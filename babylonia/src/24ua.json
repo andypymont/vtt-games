@@ -1095,31 +1095,31 @@
     "y": 4,
     "cardTypes": {
       "Z1": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/babylonia/src/assets/ziggurat-1.svg"
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/babylonia/assets/ziggurat-1.svg"
       },
       "Z2": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/babylonia/src/assets/ziggurat-2.svg"
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/babylonia/assets/ziggurat-2.svg"
       },
       "Z3": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/babylonia/src/assets/ziggurat-3.svg"
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/babylonia/assets/ziggurat-3.svg"
       },
       "Z4": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/babylonia/src/assets/ziggurat-4.svg"
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/babylonia/assets/ziggurat-4.svg"
       },
       "Z5": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/babylonia/src/assets/ziggurat-5.svg"
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/babylonia/assets/ziggurat-5.svg"
       },
       "Z6": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/babylonia/src/assets/ziggurat-6.svg"
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/babylonia/assets/ziggurat-6.svg"
       },
       "Z7": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/babylonia/src/assets/ziggurat-7.svg"
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/babylonia/assets/ziggurat-7.svg"
       },
       "Z8": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/babylonia/src/assets/ziggurat-8.svg"
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/babylonia/assets/ziggurat-8.svg"
       },
       "Z9": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/babylonia/src/assets/ziggurat-9.svg"
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/babylonia/assets/ziggurat-9.svg"
       }
     },
     "faceTemplates": [
@@ -1134,7 +1134,7 @@
             "width": 100,
             "height": 100,
             "valueType": "static",
-            "value": "https://raw.githubusercontent.com/andypymont/vtt-games/main/babylonia/src/assets/ziggurat-back.svg",
+            "value": "https://raw.githubusercontent.com/andypymont/vtt-games/main/babylonia/assets/ziggurat-back.svg",
             "color": "transparent"
           }
         ]
