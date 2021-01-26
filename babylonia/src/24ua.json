@@ -380,7 +380,7 @@
     "cardType": "S 4K"
   },
   "5mx0": {
-    "image": "/assets/-1026740996_30592",
+    "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/src/assets/map-2p.svg",
     "movable": false,
     "width": 912.309,
     "height": 729.461,
@@ -440,37 +440,37 @@
     "y": 4,
     "cardTypes": {
       "crop-5": {
-        "image": "/assets/-1879547098_1866"
+        "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/src/assets/crop-5.svg"
       },
       "crop-6": {
-        "image": "/assets/-1926863871_1866"
+        "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/src/assets/crop-6.svg"
       },
       "crop-7": {
-        "image": "/assets/-1936484068_1866"
+        "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/src/assets/crop-7.svg"
       },
       "crop-X": {
-        "image": "/assets/1730924690_1818"
+        "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/src/assets/crop-x.svg"
       },
       "city-pot": {
-        "image": "/assets/-773502381_1331"
+        "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/src/assets/city-pot.svg"
       },
       "city-star": {
-        "image": "/assets/-1620518649_543"
+        "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/src/assets/city-star.svg"
       },
       "city-crown": {
-        "image": "/assets/-1081939225_2729"
+        "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/src/assets/city-crown.svg"
       },
       "city-star-pot": {
-        "image": "/assets/406697561_1562"
+        "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/src/assets/city-star-pot.svg"
       },
       "city-crown-pot": {
-        "image": "/assets/1811170529_3736"
+        "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/src/assets/city-crown-pot.svg"
       },
       "city-crown-star": {
-        "image": "/assets/817417474_2951"
+        "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/src/assets/city-crown-star.svg"
       },
       "city-all": {
-        "image": "/assets/-1068641354_3959"
+        "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/src/assets/city-all.svg"
       }
     },
     "faceTemplates": [
@@ -485,7 +485,7 @@
             "width": 72.309,
             "height": 62.622,
             "valueType": "static",
-            "value": "/assets/-1559496209_527",
+            "value": "https://github.com/andypymont/vtt-games/raw/main/babylonia/src/assets/citycrop-back.svg",
             "color": "transparent"
           }
         ]
@@ -906,144 +906,144 @@
     "type": "card",
     "cardType": "crop-5",
     "id": "epm6",
-    "z": 7470,
-    "parent": "ggex"
+    "z": 2260,
+    "parent": "o7vz"
   },
   "jyge": {
     "deck": "s9y9D",
     "type": "card",
     "cardType": "crop-6",
     "id": "jyge",
-    "z": 6943,
-    "parent": "ggex"
+    "z": 299,
+    "parent": "o7vz"
   },
   "er76": {
     "deck": "s9y9D",
     "type": "card",
     "cardType": "crop-7",
     "id": "er76",
-    "z": 4723,
-    "parent": "ggex"
+    "z": 2653,
+    "parent": "o7vz"
   },
   "rcni": {
     "deck": "s9y9D",
     "type": "card",
     "cardType": "crop-X",
     "id": "rcni",
-    "z": 1104,
-    "parent": "ggex"
+    "z": 8550,
+    "parent": "o7vz"
   },
   "wrpq": {
     "deck": "s9y9D",
     "type": "card",
     "cardType": "crop-X",
     "id": "wrpq",
-    "z": 7349,
-    "parent": "ggex"
+    "z": 208,
+    "parent": "o7vz"
   },
   "10jf": {
     "deck": "s9y9D",
     "type": "card",
     "cardType": "crop-X",
     "id": "10jf",
-    "z": 5249,
-    "parent": "ggex"
+    "z": 822,
+    "parent": "o7vz"
   },
   "672n": {
     "deck": "s9y9D",
     "type": "card",
     "cardType": "city-pot",
     "id": "672n",
-    "z": 5784,
-    "parent": "ggex"
+    "z": 3340,
+    "parent": "o7vz"
   },
   "iulp": {
     "deck": "s9y9D",
     "type": "card",
     "cardType": "city-pot",
     "id": "iulp",
-    "z": 3769,
-    "parent": "ggex"
+    "z": 701,
+    "parent": "o7vz"
   },
   "wcw9": {
     "deck": "s9y9D",
     "type": "card",
     "cardType": "city-star",
     "id": "wcw9",
-    "z": 1756,
-    "parent": "ggex"
+    "z": 2793,
+    "parent": "o7vz"
   },
   "e8qt": {
     "deck": "s9y9D",
     "type": "card",
     "cardType": "city-star",
     "id": "e8qt",
-    "z": 145,
-    "parent": "ggex"
+    "z": 515,
+    "parent": "o7vz"
   },
   "ular": {
     "deck": "s9y9D",
     "type": "card",
     "cardType": "city-crown",
     "id": "ular",
-    "z": 6493,
-    "parent": "ggex"
+    "z": 5179,
+    "parent": "o7vz"
   },
   "9if9": {
     "deck": "s9y9D",
     "type": "card",
     "cardType": "city-crown",
     "id": "9if9",
-    "z": 771,
-    "parent": "ggex"
+    "z": 2356,
+    "parent": "o7vz"
   },
   "n805": {
     "deck": "s9y9D",
     "type": "card",
     "cardType": "city-star-pot",
     "id": "n805",
-    "z": 6804,
-    "parent": "ggex"
+    "z": 9251,
+    "parent": "o7vz"
   },
   "82cj": {
     "deck": "s9y9D",
     "type": "card",
     "cardType": "city-star-pot",
     "id": "82cj",
-    "z": 6885,
-    "parent": "ggex"
+    "z": 5125,
+    "parent": "o7vz"
   },
   "tbsd": {
     "deck": "s9y9D",
     "type": "card",
     "cardType": "city-crown-pot",
     "id": "tbsd",
-    "z": 8339,
-    "parent": "ggex"
+    "z": 922,
+    "parent": "o7vz"
   },
   "2ng0": {
     "deck": "s9y9D",
     "type": "card",
     "cardType": "city-crown-pot",
     "id": "2ng0",
-    "z": 7833,
-    "parent": "ggex"
+    "z": 7256,
+    "parent": "o7vz"
   },
   "c3om": {
     "deck": "s9y9D",
     "type": "card",
     "cardType": "city-crown-star",
     "id": "c3om",
-    "z": 3536,
-    "parent": "ggex"
+    "z": 7963,
+    "parent": "o7vz"
   },
   "0c1a": {
     "deck": "s9y9D",
     "type": "card",
     "cardType": "city-crown-star",
     "id": "0c1a",
-    "z": 6203,
-    "parent": "ggex"
+    "z": 9915,
+    "parent": "o7vz"
   },
   "3lhw": {
     "type": "holder",
@@ -1095,31 +1095,31 @@
     "y": 4,
     "cardTypes": {
       "Z1": {
-        "image": "/assets/-15957405_1656"
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/babylonia/src/assets/ziggurat-1.svg"
       },
       "Z2": {
-        "image": "/assets/1074491817_1960"
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/babylonia/src/assets/ziggurat-2.svg"
       },
       "Z3": {
-        "image": "/assets/1535018186_2655"
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/babylonia/src/assets/ziggurat-3.svg"
       },
       "Z4": {
-        "image": "/assets/1741401933_6002"
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/babylonia/src/assets/ziggurat-4.svg"
       },
       "Z5": {
-        "image": "/assets/1092346265_9329"
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/babylonia/src/assets/ziggurat-5.svg"
       },
       "Z6": {
-        "image": "/assets/-1512996590_7132"
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/babylonia/src/assets/ziggurat-6.svg"
       },
       "Z7": {
-        "image": "/assets/51975238_2163"
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/babylonia/src/assets/ziggurat-7.svg"
       },
       "Z8": {
-        "image": "/assets/1658630418_2528"
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/babylonia/src/assets/ziggurat-8.svg"
       },
       "Z9": {
-        "image": "/assets/456457514_2526"
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/babylonia/src/assets/ziggurat-9.svg"
       }
     },
     "faceTemplates": [
@@ -1134,7 +1134,7 @@
             "width": 100,
             "height": 100,
             "valueType": "static",
-            "value": "/assets/962092381_1751",
+            "value": "https://raw.githubusercontent.com/andypymont/vtt-games/main/babylonia/src/assets/ziggurat-back.svg",
             "color": "transparent"
           }
         ]
@@ -1536,8 +1536,8 @@
     "z": 11794,
     "x": 4,
     "y": 4,
-    "activeFace": 1,
-    "parent": "yjpf"
+    "parent": "yjpf",
+    "activeFace": 1
   },
   "nz1t": {
     "deck": "3lhwD",
@@ -1610,8 +1610,8 @@
     "type": "card",
     "cardType": "Z8",
     "id": "87kb",
-    "z": 11696,
-    "parent": "1hy2"
+    "z": 11812,
+    "parent": "i7t9"
   },
   "ubn5": {
     "deck": "3lhwD",
@@ -1619,7 +1619,7 @@
     "cardType": "Z9",
     "id": "ubn5",
     "z": 11296,
-    "parent": "1hy2"
+    "parent": "i7t9"
   },
   "yjpf": {
     "type": "holder",
@@ -2497,7 +2497,7 @@
     },
     "height": 75,
     "width": 75,
-    "z": 152,
+    "z": 148,
     "onEnter": {
       "activeFace": 0
     }
@@ -2509,16 +2509,16 @@
     "y": 4,
     "cardTypes": {
       "red-farmer": {
-        "image": "/assets/1486189241_3066"
+        "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/src/assets/red-farmer.svg"
       },
       "red-star": {
-        "image": "/assets/-639259714_499"
+        "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/src/assets/red-star.svg"
       },
       "red-crown": {
-        "image": "/assets/1890467275_2686"
+        "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/src/assets/red-crown.svg"
       },
       "red-pot": {
-        "image": "/assets/-1192187876_1288"
+        "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/src/assets/red-pot.svg"
       }
     },
     "faceTemplates": [
@@ -2533,7 +2533,7 @@
             "width": 72.309,
             "height": 62.622,
             "valueType": "static",
-            "value": "/assets/-740000142_263",
+            "value": "https://github.com/andypymont/vtt-games/raw/main/babylonia/src/assets/red-back.svg",
             "color": "transparent"
           }
         ]
@@ -2952,12 +2952,12 @@
   "thsz": {
     "type": "holder",
     "id": "thsz",
-    "x": 237.5,
+    "x": 208.5,
     "y": 30.5,
     "dropTarget": {
       "tiletype": "player"
     },
-    "z": 151,
+    "z": 149,
     "height": 75,
     "width": 75,
     "onEnter": {
@@ -2979,16 +2979,16 @@
     "y": 4,
     "cardTypes": {
       "purple-farmer": {
-        "image": "/assets/121515477_3066"
+        "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/src/assets/purple-farmer.svg"
       },
       "purple-star": {
-        "image": "/assets/1371767545_499"
+        "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/src/assets/purple-star.svg"
       },
       "purple-crown": {
-        "image": "/assets/-488354809_2686"
+        "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/src/assets/purple-crown.svg"
       },
       "purple-pot": {
-        "image": "/assets/-601913561_1288"
+        "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/src/assets/purple-pot.svg"
       }
     },
     "faceTemplates": [
@@ -3003,7 +3003,7 @@
             "width": 72.309,
             "height": 62.622,
             "valueType": "static",
-            "value": "/assets/248643625_263",
+            "value": "https://github.com/andypymont/vtt-games/raw/main/babylonia/src/assets/purple-back.svg",
             "color": "transparent"
           }
         ]
@@ -3448,7 +3448,7 @@
     "type": "card",
     "cardType": "purple-farmer",
     "id": "o7zh",
-    "z": 6422,
+    "z": 12026,
     "parent": "thszP"
   },
   "7zj6": {
@@ -3480,7 +3480,7 @@
     "type": "card",
     "cardType": "purple-farmer",
     "id": "6gt7",
-    "z": 5968,
+    "z": 12029,
     "parent": "thszP"
   },
   "hqjp": {
@@ -3488,7 +3488,7 @@
     "type": "card",
     "cardType": "purple-farmer",
     "id": "hqjp",
-    "z": 11777,
+    "z": 12011,
     "parent": "thszP"
   },
   "ow4g": {
@@ -3496,7 +3496,7 @@
     "type": "card",
     "cardType": "purple-farmer",
     "id": "ow4g",
-    "z": 11780,
+    "z": 12014,
     "parent": "thszP"
   },
   "rzd4": {
@@ -3504,7 +3504,7 @@
     "type": "card",
     "cardType": "purple-farmer",
     "id": "rzd4",
-    "z": 11783,
+    "z": 12017,
     "parent": "thszP"
   },
   "mfe5": {
@@ -3535,7 +3535,7 @@
     "type": "card",
     "cardType": "purple-star",
     "id": "nvep",
-    "z": 11786,
+    "z": 12005,
     "parent": "thszP"
   },
   "5wik": {
@@ -3543,7 +3543,7 @@
     "type": "card",
     "cardType": "purple-star",
     "id": "5wik",
-    "z": 11792,
+    "z": 12002,
     "parent": "thszP"
   },
   "nbjv": {
@@ -3551,7 +3551,7 @@
     "type": "card",
     "cardType": "purple-star",
     "id": "nbjv",
-    "z": 11789,
+    "z": 12008,
     "parent": "thszP"
   },
   "7vte": {
@@ -3559,7 +3559,7 @@
     "type": "card",
     "cardType": "purple-star",
     "id": "7vte",
-    "z": 6790,
+    "z": 12023,
     "parent": "thszP"
   },
   "ygv3": {
@@ -3575,7 +3575,7 @@
     "type": "card",
     "cardType": "purple-crown",
     "id": "sp97",
-    "z": 5856,
+    "z": 12032,
     "parent": "thszP"
   },
   "kzm4": {
@@ -3655,7 +3655,7 @@
     "type": "card",
     "cardType": "purple-pot",
     "id": "aqt9",
-    "z": 11774,
+    "z": 12020,
     "parent": "thszP"
   },
   "8lgm": {
@@ -3671,7 +3671,7 @@
     "type": "card",
     "cardType": "red-farmer",
     "id": "anql",
-    "z": 8561,
+    "z": 11830,
     "parent": "q5za"
   },
   "dhzg": {
@@ -3711,7 +3711,7 @@
     "type": "card",
     "cardType": "red-farmer",
     "id": "6ccg",
-    "z": 7834,
+    "z": 11827,
     "parent": "q5za"
   },
   "3tai": {
@@ -3719,7 +3719,7 @@
     "type": "card",
     "cardType": "red-farmer",
     "id": "3tai",
-    "z": 8570,
+    "z": 11833,
     "parent": "q5za"
   },
   "6ken": {
@@ -3815,7 +3815,7 @@
     "type": "card",
     "cardType": "red-crown",
     "id": "alsm",
-    "z": 11768,
+    "z": 11839,
     "parent": "q5za"
   },
   "t8rn": {
@@ -3831,7 +3831,7 @@
     "type": "card",
     "cardType": "red-crown",
     "id": "zh9v",
-    "z": 11812,
+    "z": 11842,
     "parent": "q5za"
   },
   "7d4p": {
@@ -3839,7 +3839,7 @@
     "type": "card",
     "cardType": "red-crown",
     "id": "7d4p",
-    "z": 11765,
+    "z": 11836,
     "parent": "q5za"
   },
   "wy7h": {
@@ -3918,7 +3918,7 @@
     "id": "xetlP",
     "width": 103,
     "height": 160,
-    "z": 11805,
+    "z": 11950,
     "parent": "xetl"
   },
   "xetlD": {
@@ -3928,16 +3928,16 @@
     "y": 347,
     "cardTypes": {
       "blue-farmer": {
-        "image": "/assets/1563727298_3066"
+        "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/src/assets/blue-farmer.svg"
       },
       "blue-star": {
-        "image": "/assets/-1207536288_499"
+        "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/src/assets/blue-star.svg"
       },
       "blue-crown": {
-        "image": "/assets/1045437580_2686"
+        "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/src/assets/blue-crown.svg"
       },
       "blue-pot": {
-        "image": "/assets/-37348653_1288"
+        "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/src/assets/blue-pot.svg"
       }
     },
     "faceTemplates": [
@@ -3952,7 +3952,7 @@
             "width": 72.309,
             "height": 62.622,
             "valueType": "static",
-            "value": "/assets/-1904383605_263",
+            "value": "https://github.com/andypymont/vtt-games/raw/main/babylonia/src/assets/blue-back.svg",
             "color": "transparent"
           }
         ]
@@ -4372,7 +4372,7 @@
     "type": "card",
     "cardType": "blue-farmer",
     "id": "1ycn",
-    "z": 1967,
+    "z": 4198,
     "parent": "xetlP"
   },
   "xh8u": {
@@ -4380,7 +4380,7 @@
     "type": "card",
     "cardType": "blue-farmer",
     "id": "xh8u",
-    "z": 2050,
+    "z": 11967,
     "parent": "xetlP"
   },
   "9h17": {
@@ -4388,7 +4388,7 @@
     "type": "card",
     "cardType": "blue-farmer",
     "id": "9h17",
-    "z": 3516,
+    "z": 4511,
     "parent": "xetlP"
   },
   "zvhj": {
@@ -4396,7 +4396,7 @@
     "type": "card",
     "cardType": "blue-farmer",
     "id": "zvhj",
-    "z": 4550,
+    "z": 8474,
     "parent": "xetlP"
   },
   "mafs": {
@@ -4404,7 +4404,7 @@
     "type": "card",
     "cardType": "blue-farmer",
     "id": "mafs",
-    "z": 1065,
+    "z": 11973,
     "parent": "xetlP"
   },
   "uyet": {
@@ -4412,7 +4412,7 @@
     "type": "card",
     "cardType": "blue-farmer",
     "id": "uyet",
-    "z": 2157,
+    "z": 2063,
     "parent": "xetlP"
   },
   "3fob": {
@@ -4420,7 +4420,7 @@
     "type": "card",
     "cardType": "blue-farmer",
     "id": "3fob",
-    "z": 5338,
+    "z": 6729,
     "parent": "xetlP"
   },
   "b3fk": {
@@ -4428,7 +4428,7 @@
     "type": "card",
     "cardType": "blue-farmer",
     "id": "b3fk",
-    "z": 4419,
+    "z": 705,
     "parent": "xetlP"
   },
   "moms": {
@@ -4436,7 +4436,7 @@
     "type": "card",
     "cardType": "blue-farmer",
     "id": "moms",
-    "z": 1021,
+    "z": 4779,
     "parent": "xetlP"
   },
   "2ekn": {
@@ -4444,7 +4444,7 @@
     "type": "card",
     "cardType": "blue-farmer",
     "id": "2ekn",
-    "z": 1472,
+    "z": 11970,
     "parent": "xetlP"
   },
   "9kgq": {
@@ -4452,7 +4452,7 @@
     "type": "card",
     "cardType": "blue-farmer",
     "id": "9kgq",
-    "z": 7145,
+    "z": 11964,
     "parent": "xetlP"
   },
   "y9ra": {
@@ -4460,7 +4460,7 @@
     "type": "card",
     "cardType": "blue-farmer",
     "id": "y9ra",
-    "z": 8823,
+    "z": 1723,
     "parent": "xetlP"
   },
   "1ut7": {
@@ -4468,7 +4468,7 @@
     "type": "card",
     "cardType": "blue-star",
     "id": "1ut7",
-    "z": 2143,
+    "z": 4374,
     "parent": "xetlP"
   },
   "ou19": {
@@ -4476,7 +4476,7 @@
     "type": "card",
     "cardType": "blue-star",
     "id": "ou19",
-    "z": 5592,
+    "z": 1576,
     "parent": "xetlP"
   },
   "9s18": {
@@ -4484,7 +4484,7 @@
     "type": "card",
     "cardType": "blue-star",
     "id": "9s18",
-    "z": 2160,
+    "z": 8300,
     "parent": "xetlP"
   },
   "ii0b": {
@@ -4492,7 +4492,7 @@
     "type": "card",
     "cardType": "blue-star",
     "id": "ii0b",
-    "z": 23,
+    "z": 97,
     "parent": "xetlP"
   },
   "5p1h": {
@@ -4500,7 +4500,7 @@
     "type": "card",
     "cardType": "blue-star",
     "id": "5p1h",
-    "z": 1403,
+    "z": 11955,
     "parent": "xetlP"
   },
   "9mrg": {
@@ -4508,7 +4508,7 @@
     "type": "card",
     "cardType": "blue-star",
     "id": "9mrg",
-    "z": 6271,
+    "z": 4915,
     "parent": "xetlP"
   },
   "m0yc": {
@@ -4516,7 +4516,7 @@
     "type": "card",
     "cardType": "blue-crown",
     "id": "m0yc",
-    "z": 10,
+    "z": 3526,
     "parent": "xetlP"
   },
   "ye8k": {
@@ -4524,7 +4524,7 @@
     "type": "card",
     "cardType": "blue-crown",
     "id": "ye8k",
-    "z": 2333,
+    "z": 3219,
     "parent": "xetlP"
   },
   "syqz": {
@@ -4532,7 +4532,7 @@
     "type": "card",
     "cardType": "blue-crown",
     "id": "syqz",
-    "z": 213,
+    "z": 11976,
     "parent": "xetlP"
   },
   "h7o4": {
@@ -4540,7 +4540,7 @@
     "type": "card",
     "cardType": "blue-crown",
     "id": "h7o4",
-    "z": 314,
+    "z": 5662,
     "parent": "xetlP"
   },
   "sfsc": {
@@ -4548,7 +4548,7 @@
     "type": "card",
     "cardType": "blue-crown",
     "id": "sfsc",
-    "z": 7052,
+    "z": 3022,
     "parent": "xetlP"
   },
   "a5vl": {
@@ -4556,7 +4556,7 @@
     "type": "card",
     "cardType": "blue-crown",
     "id": "a5vl",
-    "z": 5330,
+    "z": 5167,
     "parent": "xetlP"
   },
   "qgdo": {
@@ -4564,7 +4564,7 @@
     "type": "card",
     "cardType": "blue-pot",
     "id": "qgdo",
-    "z": 956,
+    "z": 7445,
     "parent": "xetlP"
   },
   "s21n": {
@@ -4572,7 +4572,7 @@
     "type": "card",
     "cardType": "blue-pot",
     "id": "s21n",
-    "z": 6495,
+    "z": 2773,
     "parent": "xetlP"
   },
   "kzu5": {
@@ -4580,7 +4580,7 @@
     "type": "card",
     "cardType": "blue-pot",
     "id": "kzu5",
-    "z": 11603,
+    "z": 11961,
     "parent": "xetlP"
   },
   "bmag": {
@@ -4588,7 +4588,7 @@
     "type": "card",
     "cardType": "blue-pot",
     "id": "bmag",
-    "z": 8807,
+    "z": 4562,
     "parent": "xetlP"
   },
   "oyrc": {
@@ -4596,7 +4596,7 @@
     "type": "card",
     "cardType": "blue-pot",
     "id": "oyrc",
-    "z": 11665,
+    "z": 11958,
     "parent": "xetlP"
   },
   "i7rc": {
@@ -4604,7 +4604,7 @@
     "type": "card",
     "cardType": "blue-pot",
     "id": "i7rc",
-    "z": 3117,
+    "z": 6929,
     "parent": "xetlP"
   },
   "32ib": {
@@ -4633,20 +4633,20 @@
   "32ibD": {
     "type": "deck",
     "id": "32ibD",
-    "x": 4,
-    "y": 4,
+    "x": 62,
+    "y": 569,
     "cardTypes": {
       "yellow-farmer": {
-        "image": "/assets/-915943640_3066"
+        "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/src/assets/yellow-farmer.svg"
       },
       "yellow-star": {
-        "image": "/assets/-1017399816_499"
+        "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/src/assets/yellow-star.svg"
       },
       "yellow-crown": {
-        "image": "/assets/-765492756_2686"
+        "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/src/assets/yellow-crown.svg"
       },
       "yellow-pot": {
-        "image": "/assets/-759124585_1288"
+        "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/src/assets/yellow-pot.svg"
       }
     },
     "faceTemplates": [
@@ -4661,7 +4661,7 @@
             "width": 72.309,
             "height": 62.622,
             "valueType": "static",
-            "value": "/assets/-1564269525_263",
+            "value": "https://github.com/andypymont/vtt-games/raw/main/babylonia/src/assets/yellow-back.svg",
             "color": "transparent"
           }
         ]
@@ -4683,8 +4683,7 @@
         ]
       }
     ],
-    "z": 10659,
-    "parent": "32ib",
+    "z": 11977,
     "cardDefaults": {
       "tiletype": "player",
       "height": 62.622,
@@ -5106,7 +5105,7 @@
     "type": "card",
     "cardType": "yellow-farmer",
     "id": "9bu5",
-    "z": 9687,
+    "z": 12041,
     "parent": "32ibP"
   },
   "1e64": {
@@ -5130,7 +5129,7 @@
     "type": "card",
     "cardType": "yellow-farmer",
     "id": "9u98",
-    "z": 9443,
+    "z": 12047,
     "parent": "32ibP"
   },
   "aea5": {
@@ -5218,7 +5217,7 @@
     "type": "card",
     "cardType": "yellow-star",
     "id": "qjlv",
-    "z": 11600,
+    "z": 12038,
     "parent": "32ibP"
   },
   "dmy5": {
@@ -5242,7 +5241,7 @@
     "type": "card",
     "cardType": "yellow-crown",
     "id": "id14",
-    "z": 9584,
+    "z": 12044,
     "parent": "32ibP"
   },
   "fkq1": {
@@ -5306,7 +5305,7 @@
     "type": "card",
     "cardType": "yellow-pot",
     "id": "6s4b",
-    "z": 9419,
+    "z": 12035,
     "parent": "32ibP"
   },
   "ujjk": {
@@ -5318,7 +5317,7 @@
     "parent": "32ibP"
   },
   "rntt": {
-    "image": "/assets/-2038471164_259",
+    "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/src/assets/player-area.svg",
     "movable": false,
     "width": 450,
     "height": 200,
@@ -5339,14 +5338,14 @@
     "id": "j5zk"
   },
   "tfg3": {
-    "image": "/assets/-2038471164_259",
+    "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/src/assets/player-area.svg",
     "movable": false,
     "width": 450,
     "height": 200,
     "layer": -4,
-    "z": 9144,
-    "x": 50,
-    "y": 450,
+    "z": 9146,
+    "x": 48,
+    "y": 451,
     "id": "tfg3"
   },
   "vead": {
@@ -5427,22 +5426,22 @@
     "z": 11803,
     "parent": "bc9g"
   },
-  "1hy2": {
+  "i7t9": {
     "type": "pile",
     "parent": "3lhw",
     "x": 4,
     "y": 4,
-    "width": 103,
-    "height": 160,
-    "id": "1hy2"
+    "width": 100,
+    "height": 100,
+    "id": "i7t9"
   },
-  "ggex": {
+  "o7vz": {
     "type": "pile",
     "parent": "s9y9",
     "x": 4,
     "y": 4,
     "width": 72.309,
     "height": 62.622,
-    "id": "ggex"
+    "id": "o7vz"
   }
 }
