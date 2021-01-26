@@ -1,0 +1,49 @@
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    height="100px"
+    width="100px"
+    viewbox="0 0 100 100"
+>
+    <rect
+        style="fill:#fffda4;stroke:#000000;stroke-width:3px"
+        x="0px"
+        y="0px"
+        width="100px"
+        height="100px"
+    />
+    <g>
+        <g>
+            <polygon
+                style="fill:#fcefde;stroke:#ff0000;stroke-width:2.5px"
+                points="9.055264,3.714146 19.345691,3.714146 24.490904,12.625917 19.345691,21.537687 9.055264,21.537687 3.910051,12.625917"
+            />
+            <polygon
+                style="fill:none;stroke:#000000;stroke-width:1px"
+                points="8.483574,2.723949 19.917381,2.723949 25.634285,12.625917 19.917381,22.527884 8.483574,22.527884 2.76667,12.625917"
+            />
+        </g>
+        <g>
+            <rect
+                style="fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:1.00157475;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+                width="11.278365"
+                height="2.9050336"
+                x="8.5612946"
+                y="14.363935"
+            />
+            <rect
+                style="fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:0.79352641;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+                width="7.0794935"
+                height="2.9050336"
+                x="10.66073"
+                y="11.055423"
+            />
+            <rect
+                style="fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:0.58386469;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+                width="3.8326914"
+                height="2.9050336"
+                x="12.284132"
+                y="7.7469096"
+            />
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,76 @@
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    height="100px"
+    width="100px"
+    viewbox="0 0 100 100"
+>
+    <rect
+        style="fill:#fffda4;stroke:#000000;stroke-width:3px"
+        x="0px"
+        y="0px"
+        width="100px"
+        height="100px"
+    />
+    <g>
+        <g>
+            <polygon
+                style="fill:#fcefde;stroke:#ff0000;stroke-width:2.5px"
+                points="9.055,3.714 19.346,3.714 24.491,12.626 19.346,21.538 9.055,21.538 3.910,12.626"
+            />
+            <polygon
+                style="fill:none;stroke:#000000;stroke-width:1px"
+                points="8.484,2.724 19.917,2.724 25.634,12.626 19.917,22.528 8.484,22.528 2.767,12.626"
+            />
+        </g>
+        <g>
+            <rect
+                style="fill:#ff0000;fill-opacity:1;stroke:none"
+                width="11.278"
+                height="2.905"
+                x="8.561"
+                y="14.364"
+            />
+            <rect
+                style="fill:#ff0000;fill-opacity:1;stroke:none"
+                width="7.079"
+                height="2.91"
+                x="10.661"
+                y="11.055"
+            />
+            <rect
+                style="fill:#ff0000;fill-opacity:1;stroke:none"
+                width="3.833"
+                height="2.905"
+                x="12.284"
+                y="7.747"
+            />
+        </g>
+    </g>
+    <text
+        style="font-size:20px;font-family:sans-serif;fill:#000000;stroke:none"
+        x="67"
+        y="19"
+    >#8</text>
+    <g>
+        <polygon
+            style="fill:#67a7c4;stroke:#000000;stroke-width:2px"
+            points="5.734,58.599 11.258,49.031 22.307,49.031 27.832,58.599 22.307,68.168 11.258,68.168"
+        />
+        <polygon
+            style="fill:#fcefde;stroke:#000000;stroke-width:2px"
+            points="22.307,49.030 27.831,39.462 38.880,39.462 44.405,49.030 38.880,58.599 27.831,58.599"
+        />
+        <polygon
+            style="fill:#fcefde;stroke:#000000;stroke-width:2px"
+            points="38.880,58.599 44.404,49.031 55.453,49.031 60.978,58.599 55.453,68.168 44.404,68.168"
+        />
+        <polygon
+            style="fill:#fcefde;stroke:#000000;stroke-width:2px"
+            points="55.453,49.030 60.977,39.462 72.026,39.462 77.551,49.030 72.026,58.599 60.977,58.599"
+        />
+        <polygon
+            style="fill:#67a7c4;stroke:#000000;stroke-width:2px"
+            points="72.027,58.599 77.551,49.031 88.600,49.031 94.125,58.599 88.600,68.168 77.551,68.168"
+        />
+    </g>
+</svg>
