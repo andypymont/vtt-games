@@ -767,8 +767,8 @@
   "player1-score-label": {
     "type": "label",
     "text": "Score:",
-    "x": 84,
-    "y": 18,
+    "x": 85,
+    "y": 15,
     "z": 104,
     "id": "player1-score-label"
   },
@@ -776,8 +776,8 @@
     "type": "label",
     "text": 0,
     "id": "player1-score",
-    "x": 64,
-    "y": 36,
+    "x": 65,
+    "y": 35,
     "width": 140,
     "height": 44,
     "css": "font-size: 30px;",
@@ -1242,8 +1242,8 @@
   "player2-score-label": {
     "type": "label",
     "text": "Score:",
-    "x": 87,
-    "y": 236,
+    "x": 85,
+    "y": 235,
     "z": 128,
     "id": "player2-score-label"
   },
@@ -1252,7 +1252,7 @@
     "text": 0,
     "id": "player2-score",
     "x": 65,
-    "y": 251,
+    "y": 255,
     "width": 140,
     "height": 44,
     "css": "font-size: 30px;",
@@ -1699,8 +1699,8 @@
     "height": 200,
     "layer": -4,
     "z": 9146,
-    "x": 48,
-    "y": 451,
+    "x": 50,
+    "y": 450,
     "id": "player3-area"
   },
   "player3-name": {
@@ -1716,8 +1716,8 @@
   "player3-score-label": {
     "type": "label",
     "text": "Score:",
-    "x": 82,
-    "y": 459,
+    "x": 85,
+    "y": 455,
     "z": 130,
     "id": "player3-score-label"
   },
@@ -1725,8 +1725,8 @@
     "type": "label",
     "text": 0,
     "id": "player3-score",
-    "x": 60,
-    "y": 474,
+    "x": 65,
+    "y": 475,
     "width": 140,
     "height": 44,
     "css": "font-size: 30px;",
@@ -2190,8 +2190,8 @@
   "player4-score-label": {
     "type": "label",
     "text": "Score:",
-    "x": 79,
-    "y": 678,
+    "x": 85,
+    "y": 675,
     "z": 149,
     "id": "player4-score-label"
   },
@@ -2199,7 +2199,7 @@
     "type": "label",
     "text": 0,
     "id": "player4-score",
-    "x": 61,
+    "x": 65,
     "y": 695,
     "width": 140,
     "height": 44,
