@@ -756,10 +756,11 @@
   },
   "player1-name": {
     "type": "label",
-    "x": 235,
-    "y": 15,
+    "x": 185,
+    "y": 5,
     "z": 103,
     "id": "player1-name",
+    "parent": "player1-area",
     "editable": true,
     "text": "PLAYER 1",
     "css": "font-weight:bold"
@@ -767,17 +768,19 @@
   "player1-score-label": {
     "type": "label",
     "text": "Score:",
-    "x": 85,
-    "y": 15,
+    "x": 20,
+    "y": -20,
     "z": 104,
-    "id": "player1-score-label"
+    "id": "player1-score-label",
+    "parent": "player1-score"
   },
   "player1-score": {
     "type": "label",
     "text": 0,
     "id": "player1-score",
-    "x": 65,
-    "y": 35,
+    "parent": "player1-area",
+    "x": 15,
+    "y": 25,
     "width": 140,
     "height": 44,
     "css": "font-size: 30px;",
@@ -825,19 +828,21 @@
   "player1-cities-label": {
     "type": "label",
     "text": "Cities:",
-    "x": 175,
-    "y": 100,
+    "x": -10,
+    "y": -25,
     "z": 123,
-    "id": "player1-cities-label"
+    "id": "player1-cities-label",
+    "parent": "player1-cities"
   },
   "player1-cities": {
     "type": "holder",
-    "x": 185,
-    "y": 125,
+    "x": 135,
+    "y": 115,
     "z": 73,
     "width": 75,
     "height": 75,
     "id": "player1-cities",
+    "parent": "player1-area",
     "dropTarget": {
       "tiletype": "citycrop"
     }
@@ -845,17 +850,19 @@
   "player1-ziggurats-label": {
     "type": "label",
     "text": "Ziggurats:",
-    "x": 355,
-    "y": 75,
+    "x": 40,
+    "y": -25,
     "z": 126,
-    "id": "player1-ziggurats-label"
+    "id": "player1-ziggurats-label",
+    "parent": "player1-ziggurats"
   },
   "player1-ziggurats": {
     "type": "holder",
-    "x": 315,
-    "y": 100,
+    "x": 265,
+    "y": 90,
     "z": 136,
     "id": "player1-ziggurats",
+    "parent": "player1-area",
     "width": 180,
     "height": 100,
     "stackOffsetX": -20,
@@ -867,16 +874,18 @@
   "player1-tiles-label": {
     "type": "label",
     "text": "Draw pile:",
-    "x": 50,
-    "y": 100,
+    "x": -10,
+    "y": -25,
     "z": 120,
-    "id": "player1-tiles-label"
+    "id": "player1-tiles-label",
+    "parent": "red-player-tiles"
   },
   "red-player-tiles": {
     "type": "holder",
     "id": "red-player-tiles",
-    "x": 60,
-    "y": 125,
+    "parent": "player1-area",
+    "x": 10,
+    "y": 115,
     "dropTarget": {
       "tiletype": "player"
     },
@@ -890,8 +899,10 @@
   "red-player-deck": {
     "type": "deck",
     "id": "red-player-deck",
+    "parent": "red-player-tiles",
     "x": 4,
     "y": 4,
+    "z": 10411,
     "cardTypes": {
       "red-farmer": {
         "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/assets/red-farmer.svg"
@@ -940,8 +951,6 @@
         ]
       }
     ],
-    "z": 10411,
-    "parent": "red-player-tiles",
     "cardDefaults": {
       "height": 62.622,
       "width": 72.309,
@@ -972,8 +981,8 @@
   },
   "red-player-pile": {
     "type": "pile",
-    "width": 103,
-    "height": 160,
+    "width": 72.309,
+    "height": 62.622,
     "id": "red-player-pile",
     "z": 11803,
     "parent": "red-player-tiles"
@@ -1231,28 +1240,31 @@
   },
   "player2-name": {
     "type": "label",
-    "x": 235,
-    "y": 235,
+    "x": 185,
+    "y": 5,
     "z": 102,
     "editable": true,
     "text": "PLAYER 2",
     "css": "font-weight:bold",
-    "id": "player2-name"
+    "id": "player2-name",
+    "parent": "player2-area"
   },
   "player2-score-label": {
     "type": "label",
     "text": "Score:",
-    "x": 85,
-    "y": 235,
+    "x": 20,
+    "y": -20,
     "z": 128,
-    "id": "player2-score-label"
+    "id": "player2-score-label",
+    "parent": "player2-score"
   },
   "player2-score": {
     "type": "label",
     "text": 0,
     "id": "player2-score",
-    "x": 65,
-    "y": 255,
+    "parent": "player2-area",
+    "x": 15,
+    "y": 25,
     "width": 140,
     "height": 44,
     "css": "font-size: 30px;",
@@ -1300,17 +1312,19 @@
   "player2-cities-label": {
     "type": "label",
     "text": "Cities:",
-    "x": 175,
-    "y": 320,
+    "x": -10,
+    "y": -25,
     "z": 153,
-    "id": "player2-cities-label"
+    "id": "player2-cities-label",
+    "parent": "player2-cities"
   },
   "player2-cities": {
     "type": "holder",
-    "x": 185,
-    "y": 345,
+    "x": 135,
+    "y": 115,
     "z": 137,
     "id": "player2-cities",
+    "parent": "player2-area",
     "width": 75,
     "height": 75,
     "dropTarget": {
@@ -1320,21 +1334,23 @@
   "player2-ziggurats-label": {
     "type": "label",
     "text": "Ziggurats:",
-    "x": 355,
-    "y": 295,
+    "x": 40,
+    "y": -25,
     "z": 126,
-    "id": "player2-ziggurats-label"
+    "id": "player2-ziggurats-label",
+    "parent": "player2-ziggurats"
   },
   "player2-ziggurats": {
     "type": "holder",
-    "x": 315,
-    "y": 320,
+    "x": 265,
+    "y": 90,
     "z": 138,
     "width": 180,
     "height": 100,
     "stackOffsetX": -20,
     "dropOffsetX": 80,
     "id": "player2-ziggurats",
+    "parent": "player2-area",
     "dropTarget": {
       "tiletype": "ziggurat"
     }
@@ -1342,16 +1358,18 @@
   "player2-tiles-label": {
     "type": "label",
     "text": "Draw pile:",
-    "x": 50,
-    "y": 320,
+    "x": -10,
+    "y": -25,
     "z": 152,
-    "id": "player2-tiles-label"
+    "id": "player2-tiles-label",
+    "parent": "blue-player-tiles"
   },
   "blue-player-tiles": {
     "type": "holder",
     "id": "blue-player-tiles",
-    "x": 60,
-    "y": 345,
+    "parent": "player2-area",
+    "x": 10,
+    "y": 115,
     "dropTarget": {
       "tiletype": "player"
     },
@@ -1365,16 +1383,18 @@
   "blue-player-pile": {
     "type": "pile",
     "id": "blue-player-pile",
-    "width": 103,
-    "height": 160,
+    "width": 72.309,
+    "height": 62.622,
     "z": 11950,
     "parent": "blue-player-tiles"
   },
   "blue-player-deck": {
     "type": "deck",
     "id": "blue-player-deck",
-    "x": 62,
-    "y": 347,
+    "parent": "blue-player-tiles",
+    "x": 4,
+    "y": 4,
+    "z": 11582,
     "cardTypes": {
       "blue-farmer": {
         "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/assets/blue-farmer.svg"
@@ -1423,7 +1443,6 @@
         ]
       }
     ],
-    "z": 11582,
     "cardDefaults": {
       "tiletype": "player",
       "height": 62.622,
@@ -1705,28 +1724,31 @@
   },
   "player3-name": {
     "type": "label",
-    "x": 235,
-    "y": 455,
+    "x": 185,
+    "y": 5,
     "z": 102,
     "editable": true,
     "text": "PLAYER 3",
     "css": "font-weight:bold",
-    "id": "player3-name"
+    "id": "player3-name",
+    "parent": "player3-area"
   },
   "player3-score-label": {
     "type": "label",
     "text": "Score:",
-    "x": 85,
-    "y": 455,
+    "x": 20,
+    "y": -20,
     "z": 130,
-    "id": "player3-score-label"
+    "id": "player3-score-label",
+    "parent": "player3-score"
   },
   "player3-score": {
     "type": "label",
     "text": 0,
     "id": "player3-score",
-    "x": 65,
-    "y": 475,
+    "parent": "player3-area",
+    "x": 15,
+    "y": 25,
     "width": 140,
     "height": 44,
     "css": "font-size: 30px;",
@@ -1774,19 +1796,21 @@
   "player3-cities-label": {
     "type": "label",
     "text": "Cities:",
-    "x": 175,
-    "y": 540,
+    "x": -10,
+    "y": -25,
     "z": 156,
-    "id": "player3-cities-label"
+    "id": "player3-cities-label",
+    "parent": "player3-cities"
   },
   "player3-cities": {
     "type": "holder",
-    "x": 185,
-    "y": 565,
+    "x": 135,
+    "y": 115,
     "z": 72,
     "width": 75,
     "height": 75,
     "id": "player3-cities",
+    "parent": "player3-area",
     "dropTarget": {
       "tiletype": "citycrop"
     }
@@ -1794,21 +1818,23 @@
   "player3-ziggurats-label": {
     "type": "label",
     "text": "Ziggurats:",
-    "x": 355,
-    "y": 515,
+    "x": 40,
+    "y": -25,
     "z": 126,
-    "id": "player3-ziggurats-label"
+    "id": "player3-ziggurats-label",
+    "parent": "player3-ziggurats"
   },
   "player3-ziggurats": {
     "type": "holder",
-    "x": 315,
-    "y": 540,
+    "x": 265,
+    "y": 90,
     "z": 138,
     "width": 180,
     "height": 100,
     "stackOffsetX": -20,
     "dropOffsetX": 80,
     "id": "player3-ziggurats",
+    "parent": "player3-area",
     "dropTarget": {
       "tiletype": "ziggurat"
     }
@@ -1816,20 +1842,22 @@
   "player3-tiles-label": {
     "type": "label",
     "text": "Draw pile:",
-    "x": 50,
-    "y": 540,
+    "x": -10,
+    "y": -25,
     "z": 150,
-    "id": "player3-tiles-label"
+    "id": "player3-tiles-label",
+    "parent": "yellow-player-tiles"
   },
   "yellow-player-tiles": {
     "type": "holder",
     "id": "yellow-player-tiles",
-    "x": 60,
-    "y": 565,
+    "parent": "player3-area",
+    "x": 10,
+    "y": 115,
+    "z": 93,
     "dropTarget": {
       "tiletype": "player"
     },
-    "z": 93,
     "height": 75,
     "width": 75,
     "onEnter": {
@@ -1839,16 +1867,17 @@
   "yellow-player-pile": {
     "type": "pile",
     "id": "yellow-player-pile",
-    "width": 103,
-    "height": 160,
-    "z": 11807,
-    "parent": "yellow-player-tiles"
+    "parent": "yellow-player-tiles",
+    "width": 72.309,
+    "height": 62.622,
+    "z": 11807
   },
   "yellow-player-deck": {
     "type": "deck",
     "id": "yellow-player-deck",
-    "x": 62,
-    "y": 569,
+    "parent": "yellow-player-tiles",
+    "x": 4,
+    "y": 4,
     "cardTypes": {
       "yellow-farmer": {
         "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/assets/yellow-farmer.svg"
@@ -2179,28 +2208,31 @@
   },
   "player4-name": {
     "type": "label",
-    "x": 235,
-    "y": 675,
+    "x": 185,
+    "y": 5,
     "z": 102,
     "editable": true,
     "text": "PLAYER 4",
     "css": "font-weight:bold",
-    "id": "player4-name"
+    "id": "player4-name",
+    "parent": "player4-area"
   },
   "player4-score-label": {
     "type": "label",
     "text": "Score:",
-    "x": 85,
-    "y": 675,
+    "x": 20,
+    "y": -20,
     "z": 149,
-    "id": "player4-score-label"
+    "id": "player4-score-label",
+    "parent": "player4-score"
   },
   "player4-score": {
     "type": "label",
     "text": 0,
     "id": "player4-score",
-    "x": 65,
-    "y": 695,
+    "parent": "player4-area",
+    "x": 15,
+    "y": 25,
     "width": 140,
     "height": 44,
     "css": "font-size: 30px;",
@@ -2248,19 +2280,21 @@
   "player4-cities-label": {
     "type": "label",
     "text": "Cities:",
-    "x": 175,
-    "y": 760,
+    "x": -10,
+    "y": -25,
     "z": 154,
-    "id": "player4-cities-label"
+    "id": "player4-cities-label",
+    "parent": "player4-cities"
   },
   "player4-cities": {
     "type": "holder",
-    "x": 185,
-    "y": 785,
+    "x": 135,
+    "y": 115,
     "z": 71,
     "width": 75,
     "height": 75,
     "id": "player4-cities",
+    "parent": "player4-area",
     "dropTarget": {
       "tiletype": "citycrop"
     }
@@ -2268,21 +2302,23 @@
   "player4-ziggurats-label": {
     "type": "label",
     "text": "Ziggurats:",
-    "x": 355,
-    "y": 735,
+    "x": 40,
+    "y": -25,
     "z": 126,
-    "id": "player4-ziggurats-label"
+    "id": "player4-ziggurats-label",
+    "parent": "player4-ziggurats"
   },
   "player4-ziggurats": {
     "type": "holder",
-    "x": 315,
-    "y": 760,
+    "x": 265,
+    "y": 90,
     "z": 138,
     "width": 180,
     "height": 100,
     "stackOffsetX": -20,
     "dropOffsetX": 80,
     "id": "player4-ziggurats",
+    "parent": "player4-area",
     "dropTarget": {
       "tiletype": "ziggurat"
     }
@@ -2290,16 +2326,18 @@
   "player4-tiles-label": {
     "type": "label",
     "text": "Draw pile:",
-    "x": 50,
-    "y": 760,
+    "x": -10,
+    "y": -25,
     "z": 155,
-    "id": "player4-tiles-label"
+    "id": "player4-tiles-label",
+    "parent": "purple-player-tiles"
   },
   "purple-player-tiles": {
     "type": "holder",
     "id": "purple-player-tiles",
-    "x": 60,
-    "y": 785,
+    "parent": "player4-area",
+    "x": 10,
+    "y": 115,
     "dropTarget": {
       "tiletype": "player"
     },
@@ -2313,16 +2351,18 @@
   "purple-player-pile": {
     "type": "pile",
     "id": "purple-player-pile",
-    "width": 103,
-    "height": 160,
+    "width": 72.309,
+    "height": 62.622,
     "z": 11809,
     "parent": "purple-player-tiles"
   },
   "purple-player-deck": {
     "type": "deck",
     "id": "purple-player-deck",
+    "parent": "purple-player-tiles",
     "x": 4,
     "y": 4,
+    "z": 10411,
     "cardTypes": {
       "purple-farmer": {
         "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/assets/purple-farmer.svg"
@@ -2371,8 +2411,6 @@
         ]
       }
     ],
-    "z": 10411,
-    "parent": "purple-player-tiles",
     "cardDefaults": {
       "tiletype": "player",
       "height": 62.622,
