@@ -1,0 +1,2315 @@
+{
+  "_meta": {
+    "version": 1,
+    "info": {
+      "name": "Babylonia",
+      "image": "",
+      "rules": "",
+      "bgg": "",
+      "year": "2019",
+      "mode": "vs",
+      "time": "60",
+      "players": "2",
+      "language": "UN",
+      "variant": "",
+      "attribution": ""
+    }
+  },
+  "board": {
+    "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/assets/map-2p.svg",
+    "movable": false,
+    "width": 912.309,
+    "height": 729.461,
+    "layer": -4,
+    "id": "board",
+    "z": 9145,
+    "x": 540,
+    "y": 140
+  },
+  "citycrop": {
+    "type": "holder",
+    "id": "citycrop",
+    "x": 1468.5,
+    "y": 222.5,
+    "dropTarget": {
+      "tiletype": "citycrop"
+    },
+    "z": 147,
+    "height": 75,
+    "width": 75,
+    "onEnter": {
+      "activeFace": 0
+    },
+    "onLeave": {
+      "activeFace": 1
+    }
+  },
+  "citycrop-button": {
+    "id": "citycrop-button",
+    "parent": "citycrop",
+    "y": -50,
+    "width": 111,
+    "height": 40,
+    "type": "button",
+    "text": "Recall & Shuffle",
+    "movableInEdit": false,
+    "clickRoutine": [
+      {
+        "func": "RECALL",
+        "holder": "citycrop"
+      },
+      {
+        "func": "FLIP",
+        "holder": "citycrop",
+        "face": 0
+      },
+      {
+        "func": "SHUFFLE",
+        "holder": "citycrop"
+      }
+    ]
+  },
+  "citycrop-deck": {
+    "type": "deck",
+    "id": "citycrop-deck",
+    "x": 4,
+    "y": 4,
+    "cardTypes": {
+      "crop-5": {
+        "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/assets/crop-5.svg"
+      },
+      "crop-6": {
+        "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/assets/crop-6.svg"
+      },
+      "crop-7": {
+        "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/assets/crop-7.svg"
+      },
+      "crop-X": {
+        "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/assets/crop-x.svg"
+      },
+      "city-pot": {
+        "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/assets/city-pot.svg"
+      },
+      "city-star": {
+        "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/assets/city-star.svg"
+      },
+      "city-crown": {
+        "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/assets/city-crown.svg"
+      },
+      "city-star-pot": {
+        "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/assets/city-star-pot.svg"
+      },
+      "city-crown-pot": {
+        "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/assets/city-crown-pot.svg"
+      },
+      "city-crown-star": {
+        "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/assets/city-crown-star.svg"
+      },
+      "city-all": {
+        "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/assets/city-all.svg"
+      }
+    },
+    "faceTemplates": [
+      {
+        "border": false,
+        "radius": false,
+        "objects": [
+          {
+            "type": "image",
+            "x": 0,
+            "y": 0,
+            "width": 72.309,
+            "height": 62.622,
+            "valueType": "static",
+            "value": "https://github.com/andypymont/vtt-games/raw/main/babylonia/assets/citycrop-back.svg",
+            "color": "transparent"
+          }
+        ]
+      },
+      {
+        "border": false,
+        "radius": false,
+        "objects": [
+          {
+            "type": "image",
+            "x": 0,
+            "y": 0,
+            "width": 72.309,
+            "height": 62.622,
+            "valueType": "dynamic",
+            "value": "image",
+            "color": "transparent"
+          }
+        ]
+      }
+    ],
+    "z": 10171,
+    "parent": "citycrop",
+    "cardDefaults": {
+      "tiletype": "citycrop",
+      "height": 62.622,
+      "width": 72.309,
+      "grid": [
+        {
+          "x": 105,
+          "y": 60.622,
+          "offsetX": 67.5,
+          "offsetY": 50,
+          "minX": 540,
+          "maxX": 1453,
+          "minY": 140,
+          "maxY": 870
+        },
+        {
+          "x": 105,
+          "y": 60.622,
+          "offsetX": 120.2,
+          "offsetY": 80.311,
+          "minX": 540,
+          "maxX": 1453,
+          "minY": 140,
+          "maxY": 870
+        }
+      ]
+    }
+  },
+  "citycrop-pile": {
+    "type": "pile",
+    "parent": "citycrop",
+    "x": 4,
+    "y": 4,
+    "width": 72.309,
+    "height": 62.622,
+    "id": "citycrop-pile"
+  },
+  "crop-5-01": {
+    "deck": "citycrop-deck",
+    "type": "card",
+    "cardType": "crop-5",
+    "id": "crop-5-01",
+    "z": 1741,
+    "parent": "citycrop-pile"
+  },
+  "crop-6-01": {
+    "deck": "citycrop-deck",
+    "type": "card",
+    "cardType": "crop-6",
+    "id": "crop-6-01",
+    "z": 5078,
+    "parent": "citycrop-pile"
+  },
+  "crop-7-01": {
+    "deck": "citycrop-deck",
+    "type": "card",
+    "cardType": "crop-7",
+    "id": "crop-7-01",
+    "z": 8638,
+    "parent": "citycrop-pile"
+  },
+  "crop-x-01": {
+    "deck": "citycrop-deck",
+    "type": "card",
+    "cardType": "crop-X",
+    "id": "crop-x-01",
+    "z": 3445,
+    "parent": "citycrop-pile"
+  },
+  "crop-x-02": {
+    "deck": "citycrop-deck",
+    "type": "card",
+    "cardType": "crop-X",
+    "id": "crop-x-02",
+    "z": 5236,
+    "parent": "citycrop-pile"
+  },
+  "crop-x-03": {
+    "deck": "citycrop-deck",
+    "type": "card",
+    "cardType": "crop-X",
+    "id": "crop-x-03",
+    "z": 2422,
+    "parent": "citycrop-pile"
+  },
+  "city-pot-01": {
+    "deck": "citycrop-deck",
+    "type": "card",
+    "cardType": "city-pot",
+    "id": "city-pot-01",
+    "z": 4486,
+    "parent": "citycrop-pile"
+  },
+  "city-pot-02": {
+    "deck": "citycrop-deck",
+    "type": "card",
+    "cardType": "city-pot",
+    "id": "city-pot-02",
+    "z": 2460,
+    "parent": "citycrop-pile"
+  },
+  "city-star-01": {
+    "deck": "citycrop-deck",
+    "type": "card",
+    "cardType": "city-star",
+    "id": "city-star-01",
+    "z": 9291,
+    "parent": "citycrop-pile"
+  },
+  "city-star-02": {
+    "deck": "citycrop-deck",
+    "type": "card",
+    "cardType": "city-star",
+    "id": "city-star-02",
+    "z": 6117,
+    "parent": "citycrop-pile"
+  },
+  "city-crown-01": {
+    "deck": "citycrop-deck",
+    "type": "card",
+    "cardType": "city-crown",
+    "id": "city-crown-01",
+    "z": 1663,
+    "parent": "citycrop-pile"
+  },
+  "city-crown-02": {
+    "deck": "citycrop-deck",
+    "type": "card",
+    "cardType": "city-crown",
+    "id": "city-crown-02",
+    "z": 3792,
+    "parent": "citycrop-pile"
+  },
+  "city-star-pot-01": {
+    "deck": "citycrop-deck",
+    "type": "card",
+    "cardType": "city-star-pot",
+    "id": "city-star-pot-01",
+    "z": 8194,
+    "parent": "citycrop-pile"
+  },
+  "city-star-pot-02": {
+    "deck": "citycrop-deck",
+    "type": "card",
+    "cardType": "city-star-pot",
+    "id": "city-star-pot-02",
+    "z": 687,
+    "parent": "citycrop-pile"
+  },
+  "city-crown-pot-01": {
+    "deck": "citycrop-deck",
+    "type": "card",
+    "cardType": "city-crown-pot",
+    "id": "city-crown-pot-01",
+    "z": 9678,
+    "parent": "citycrop-pile"
+  },
+  "city-crown-pot-02": {
+    "deck": "citycrop-deck",
+    "type": "card",
+    "cardType": "city-crown-pot",
+    "id": "city-crown-pot-02",
+    "z": 7760,
+    "parent": "citycrop-pile"
+  },
+  "city-crown-star-01": {
+    "deck": "citycrop-deck",
+    "type": "card",
+    "cardType": "city-crown-star",
+    "id": "city-crown-star-01",
+    "z": 9718,
+    "parent": "citycrop-pile"
+  },
+  "city-crown-star-02": {
+    "deck": "citycrop-deck",
+    "type": "card",
+    "cardType": "city-crown-star",
+    "id": "city-crown-star-02",
+    "z": 8240,
+    "parent": "citycrop-pile"
+  },
+  "ziggurats": {
+    "type": "holder",
+    "id": "ziggurats",
+    "x": 1470,
+    "y": 56,
+    "dropTarget": {
+      "tiletype": "ziggurat"
+    },
+    "z": 145,
+    "width": 100,
+    "height": 100,
+    "onEnter": {
+      "activeFace": 0
+    },
+    "onLeave": {
+      "activeFace": 1
+    }
+  },
+  "ziggurats-button": {
+    "id": "ziggurats-button",
+    "parent": "ziggurats",
+    "y": -50,
+    "width": 111,
+    "height": 40,
+    "type": "button",
+    "text": "Recall & Shuffle",
+    "movableInEdit": false,
+    "clickRoutine": [
+      {
+        "func": "RECALL",
+        "holder": "ziggurats"
+      },
+      {
+        "func": "FLIP",
+        "holder": "ziggurats",
+        "face": 0
+      },
+      {
+        "func": "SHUFFLE",
+        "holder": "ziggurats"
+      }
+    ]
+  },
+  "ziggurats-deck": {
+    "type": "deck",
+    "id": "ziggurats-deck",
+    "x": 4,
+    "y": 4,
+    "cardTypes": {
+      "Z1": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/babylonia/assets/ziggurat-1.svg"
+      },
+      "Z2": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/babylonia/assets/ziggurat-2.svg"
+      },
+      "Z3": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/babylonia/assets/ziggurat-3.svg"
+      },
+      "Z4": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/babylonia/assets/ziggurat-4.svg"
+      },
+      "Z5": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/babylonia/assets/ziggurat-5.svg"
+      },
+      "Z6": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/babylonia/assets/ziggurat-6.svg"
+      },
+      "Z7": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/babylonia/assets/ziggurat-7.svg"
+      },
+      "Z8": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/babylonia/assets/ziggurat-8.svg"
+      },
+      "Z9": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/babylonia/assets/ziggurat-9.svg"
+      }
+    },
+    "faceTemplates": [
+      {
+        "border": false,
+        "radius": false,
+        "objects": [
+          {
+            "type": "image",
+            "x": 0,
+            "y": 0,
+            "width": 100,
+            "height": 100,
+            "valueType": "static",
+            "value": "https://raw.githubusercontent.com/andypymont/vtt-games/main/babylonia/assets/ziggurat-back.svg",
+            "color": "transparent"
+          }
+        ]
+      },
+      {
+        "border": false,
+        "radius": false,
+        "objects": [
+          {
+            "type": "image",
+            "x": 0,
+            "y": 0,
+            "width": 100,
+            "height": 100,
+            "valueType": "dynamic",
+            "value": "image",
+            "color": "transparent"
+          }
+        ]
+      }
+    ],
+    "z": 11568,
+    "cardDefaults": {
+      "tiletype": "ziggurat",
+      "height": 100,
+      "width": 100
+    },
+    "parent": "ziggurats"
+  },
+  "ziggurats-pile": {
+    "type": "pile",
+    "parent": "ziggurats",
+    "x": 4,
+    "y": 4,
+    "width": 100,
+    "height": 100,
+    "id": "ziggurats-pile"
+  },
+  "ziggurat-01": {
+    "deck": "ziggurats-deck",
+    "type": "card",
+    "cardType": "Z1",
+    "id": "ziggurat-01",
+    "z": 11794,
+    "x": 4,
+    "y": 4,
+    "parent": "ziggurat-display-01",
+    "activeFace": 1
+  },
+  "ziggurat-02": {
+    "deck": "ziggurats-deck",
+    "type": "card",
+    "cardType": "Z2",
+    "id": "ziggurat-02",
+    "z": 11689,
+    "x": 4,
+    "y": 4,
+    "activeFace": 1,
+    "parent": "ziggurat-display-02"
+  },
+  "ziggurat-03": {
+    "deck": "ziggurats-deck",
+    "type": "card",
+    "cardType": "Z3",
+    "id": "ziggurat-03",
+    "z": 11687,
+    "x": 4,
+    "y": 4,
+    "activeFace": 1,
+    "parent": "ziggurat-display-03"
+  },
+  "ziggurat-04": {
+    "deck": "ziggurats-deck",
+    "type": "card",
+    "cardType": "Z4",
+    "id": "ziggurat-04",
+    "z": 11581,
+    "x": 4,
+    "y": 4,
+    "parent": "ziggurat-display-04",
+    "activeFace": 1
+  },
+  "ziggurat-05": {
+    "deck": "ziggurats-deck",
+    "type": "card",
+    "cardType": "Z5",
+    "id": "ziggurat-05",
+    "z": 10976,
+    "activeFace": 1,
+    "y": 4,
+    "x": 4,
+    "parent": "ziggurat-display-05"
+  },
+  "ziggurat-06": {
+    "deck": "ziggurats-deck",
+    "type": "card",
+    "cardType": "Z6",
+    "id": "ziggurat-06",
+    "z": 10198,
+    "x": 4,
+    "y": 4,
+    "activeFace": 1,
+    "parent": "ziggurat-display-06"
+  },
+  "ziggurat-07": {
+    "deck": "ziggurats-deck",
+    "type": "card",
+    "cardType": "Z7",
+    "id": "ziggurat-07",
+    "z": 11691,
+    "x": 4,
+    "y": 4,
+    "activeFace": 1,
+    "parent": "ziggurat-display-07"
+  },
+  "ziggurat-08": {
+    "deck": "ziggurats-deck",
+    "type": "card",
+    "cardType": "Z8",
+    "id": "ziggurat-08",
+    "z": 11812,
+    "parent": "ziggurats-pile"
+  },
+  "ziggurat-09": {
+    "deck": "ziggurats-deck",
+    "type": "card",
+    "cardType": "Z9",
+    "id": "ziggurat-09",
+    "z": 11296,
+    "parent": "ziggurats-pile"
+  },
+  "ziggurat-display-01": {
+    "type": "holder",
+    "x": 610,
+    "y": 10,
+    "z": 139,
+    "id": "ziggurat-display-01",
+    "height": 100,
+    "width": 100,
+    "dropTarget": {
+      "tiletype": "ziggurat"
+    }
+  },
+  "ziggurat-display-02": {
+    "type": "holder",
+    "x": 720,
+    "y": 10,
+    "z": 106,
+    "height": 100,
+    "width": 100,
+    "id": "ziggurat-display-02",
+    "dropTarget": {
+      "tiletype": "ziggurat"
+    }
+  },
+  "ziggurat-display-03": {
+    "type": "holder",
+    "x": 830,
+    "y": 10,
+    "z": 105,
+    "height": 100,
+    "width": 100,
+    "id": "ziggurat-display-03",
+    "dropTarget": {
+      "tiletype": "ziggurat"
+    }
+  },
+  "ziggurat-display-04": {
+    "type": "holder",
+    "x": 940,
+    "y": 10,
+    "z": 104,
+    "height": 100,
+    "width": 100,
+    "id": "ziggurat-display-04",
+    "dropTarget": {
+      "tiletype": "ziggurat"
+    }
+  },
+  "ziggurat-display-05": {
+    "type": "holder",
+    "x": 1050,
+    "y": 10,
+    "z": 103,
+    "height": 100,
+    "width": 100,
+    "id": "ziggurat-display-05",
+    "dropTarget": {
+      "tiletype": "ziggurat"
+    }
+  },
+  "ziggurat-display-06": {
+    "type": "holder",
+    "x": 1160,
+    "y": 10,
+    "z": 102,
+    "height": 100,
+    "width": 100,
+    "id": "ziggurat-display-06",
+    "dropTarget": {
+      "tiletype": "ziggurat"
+    }
+  },
+  "ziggurat-display-07": {
+    "type": "holder",
+    "x": 1270,
+    "y": 10,
+    "z": 142,
+    "height": 100,
+    "width": 100,
+    "id": "ziggurat-display-07",
+    "dropTarget": {
+      "tiletype": "ziggurat"
+    }
+  },
+  "player1-area": {
+    "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/assets/player-area.svg",
+    "movable": false,
+    "width": 450,
+    "height": 200,
+    "layer": -4,
+    "id": "player1-area",
+    "z": 9141,
+    "x": 50,
+    "y": 230
+  },
+  "player1-name": {
+    "type": "label",
+    "x": 185,
+    "y": 5,
+    "z": 103,
+    "id": "player1-name",
+    "parent": "player1-area",
+    "editable": true,
+    "text": "PLAYER 1",
+    "css": "font-weight:bold"
+  },
+  "player1-score-label": {
+    "type": "label",
+    "text": "Score:",
+    "x": 20,
+    "y": -20,
+    "z": 104,
+    "id": "player1-score-label",
+    "parent": "player1-score"
+  },
+  "player1-score": {
+    "type": "label",
+    "text": 0,
+    "id": "player1-score",
+    "parent": "player1-area",
+    "x": 15,
+    "y": 25,
+    "width": 140,
+    "height": 44,
+    "css": "font-size: 30px;",
+    "editable": true,
+    "z": 109
+  },
+  "player1-score-dec": {
+    "id": "player1-score-dec",
+    "parent": "player1-score",
+    "x": 4,
+    "y": -2,
+    "width": 36,
+    "height": 36,
+    "type": "button",
+    "movableInEdit": false,
+    "text": "-",
+    "clickRoutine": [
+      {
+        "func": "LABEL",
+        "label": "player1-score",
+        "mode": "dec",
+        "value": 1
+      }
+    ]
+  },
+  "player1-score-inc": {
+    "id": "player1-score-inc",
+    "parent": "player1-score",
+    "x": 100,
+    "y": -2,
+    "width": 36,
+    "height": 36,
+    "type": "button",
+    "movableInEdit": false,
+    "text": "+",
+    "clickRoutine": [
+      {
+        "func": "LABEL",
+        "label": "player1-score",
+        "mode": "inc",
+        "value": 1
+      }
+    ]
+  },
+  "player1-cities-label": {
+    "type": "label",
+    "text": "Cities:",
+    "x": -10,
+    "y": -25,
+    "z": 123,
+    "id": "player1-cities-label",
+    "parent": "player1-cities"
+  },
+  "player1-cities": {
+    "type": "holder",
+    "x": 135,
+    "y": 115,
+    "z": 73,
+    "width": 75,
+    "height": 75,
+    "id": "player1-cities",
+    "parent": "player1-area",
+    "dropTarget": {
+      "tiletype": "citycrop"
+    }
+  },
+  "player1-ziggurats-label": {
+    "type": "label",
+    "text": "Ziggurats:",
+    "x": 40,
+    "y": -25,
+    "z": 126,
+    "id": "player1-ziggurats-label",
+    "parent": "player1-ziggurats"
+  },
+  "player1-ziggurats": {
+    "type": "holder",
+    "x": 265,
+    "y": 90,
+    "z": 136,
+    "id": "player1-ziggurats",
+    "parent": "player1-area",
+    "width": 180,
+    "height": 100,
+    "stackOffsetX": -20,
+    "dropOffsetX": 80,
+    "dropTarget": {
+      "tiletype": "ziggurat"
+    }
+  },
+  "player1-tiles-label": {
+    "type": "label",
+    "text": "Draw pile:",
+    "x": -10,
+    "y": -25,
+    "z": 120,
+    "id": "player1-tiles-label",
+    "parent": "red-player-tiles"
+  },
+  "red-player-tiles": {
+    "type": "holder",
+    "id": "red-player-tiles",
+    "parent": "player1-area",
+    "x": 10,
+    "y": 115,
+    "dropTarget": {
+      "tiletype": "player"
+    },
+    "height": 75,
+    "width": 75,
+    "z": 132,
+    "onEnter": {
+      "activeFace": 0
+    }
+  },
+  "red-player-deck": {
+    "type": "deck",
+    "id": "red-player-deck",
+    "parent": "red-player-tiles",
+    "x": 4,
+    "y": 4,
+    "z": 10411,
+    "cardTypes": {
+      "red-farmer": {
+        "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/assets/red-farmer.svg"
+      },
+      "red-star": {
+        "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/assets/red-star.svg"
+      },
+      "red-crown": {
+        "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/assets/red-crown.svg"
+      },
+      "red-pot": {
+        "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/assets/red-pot.svg"
+      }
+    },
+    "faceTemplates": [
+      {
+        "border": false,
+        "radius": false,
+        "objects": [
+          {
+            "type": "image",
+            "x": 0,
+            "y": 0,
+            "width": 72.309,
+            "height": 62.622,
+            "valueType": "static",
+            "value": "https://github.com/andypymont/vtt-games/raw/main/babylonia/assets/red-back.svg",
+            "color": "transparent"
+          }
+        ]
+      },
+      {
+        "border": false,
+        "radius": false,
+        "objects": [
+          {
+            "type": "image",
+            "x": 0,
+            "y": 0,
+            "width": 72.309,
+            "height": 62.622,
+            "valueType": "dynamic",
+            "value": "image",
+            "color": "transparent"
+          }
+        ]
+      }
+    ],
+    "cardDefaults": {
+      "height": 62.622,
+      "width": 72.309,
+      "tiletype": "player",
+      "grid": [
+        {
+          "x": 105,
+          "y": 60.622,
+          "offsetX": 67.5,
+          "offsetY": 50,
+          "minX": 540,
+          "maxX": 1453,
+          "minY": 140,
+          "maxY": 870
+        },
+        {
+          "x": 105,
+          "y": 60.622,
+          "offsetX": 120.2,
+          "offsetY": 80.311,
+          "minX": 540,
+          "maxX": 1453,
+          "minY": 140,
+          "maxY": 870
+        }
+      ]
+    }
+  },
+  "red-player-pile": {
+    "type": "pile",
+    "width": 72.309,
+    "height": 62.622,
+    "id": "red-player-pile",
+    "z": 11803,
+    "parent": "red-player-tiles"
+  },
+  "red-farmer-01": {
+    "deck": "red-player-deck",
+    "type": "card",
+    "cardType": "red-farmer",
+    "id": "red-farmer-01",
+    "z": 1162,
+    "parent": "red-player-pile"
+  },
+  "red-farmer-02": {
+    "deck": "red-player-deck",
+    "type": "card",
+    "cardType": "red-farmer",
+    "id": "red-farmer-02",
+    "z": 11830,
+    "parent": "red-player-pile"
+  },
+  "red-farmer-03": {
+    "deck": "red-player-deck",
+    "type": "card",
+    "cardType": "red-farmer",
+    "id": "red-farmer-03",
+    "z": 814,
+    "parent": "red-player-pile"
+  },
+  "red-farmer-04": {
+    "deck": "red-player-deck",
+    "type": "card",
+    "cardType": "red-farmer",
+    "id": "red-farmer-04",
+    "z": 3242,
+    "parent": "red-player-pile"
+  },
+  "red-farmer-05": {
+    "deck": "red-player-deck",
+    "type": "card",
+    "cardType": "red-farmer",
+    "id": "red-farmer-05",
+    "z": 4464,
+    "parent": "red-player-pile"
+  },
+  "red-farmer-06": {
+    "deck": "red-player-deck",
+    "type": "card",
+    "cardType": "red-farmer",
+    "id": "red-farmer-06",
+    "z": 5265,
+    "parent": "red-player-pile"
+  },
+  "red-farmer-07": {
+    "deck": "red-player-deck",
+    "type": "card",
+    "cardType": "red-farmer",
+    "id": "red-farmer-07",
+    "z": 11827,
+    "parent": "red-player-pile"
+  },
+  "red-farmer-08": {
+    "deck": "red-player-deck",
+    "type": "card",
+    "cardType": "red-farmer",
+    "id": "red-farmer-08",
+    "z": 11833,
+    "parent": "red-player-pile"
+  },
+  "red-farmer-09": {
+    "deck": "red-player-deck",
+    "type": "card",
+    "cardType": "red-farmer",
+    "id": "red-farmer-09",
+    "z": 921,
+    "parent": "red-player-pile"
+  },
+  "red-farmer-10": {
+    "deck": "red-player-deck",
+    "type": "card",
+    "cardType": "red-farmer",
+    "id": "red-farmer-10",
+    "z": 6738,
+    "parent": "red-player-pile"
+  },
+  "red-farmer-11": {
+    "deck": "red-player-deck",
+    "type": "card",
+    "cardType": "red-farmer",
+    "id": "red-farmer-11",
+    "z": 4975,
+    "parent": "red-player-pile"
+  },
+  "red-farmer-12": {
+    "deck": "red-player-deck",
+    "type": "card",
+    "cardType": "red-farmer",
+    "id": "red-farmer-12",
+    "z": 3691,
+    "parent": "red-player-pile"
+  },
+  "red-star-01": {
+    "deck": "red-player-deck",
+    "type": "card",
+    "cardType": "red-star",
+    "id": "red-star-01",
+    "z": 1812,
+    "parent": "red-player-pile"
+  },
+  "red-star-02": {
+    "deck": "red-player-deck",
+    "type": "card",
+    "cardType": "red-star",
+    "id": "red-star-02",
+    "z": 4689,
+    "parent": "red-player-pile"
+  },
+  "red-star-03": {
+    "deck": "red-player-deck",
+    "type": "card",
+    "cardType": "red-star",
+    "id": "red-star-03",
+    "z": 6202,
+    "parent": "red-player-pile"
+  },
+  "red-star-04": {
+    "deck": "red-player-deck",
+    "type": "card",
+    "cardType": "red-star",
+    "id": "red-star-04",
+    "z": 6506,
+    "parent": "red-player-pile"
+  },
+  "red-star-05": {
+    "deck": "red-player-deck",
+    "type": "card",
+    "cardType": "red-star",
+    "id": "red-star-05",
+    "z": 2091,
+    "parent": "red-player-pile"
+  },
+  "red-star-06": {
+    "deck": "red-player-deck",
+    "type": "card",
+    "cardType": "red-star",
+    "id": "red-star-06",
+    "z": 7094,
+    "parent": "red-player-pile"
+  },
+  "red-crown-01": {
+    "deck": "red-player-deck",
+    "type": "card",
+    "cardType": "red-crown",
+    "id": "red-crown-01",
+    "z": 4724,
+    "parent": "red-player-pile"
+  },
+  "red-crown-02": {
+    "deck": "red-player-deck",
+    "type": "card",
+    "cardType": "red-crown",
+    "id": "red-crown-02",
+    "z": 11839,
+    "parent": "red-player-pile"
+  },
+  "red-crown-03": {
+    "deck": "red-player-deck",
+    "type": "card",
+    "cardType": "red-crown",
+    "id": "red-crown-03",
+    "z": 7249,
+    "parent": "red-player-pile"
+  },
+  "red-crown-04": {
+    "deck": "red-player-deck",
+    "type": "card",
+    "cardType": "red-crown",
+    "id": "red-crown-04",
+    "z": 11842,
+    "parent": "red-player-pile"
+  },
+  "red-crown-05": {
+    "deck": "red-player-deck",
+    "type": "card",
+    "cardType": "red-crown",
+    "id": "red-crown-05",
+    "z": 11836,
+    "parent": "red-player-pile"
+  },
+  "red-crown-06": {
+    "deck": "red-player-deck",
+    "type": "card",
+    "cardType": "red-crown",
+    "id": "red-crown-06",
+    "z": 4981,
+    "parent": "red-player-pile"
+  },
+  "red-pot-01": {
+    "deck": "red-player-deck",
+    "type": "card",
+    "cardType": "red-pot",
+    "id": "red-pot-01",
+    "z": 6854,
+    "parent": "red-player-pile"
+  },
+  "red-pot-02": {
+    "deck": "red-player-deck",
+    "type": "card",
+    "cardType": "red-pot",
+    "id": "red-pot-02",
+    "z": 7579,
+    "parent": "red-player-pile"
+  },
+  "red-pot-03": {
+    "deck": "red-player-deck",
+    "type": "card",
+    "cardType": "red-pot",
+    "id": "red-pot-03",
+    "z": 3657,
+    "parent": "red-player-pile"
+  },
+  "red-pot-04": {
+    "deck": "red-player-deck",
+    "type": "card",
+    "cardType": "red-pot",
+    "id": "red-pot-04",
+    "z": 412,
+    "parent": "red-player-pile"
+  },
+  "red-pot-05": {
+    "deck": "red-player-deck",
+    "type": "card",
+    "cardType": "red-pot",
+    "id": "red-pot-05",
+    "z": 6304,
+    "parent": "red-player-pile"
+  },
+  "red-pot-06": {
+    "deck": "red-player-deck",
+    "type": "card",
+    "cardType": "red-pot",
+    "id": "red-pot-06",
+    "z": 7363,
+    "parent": "red-player-pile"
+  },
+  "player2-area": {
+    "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/assets/player-area.svg",
+    "movable": false,
+    "width": 450,
+    "height": 200,
+    "layer": -4,
+    "z": 9142,
+    "x": 50,
+    "y": 450,
+    "id": "player2-area"
+  },
+  "player2-name": {
+    "type": "label",
+    "x": 185,
+    "y": 5,
+    "z": 102,
+    "editable": true,
+    "text": "PLAYER 2",
+    "css": "font-weight:bold",
+    "id": "player2-name",
+    "parent": "player2-area"
+  },
+  "player2-score-label": {
+    "type": "label",
+    "text": "Score:",
+    "x": 20,
+    "y": -20,
+    "z": 128,
+    "id": "player2-score-label",
+    "parent": "player2-score"
+  },
+  "player2-score": {
+    "type": "label",
+    "text": 0,
+    "id": "player2-score",
+    "parent": "player2-area",
+    "x": 15,
+    "y": 25,
+    "width": 140,
+    "height": 44,
+    "css": "font-size: 30px;",
+    "editable": true,
+    "z": 127
+  },
+  "player2-score-dec": {
+    "id": "player2-score-dec",
+    "parent": "player2-score",
+    "x": 4,
+    "y": -2,
+    "width": 36,
+    "height": 36,
+    "type": "button",
+    "movableInEdit": false,
+    "text": "-",
+    "clickRoutine": [
+      {
+        "func": "LABEL",
+        "label": "player2-score",
+        "mode": "dec",
+        "value": 1
+      }
+    ]
+  },
+  "player2-score-inc": {
+    "id": "player2-score-inc",
+    "parent": "player2-score",
+    "x": 100,
+    "y": -2,
+    "width": 36,
+    "height": 36,
+    "type": "button",
+    "movableInEdit": false,
+    "text": "+",
+    "clickRoutine": [
+      {
+        "func": "LABEL",
+        "label": "player2-score",
+        "mode": "inc",
+        "value": 1
+      }
+    ]
+  },
+  "player2-cities-label": {
+    "type": "label",
+    "text": "Cities:",
+    "x": -10,
+    "y": -25,
+    "z": 153,
+    "id": "player2-cities-label",
+    "parent": "player2-cities"
+  },
+  "player2-cities": {
+    "type": "holder",
+    "x": 135,
+    "y": 115,
+    "z": 137,
+    "id": "player2-cities",
+    "parent": "player2-area",
+    "width": 75,
+    "height": 75,
+    "dropTarget": {
+      "tiletype": "citycrop"
+    }
+  },
+  "player2-ziggurats-label": {
+    "type": "label",
+    "text": "Ziggurats:",
+    "x": 40,
+    "y": -25,
+    "z": 126,
+    "id": "player2-ziggurats-label",
+    "parent": "player2-ziggurats"
+  },
+  "player2-ziggurats": {
+    "type": "holder",
+    "x": 265,
+    "y": 90,
+    "z": 138,
+    "width": 180,
+    "height": 100,
+    "stackOffsetX": -20,
+    "dropOffsetX": 80,
+    "id": "player2-ziggurats",
+    "parent": "player2-area",
+    "dropTarget": {
+      "tiletype": "ziggurat"
+    }
+  },
+  "player2-tiles-label": {
+    "type": "label",
+    "text": "Draw pile:",
+    "x": -10,
+    "y": -25,
+    "z": 152,
+    "id": "player2-tiles-label",
+    "parent": "blue-player-tiles"
+  },
+  "blue-player-tiles": {
+    "type": "holder",
+    "id": "blue-player-tiles",
+    "parent": "player2-area",
+    "x": 10,
+    "y": 115,
+    "dropTarget": {
+      "tiletype": "player"
+    },
+    "z": 88,
+    "height": 75,
+    "width": 75,
+    "onEnter": {
+      "activeFace": 0
+    }
+  },
+  "blue-player-pile": {
+    "type": "pile",
+    "id": "blue-player-pile",
+    "width": 72.309,
+    "height": 62.622,
+    "z": 11950,
+    "parent": "blue-player-tiles"
+  },
+  "blue-player-deck": {
+    "type": "deck",
+    "id": "blue-player-deck",
+    "parent": "blue-player-tiles",
+    "x": 4,
+    "y": 4,
+    "z": 11582,
+    "cardTypes": {
+      "blue-farmer": {
+        "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/assets/blue-farmer.svg"
+      },
+      "blue-star": {
+        "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/assets/blue-star.svg"
+      },
+      "blue-crown": {
+        "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/assets/blue-crown.svg"
+      },
+      "blue-pot": {
+        "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/assets/blue-pot.svg"
+      }
+    },
+    "faceTemplates": [
+      {
+        "border": false,
+        "radius": false,
+        "objects": [
+          {
+            "type": "image",
+            "x": 0,
+            "y": 0,
+            "width": 72.309,
+            "height": 62.622,
+            "valueType": "static",
+            "value": "https://github.com/andypymont/vtt-games/raw/main/babylonia/assets/blue-back.svg",
+            "color": "transparent"
+          }
+        ]
+      },
+      {
+        "border": false,
+        "radius": false,
+        "objects": [
+          {
+            "type": "image",
+            "x": 0,
+            "y": 0,
+            "width": 72.309,
+            "height": 62.622,
+            "valueType": "dynamic",
+            "value": "image",
+            "color": "transparent"
+          }
+        ]
+      }
+    ],
+    "cardDefaults": {
+      "tiletype": "player",
+      "height": 62.622,
+      "width": 72.309,
+      "grid": [
+        {
+          "x": 105,
+          "y": 60.622,
+          "offsetX": 67.5,
+          "offsetY": 50,
+          "minX": 540,
+          "maxX": 1453,
+          "minY": 140,
+          "maxY": 870
+        },
+        {
+          "x": 105,
+          "y": 60.622,
+          "offsetX": 120.2,
+          "offsetY": 80.311,
+          "minX": 540,
+          "maxX": 1453,
+          "minY": 140,
+          "maxY": 870
+        }
+      ]
+    }
+  },
+  "blue-farmer-01": {
+    "deck": "blue-player-deck",
+    "type": "card",
+    "cardType": "blue-farmer",
+    "id": "blue-farmer-01",
+    "z": 4198,
+    "parent": "blue-player-pile"
+  },
+  "blue-farmer-02": {
+    "deck": "blue-player-deck",
+    "type": "card",
+    "cardType": "blue-farmer",
+    "id": "blue-farmer-02",
+    "z": 11967,
+    "parent": "blue-player-pile"
+  },
+  "blue-farmer-03": {
+    "deck": "blue-player-deck",
+    "type": "card",
+    "cardType": "blue-farmer",
+    "id": "blue-farmer-03",
+    "z": 4511,
+    "parent": "blue-player-pile"
+  },
+  "blue-farmer-04": {
+    "deck": "blue-player-deck",
+    "type": "card",
+    "cardType": "blue-farmer",
+    "id": "blue-farmer-04",
+    "z": 8474,
+    "parent": "blue-player-pile"
+  },
+  "blue-farmer-05": {
+    "deck": "blue-player-deck",
+    "type": "card",
+    "cardType": "blue-farmer",
+    "id": "blue-farmer-05",
+    "z": 11973,
+    "parent": "blue-player-pile"
+  },
+  "blue-farmer-06": {
+    "deck": "blue-player-deck",
+    "type": "card",
+    "cardType": "blue-farmer",
+    "id": "blue-farmer-06",
+    "z": 2063,
+    "parent": "blue-player-pile"
+  },
+  "blue-farmer-07": {
+    "deck": "blue-player-deck",
+    "type": "card",
+    "cardType": "blue-farmer",
+    "id": "blue-farmer-07",
+    "z": 6729,
+    "parent": "blue-player-pile"
+  },
+  "blue-farmer-08": {
+    "deck": "blue-player-deck",
+    "type": "card",
+    "cardType": "blue-farmer",
+    "id": "blue-farmer-08",
+    "z": 705,
+    "parent": "blue-player-pile"
+  },
+  "blue-farmer-09": {
+    "deck": "blue-player-deck",
+    "type": "card",
+    "cardType": "blue-farmer",
+    "id": "blue-farmer-09",
+    "z": 4779,
+    "parent": "blue-player-pile"
+  },
+  "blue-farmer-10": {
+    "deck": "blue-player-deck",
+    "type": "card",
+    "cardType": "blue-farmer",
+    "id": "blue-farmer-10",
+    "z": 11970,
+    "parent": "blue-player-pile"
+  },
+  "blue-farmer-11": {
+    "deck": "blue-player-deck",
+    "type": "card",
+    "cardType": "blue-farmer",
+    "id": "blue-farmer-11",
+    "z": 11964,
+    "parent": "blue-player-pile"
+  },
+  "blue-farmer-12": {
+    "deck": "blue-player-deck",
+    "type": "card",
+    "cardType": "blue-farmer",
+    "id": "blue-farmer-12",
+    "z": 1723,
+    "parent": "blue-player-pile"
+  },
+  "blue-star-01": {
+    "deck": "blue-player-deck",
+    "type": "card",
+    "cardType": "blue-star",
+    "id": "blue-star-01",
+    "z": 4374,
+    "parent": "blue-player-pile"
+  },
+  "blue-star-02": {
+    "deck": "blue-player-deck",
+    "type": "card",
+    "cardType": "blue-star",
+    "id": "blue-star-02",
+    "z": 1576,
+    "parent": "blue-player-pile"
+  },
+  "blue-star-03": {
+    "deck": "blue-player-deck",
+    "type": "card",
+    "cardType": "blue-star",
+    "id": "blue-star-03",
+    "z": 8300,
+    "parent": "blue-player-pile"
+  },
+  "blue-star-04": {
+    "deck": "blue-player-deck",
+    "type": "card",
+    "cardType": "blue-star",
+    "id": "blue-star-04",
+    "z": 97,
+    "parent": "blue-player-pile"
+  },
+  "blue-star-05": {
+    "deck": "blue-player-deck",
+    "type": "card",
+    "cardType": "blue-star",
+    "id": "blue-star-05",
+    "z": 11955,
+    "parent": "blue-player-pile"
+  },
+  "blue-star-06": {
+    "deck": "blue-player-deck",
+    "type": "card",
+    "cardType": "blue-star",
+    "id": "blue-star-06",
+    "z": 4915,
+    "parent": "blue-player-pile"
+  },
+  "blue-crown-01": {
+    "deck": "blue-player-deck",
+    "type": "card",
+    "cardType": "blue-crown",
+    "id": "blue-crown-01",
+    "z": 3526,
+    "parent": "blue-player-pile"
+  },
+  "blue-crown-02": {
+    "deck": "blue-player-deck",
+    "type": "card",
+    "cardType": "blue-crown",
+    "id": "blue-crown-02",
+    "z": 3219,
+    "parent": "blue-player-pile"
+  },
+  "blue-crown-03": {
+    "deck": "blue-player-deck",
+    "type": "card",
+    "cardType": "blue-crown",
+    "id": "blue-crown-03",
+    "z": 11976,
+    "parent": "blue-player-pile"
+  },
+  "blue-crown-04": {
+    "deck": "blue-player-deck",
+    "type": "card",
+    "cardType": "blue-crown",
+    "id": "blue-crown-04",
+    "z": 5662,
+    "parent": "blue-player-pile"
+  },
+  "blue-crown-05": {
+    "deck": "blue-player-deck",
+    "type": "card",
+    "cardType": "blue-crown",
+    "id": "blue-crown-05",
+    "z": 3022,
+    "parent": "blue-player-pile"
+  },
+  "blue-crown-06": {
+    "deck": "blue-player-deck",
+    "type": "card",
+    "cardType": "blue-crown",
+    "id": "blue-crown-06",
+    "z": 5167,
+    "parent": "blue-player-pile"
+  },
+  "blue-pot-01": {
+    "deck": "blue-player-deck",
+    "type": "card",
+    "cardType": "blue-pot",
+    "id": "blue-pot-01",
+    "z": 7445,
+    "parent": "blue-player-pile"
+  },
+  "blue-pot-02": {
+    "deck": "blue-player-deck",
+    "type": "card",
+    "cardType": "blue-pot",
+    "id": "blue-pot-02",
+    "z": 2773,
+    "parent": "blue-player-pile"
+  },
+  "blue-pot-03": {
+    "deck": "blue-player-deck",
+    "type": "card",
+    "cardType": "blue-pot",
+    "id": "blue-pot-03",
+    "z": 11961,
+    "parent": "blue-player-pile"
+  },
+  "blue-pot-04": {
+    "deck": "blue-player-deck",
+    "type": "card",
+    "cardType": "blue-pot",
+    "id": "blue-pot-04",
+    "z": 4562,
+    "parent": "blue-player-pile"
+  },
+  "blue-pot-05": {
+    "deck": "blue-player-deck",
+    "type": "card",
+    "cardType": "blue-pot",
+    "id": "blue-pot-05",
+    "z": 11958,
+    "parent": "blue-player-pile"
+  },
+  "blue-pot-06": {
+    "deck": "blue-player-deck",
+    "type": "card",
+    "cardType": "blue-pot",
+    "id": "blue-pot-06",
+    "z": 6929,
+    "parent": "blue-player-pile"
+  },
+  "yellow-player-tiles": {
+    "type": "holder",
+    "id": "yellow-player-tiles",
+    "x": 185,
+    "y": 10,
+    "z": 93,
+    "dropTarget": {
+      "tiletype": "player"
+    },
+    "height": 75,
+    "width": 75,
+    "onEnter": {
+      "activeFace": 0
+    }
+  },
+  "yellow-player-pile": {
+    "type": "pile",
+    "id": "yellow-player-pile",
+    "parent": "yellow-player-tiles",
+    "width": 72.309,
+    "height": 62.622,
+    "z": 11807
+  },
+  "yellow-player-deck": {
+    "type": "deck",
+    "id": "yellow-player-deck",
+    "parent": "yellow-player-tiles",
+    "x": 4,
+    "y": 4,
+    "cardTypes": {
+      "yellow-farmer": {
+        "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/assets/yellow-farmer.svg"
+      },
+      "yellow-star": {
+        "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/assets/yellow-star.svg"
+      },
+      "yellow-crown": {
+        "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/assets/yellow-crown.svg"
+      },
+      "yellow-pot": {
+        "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/assets/yellow-pot.svg"
+      }
+    },
+    "faceTemplates": [
+      {
+        "border": false,
+        "radius": false,
+        "objects": [
+          {
+            "type": "image",
+            "x": 0,
+            "y": 0,
+            "width": 72.309,
+            "height": 62.622,
+            "valueType": "static",
+            "value": "https://github.com/andypymont/vtt-games/raw/main/babylonia/assets/yellow-back.svg",
+            "color": "transparent"
+          }
+        ]
+      },
+      {
+        "border": false,
+        "radius": false,
+        "objects": [
+          {
+            "type": "image",
+            "x": 0,
+            "y": 0,
+            "width": 72.309,
+            "height": 62.622,
+            "valueType": "dynamic",
+            "value": "image",
+            "color": "transparent"
+          }
+        ]
+      }
+    ],
+    "z": 11977,
+    "cardDefaults": {
+      "tiletype": "player",
+      "height": 62.622,
+      "width": 72.309,
+      "grid": [
+        {
+          "x": 105,
+          "y": 60.622,
+          "offsetX": 67.5,
+          "offsetY": 50,
+          "minX": 540,
+          "maxX": 1453,
+          "minY": 140,
+          "maxY": 870
+        },
+        {
+          "x": 105,
+          "y": 60.622,
+          "offsetX": 120.2,
+          "offsetY": 80.311,
+          "minX": 540,
+          "maxX": 1453,
+          "minY": 140,
+          "maxY": 870
+        }
+      ]
+    }
+  },
+  "yellow-farmer-01": {
+    "deck": "yellow-player-deck",
+    "type": "card",
+    "cardType": "yellow-farmer",
+    "id": "yellow-farmer-01",
+    "z": 6281,
+    "parent": "yellow-player-pile"
+  },
+  "yellow-farmer-02": {
+    "deck": "yellow-player-deck",
+    "type": "card",
+    "cardType": "yellow-farmer",
+    "id": "yellow-farmer-02",
+    "z": 8858,
+    "parent": "yellow-player-pile"
+  },
+  "yellow-farmer-03": {
+    "deck": "yellow-player-deck",
+    "type": "card",
+    "cardType": "yellow-farmer",
+    "id": "yellow-farmer-03",
+    "z": 5217,
+    "parent": "yellow-player-pile"
+  },
+  "yellow-farmer-04": {
+    "deck": "yellow-player-deck",
+    "type": "card",
+    "cardType": "yellow-farmer",
+    "id": "yellow-farmer-04",
+    "z": 12041,
+    "parent": "yellow-player-pile"
+  },
+  "yellow-farmer-05": {
+    "deck": "yellow-player-deck",
+    "type": "card",
+    "cardType": "yellow-farmer",
+    "id": "yellow-farmer-05",
+    "z": 5653,
+    "parent": "yellow-player-pile"
+  },
+  "yellow-farmer-06": {
+    "deck": "yellow-player-deck",
+    "type": "card",
+    "cardType": "yellow-farmer",
+    "id": "yellow-farmer-06",
+    "z": 9064,
+    "parent": "yellow-player-pile"
+  },
+  "yellow-farmer-07": {
+    "deck": "yellow-player-deck",
+    "type": "card",
+    "cardType": "yellow-farmer",
+    "id": "yellow-farmer-07",
+    "z": 12047,
+    "parent": "yellow-player-pile"
+  },
+  "yellow-farmer-08": {
+    "deck": "yellow-player-deck",
+    "type": "card",
+    "cardType": "yellow-farmer",
+    "id": "yellow-farmer-08",
+    "z": 2135,
+    "parent": "yellow-player-pile"
+  },
+  "yellow-farmer-09": {
+    "deck": "yellow-player-deck",
+    "type": "card",
+    "cardType": "yellow-farmer",
+    "id": "yellow-farmer-09",
+    "z": 1137,
+    "parent": "yellow-player-pile"
+  },
+  "yellow-farmer-10": {
+    "deck": "yellow-player-deck",
+    "type": "card",
+    "cardType": "yellow-farmer",
+    "id": "yellow-farmer-10",
+    "z": 3022,
+    "parent": "yellow-player-pile"
+  },
+  "yellow-farmer-11": {
+    "deck": "yellow-player-deck",
+    "type": "card",
+    "cardType": "yellow-farmer",
+    "id": "yellow-farmer-11",
+    "z": 1999,
+    "parent": "yellow-player-pile"
+  },
+  "yellow-farmer-12": {
+    "deck": "yellow-player-deck",
+    "type": "card",
+    "cardType": "yellow-farmer",
+    "id": "yellow-farmer-12",
+    "z": 5001,
+    "parent": "yellow-player-pile"
+  },
+  "yellow-star-01": {
+    "deck": "yellow-player-deck",
+    "type": "card",
+    "cardType": "yellow-star",
+    "id": "yellow-star-01",
+    "z": 8282,
+    "parent": "yellow-player-pile"
+  },
+  "yellow-star-02": {
+    "deck": "yellow-player-deck",
+    "type": "card",
+    "cardType": "yellow-star",
+    "id": "yellow-star-02",
+    "z": 9177,
+    "parent": "yellow-player-pile"
+  },
+  "yellow-star-03": {
+    "deck": "yellow-player-deck",
+    "type": "card",
+    "cardType": "yellow-star",
+    "id": "yellow-star-03",
+    "z": 5829,
+    "parent": "yellow-player-pile"
+  },
+  "yellow-star-04": {
+    "deck": "yellow-player-deck",
+    "type": "card",
+    "cardType": "yellow-star",
+    "id": "yellow-star-04",
+    "z": 2821,
+    "parent": "yellow-player-pile"
+  },
+  "yellow-star-05": {
+    "deck": "yellow-player-deck",
+    "type": "card",
+    "cardType": "yellow-star",
+    "id": "yellow-star-05",
+    "z": 7249,
+    "parent": "yellow-player-pile"
+  },
+  "yellow-star-06": {
+    "deck": "yellow-player-deck",
+    "type": "card",
+    "cardType": "yellow-star",
+    "id": "yellow-star-06",
+    "z": 12038,
+    "parent": "yellow-player-pile"
+  },
+  "yellow-crown-01": {
+    "deck": "yellow-player-deck",
+    "type": "card",
+    "cardType": "yellow-crown",
+    "id": "yellow-crown-01",
+    "z": 6386,
+    "parent": "yellow-player-pile"
+  },
+  "yellow-crown-02": {
+    "deck": "yellow-player-deck",
+    "type": "card",
+    "cardType": "yellow-crown",
+    "id": "yellow-crown-02",
+    "z": 7165,
+    "parent": "yellow-player-pile"
+  },
+  "yellow-crown-03": {
+    "deck": "yellow-player-deck",
+    "type": "card",
+    "cardType": "yellow-crown",
+    "id": "yellow-crown-03",
+    "z": 12044,
+    "parent": "yellow-player-pile"
+  },
+  "yellow-crown-04": {
+    "deck": "yellow-player-deck",
+    "type": "card",
+    "cardType": "yellow-crown",
+    "id": "yellow-crown-04",
+    "z": 8862,
+    "parent": "yellow-player-pile"
+  },
+  "yellow-crown-05": {
+    "deck": "yellow-player-deck",
+    "type": "card",
+    "cardType": "yellow-crown",
+    "id": "yellow-crown-05",
+    "z": 2863,
+    "parent": "yellow-player-pile"
+  },
+  "yellow-crown-06": {
+    "deck": "yellow-player-deck",
+    "type": "card",
+    "cardType": "yellow-crown",
+    "id": "yellow-crown-06",
+    "z": 497,
+    "parent": "yellow-player-pile"
+  },
+  "yellow-pot-01": {
+    "deck": "yellow-player-deck",
+    "type": "card",
+    "cardType": "yellow-pot",
+    "id": "yellow-pot-01",
+    "z": 4064,
+    "parent": "yellow-player-pile"
+  },
+  "yellow-pot-02": {
+    "deck": "yellow-player-deck",
+    "type": "card",
+    "cardType": "yellow-pot",
+    "id": "yellow-pot-02",
+    "z": 2965,
+    "parent": "yellow-player-pile"
+  },
+  "yellow-pot-03": {
+    "deck": "yellow-player-deck",
+    "type": "card",
+    "cardType": "yellow-pot",
+    "id": "yellow-pot-03",
+    "z": 215,
+    "parent": "yellow-player-pile"
+  },
+  "yellow-pot-04": {
+    "deck": "yellow-player-deck",
+    "type": "card",
+    "cardType": "yellow-pot",
+    "id": "yellow-pot-04",
+    "z": 4107,
+    "parent": "yellow-player-pile"
+  },
+  "yellow-pot-05": {
+    "deck": "yellow-player-deck",
+    "type": "card",
+    "cardType": "yellow-pot",
+    "id": "yellow-pot-05",
+    "z": 12035,
+    "parent": "yellow-player-pile"
+  },
+  "yellow-pot-06": {
+    "deck": "yellow-player-deck",
+    "type": "card",
+    "cardType": "yellow-pot",
+    "id": "yellow-pot-06",
+    "z": 1824,
+    "parent": "yellow-player-pile"
+  },
+  "purple-player-tiles": {
+    "type": "holder",
+    "id": "purple-player-tiles",
+    "x": 60,
+    "y": 10,
+    "dropTarget": {
+      "tiletype": "player"
+    },
+    "z": 91,
+    "height": 75,
+    "width": 75,
+    "onEnter": {
+      "activeFace": 0
+    }
+  },
+  "purple-player-pile": {
+    "type": "pile",
+    "id": "purple-player-pile",
+    "width": 72.309,
+    "height": 62.622,
+    "z": 11809,
+    "parent": "purple-player-tiles"
+  },
+  "purple-player-deck": {
+    "type": "deck",
+    "id": "purple-player-deck",
+    "parent": "purple-player-tiles",
+    "x": 4,
+    "y": 4,
+    "z": 10411,
+    "cardTypes": {
+      "purple-farmer": {
+        "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/assets/purple-farmer.svg"
+      },
+      "purple-star": {
+        "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/assets/purple-star.svg"
+      },
+      "purple-crown": {
+        "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/assets/purple-crown.svg"
+      },
+      "purple-pot": {
+        "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/assets/purple-pot.svg"
+      }
+    },
+    "faceTemplates": [
+      {
+        "border": false,
+        "radius": false,
+        "objects": [
+          {
+            "type": "image",
+            "x": 0,
+            "y": 0,
+            "width": 72.309,
+            "height": 62.622,
+            "valueType": "static",
+            "value": "https://github.com/andypymont/vtt-games/raw/main/babylonia/assets/purple-back.svg",
+            "color": "transparent"
+          }
+        ]
+      },
+      {
+        "border": false,
+        "radius": false,
+        "objects": [
+          {
+            "type": "image",
+            "x": 0,
+            "y": 0,
+            "width": 72.309,
+            "height": 62.622,
+            "valueType": "dynamic",
+            "value": "image",
+            "color": "transparent"
+          }
+        ]
+      }
+    ],
+    "cardDefaults": {
+      "tiletype": "player",
+      "height": 62.622,
+      "width": 72.309,
+      "grid": [
+        {
+          "x": 105,
+          "y": 60.622,
+          "offsetX": 67.5,
+          "offsetY": 50,
+          "minX": 540,
+          "maxX": 1453,
+          "minY": 140,
+          "maxY": 870
+        },
+        {
+          "x": 105,
+          "y": 60.622,
+          "offsetX": 120.2,
+          "offsetY": 80.311,
+          "minX": 540,
+          "maxX": 1453,
+          "minY": 140,
+          "maxY": 870
+        }
+      ]
+    }
+  },
+  "purple-farmer-01": {
+    "deck": "purple-player-deck",
+    "type": "card",
+    "cardType": "purple-farmer",
+    "id": "purple-farmer-01",
+    "z": 4970,
+    "parent": "purple-player-pile"
+  },
+  "purple-farmer-02": {
+    "deck": "purple-player-deck",
+    "type": "card",
+    "cardType": "purple-farmer",
+    "id": "purple-farmer-02",
+    "z": 912,
+    "parent": "purple-player-pile"
+  },
+  "purple-farmer-03": {
+    "deck": "purple-player-deck",
+    "type": "card",
+    "cardType": "purple-farmer",
+    "id": "purple-farmer-03",
+    "z": 4714,
+    "parent": "purple-player-pile"
+  },
+  "purple-farmer-04": {
+    "deck": "purple-player-deck",
+    "type": "card",
+    "cardType": "purple-farmer",
+    "id": "purple-farmer-04",
+    "z": 12026,
+    "parent": "purple-player-pile"
+  },
+  "purple-farmer-05": {
+    "deck": "purple-player-deck",
+    "type": "card",
+    "cardType": "purple-farmer",
+    "id": "purple-farmer-05",
+    "z": 3294,
+    "parent": "purple-player-pile"
+  },
+  "purple-farmer-06": {
+    "deck": "purple-player-deck",
+    "type": "card",
+    "cardType": "purple-farmer",
+    "id": "purple-farmer-06",
+    "z": 1245,
+    "parent": "purple-player-pile"
+  },
+  "purple-farmer-07": {
+    "deck": "purple-player-deck",
+    "type": "card",
+    "cardType": "purple-farmer",
+    "id": "purple-farmer-07",
+    "z": 3709,
+    "parent": "purple-player-pile"
+  },
+  "purple-farmer-08": {
+    "deck": "purple-player-deck",
+    "type": "card",
+    "cardType": "purple-farmer",
+    "id": "purple-farmer-08",
+    "z": 12029,
+    "parent": "purple-player-pile"
+  },
+  "purple-farmer-09": {
+    "deck": "purple-player-deck",
+    "type": "card",
+    "cardType": "purple-farmer",
+    "id": "purple-farmer-09",
+    "z": 12011,
+    "parent": "purple-player-pile"
+  },
+  "purple-farmer-10": {
+    "deck": "purple-player-deck",
+    "type": "card",
+    "cardType": "purple-farmer",
+    "id": "purple-farmer-10",
+    "z": 12014,
+    "parent": "purple-player-pile"
+  },
+  "purple-farmer-11": {
+    "deck": "purple-player-deck",
+    "type": "card",
+    "cardType": "purple-farmer",
+    "id": "purple-farmer-11",
+    "z": 12017,
+    "parent": "purple-player-pile"
+  },
+  "purple-farmer-12": {
+    "deck": "purple-player-deck",
+    "type": "card",
+    "cardType": "purple-farmer",
+    "id": "purple-farmer-12",
+    "z": 383,
+    "parent": "purple-player-pile"
+  },
+  "purple-star-01": {
+    "deck": "purple-player-deck",
+    "type": "card",
+    "cardType": "purple-star",
+    "id": "purple-star-01",
+    "parent": "purple-player-pile"
+  },
+  "purple-star-02": {
+    "deck": "purple-player-deck",
+    "type": "card",
+    "cardType": "purple-star",
+    "id": "purple-star-02",
+    "z": 3735,
+    "parent": "purple-player-pile"
+  },
+  "purple-star-03": {
+    "deck": "purple-player-deck",
+    "type": "card",
+    "cardType": "purple-star",
+    "id": "purple-star-03",
+    "z": 12005,
+    "parent": "purple-player-pile"
+  },
+  "purple-star-04": {
+    "deck": "purple-player-deck",
+    "type": "card",
+    "cardType": "purple-star",
+    "id": "purple-star-04",
+    "z": 12002,
+    "parent": "purple-player-pile"
+  },
+  "purple-star-05": {
+    "deck": "purple-player-deck",
+    "type": "card",
+    "cardType": "purple-star",
+    "id": "purple-star-05",
+    "z": 12008,
+    "parent": "purple-player-pile"
+  },
+  "purple-star-06": {
+    "deck": "purple-player-deck",
+    "type": "card",
+    "cardType": "purple-star",
+    "id": "purple-star-06",
+    "z": 12023,
+    "parent": "purple-player-pile"
+  },
+  "purple-crown-01": {
+    "deck": "purple-player-deck",
+    "type": "card",
+    "cardType": "purple-crown",
+    "id": "purple-crown-01",
+    "z": 606,
+    "parent": "purple-player-pile"
+  },
+  "purple-crown-02": {
+    "deck": "purple-player-deck",
+    "type": "card",
+    "cardType": "purple-crown",
+    "id": "purple-crown-02",
+    "z": 12032,
+    "parent": "purple-player-pile"
+  },
+  "purple-crown-03": {
+    "deck": "purple-player-deck",
+    "type": "card",
+    "cardType": "purple-crown",
+    "id": "purple-crown-03",
+    "z": 387,
+    "parent": "purple-player-pile"
+  },
+  "purple-crown-04": {
+    "deck": "purple-player-deck",
+    "type": "card",
+    "cardType": "purple-crown",
+    "id": "purple-crown-04",
+    "z": 1094,
+    "parent": "purple-player-pile"
+  },
+  "purple-crown-05": {
+    "deck": "purple-player-deck",
+    "type": "card",
+    "cardType": "purple-crown",
+    "id": "purple-crown-05",
+    "z": 813,
+    "parent": "purple-player-pile"
+  },
+  "purple-crown-06": {
+    "deck": "purple-player-deck",
+    "type": "card",
+    "cardType": "purple-crown",
+    "id": "purple-crown-06",
+    "z": 3335,
+    "parent": "purple-player-pile"
+  },
+  "purple-pot-01": {
+    "deck": "purple-player-deck",
+    "type": "card",
+    "cardType": "purple-pot",
+    "id": "purple-pot-01",
+    "z": 3645,
+    "parent": "purple-player-pile"
+  },
+  "purple-pot-02": {
+    "deck": "purple-player-deck",
+    "type": "card",
+    "cardType": "purple-pot",
+    "id": "purple-pot-02",
+    "z": 1623,
+    "parent": "purple-player-pile"
+  },
+  "purple-pot-03": {
+    "deck": "purple-player-deck",
+    "type": "card",
+    "cardType": "purple-pot",
+    "id": "purple-pot-03",
+    "z": 4943,
+    "parent": "purple-player-pile"
+  },
+  "purple-pot-04": {
+    "deck": "purple-player-deck",
+    "type": "card",
+    "cardType": "purple-pot",
+    "id": "purple-pot-04",
+    "z": 70,
+    "parent": "purple-player-pile"
+  },
+  "purple-pot-05": {
+    "deck": "purple-player-deck",
+    "type": "card",
+    "cardType": "purple-pot",
+    "id": "purple-pot-05",
+    "z": 5076,
+    "parent": "purple-player-pile"
+  },
+  "purple-pot-06": {
+    "deck": "purple-player-deck",
+    "type": "card",
+    "cardType": "purple-pot",
+    "id": "purple-pot-06",
+    "z": 12020,
+    "parent": "purple-player-pile"
+  },
+  "hand-area": {
+    "type": "holder",
+    "onEnter": {
+      "activeFace": 1
+    },
+    "onLeave": {
+      "activeFace": 0
+    },
+    "dropOffsetX": 10,
+    "dropOffsetY": 14,
+    "stackOffsetX": 40,
+    "childrenPerOwner": true,
+    "x": 49,
+    "y": 887,
+    "width": 400,
+    "height": 100,
+    "id": "hand-area",
+    "z": 144,
+    "dropTarget": {
+      "tiletype": "player"
+    }
+  }
+}
