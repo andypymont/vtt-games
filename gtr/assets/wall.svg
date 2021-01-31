@@ -14,7 +14,7 @@
         height="86"
         style="
             fill:#777777;
-            stroke:black;
+            stroke:#000000;
             stroke-width:1px
         "
     />
