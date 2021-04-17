@@ -1,0 +1,146 @@
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="400px"
+    height="400px"
+    viewbox="0 0 400 400"
+>
+    <g transform="rotate(90,40,40)">
+        <rect
+            x="0"
+            y="0"
+            width="80"
+            height="80"
+            style="fill:#ffa500;stroke-width:2px;stroke:#555555"
+        />
+        <path
+            d="m 28.74,30.32 v -2.43 l -0.94,-5.18 -0.94,-5.18 -0.41,-0.19 c -0.6,-0.27 -1.19,-0.87 -1.46,-1.48 -0.55,-1.2 -0.22,-2.73 0.76,-3.54 1.56,-1.28 3.8,-0.8 4.69,1 0.2,0.42 0.23,0.55 0.26,1.12 0.02,0.51 0,0.74 -0.11,1.07 -0.13,0.4 -0.52,1.08 -0.73,1.25 -0.08,0.07 0.3,0.36 2.18,1.71 1.25,0.9 2.31,1.62 2.35,1.61 0.04,-0.01 0.72,-1.33 1.51,-2.93 l 1.45,-2.9 -0.32,-0.24 c -0.42,-0.31 -0.76,-0.74 -1,-1.24 -0.17,-0.37 -0.19,-0.47 -0.19,-1.19 0,-0.74 0.01,-0.81 0.22,-1.24 0.52,-1.1 1.54,-1.76 2.71,-1.76 0.27,0 0.63,0.04 0.79,0.08 0.83,0.22 1.6,0.87 1.98,1.68 0.21,0.43 0.22,0.5 0.22,1.24 0,0.74 -0.01,0.81 -0.21,1.22 -0.24,0.5 -0.66,1.01 -1.01,1.23 -0.13,0.08 -0.24,0.18 -0.23,0.23 0,0.06 2.1,4.31 2.78,5.61 l 0.15,0.29 0.63,-0.46 c 0.35,-0.25 1.37,-0.99 2.28,-1.63 0.91,-0.64 1.65,-1.19 1.65,-1.21 0,-0.02 -0.14,-0.22 -0.31,-0.45 -0.43,-0.58 -0.6,-1.17 -0.57,-1.98 0.02,-0.52 0.06,-0.7 0.24,-1.07 1.1,-2.33 4.34,-2.34 5.48,-0.02 0.21,0.44 0.22,0.5 0.23,1.25 0,0.77 0.00,0.80 -0.25,1.29 -0.32,0.64 -0.81,1.15 -1.41,1.43 l -0.45,0.21 -0.94,5.18 -0.94,5.18 v 2.43 2.43 0 h -12.47 l -7.68,-0.11 z m 18.16,-0.6 v -0.99 h -8.09 -8.09 v 0.99 l 0.04,1.03 8.05,-0.04 h 8.1 z m 0.2,-3.38 c 0.03,-0.2 0.35,-1.89 0.69,-3.76 0.34,-1.87 0.63,-3.45 0.64,-3.52 0.02,-0.07 0.01,-0.12 -0.02,-0.12 -0.02,0 -1.16,0.8 -2.52,1.77 -1.36,0.97 -2.51,1.76 -2.55,1.74 -0.04,-0.02 -0.37,-0.1 -0.74,-0.19 l -0.67,-0.16 -1.54,-3.11 c -0.85,-1.71 -1.56,-3.11 -1.58,-3.11 -0.02,0 -0.73,1.4 -1.58,3.11 l -1.54,3.11 -0.75,0.18 -0.75,0.18 -2.49,-1.78 c -1.37,-0.98 -2.5,-1.76 -2.51,-1.75 -0.01,0.01 0.29,1.76 0.68,3.87 0.39,2.11 0.7,3.85 0.7,3.86 0,0.01 3.7,0.02 8.23,0.02 h 8.23 z m -18.95,-10.83 c 0.35,-0.14 0.55,-0.48 0.55,-0.9 0,-0.57 -0.39,-0.98 -0.94,-0.99 -0.8,-0.01 -1.29,0.75 -0.92,1.44 0.26,0.49 0.78,0.67 1.31,0.46 z m 22.34,-0.1 c 0.27,-0.19 0.45,-0.67 0.39,-1.01 -0.1,-0.52 -0.72,-0.9 -1.24,-0.76 -0.89,0.24 -1.02,1.44 -0.21,1.85 0.29,0.15 0.79,0.11 1.06,-0.08 z m -11.15,-2.99 c 0.46,-0.33 0.58,-0.79 0.35,-1.27 -0.27,-0.56 -0.86,-0.73 -1.4,-0.41 -0.7,0.41 -0.62,1.44 0.14,1.78 0.25,0.11 0.69,0.07 0.92,-0.1 z"
+            style="fill:#000000;stroke:none"
+        />
+        <text
+            x="40"
+            y="55"
+            text-anchor="middle"
+            style="dominant-baseline:middle;font:16px sans-serif;fill:#000000"
+        >x100</text>
+    </g>
+    <g transform="translate(0,80) rotate(90,40,40)">
+        <rect
+            x="0"
+            y="0"
+            width="80"
+            height="80"
+            style="fill:#0099ff;stroke-width:2px;stroke:#555555"
+        />
+        <text
+            x="40"
+            y="40"
+            text-anchor="middle"
+            style="dominant-baseline:middle;font:16px sans-serif"
+        >BLUE</text>
+    </g>
+    <g transform="translate(0,160) rotate(90,40,40)">
+        <rect
+            x="0"
+            y="0"
+            width="80"
+            height="80"
+            style="fill:#ff2200;stroke-width:2px;stroke:#555555"
+        />
+        <text
+            x="40"
+            y="40"
+            text-anchor="middle"
+            style="dominant-baseline:middle;font:16px sans-serif"
+        >RED</text>
+    </g>
+    <g transform="translate(0,240) rotate(90,40,40)">
+        <rect
+            x="0"
+            y="0"
+            width="80"
+            height="80"
+            style="fill:#00ff33;stroke-width:2px;stroke:#555555"
+        />
+        <text
+            x="40"
+            y="40"
+            text-anchor="middle"
+            style="dominant-baseline:middle;font:16px sans-serif"
+        >GREEN</text>
+    </g>
+    <g transform="translate(0,320)">
+        <rect
+            x="0"
+            y="0"
+            width="80"
+            height="80"
+            style="fill:#ffffff;stroke-width:2px;stroke:#555555"
+        />
+        <text
+            x="40"
+            y="40"
+            text-anchor="middle"
+            style="dominant-baseline:middle;font:16px sans-serif;fill:#000000"
+        >EVENT</text>
+    </g>
+    <g transform="translate(80,320)">
+        <rect
+            x="0"
+            y="0"
+            width="80"
+            height="80"
+            style="fill:#faed27;stroke-width:2px;stroke:#555555"
+        />
+        <text
+            x="40"
+            y="40"
+            text-anchor="middle"
+            style="dominant-baseline:middle;font:16px sans-serif"
+        >YELLOW</text>
+    </g>
+    <g transform="translate(160,320)">
+        <rect
+            x="0"
+            y="0"
+            width="80"
+            height="80"
+            style="fill:#00ff33;stroke-width:2px;stroke:#555555"
+        />
+        <text
+            x="40"
+            y="40"
+            text-anchor="middle"
+            style="dominant-baseline:middle;font:16px sans-serif"
+        >GREEN</text>
+    </g>
+    <g transform="translate(240,320)">
+        <rect
+            x="0"
+            y="0"
+            width="80"
+            height="80"
+            style="fill:#0099ff;stroke-width:2px;stroke:#555555"
+        />
+        <text
+            x="40"
+            y="40"
+            text-anchor="middle"
+            style="dominant-baseline:middle;font:16px sans-serif"
+        >BLUE</text>
+    </g>
+    <g transform="translate(320,320)">
+        <rect
+            x="0"
+            y="0"
+            width="80"
+            height="80"
+            style="fill:#ffffff;stroke-width:2px;stroke:#555555"
+        />
+        <text
+            x="40"
+            y="40"
+            text-anchor="middle"
+            style="dominant-baseline:middle;font:16px sans-serif;fill:#000000"
+        >EVENT</text>
+    </g>
+</svg>

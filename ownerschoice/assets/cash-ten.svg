@@ -1,0 +1,22 @@
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="40px"
+    height="25px"
+    viewbox="0 0 40 25"
+>   
+    <rect
+        x="1"
+        y="1"
+        width="38px"
+        height="23px"
+        rx="2"
+        ry="2"
+        style="fill:#fcd9c5;stroke-width:1px;stroke:#555555"
+    />
+    <text
+        text-anchor="middle"
+        x="50%"
+        y="50%"
+        style="dominant-baseline:middle;font:10px sans-serif"
+    >£10</text>
+</svg>

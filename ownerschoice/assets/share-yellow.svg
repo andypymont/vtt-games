@@ -1,0 +1,28 @@
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="40px"
+    height="25px"
+    viewbox="0 0 40 25"
+>
+    <rect
+        x="1"
+        y="1"
+        width="38px"
+        height="23px"
+        rx="2"
+        ry="2"
+        style="fill:#faed27;stroke-width:1px;stroke:#555555"
+    />
+    <text
+        x="50%"
+        y="30%"
+        text-anchor="middle"
+        style="dominant-baseline:middle;font:7px sans-serif"
+    >YELLOW</text>
+    <text
+        x="50%"
+        y="70%"
+        text-anchor="middle"
+        style="dominant-baseline:middle;font:7px sans-serif"
+    >SHARE</text>
+</svg>
