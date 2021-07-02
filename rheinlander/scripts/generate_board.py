@@ -1,6 +1,7 @@
 """Generate the Rheinalnder board SVG."""
 
 import xml.etree.ElementTree as ET
+from statistics import mean
 from xml.dom import minidom
 
 points = {
@@ -219,237 +220,326 @@ points = {
     213: (751, 840),
     214: (709, 840),
     215: (653, 840),
+    'L01': (30, 613),
+    'L02': (192, 617),
+    'L03': (45, 502),
+    'L04': (164, 373),
+    'L05': (26, 207),
+    'L06': (190, 248),
+    'L07': (368, 199),
+    'L08': (215, 376),
+    'L09': (342, 491),
+    'L10': (355, 622),
+    'L11': (422, 792),
+    'L12': (458, 617),
+    'L13': (640, 549),
+    'L14': (428, 437),
+    'L15': (587, 347),
+    'L16': (544, 217),
+    'L17': (689, 280),
+    'L18': (579, 50),
+    'L19': (721, 131),
+    'L20': (865, 70),
+    'L21': (821, 316),
+    'L22': (965, 384),
+    'L23': (762, 540),
+    'L24': (823, 661),
+    'L25': (907, 784),
+    'L26': (665, 784),
 }
 
-def polygon(doc, point_seq, fill):
+def polygon(doc, point_seq, fill, number=None):
     """Generate SVG polygon connecting the given set of points."""
     poly = ET.SubElement(doc, 'polygon')
     poly.set('style', 'fill:#{};stroke:#000000;stroke-width:1px'.format(fill))
     point_locs = [points.get(point) for point in point_seq]
     poly.set('points', ' '.join('{},{}'.format(x, y) for (x, y) in point_locs))
+    if number is not None:
+        number_label(doc, number, *center(point_locs))
     return poly
 
-def land(doc, point_seq):
+def number_label(doc, number, x, y):
+    """Generate a number label (for a river space)."""
+    text = ET.SubElement(doc, 'text')
+    text.set('style', 'font:12px sans-serif;fill:#000000;align:center;text-anchor:middle')
+    text.set('x', '{}'.format(x))
+    text.set('y', '{}'.format(y))
+    text.text = '{}'.format(number)
+    return text
+
+def land(doc, *point_seq):
     """Generate a land space connecting a given set of points."""
     return polygon(doc, point_seq, '00ff00')
 
-def river(doc, point_seq):
+def center(point_locs):
+    """Calculate the center of the given points."""
+    return (
+        int(mean(pt[0] for pt in point_locs)),
+        int(mean(pt[1] for pt in point_locs)),
+    )
+   
+def river(doc, number, *point_seq):
     """Generate a river space connecting a given set of points."""
-    return polygon(doc, point_seq, '0099ff')
+    return polygon(doc, point_seq, '0099ff', number)
 
-spaces = [
+def landmark(doc, location):
+    """Generate a circle ready for a Landmark tile."""
+    circle = ET.SubElement(doc, 'circle')
+    x, y = points.get(location)
+    circle.set('cx', '{}'.format(x))
+    circle.set('cy', '{}'.format(y))
+    circle.set('r', '20')
+    circle.set('style', 'fill:#cc9999;stroke:#000000;stroke-width:1px')
+    return circle
+
+elements = [
     # 1:
     (land, 1, 2, 6, 5),
-    (river, 2, 3, 7, 6),
+    (river, '1', 2, 3, 7, 6),
     (land, 3, 4, 8, 7),
     # 2:
     (land, 5, 6, 10, 9),
-    (river, 10, 11, 7, 6),
+    (river, '2', 10, 11, 7, 6),
     (land, 11, 12, 8, 7),
     # 3:
     (land, 13, 14, 10, 9),
-    (river, 14, 15, 11, 10),
+    (river, '3', 14, 15, 11, 10),
     (land, 15, 16, 12, 11),
     # 4:
     (land, 17, 18, 14, 13),
-    (river, 18, 19, 15, 14),
+    (river, '4', 18, 19, 15, 14),
     (land, 19, 20, 16, 15),
     # 5:
     (land, 21, 22, 18, 17),
-    (river, 22, 23, 19, 18),
+    (river, '5', 22, 23, 19, 18),
     (land, 23, 24, 25, 20, 19),
     # 6:
     (land, 27, 28, 22, 21),
-    (river, 28, 29, 23, 22),
+    (river, '6', 28, 29, 23, 22),
     (land, 29, 30, 24, 23),
     # 7:
     (land, 31, 32, 28, 27),
-    (river, 32, 33, 29, 28),
+    (river, '7', 32, 33, 29, 28),
     (land, 33, 34, 30, 29),
     # 8:
     (land, 35, 36, 32, 31),
-    (river, 36, 37, 33, 32),
+    (river, '8', 36, 37, 33, 32),
     (land, 37, 38, 34, 33),
     # 9:
     (land, 39, 40, 36, 35),
-    (river, 40, 41, 37, 36),
+    (river, '9', 40, 41, 37, 36),
     (land, 41, 42, 38, 37),
     # 10:
     (land, 39, 40, 44, 43),
-    (river, 40, 41, 45, 44),
+    (river, '10', 40, 41, 45, 44),
     (land, 41, 42, 46, 45),
     # 11:
     (land, 43, 44, 48, 47),
-    (river, 44, 45, 49, 48),
+    (river, '11', 44, 45, 49, 48),
     (land, 45, 46, 50, 49),
     # 12:
     (land, 47, 48, 52, 51),
-    (river, 48, 49, 53, 52),
+    (river, '12', 48, 49, 53, 52),
     (land, 49, 50, 54, 53),
     # 13:
     (land, 53, 54, 58, 57),
-    (river, 52, 53, 57, 56),
+    (river, '13', 52, 53, 57, 56),
     (land, 51, 52, 56, 55),
     # 14:
     (land, 58, 57, 61, 62),
-    (river, 56, 57, 61, 60),
+    (river, '14', 56, 57, 61, 60),
     (land, 55, 56, 60, 59),
     # 15:
     (land, 61, 62, 26, 65),
-    (river, 60, 61, 65, 64),
+    (river, '15', 60, 61, 65, 64),
     (land, 59, 60, 64, 63),
     # 16:
     (land, 65, 26, 25, 20, 68),
-    (river, 64, 65, 68, 67),
+    (river, '16', 64, 65, 68, 67),
     (land, 63, 64, 67, 66),
     # 17:
     (land, 20, 16, 71, 68),
-    (river, 67, 68, 71, 70),
+    (river, '17', 67, 68, 71, 70),
     (land, 66, 67, 70, 69),
     # 18:
     (land, 16, 12, 74, 71),
-    (river, 70, 71, 74, 73),
+    (river, '18', 70, 71, 74, 73),
     (land, 69, 70, 73, 72),
     # 19:
     (land, 74, 77, 78, 12),
-    (river, 73, 74, 77, 76),
+    (river, '19', 73, 74, 77, 76),
     (land, 72, 73, 76, 75),
     # 20:
     (land, 75, 76, 80, 79),
-    (river, 76, 77, 81, 80),
+    (river, '20', 76, 77, 81, 80),
     (land, 77, 78, 82, 81),
     # 21:
     (land, 79, 80, 84, 83),
-    (river, 80, 81, 85, 84),
+    (river, '21', 80, 81, 85, 84),
     (land, 81, 82, 86, 85),
     # 22:
     (land, 83, 84, 88, 87),
-    (river, 84, 85, 89, 88),
+    (river, '22', 84, 85, 89, 88),
     (land, 85, 86, 90, 89),
     # 23:
     (land, 87, 88, 92, 91),
-    (river, 88, 89, 93, 92),
+    (river, '23', 88, 89, 93, 92),
     (land, 89, 90, 94, 93),
     # 24:
     (land, 91, 92, 96, 95),
-    (river, 96, 97, 93, 92),
+    (river, '24', 96, 97, 93, 92),
     (land, 97, 98, 94, 93),
     # 25:
     (land, 95, 96, 100, 99),
-    (river, 96, 97, 101, 100),
+    (river, '25', 96, 97, 101, 100),
     (land, 97, 98, 102, 101),
     # 26:
     (land, 99, 100, 104, 103),
-    (river, 100, 101, 105, 104),
+    (river, '26', 100, 101, 105, 104),
     (land, 101, 102, 106, 105),
     # 27:
     (land, 103, 104, 108, 107),
-    (river, 104, 105, 109, 108),
+    (river, '27', 104, 105, 109, 108),
     (land, 105, 106, 110, 109),
     # 28:
     (land, 107, 108, 112, 111),
-    (river, 108, 109, 113, 112),
+    (river, '28', 108, 109, 113, 112),
     (land, 109, 110, 114, 113),
     # 29:
     (land, 111, 112, 116, 115),
-    (river, 112, 113, 117, 116),
+    (river, '29', 112, 113, 117, 116),
     (land, 113, 114, 118, 117),
     # 30:
     (land, 115, 116, 120, 119),
-    (river, 116, 117, 122, 121, 120),
+    (river, None, 116, 117, 122, 121, 120),
+    (number_label, '30', 492, 286),
     (land, 117, 118, 126, 122),
     # 31:
     (land, 119, 120, 128, 127),
-    (river, 120, 121, 124, 123, 129, 128),
+    (river, None, 120, 121, 124, 123, 129, 128),
+    (number_label, '31', 492, 209),
     (land, 123, 124, 130, 129),
     # 32:
     (land, 130, 131, 125, 124),
-    (river, 131, 132, 122, 121, 124, 125),
+    (river, None, 131, 132, 122, 121, 124, 125),
+    (number_label, '32', 560, 263),
     (land, 132, 133, 126, 122),
     # 33:
     (land, 127, 128, 135, 134),
-    (river, 128, 129, 136, 135),
+    (river, '33', 128, 129, 136, 135),
     (land, 129, 130, 137, 136),
     # 34:
     (land, 130, 131, 138, 137),
-    (river, 131, 132, 139, 138),
+    (river, '34', 131, 132, 139, 138),
     (land, 132, 133, 140, 139),
     # 35:
     (land, 134, 135, 142, 141),
-    (river, 135, 136, 143, 142),
+    (river, '35', 135, 136, 143, 142),
     (land, 136, 137, 144, 143),
     # 36:
     (land, 137, 138, 145, 144),
-    (river, 138, 139, 146, 145),
+    (river, '36', 138, 139, 146, 145),
     (land, 139, 140, 147, 146),
     # 37:
     (land, 141, 142, 149, 148),
-    (river, 142, 143, 150, 152, 151, 149),
+    (river, None, 142, 143, 150, 152, 151, 149),
+    (number_label, '37', 725, 88),
     (land, 143, 144, 152, 150),
     # 38:
     (land, 144, 145, 153, 152),
-    (river, 145, 146, 154, 151, 152, 153),
+    (river, None, 145, 146, 154, 151, 152, 153),
+    (number_label, '38', 725, 185),
     (land, 154, 155, 147, 146),
     # 39:
     (land, 148, 149, 157, 156),
-    (river, 149, 151, 154, 158, 157),
+    (river, '39', 149, 151, 154, 158, 157),
     (land, 154, 155, 159, 158),
     # 40:
     (land, 156, 157, 161, 160),
-    (river, 157, 158, 162, 161),
+    (river, '40', 157, 158, 162, 161),
     (land, 158, 159, 163, 162),
     # 41:
     (land, 162, 163, 167, 166),
-    (river, 161, 162, 166, 165),
+    (river, '41', 161, 162, 166, 165),
     (land, 160, 161, 165, 164),
     # 42:
     (land, 166, 167, 171, 170),
-    (river, 165, 166, 170, 169),
+    (river, '42', 165, 166, 170, 169),
     (land, 164, 165, 169, 168),
     # 43:
     (land, 170, 171, 175, 174),
-    (river, 169, 170, 174, 173),
+    (river, '43', 169, 170, 174, 173),
     (land, 168, 169, 173, 172),
     # 44:
     (land, 174, 175, 179, 178),
-    (river, 173, 174, 178, 177),
+    (river, '44', 173, 174, 178, 177),
     (land, 172, 173, 177, 176),
     # 45:
     (land, 176, 177, 181, 180),
-    (river, 177, 178, 182, 181),
+    (river, '45', 177, 178, 182, 181),
     (land, 178, 179, 183, 182),
     # 46:
     (land, 180, 181, 185, 184),
-    (river, 181, 182, 187, 186, 185),
+    (river, None, 181, 182, 187, 186, 185),
+    (number_label, '46', 848, 551),
     (land, 182, 183, 188, 187),
     # 47:
     (land, 187, 188, 197, 196),
-    (river, 186, 187, 196, 195, 191, 190),
+    (river, None, 186, 187, 196, 195, 191, 190),
+    (number_label, '47', 784, 630),
     (land, 194, 195, 191, 190, 189),
     # 48:
     (land, 184, 185, 193, 192),
-    (river, 193, 194, 189, 190, 186, 185),
+    (river, None, 193, 194, 189, 190, 186, 185),
+    (number_label, '48', 875, 630),
     # 49:
     (land, 196, 197, 203, 202),
-    (river, 195, 196, 202, 201),
+    (river, '49', 195, 196, 202, 201),
     (land, 194, 195, 201, 200),
     # 50:
     (land, 192, 193, 199, 198),
-    (river, 193, 194, 200, 199),
+    (river, '50', 193, 194, 200, 199),
     # 51:
     (land, 202, 203, 209, 208),
-    (river, 201, 202, 208, 207),
+    (river, '51', 201, 202, 208, 207),
     (land, 200, 201, 207, 206),
     # 52:
     (land, 198, 199, 205, 204),
-    (river, 199, 200, 206, 205),
+    (river, '52', 199, 200, 206, 205),
     # 53:
     (land, 208, 209, 215, 214),
-    (river, 207, 208, 214, 213),
+    (river, '53', 207, 208, 214, 213),
     (land, 206, 207, 213, 212),
     # 54:
     (land, 204, 205, 211, 210),
-    (river, 205, 206, 212, 211),
+    (river, '54', 205, 206, 212, 211),
+    # Landmarks:
+    (landmark, 'L01'),
+    (landmark, 'L02'),
+    (landmark, 'L03'),
+    (landmark, 'L04'),
+    (landmark, 'L05'),
+    (landmark, 'L06'),
+    (landmark, 'L07'),
+    (landmark, 'L08'),
+    (landmark, 'L09'),
+    (landmark, 'L10'),
+    (landmark, 'L11'),
+    (landmark, 'L12'),
+    (landmark, 'L13'),
+    (landmark, 'L14'),
+    (landmark, 'L15'),
+    (landmark, 'L16'),
+    (landmark, 'L17'),
+    (landmark, 'L18'),
+    (landmark, 'L19'),
+    (landmark, 'L20'),
+    (landmark, 'L21'),
+    (landmark, 'L22'),
+    (landmark, 'L23'),
+    (landmark, 'L24'),
+    (landmark, 'L25'),
+    (landmark, 'L26'),
 ]
 
 def main():
@@ -460,9 +550,9 @@ def main():
     doc.set('height', '840px')
     doc.set('viewbox', '0 0 1000 840')
 
-    for space in spaces:
-        func, *point_seq = space
-        func(doc, point_seq)
+    for element in elements:
+        func, *args = element
+        func(doc, *args)
 
     rough_string = ET.tostring(doc, 'utf-8')
     reparsed = minidom.parseString(rough_string)
