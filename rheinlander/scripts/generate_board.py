@@ -545,7 +545,7 @@ elements = [
 def main():
     """Generate and output the document."""
     doc = ET.Element('svg')
-    doc.set('xlmns', 'http://www.w3.org/2000/svg')
+    doc.set('xmlns', 'http://www.w3.org/2000/svg')
     doc.set('width', '1000px')
     doc.set('height', '840px')
     doc.set('viewbox', '0 0 1000 840')
