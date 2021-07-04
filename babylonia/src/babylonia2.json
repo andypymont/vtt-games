@@ -29,8 +29,8 @@
   "citycrop": {
     "type": "holder",
     "id": "citycrop",
-    "x": 1468.5,
-    "y": 222.5,
+    "x": 1472,
+    "y": 140,
     "dropTarget": {
       "tiletype": "citycrop"
     },
@@ -43,31 +43,6 @@
     "onLeave": {
       "activeFace": 1
     }
-  },
-  "citycrop-button": {
-    "id": "citycrop-button",
-    "parent": "citycrop",
-    "y": -50,
-    "width": 111,
-    "height": 40,
-    "type": "button",
-    "text": "Recall & Shuffle",
-    "movableInEdit": false,
-    "clickRoutine": [
-      {
-        "func": "RECALL",
-        "holder": "citycrop"
-      },
-      {
-        "func": "FLIP",
-        "holder": "citycrop",
-        "face": 0
-      },
-      {
-        "func": "SHUFFLE",
-        "holder": "citycrop"
-      }
-    ]
   },
   "citycrop-deck": {
     "type": "deck",
@@ -330,7 +305,7 @@
     "type": "holder",
     "id": "ziggurats",
     "x": 1470,
-    "y": 56,
+    "y": 10,
     "dropTarget": {
       "tiletype": "ziggurat"
     },
@@ -343,31 +318,6 @@
     "onLeave": {
       "activeFace": 1
     }
-  },
-  "ziggurats-button": {
-    "id": "ziggurats-button",
-    "parent": "ziggurats",
-    "y": -50,
-    "width": 111,
-    "height": 40,
-    "type": "button",
-    "text": "Recall & Shuffle",
-    "movableInEdit": false,
-    "clickRoutine": [
-      {
-        "func": "RECALL",
-        "holder": "ziggurats"
-      },
-      {
-        "func": "FLIP",
-        "holder": "ziggurats",
-        "face": 0
-      },
-      {
-        "func": "SHUFFLE",
-        "holder": "ziggurats"
-      }
-    ]
   },
   "ziggurats-deck": {
     "type": "deck",
@@ -2311,5 +2261,433 @@
     "dropTarget": {
       "tiletype": "player"
     }
+  },
+  "button-basic-game": {
+    "type": "button",
+    "id": "button-basic-game",
+    "x": 1450,
+    "y": 230,
+    "height": 35,
+    "width": 130,
+    "text": "Setup: Basic",
+    "clickRoutine": [
+      {
+        "func": "RECALL",
+        "holder": "citycrop"
+      },
+      {
+        "func": "SHUFFLE",
+        "holder": "citycrop"
+      },
+      {
+        "func": "MOVEXY",
+        "from": "citycrop",
+        "count": 1,
+        "x": 540,
+        "y": 322.8,
+        "face": 1
+      },
+      {
+        "func": "MOVEXY",
+        "from": "citycrop",
+        "count": 1,
+        "x": 592.7,
+        "y": 413.7,
+        "face": 1
+      },
+      {
+        "func": "MOVEXY",
+        "from": "citycrop",
+        "count": 1,
+        "x": 540,
+        "y": 504.7,
+        "face": 1
+      },
+      {
+        "func": "MOVEXY",
+        "from": "citycrop",
+        "count": 1,
+        "x": 645,
+        "y": 565.3,
+        "face": 1
+      },
+      {
+        "func": "MOVEXY",
+        "from": "citycrop",
+        "count": 1,
+        "x": 750,
+        "y": 444,
+        "face": 1
+      },
+      {
+        "func": "MOVEXY",
+        "from": "citycrop",
+        "count": 1,
+        "x": 750,
+        "y": 565.3,
+        "face": 1
+      },
+      {
+        "func": "MOVEXY",
+        "from": "citycrop",
+        "count": 1,
+        "x": 697.7,
+        "y": 231.9,
+        "face": 1
+      },
+      {
+        "func": "MOVEXY",
+        "from": "citycrop",
+        "count": 1,
+        "x": 855,
+        "y": 262.2,
+        "face": 1
+      },
+      {
+        "func": "MOVEXY",
+        "from": "citycrop",
+        "count": 1,
+        "x": 960,
+        "y": 322.8,
+        "face": 1
+      },
+      {
+        "func": "MOVEXY",
+        "from": "citycrop",
+        "count": 1,
+        "x": 802.7,
+        "y": 353.1,
+        "face": 1
+      },
+      {
+        "func": "MOVEXY",
+        "from": "citycrop",
+        "count": 1,
+        "x": 1012.7,
+        "y": 413.7,
+        "face": 1
+      },
+      {
+        "func": "MOVEXY",
+        "from": "citycrop",
+        "count": 1,
+        "x": 855,
+        "y": 504.7,
+        "face": 1
+      },
+      {
+        "func": "MOVEXY",
+        "from": "citycrop",
+        "count": 1,
+        "x": 960,
+        "y": 625.9,
+        "face": 1
+      },
+      {
+        "func": "MOVEXY",
+        "from": "citycrop",
+        "count": 1,
+        "x": 802.7,
+        "y": 716.8,
+        "face": 1
+      },
+      {
+        "func": "MOVEXY",
+        "from": "citycrop",
+        "count": 1,
+        "x": 907.7,
+        "y": 716.8,
+        "face": 1
+      },
+      {
+        "func": "MOVEXY",
+        "from": "citycrop",
+        "count": 1,
+        "x": 592.7,
+        "y": 777.5,
+        "face": 1
+      },
+      {
+        "func": "MOVEXY",
+        "from": "citycrop",
+        "count": 1,
+        "x": 750,
+        "y": 807.8,
+        "face": 1
+      },
+      {
+        "func": "MOVEXY",
+        "from": "citycrop",
+        "count": 1,
+        "x": 960,
+        "y": 807.8,
+        "face": 1
+      },
+      {
+        "func": "RECALL",
+        "holder": "ziggurats"
+      },
+      {
+        "func": "SORT",
+        "holder": "ziggurats",
+        "key": "id",
+        "reverse": true
+      },
+      {
+        "func": "MOVE",
+        "from": "ziggurats",
+        "to": "ziggurat-display-01",
+        "count": 1
+      },
+      {
+        "func": "MOVE",
+        "from": "ziggurats",
+        "to": "ziggurat-display-02",
+        "count": 1
+      },
+      {
+        "func": "MOVE",
+        "from": "ziggurats",
+        "to": "ziggurat-display-03",
+        "count": 1
+      },
+      {
+        "func": "MOVE",
+        "from": "ziggurats",
+        "to": "ziggurat-display-04",
+        "count": 1
+      },
+      {
+        "func": "MOVE",
+        "from": "ziggurats",
+        "to": "ziggurat-display-05",
+        "count": 1
+      },
+      {
+        "func": "MOVE",
+        "from": "ziggurats",
+        "to": "ziggurat-display-06",
+        "count": 1
+      },
+      {
+        "func": "MOVE",
+        "from": "ziggurats",
+        "to": "ziggurat-display-07",
+        "count": 1
+      }
+    ]
+  },
+  "button-advanced-game": {
+    "type": "button",
+    "id": "button-advanced-game",
+    "x": 1450,
+    "y": 275,
+    "width": 130,
+    "height": 35,
+    "text": "Setup: Advanced",
+    "clickRoutine": [
+      {
+        "func": "RECALL",
+        "holder": "citycrop"
+      },
+      {
+        "func": "SHUFFLE",
+        "holder": "citycrop"
+      },
+      {
+        "func": "MOVEXY",
+        "from": "citycrop",
+        "count": 1,
+        "x": 540,
+        "y": 322.8,
+        "face": 1
+      },
+      {
+        "func": "MOVEXY",
+        "from": "citycrop",
+        "count": 1,
+        "x": 592.7,
+        "y": 413.7,
+        "face": 1
+      },
+      {
+        "func": "MOVEXY",
+        "from": "citycrop",
+        "count": 1,
+        "x": 540,
+        "y": 504.7,
+        "face": 1
+      },
+      {
+        "func": "MOVEXY",
+        "from": "citycrop",
+        "count": 1,
+        "x": 645,
+        "y": 565.3,
+        "face": 1
+      },
+      {
+        "func": "MOVEXY",
+        "from": "citycrop",
+        "count": 1,
+        "x": 750,
+        "y": 444,
+        "face": 1
+      },
+      {
+        "func": "MOVEXY",
+        "from": "citycrop",
+        "count": 1,
+        "x": 750,
+        "y": 565.3,
+        "face": 1
+      },
+      {
+        "func": "MOVEXY",
+        "from": "citycrop",
+        "count": 1,
+        "x": 697.7,
+        "y": 231.9,
+        "face": 1
+      },
+      {
+        "func": "MOVEXY",
+        "from": "citycrop",
+        "count": 1,
+        "x": 855,
+        "y": 262.2,
+        "face": 1
+      },
+      {
+        "func": "MOVEXY",
+        "from": "citycrop",
+        "count": 1,
+        "x": 960,
+        "y": 322.8,
+        "face": 1
+      },
+      {
+        "func": "MOVEXY",
+        "from": "citycrop",
+        "count": 1,
+        "x": 802.7,
+        "y": 353.1,
+        "face": 1
+      },
+      {
+        "func": "MOVEXY",
+        "from": "citycrop",
+        "count": 1,
+        "x": 1012.7,
+        "y": 413.7,
+        "face": 1
+      },
+      {
+        "func": "MOVEXY",
+        "from": "citycrop",
+        "count": 1,
+        "x": 855,
+        "y": 504.7,
+        "face": 1
+      },
+      {
+        "func": "MOVEXY",
+        "from": "citycrop",
+        "count": 1,
+        "x": 960,
+        "y": 625.9,
+        "face": 1
+      },
+      {
+        "func": "MOVEXY",
+        "from": "citycrop",
+        "count": 1,
+        "x": 802.7,
+        "y": 716.8,
+        "face": 1
+      },
+      {
+        "func": "MOVEXY",
+        "from": "citycrop",
+        "count": 1,
+        "x": 907.7,
+        "y": 716.8,
+        "face": 1
+      },
+      {
+        "func": "MOVEXY",
+        "from": "citycrop",
+        "count": 1,
+        "x": 592.7,
+        "y": 777.5,
+        "face": 1
+      },
+      {
+        "func": "MOVEXY",
+        "from": "citycrop",
+        "count": 1,
+        "x": 750,
+        "y": 807.8,
+        "face": 1
+      },
+      {
+        "func": "MOVEXY",
+        "from": "citycrop",
+        "count": 1,
+        "x": 960,
+        "y": 807.8,
+        "face": 1
+      },
+      {
+        "func": "RECALL",
+        "holder": "ziggurats"
+      },
+      {
+        "func": "SHUFFLE",
+        "holder": "ziggurats"
+      },
+      {
+        "func": "MOVE",
+        "from": "ziggurats",
+        "to": "ziggurat-display-01",
+        "count": 1
+      },
+      {
+        "func": "MOVE",
+        "from": "ziggurats",
+        "to": "ziggurat-display-02",
+        "count": 1
+      },
+      {
+        "func": "MOVE",
+        "from": "ziggurats",
+        "to": "ziggurat-display-03",
+        "count": 1
+      },
+      {
+        "func": "MOVE",
+        "from": "ziggurats",
+        "to": "ziggurat-display-04",
+        "count": 1
+      },
+      {
+        "func": "MOVE",
+        "from": "ziggurats",
+        "to": "ziggurat-display-05",
+        "count": 1
+      },
+      {
+        "func": "MOVE",
+        "from": "ziggurats",
+        "to": "ziggurat-display-06",
+        "count": 1
+      },
+      {
+        "func": "MOVE",
+        "from": "ziggurats",
+        "to": "ziggurat-display-07",
+        "count": 1
+      }
+    ]
   }
 }
