@@ -1,0 +1,20 @@
+<svg
+    xmlns="http://www.w3.org/2000/svg" 
+    height="60"
+    width="60"
+    viewbox="0 0 60 60"
+>
+    <rect
+        x="0.5"
+        y="0.5"
+        width="59"
+        height="59"
+        rx="5"
+        ry="5"
+        style="fill:#9966cc;stroke:#000000;stoke-width:0.5px"
+    />
+    <path
+        d="m 30,2.5 -2.1,4.1 h 4.1 z M 27.3,8.7 V 40.5 h 5.4 V 8.7 Z M 25.4,42.6 v 1.7 h 9.2 v -1.7 z m -2.0,3.8 -1.6,11.1 H 38.2 L 36.7,46.4 Z"
+        style="fill:#000000;stroke:none"
+    />
+</svg>
