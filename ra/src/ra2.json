@@ -1,0 +1,3035 @@
+{
+  "_meta": {
+    "version": 3,
+    "info": {
+      "name": "Ra",
+      "image": "",
+      "rules": "",
+      "bgg": "",
+      "year": "1999",
+      "mode": "vs",
+      "time": "60",
+      "players": "2",
+      "language": "GB",
+      "variant": "",
+      "attribution": ""
+    }
+  },
+  "sun-1": {
+    "type": "card",
+    "id": "sun-1",
+    "cardType": "sun-1",
+    "z": 767,
+    "deck": "suns-deck",
+    "x": 4,
+    "y": 4,
+    "parent": "current-holder-sun"
+  },
+  "sun-4": {
+    "type": "card",
+    "id": "sun-4",
+    "cardType": "sun-4",
+    "z": 158,
+    "deck": "suns-deck",
+    "x": 1480,
+    "y": 50
+  },
+  "tiles-holder": {
+    "type": "holder",
+    "id": "tiles-holder",
+    "x": 10,
+    "y": 100,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck"
+    },
+    "width": 70,
+    "height": 70,
+    "onEnter": {
+      "activeFace": 0
+    },
+    "onLeave": {
+      "activeFace": 1
+    }
+  },
+  "tiles-deck": {
+    "type": "deck",
+    "id": "tiles-deck",
+    "parent": "tiles-holder",
+    "cardTypes": {
+      "ra": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/ra/assets/tile-ra.svg"
+      },
+      "god": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/ra/assets/tile-god.svg"
+      },
+      "pharaoh": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/ra/assets/tile-pharaoh.svg"
+      },
+      "funeral": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/ra/assets/tile-funeral.svg"
+      },
+      "nile": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/ra/assets/tile-nile.svg"
+      },
+      "flood": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/ra/assets/tile-flood.svg"
+      },
+      "drought": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/ra/assets/tile-drought.svg"
+      },
+      "civ-1": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/ra/assets/tile-civ-1.svg"
+      },
+      "civ-2": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/ra/assets/tile-civ-2.svg"
+      },
+      "civ-3": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/ra/assets/tile-civ-3.svg"
+      },
+      "civ-4": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/ra/assets/tile-civ-4.svg"
+      },
+      "civ-5": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/ra/assets/tile-civ-5.svg"
+      },
+      "unrest": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/ra/assets/tile-unrest.svg"
+      },
+      "gold": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/ra/assets/tile-gold.svg"
+      },
+      "monument-1": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/ra/assets/tile-monument-1.svg"
+      },
+      "monument-2": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/ra/assets/tile-monument-2.svg"
+      },
+      "monument-3": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/ra/assets/tile-monument-3.svg"
+      },
+      "monument-4": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/ra/assets/tile-monument-4.svg"
+      },
+      "monument-5": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/ra/assets/tile-monument-5.svg"
+      },
+      "monument-6": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/ra/assets/tile-monument-6.svg"
+      },
+      "monument-7": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/ra/assets/tile-monument-7.svg"
+      },
+      "monument-8": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/ra/assets/tile-monument-8.svg"
+      },
+      "earthquake": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/ra/assets/tile-earthquake.svg"
+      }
+    },
+    "faceTemplates": [
+      {
+        "border": false,
+        "radius": false,
+        "objects": [
+          {
+            "type": "image",
+            "x": 0,
+            "y": 0,
+            "width": 60,
+            "height": 60,
+            "valueType": "static",
+            "value": "https://raw.githubusercontent.com/andypymont/vtt-games/main/ra/assets/tile-back.svg",
+            "color": "transparent"
+          }
+        ]
+      },
+      {
+        "border": false,
+        "radius": false,
+        "objects": [
+          {
+            "type": "image",
+            "x": 0,
+            "y": 0,
+            "width": 60,
+            "height": 60,
+            "valueType": "dynamic",
+            "value": "image",
+            "color": "transparent"
+          }
+        ]
+      }
+    ],
+    "width": 60,
+    "height": 60,
+    "movableInEdit": false,
+    "cardDefaults": {
+      "height": 60,
+      "width": 60
+    }
+  },
+  "tile-ra-1": {
+    "type": "card",
+    "id": "tile-ra-1",
+    "deck": "tiles-deck",
+    "cardType": "ra",
+    "z": 174,
+    "parent": "tiles-pile"
+  },
+  "sun-5": {
+    "type": "card",
+    "id": "sun-5",
+    "cardType": "sun-5",
+    "z": 155,
+    "deck": "suns-deck",
+    "x": 1480,
+    "y": 10
+  },
+  "sun-6": {
+    "type": "card",
+    "id": "sun-6",
+    "cardType": "sun-6",
+    "z": 152,
+    "deck": "suns-deck",
+    "x": 1440,
+    "y": 10
+  },
+  "sun-7": {
+    "type": "card",
+    "id": "sun-7",
+    "cardType": "sun-7",
+    "z": 149,
+    "deck": "suns-deck",
+    "x": 1440,
+    "y": 50
+  },
+  "sun-9": {
+    "type": "card",
+    "id": "sun-9",
+    "cardType": "sun-9",
+    "z": 143,
+    "deck": "suns-deck",
+    "x": 1400,
+    "y": 10
+  },
+  "sun-8": {
+    "type": "card",
+    "id": "sun-8",
+    "cardType": "sun-8",
+    "z": 146,
+    "deck": "suns-deck",
+    "x": 1400,
+    "y": 50
+  },
+  "sun-3": {
+    "type": "card",
+    "id": "sun-3",
+    "cardType": "sun-3",
+    "z": 161,
+    "deck": "suns-deck",
+    "x": 1520,
+    "y": 50
+  },
+  "sun-2": {
+    "type": "card",
+    "id": "sun-2",
+    "cardType": "sun-2",
+    "z": 165,
+    "deck": "suns-deck",
+    "x": 1520,
+    "y": 10
+  },
+  "tile-ra-2": {
+    "type": "card",
+    "id": "tile-ra-2",
+    "deck": "tiles-deck",
+    "cardType": "ra",
+    "z": 175,
+    "parent": "tiles-pile"
+  },
+  "tiles-pile": {
+    "type": "pile",
+    "id": "tiles-pile",
+    "parent": "tiles-holder",
+    "width": 60,
+    "height": 60
+  },
+  "tile-ra-3": {
+    "type": "card",
+    "id": "tile-ra-3",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "ra",
+    "z": 225
+  },
+  "tile-ra-4": {
+    "type": "card",
+    "id": "tile-ra-4",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "ra",
+    "z": 181
+  },
+  "tile-ra-5": {
+    "type": "card",
+    "id": "tile-ra-5",
+    "deck": "tiles-deck",
+    "cardType": "ra",
+    "z": 236,
+    "parent": "tiles-pile"
+  },
+  "tile-ra-6": {
+    "type": "card",
+    "id": "tile-ra-6",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "ra",
+    "z": 191
+  },
+  "tile-ra-7": {
+    "type": "card",
+    "id": "tile-ra-7",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "ra",
+    "z": 189
+  },
+  "tile-ra-8": {
+    "type": "card",
+    "id": "tile-ra-8",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "ra",
+    "z": 211
+  },
+  "tile-ra-9": {
+    "type": "card",
+    "id": "tile-ra-9",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "ra",
+    "z": 199
+  },
+  "tile-ra-10": {
+    "type": "card",
+    "id": "tile-ra-10",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "ra",
+    "z": 207
+  },
+  "tile-ra-11": {
+    "type": "card",
+    "id": "tile-ra-11",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "ra",
+    "z": 187
+  },
+  "tile-ra-12": {
+    "type": "card",
+    "id": "tile-ra-12",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "ra",
+    "z": 227
+  },
+  "tile-ra-13": {
+    "type": "card",
+    "id": "tile-ra-13",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "ra",
+    "z": 183
+  },
+  "tile-ra-14": {
+    "type": "card",
+    "id": "tile-ra-14",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "ra",
+    "z": 213
+  },
+  "tile-ra-15": {
+    "type": "card",
+    "id": "tile-ra-15",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "ra",
+    "z": 193
+  },
+  "tile-ra-16": {
+    "type": "card",
+    "id": "tile-ra-16",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "ra",
+    "z": 221
+  },
+  "tile-ra-17": {
+    "type": "card",
+    "id": "tile-ra-17",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "ra",
+    "z": 217
+  },
+  "tile-ra-18": {
+    "type": "card",
+    "id": "tile-ra-18",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "ra",
+    "z": 223
+  },
+  "tile-ra-19": {
+    "type": "card",
+    "id": "tile-ra-19",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "ra",
+    "z": 219
+  },
+  "tile-ra-20": {
+    "type": "card",
+    "id": "tile-ra-20",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "ra",
+    "z": 215
+  },
+  "tile-ra-21": {
+    "type": "card",
+    "id": "tile-ra-21",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "ra",
+    "z": 203
+  },
+  "tile-ra-22": {
+    "type": "card",
+    "id": "tile-ra-22",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "ra",
+    "z": 201
+  },
+  "tile-ra-23": {
+    "type": "card",
+    "id": "tile-ra-23",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "ra",
+    "z": 197
+  },
+  "tile-ra-24": {
+    "type": "card",
+    "id": "tile-ra-24",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "ra",
+    "z": 205
+  },
+  "tile-ra-25": {
+    "type": "card",
+    "id": "tile-ra-25",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "ra",
+    "z": 185
+  },
+  "tile-ra-26": {
+    "type": "card",
+    "id": "tile-ra-26",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "ra",
+    "z": 177
+  },
+  "tile-ra-27": {
+    "type": "card",
+    "id": "tile-ra-27",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "ra",
+    "z": 209
+  },
+  "tile-ra-29": {
+    "type": "card",
+    "id": "tile-ra-29",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "ra",
+    "z": 195
+  },
+  "tile-ra-28": {
+    "type": "card",
+    "id": "tile-ra-28",
+    "deck": "tiles-deck",
+    "cardType": "ra",
+    "z": 239,
+    "parent": "tiles-pile"
+  },
+  "tile-ra-30": {
+    "type": "card",
+    "id": "tile-ra-30",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "ra",
+    "z": 179
+  },
+  "tile-god-1": {
+    "type": "card",
+    "id": "tile-god-1",
+    "deck": "tiles-deck",
+    "cardType": "god",
+    "z": 247,
+    "parent": "tiles-pile"
+  },
+  "tile-god-2": {
+    "type": "card",
+    "id": "tile-god-2",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "god",
+    "z": 249
+  },
+  "tile-god-3": {
+    "type": "card",
+    "id": "tile-god-3",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "god",
+    "z": 253
+  },
+  "tile-god-4": {
+    "type": "card",
+    "id": "tile-god-4",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "god",
+    "z": 257
+  },
+  "tile-god-5": {
+    "type": "card",
+    "id": "tile-god-5",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "god",
+    "z": 259
+  },
+  "tile-god-6": {
+    "type": "card",
+    "id": "tile-god-6",
+    "deck": "tiles-deck",
+    "cardType": "god",
+    "z": 266,
+    "parent": "tiles-pile"
+  },
+  "tile-god-7": {
+    "type": "card",
+    "id": "tile-god-7",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "god",
+    "z": 255
+  },
+  "tile-god-8": {
+    "type": "card",
+    "id": "tile-god-8",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "god",
+    "z": 251
+  },
+  "tile-pharaoh-1": {
+    "type": "card",
+    "id": "tile-pharaoh-1",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "pharaoh",
+    "z": 274
+  },
+  "tile-pharaoh-2": {
+    "type": "card",
+    "id": "tile-pharaoh-2",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "pharaoh",
+    "z": 270
+  },
+  "tile-pharaoh-3": {
+    "type": "card",
+    "id": "tile-pharaoh-3",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "pharaoh",
+    "z": 272
+  },
+  "tile-pharaoh-4": {
+    "type": "card",
+    "id": "tile-pharaoh-4",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "pharaoh",
+    "z": 298
+  },
+  "tile-pharaoh-5": {
+    "type": "card",
+    "id": "tile-pharaoh-5",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "pharaoh",
+    "z": 308
+  },
+  "tile-pharaoh-6": {
+    "type": "card",
+    "id": "tile-pharaoh-6",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "pharaoh",
+    "z": 288
+  },
+  "tile-pharaoh-7": {
+    "type": "card",
+    "id": "tile-pharaoh-7",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "pharaoh",
+    "z": 304
+  },
+  "tile-pharaoh-8": {
+    "type": "card",
+    "id": "tile-pharaoh-8",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "pharaoh",
+    "z": 312
+  },
+  "tile-pharaoh-9": {
+    "type": "card",
+    "id": "tile-pharaoh-9",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "pharaoh",
+    "z": 286
+  },
+  "tile-pharaoh-10": {
+    "type": "card",
+    "id": "tile-pharaoh-10",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "pharaoh",
+    "z": 280
+  },
+  "tile-pharaoh-11": {
+    "type": "card",
+    "id": "tile-pharaoh-11",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "pharaoh",
+    "z": 278
+  },
+  "tile-pharaoh-12": {
+    "type": "card",
+    "id": "tile-pharaoh-12",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "pharaoh",
+    "z": 310
+  },
+  "tile-pharaoh-13": {
+    "type": "card",
+    "id": "tile-pharaoh-13",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "pharaoh",
+    "z": 284
+  },
+  "tile-pharaoh-14": {
+    "type": "card",
+    "id": "tile-pharaoh-14",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "pharaoh",
+    "z": 314
+  },
+  "tile-pharaoh-15": {
+    "type": "card",
+    "id": "tile-pharaoh-15",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "pharaoh",
+    "z": 294
+  },
+  "tile-pharaoh-16": {
+    "type": "card",
+    "id": "tile-pharaoh-16",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "pharaoh",
+    "z": 290
+  },
+  "tile-pharaoh-17": {
+    "type": "card",
+    "id": "tile-pharaoh-17",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "pharaoh",
+    "z": 268
+  },
+  "tile-pharaoh-18": {
+    "type": "card",
+    "id": "tile-pharaoh-18",
+    "deck": "tiles-deck",
+    "cardType": "pharaoh",
+    "z": 344,
+    "parent": "tiles-pile"
+  },
+  "tile-pharaoh-19": {
+    "type": "card",
+    "id": "tile-pharaoh-19",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "pharaoh",
+    "z": 296
+  },
+  "tile-pharaoh-20": {
+    "type": "card",
+    "id": "tile-pharaoh-20",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "pharaoh",
+    "z": 300
+  },
+  "tile-pharaoh-21": {
+    "type": "card",
+    "id": "tile-pharaoh-21",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "pharaoh",
+    "z": 306
+  },
+  "tile-pharaoh-22": {
+    "type": "card",
+    "id": "tile-pharaoh-22",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "pharaoh",
+    "z": 302
+  },
+  "tile-pharaoh-23": {
+    "type": "card",
+    "id": "tile-pharaoh-23",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "pharaoh",
+    "z": 276
+  },
+  "tile-pharaoh-24": {
+    "type": "card",
+    "id": "tile-pharaoh-24",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "pharaoh",
+    "z": 292
+  },
+  "tile-pharaoh-25": {
+    "type": "card",
+    "id": "tile-pharaoh-25",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "pharaoh",
+    "z": 282
+  },
+  "tile-funeral-1": {
+    "type": "card",
+    "id": "tile-funeral-1",
+    "deck": "tiles-deck",
+    "cardType": "funeral",
+    "z": 351,
+    "parent": "tiles-pile"
+  },
+  "tile-funeral-2": {
+    "type": "card",
+    "id": "tile-funeral-2",
+    "deck": "tiles-deck",
+    "cardType": "funeral",
+    "z": 347,
+    "parent": "tiles-pile"
+  },
+  "suns-deck": {
+    "type": "deck",
+    "id": "suns-deck",
+    "width": 30,
+    "height": 30,
+    "movableInEdit": false,
+    "cardDefaults": {
+      "width": 30,
+      "height": 30
+    },
+    "cardTypes": {
+      "sun-1": {
+        "text": "1"
+      },
+      "sun-2": {
+        "text": "2"
+      },
+      "sun-3": {
+        "text": "3"
+      },
+      "sun-4": {
+        "text": "4"
+      },
+      "sun-5": {
+        "text": "5"
+      },
+      "sun-6": {
+        "text": "6"
+      },
+      "sun-7": {
+        "text": "7"
+      },
+      "sun-8": {
+        "text": "8"
+      },
+      "sun-9": {
+        "text": "9"
+      },
+      "sun-10": {
+        "text": "10"
+      },
+      "sun-11": {
+        "text": "11"
+      },
+      "sun-12": {
+        "text": "12"
+      },
+      "sun-13": {
+        "text": "13"
+      },
+      "sun-14": {
+        "text": "14"
+      },
+      "sun-15": {
+        "text": "15"
+      },
+      "sun-16": {
+        "text": "16"
+      }
+    },
+    "faceTemplates": [
+      {
+        "border": false,
+        "radius": false,
+        "objects": [
+          {
+            "type": "image",
+            "x": 0,
+            "y": 0,
+            "width": 30,
+            "height": 30,
+            "valueType": "static",
+            "value": "https://raw.githubusercontent.com/andypymont/vtt-games/main/ra/assets/sun.svg",
+            "color": "transparent"
+          },
+          {
+            "type": "text",
+            "x": 0,
+            "y": 6,
+            "fontSize": 14,
+            "valueType": "dynamic",
+            "value": "text",
+            "textAlign": "center",
+            "width": 30
+          }
+        ]
+      }
+    ],
+    "parent": "suns-holder"
+  },
+  "suns-holder": {
+    "type": "holder",
+    "id": "suns-holder",
+    "x": -50,
+    "y": -50,
+    "width": 40,
+    "height": 40,
+    "dropTarget": {
+      "type": "card",
+      "deck": "deck-suns"
+    },
+    "z": 1
+  },
+  "tile-nile-1": {
+    "type": "card",
+    "id": "tile-nile-1",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "nile",
+    "z": 395
+  },
+  "tile-nile-2": {
+    "type": "card",
+    "id": "tile-nile-2",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "nile",
+    "z": 381
+  },
+  "tile-nile-3": {
+    "type": "card",
+    "id": "tile-nile-3",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "nile",
+    "z": 373
+  },
+  "tile-nile-4": {
+    "type": "card",
+    "id": "tile-nile-4",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "nile",
+    "z": 391
+  },
+  "tile-nile-5": {
+    "type": "card",
+    "id": "tile-nile-5",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "nile",
+    "z": 397
+  },
+  "tile-nile-6": {
+    "type": "card",
+    "id": "tile-nile-6",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "nile",
+    "z": 379
+  },
+  "tile-nile-7": {
+    "type": "card",
+    "id": "tile-nile-7",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "nile",
+    "z": 383
+  },
+  "tile-nile-8": {
+    "type": "card",
+    "id": "tile-nile-8",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "nile",
+    "z": 359
+  },
+  "tile-nile-9": {
+    "type": "card",
+    "id": "tile-nile-9",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "nile",
+    "z": 387
+  },
+  "tile-nile-10": {
+    "type": "card",
+    "id": "tile-nile-10",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "nile",
+    "z": 365
+  },
+  "tile-nile-11": {
+    "type": "card",
+    "id": "tile-nile-11",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "nile",
+    "z": 399
+  },
+  "tile-nile-12": {
+    "type": "card",
+    "id": "tile-nile-12",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "nile",
+    "z": 363
+  },
+  "tile-nile-13": {
+    "type": "card",
+    "id": "tile-nile-13",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "nile",
+    "z": 377
+  },
+  "tile-nile-14": {
+    "type": "card",
+    "id": "tile-nile-14",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "nile",
+    "z": 355
+  },
+  "tile-nile-15": {
+    "type": "card",
+    "id": "tile-nile-15",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "nile",
+    "z": 369
+  },
+  "tile-nile-16": {
+    "type": "card",
+    "id": "tile-nile-16",
+    "deck": "tiles-deck",
+    "cardType": "nile",
+    "z": 415,
+    "parent": "tiles-pile"
+  },
+  "tile-nile-17": {
+    "type": "card",
+    "id": "tile-nile-17",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "nile",
+    "z": 375
+  },
+  "tile-nile-18": {
+    "type": "card",
+    "id": "tile-nile-18",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "nile",
+    "z": 353
+  },
+  "tile-nile-19": {
+    "type": "card",
+    "id": "tile-nile-19",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "nile",
+    "z": 357
+  },
+  "tile-nile-20": {
+    "type": "card",
+    "id": "tile-nile-20",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "nile",
+    "z": 367
+  },
+  "tile-nile-21": {
+    "type": "card",
+    "id": "tile-nile-21",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "nile",
+    "z": 371
+  },
+  "tile-nile-22": {
+    "type": "card",
+    "id": "tile-nile-22",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "nile",
+    "z": 361
+  },
+  "tile-nile-23": {
+    "type": "card",
+    "id": "tile-nile-23",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "nile",
+    "z": 393
+  },
+  "tile-nile-25": {
+    "type": "card",
+    "id": "tile-nile-25",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "nile",
+    "z": 385
+  },
+  "tile-nile-24": {
+    "type": "card",
+    "id": "tile-nile-24",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "nile",
+    "z": 389
+  },
+  "tile-flood-1": {
+    "type": "card",
+    "id": "tile-flood-1",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "flood",
+    "z": 433
+  },
+  "tile-flood-2": {
+    "type": "card",
+    "id": "tile-flood-2",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "flood",
+    "z": 423
+  },
+  "tile-flood-3": {
+    "type": "card",
+    "id": "tile-flood-3",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "flood",
+    "z": 417
+  },
+  "tile-flood-4": {
+    "type": "card",
+    "id": "tile-flood-4",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "flood",
+    "z": 419
+  },
+  "tile-flood-5": {
+    "type": "card",
+    "id": "tile-flood-5",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "flood",
+    "z": 431
+  },
+  "tile-flood-6": {
+    "type": "card",
+    "id": "tile-flood-6",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "flood",
+    "z": 435
+  },
+  "tile-flood-7": {
+    "type": "card",
+    "id": "tile-flood-7",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "flood",
+    "z": 427
+  },
+  "tile-flood-8": {
+    "type": "card",
+    "id": "tile-flood-8",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "flood",
+    "z": 421
+  },
+  "tile-flood-9": {
+    "type": "card",
+    "id": "tile-flood-9",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "flood",
+    "z": 425
+  },
+  "tile-flood-10": {
+    "type": "card",
+    "id": "tile-flood-10",
+    "deck": "tiles-deck",
+    "cardType": "flood",
+    "z": 455,
+    "parent": "tiles-pile"
+  },
+  "tile-flood-11": {
+    "type": "card",
+    "id": "tile-flood-11",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "flood",
+    "z": 437
+  },
+  "tile-flood-12": {
+    "type": "card",
+    "id": "tile-flood-12",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "flood",
+    "z": 429
+  },
+  "tile-drought-1": {
+    "type": "card",
+    "id": "tile-drought-1",
+    "deck": "tiles-deck",
+    "cardType": "drought",
+    "z": 465,
+    "parent": "tiles-pile"
+  },
+  "tile-drought-2": {
+    "type": "card",
+    "id": "tile-drought-2",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "drought",
+    "z": 457
+  },
+  "tile-civ-1-1": {
+    "type": "card",
+    "id": "tile-civ-1-1",
+    "deck": "tiles-deck",
+    "cardType": "civ-1",
+    "z": 480,
+    "parent": "tiles-pile"
+  },
+  "tile-civ-1-2": {
+    "type": "card",
+    "id": "tile-civ-1-2",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "civ-1",
+    "z": 473
+  },
+  "tile-civ-1-3": {
+    "type": "card",
+    "id": "tile-civ-1-3",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "civ-1",
+    "z": 469
+  },
+  "tile-civ-1-4": {
+    "type": "card",
+    "id": "tile-civ-1-4",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "civ-1",
+    "z": 467
+  },
+  "tile-civ-1-5": {
+    "type": "card",
+    "id": "tile-civ-1-5",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "civ-1",
+    "z": 471
+  },
+  "tile-civ-2-1": {
+    "type": "card",
+    "id": "tile-civ-2-1",
+    "deck": "tiles-deck",
+    "cardType": "civ-2",
+    "z": 499,
+    "parent": "tiles-pile"
+  },
+  "tile-civ-2-2": {
+    "type": "card",
+    "id": "tile-civ-2-2",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "civ-2",
+    "z": 482
+  },
+  "tile-civ-2-3": {
+    "type": "card",
+    "id": "tile-civ-2-3",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "civ-2",
+    "z": 484
+  },
+  "tile-civ-2-4": {
+    "type": "card",
+    "id": "tile-civ-2-4",
+    "deck": "tiles-deck",
+    "cardType": "civ-2",
+    "z": 496,
+    "parent": "tiles-pile"
+  },
+  "tile-civ-2-5": {
+    "type": "card",
+    "id": "tile-civ-2-5",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "civ-2",
+    "z": 486
+  },
+  "tile-civ-3-1": {
+    "type": "card",
+    "id": "tile-civ-3-1",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "civ-3",
+    "z": 509
+  },
+  "tile-civ-5-1": {
+    "type": "card",
+    "id": "tile-civ-5-1",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "civ-5",
+    "z": 521
+  },
+  "tile-civ-4-1": {
+    "type": "card",
+    "id": "tile-civ-4-1",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "civ-4",
+    "z": 513
+  },
+  "tile-civ-4-2": {
+    "type": "card",
+    "id": "tile-civ-4-2",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "civ-4",
+    "z": 517
+  },
+  "tile-civ-4-3": {
+    "type": "card",
+    "id": "tile-civ-4-3",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "civ-4",
+    "z": 511
+  },
+  "tile-civ-3-2": {
+    "type": "card",
+    "id": "tile-civ-3-2",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "civ-3",
+    "z": 501
+  },
+  "tile-civ-5-2": {
+    "type": "card",
+    "id": "tile-civ-5-2",
+    "deck": "tiles-deck",
+    "cardType": "civ-5",
+    "z": 569,
+    "parent": "tiles-pile"
+  },
+  "tile-civ-5-3": {
+    "type": "card",
+    "id": "tile-civ-5-3",
+    "deck": "tiles-deck",
+    "cardType": "civ-5",
+    "z": 565,
+    "parent": "tiles-pile"
+  },
+  "tile-civ-4-4": {
+    "type": "card",
+    "id": "tile-civ-4-4",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "civ-4",
+    "z": 515
+  },
+  "tile-civ-3-3": {
+    "type": "card",
+    "id": "tile-civ-3-3",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "civ-3",
+    "z": 507
+  },
+  "tile-civ-3-4": {
+    "type": "card",
+    "id": "tile-civ-3-4",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "civ-3",
+    "z": 505
+  },
+  "tile-civ-5-4": {
+    "type": "card",
+    "id": "tile-civ-5-4",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "civ-5",
+    "z": 525
+  },
+  "tile-civ-5-5": {
+    "type": "card",
+    "id": "tile-civ-5-5",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "civ-5",
+    "z": 523
+  },
+  "tile-civ-4-5": {
+    "type": "card",
+    "id": "tile-civ-4-5",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "civ-4",
+    "z": 519
+  },
+  "tile-civ-3-5": {
+    "type": "card",
+    "id": "tile-civ-3-5",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "civ-3",
+    "z": 503
+  },
+  "tile-unrest-1": {
+    "type": "card",
+    "id": "tile-unrest-1",
+    "deck": "tiles-deck",
+    "cardType": "unrest",
+    "z": 584,
+    "parent": "tiles-pile"
+  },
+  "tile-unrest-2": {
+    "type": "card",
+    "id": "tile-unrest-2",
+    "deck": "tiles-deck",
+    "cardType": "unrest",
+    "z": 581,
+    "parent": "tiles-pile"
+  },
+  "tile-unrest-3": {
+    "type": "card",
+    "id": "tile-unrest-3",
+    "deck": "tiles-deck",
+    "cardType": "unrest",
+    "z": 577,
+    "parent": "tiles-pile"
+  },
+  "tile-unrest-4": {
+    "type": "card",
+    "id": "tile-unrest-4",
+    "deck": "tiles-deck",
+    "cardType": "unrest",
+    "z": 572,
+    "parent": "tiles-pile"
+  },
+  "tile-gold-1": {
+    "type": "card",
+    "id": "tile-gold-1",
+    "deck": "tiles-deck",
+    "cardType": "gold",
+    "z": 599,
+    "parent": "tiles-pile"
+  },
+  "tile-gold-2": {
+    "type": "card",
+    "id": "tile-gold-2",
+    "deck": "tiles-deck",
+    "cardType": "gold",
+    "z": 602,
+    "parent": "tiles-pile"
+  },
+  "tile-gold-3": {
+    "type": "card",
+    "id": "tile-gold-3",
+    "deck": "tiles-deck",
+    "cardType": "gold",
+    "z": 588,
+    "parent": "tiles-pile"
+  },
+  "tile-gold-4": {
+    "type": "card",
+    "id": "tile-gold-4",
+    "deck": "tiles-deck",
+    "cardType": "gold",
+    "z": 592,
+    "parent": "tiles-pile"
+  },
+  "tile-gold-5": {
+    "type": "card",
+    "id": "tile-gold-5",
+    "deck": "tiles-deck",
+    "cardType": "gold",
+    "z": 595,
+    "parent": "tiles-pile"
+  },
+  "tile-monument-1-1": {
+    "type": "card",
+    "id": "tile-monument-1-1",
+    "deck": "tiles-deck",
+    "cardType": "monument-1",
+    "z": 616,
+    "parent": "tiles-pile"
+  },
+  "tile-monument-1-2": {
+    "type": "card",
+    "id": "tile-monument-1-2",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "monument-1",
+    "z": 608
+  },
+  "tile-monument-1-3": {
+    "type": "card",
+    "id": "tile-monument-1-3",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "monument-1",
+    "z": 604
+  },
+  "tile-monument-1-4": {
+    "type": "card",
+    "id": "tile-monument-1-4",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "monument-1",
+    "z": 606
+  },
+  "tile-monument-1-5": {
+    "type": "card",
+    "id": "tile-monument-1-5",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "monument-1",
+    "z": 610
+  },
+  "tile-monument-2-1": {
+    "type": "card",
+    "id": "tile-monument-2-1",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "monument-2",
+    "z": 624
+  },
+  "tile-monument-5-1": {
+    "type": "card",
+    "id": "tile-monument-5-1",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "monument-5",
+    "z": 652
+  },
+  "tile-monument-4-1": {
+    "type": "card",
+    "id": "tile-monument-4-1",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "monument-4",
+    "z": 640
+  },
+  "tile-monument-3-1": {
+    "type": "card",
+    "id": "tile-monument-3-1",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "monument-3",
+    "z": 628
+  },
+  "tile-monument-5-2": {
+    "type": "card",
+    "id": "tile-monument-5-2",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "monument-5",
+    "z": 650
+  },
+  "tile-monument-5-3": {
+    "type": "card",
+    "id": "tile-monument-5-3",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "monument-5",
+    "z": 654
+  },
+  "tile-monument-4-2": {
+    "type": "card",
+    "id": "tile-monument-4-2",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "monument-4",
+    "z": 646
+  },
+  "tile-monument-4-3": {
+    "type": "card",
+    "id": "tile-monument-4-3",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "monument-4",
+    "z": 638
+  },
+  "tile-monument-2-2": {
+    "type": "card",
+    "id": "tile-monument-2-2",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "monument-2",
+    "z": 620
+  },
+  "tile-monument-3-2": {
+    "type": "card",
+    "id": "tile-monument-3-2",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "monument-3",
+    "z": 632
+  },
+  "tile-monument-4-4": {
+    "type": "card",
+    "id": "tile-monument-4-4",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "monument-4",
+    "z": 642
+  },
+  "tile-monument-3-3": {
+    "type": "card",
+    "id": "tile-monument-3-3",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "monument-3",
+    "z": 636
+  },
+  "tile-monument-5-4": {
+    "type": "card",
+    "id": "tile-monument-5-4",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "monument-5",
+    "z": 648
+  },
+  "tile-monument-4-5": {
+    "type": "card",
+    "id": "tile-monument-4-5",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "monument-4",
+    "z": 644
+  },
+  "tile-monument-2-3": {
+    "type": "card",
+    "id": "tile-monument-2-3",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "monument-2",
+    "z": 618
+  },
+  "tile-monument-3-4": {
+    "type": "card",
+    "id": "tile-monument-3-4",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "monument-3",
+    "z": 630
+  },
+  "tile-monument-3-5": {
+    "type": "card",
+    "id": "tile-monument-3-5",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "monument-3",
+    "z": 634
+  },
+  "tile-monument-5-5": {
+    "type": "card",
+    "id": "tile-monument-5-5",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "monument-5",
+    "z": 656
+  },
+  "tile-monument-2-4": {
+    "type": "card",
+    "id": "tile-monument-2-4",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "monument-2",
+    "z": 626
+  },
+  "tile-monument-2-5": {
+    "type": "card",
+    "id": "tile-monument-2-5",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "monument-2",
+    "z": 622
+  },
+  "tile-monument-6-1": {
+    "type": "card",
+    "id": "tile-monument-6-1",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "monument-6",
+    "z": 662
+  },
+  "tile-monument-6-2": {
+    "type": "card",
+    "id": "tile-monument-6-2",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "monument-6",
+    "z": 660
+  },
+  "tile-monument-6-3": {
+    "type": "card",
+    "id": "tile-monument-6-3",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "monument-6",
+    "z": 658
+  },
+  "tile-monument-8-1": {
+    "type": "card",
+    "id": "tile-monument-8-1",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "monument-8",
+    "z": 678
+  },
+  "tile-monument-8-2": {
+    "type": "card",
+    "id": "tile-monument-8-2",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "monument-8",
+    "z": 680
+  },
+  "tile-monument-7-1": {
+    "type": "card",
+    "id": "tile-monument-7-1",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "monument-7",
+    "z": 670
+  },
+  "tile-earthquake-1": {
+    "type": "card",
+    "id": "tile-earthquake-1",
+    "deck": "tiles-deck",
+    "cardType": "earthquake",
+    "z": 818,
+    "parent": "tiles-pile"
+  },
+  "tile-monument-7-": {
+    "type": "card",
+    "id": "tile-monument-7-",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "monument-7",
+    "z": 676
+  },
+  "tile-monument-8-3": {
+    "type": "card",
+    "id": "tile-monument-8-3",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "monument-8",
+    "z": 684
+  },
+  "tile-monument-7-2": {
+    "type": "card",
+    "id": "tile-monument-7-2",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "monument-7",
+    "z": 668
+  },
+  "tile-monument-6-4": {
+    "type": "card",
+    "id": "tile-monument-6-4",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "monument-6",
+    "z": 666
+  },
+  "tile-monument-8-4": {
+    "type": "card",
+    "id": "tile-monument-8-4",
+    "deck": "tiles-deck",
+    "cardType": "monument-8",
+    "z": 795,
+    "parent": "tiles-pile"
+  },
+  "tile-monument-8-5": {
+    "type": "card",
+    "id": "tile-monument-8-5",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "monument-8",
+    "z": 682
+  },
+  "tile-monument-7-3": {
+    "type": "card",
+    "id": "tile-monument-7-3",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "monument-7",
+    "z": 672
+  },
+  "tile-monument-7-4": {
+    "type": "card",
+    "id": "tile-monument-7-4",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "monument-7",
+    "z": 674
+  },
+  "tile-monument-6-5": {
+    "type": "card",
+    "id": "tile-monument-6-5",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "monument-6",
+    "z": 664
+  },
+  "tile-earthquake-2": {
+    "type": "card",
+    "id": "tile-earthquake-2",
+    "deck": "tiles-deck",
+    "cardType": "earthquake",
+    "z": 815,
+    "parent": "tiles-pile"
+  },
+  "current-holder-sun": {
+    "type": "holder",
+    "id": "current-holder-sun",
+    "x": 125,
+    "y": 115,
+    "width": 40,
+    "height": 40,
+    "dropTarget": {
+      "type": "card",
+      "deck": "suns-deck"
+    }
+  },
+  "holder-current-1": {
+    "type": "holder",
+    "id": "holder-current-1",
+    "x": 210,
+    "y": 100,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck"
+    }
+  },
+  "holder-current-2": {
+    "type": "holder",
+    "id": "holder-current-2",
+    "x": 310,
+    "y": 100,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck"
+    }
+  },
+  "holder-current-3": {
+    "type": "holder",
+    "id": "holder-current-3",
+    "x": 410,
+    "y": 100,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck"
+    }
+  },
+  "holder-current-4": {
+    "type": "holder",
+    "id": "holder-current-4",
+    "x": 510,
+    "y": 100,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck"
+    }
+  },
+  "holder-current-5": {
+    "type": "holder",
+    "id": "holder-current-5",
+    "x": 610,
+    "y": 100,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck"
+    }
+  },
+  "holder-current-6": {
+    "type": "holder",
+    "id": "holder-current-6",
+    "x": 710,
+    "y": 100,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck"
+    }
+  },
+  "holder-current-7": {
+    "type": "holder",
+    "id": "holder-current-7",
+    "x": 810,
+    "y": 100,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck"
+    }
+  },
+  "holder-current-8": {
+    "type": "holder",
+    "id": "holder-current-8",
+    "x": 910,
+    "y": 100,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck"
+    }
+  },
+  "p1-gold-holder": {
+    "type": "holder",
+    "id": "p1-gold-holder",
+    "x": 180,
+    "y": 310,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "gold"
+    }
+  },
+  "p1-sun-holder-1": {
+    "type": "holder",
+    "id": "p1-sun-holder-1",
+    "x": 10,
+    "y": 305,
+    "width": 40,
+    "height": 40,
+    "dropTarget": {
+      "type": "card",
+      "deck": "suns-deck"
+    }
+  },
+  "p1-sun-holder-2": {
+    "type": "holder",
+    "id": "p1-sun-holder-2",
+    "x": 50,
+    "y": 305,
+    "width": 40,
+    "height": 40,
+    "dropTarget": {
+      "type": "card",
+      "deck": "suns-deck"
+    }
+  },
+  "p1-sun-holder-3": {
+    "type": "holder",
+    "id": "p1-sun-holder-3",
+    "x": 90,
+    "y": 305,
+    "width": 40,
+    "height": 40,
+    "dropTarget": {
+      "type": "card",
+      "deck": "suns-deck"
+    }
+  },
+  "p1-sun-holder-4": {
+    "type": "holder",
+    "id": "p1-sun-holder-4",
+    "x": 10,
+    "y": 345,
+    "width": 40,
+    "height": 40,
+    "dropTarget": {
+      "type": "card",
+      "deck": "suns-deck"
+    }
+  },
+  "p1-sun-holder-5": {
+    "type": "holder",
+    "id": "p1-sun-holder-5",
+    "x": 50,
+    "y": 345,
+    "width": 40,
+    "height": 40,
+    "dropTarget": {
+      "type": "card",
+      "deck": "suns-deck"
+    }
+  },
+  "p1-sun-holder-6": {
+    "type": "holder",
+    "id": "p1-sun-holder-6",
+    "x": 90,
+    "y": 345,
+    "width": 40,
+    "height": 40,
+    "dropTarget": {
+      "type": "card",
+      "deck": "suns-deck"
+    }
+  },
+  "p1-sun-holder-7": {
+    "type": "holder",
+    "id": "p1-sun-holder-7",
+    "x": 130,
+    "y": 305,
+    "width": 40,
+    "height": 40,
+    "dropTarget": {
+      "type": "card",
+      "deck": "suns-deck"
+    }
+  },
+  "p1-sun-holder-8": {
+    "type": "holder",
+    "id": "p1-sun-holder-8",
+    "x": 130,
+    "y": 345,
+    "width": 40,
+    "height": 40,
+    "dropTarget": {
+      "type": "card",
+      "deck": "suns-deck"
+    }
+  },
+  "p1-god-holder": {
+    "type": "holder",
+    "id": "p1-god-holder",
+    "x": 260,
+    "y": 310,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "god"
+    }
+  },
+  "p1-pharaoh-holder": {
+    "type": "holder",
+    "id": "p1-pharaoh-holder",
+    "x": 340,
+    "y": 310,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "pharaoh"
+    }
+  },
+  "p1-nile-holder": {
+    "type": "holder",
+    "id": "p1-nile-holder",
+    "x": 420,
+    "y": 310,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "nile"
+    }
+  },
+  "p1-flood-holder": {
+    "type": "holder",
+    "id": "p1-flood-holder",
+    "x": 490,
+    "y": 310,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "flood"
+    }
+  },
+  "p1-civ1-holder": {
+    "type": "holder",
+    "id": "p1-civ1-holder",
+    "x": 570,
+    "y": 310,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "civ1"
+    }
+  },
+  "p1-civ2-holder": {
+    "type": "holder",
+    "id": "p1-civ2-holder",
+    "x": 640,
+    "y": 310,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "civ2"
+    }
+  },
+  "p1-civ3-holder": {
+    "type": "holder",
+    "id": "p1-civ3-holder",
+    "x": 710,
+    "y": 310,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "civ3"
+    }
+  },
+  "p1-civ4-holder": {
+    "type": "holder",
+    "id": "p1-civ4-holder",
+    "x": 780,
+    "y": 310,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "civ4"
+    }
+  },
+  "p1-civ5-holder": {
+    "type": "holder",
+    "id": "p1-civ5-holder",
+    "x": 850,
+    "y": 310,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "civ5"
+    }
+  },
+  "p1-monument1-holder": {
+    "type": "holder",
+    "id": "p1-monument1-holder",
+    "x": 930,
+    "y": 310,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "monument-1"
+    }
+  },
+  "p1-monument2-holder": {
+    "type": "holder",
+    "id": "p1-monument2-holder",
+    "x": 1000,
+    "y": 310,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "monument-2"
+    }
+  },
+  "p1-monument3-holder": {
+    "type": "holder",
+    "id": "p1-monument3-holder",
+    "x": 1070,
+    "y": 310,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "monument-3"
+    }
+  },
+  "p1-monument4-holder": {
+    "type": "holder",
+    "id": "p1-monument4-holder",
+    "x": 1140,
+    "y": 310,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "monument-4"
+    }
+  },
+  "p1-monument5-holder": {
+    "type": "holder",
+    "id": "p1-monument5-holder",
+    "x": 1210,
+    "y": 310,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "monument-5"
+    }
+  },
+  "p1-monument6-holder": {
+    "type": "holder",
+    "id": "p1-monument6-holder",
+    "x": 1280,
+    "y": 310,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "monument-6"
+    }
+  },
+  "p1-monument7-holder": {
+    "type": "holder",
+    "id": "p1-monument7-holder",
+    "x": 1350,
+    "y": 310,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "monument-7"
+    }
+  },
+  "p1-monument8-holder": {
+    "type": "holder",
+    "id": "p1-monument8-holder",
+    "x": 1420,
+    "y": 310,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "monument-8"
+    }
+  },
+  "example-god": {
+    "id": "example-god",
+    "width": 60,
+    "height": 60,
+    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/ra/assets/tile-god.svg",
+    "x": 265,
+    "y": 195,
+    "css": "opacity:0.2",
+    "movable": false
+  },
+  "example-gold": {
+    "id": "example-gold",
+    "x": 185,
+    "y": 195,
+    "width": 60,
+    "height": 60,
+    "css": "opacity:0.2",
+    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/ra/assets/tile-gold.svg",
+    "movable": false
+  },
+  "example-pharaoh": {
+    "id": "example-pharaoh",
+    "x": 345,
+    "y": 195,
+    "width": 60,
+    "height": 60,
+    "css": "opacity:0.2",
+    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/ra/assets/tile-pharaoh.svg",
+    "movable": false
+  },
+  "example-nile": {
+    "id": "example-nile",
+    "x": 425,
+    "y": 195,
+    "width": 60,
+    "height": 60,
+    "css": "opacity:0.2",
+    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/ra/assets/tile-nile.svg",
+    "movable": false
+  },
+  "example-flood": {
+    "id": "example-flood",
+    "x": 495,
+    "y": 195,
+    "width": 60,
+    "height": 60,
+    "css": "opacity:0.2",
+    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/ra/assets/tile-flood.svg",
+    "movable": false
+  },
+  "example-civ-1": {
+    "id": "example-civ-1",
+    "x": 575,
+    "y": 195,
+    "width": 60,
+    "height": 60,
+    "css": "opacity:0.2",
+    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/ra/assets/tile-civ-1.svg",
+    "movable": false
+  },
+  "example-civ-2": {
+    "id": "example-civ-2",
+    "x": 645,
+    "y": 195,
+    "width": 60,
+    "height": 60,
+    "css": "opacity:0.2",
+    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/ra/assets/tile-civ-2.svg",
+    "movable": false
+  },
+  "example-civ-3": {
+    "id": "example-civ-3",
+    "x": 715,
+    "y": 195,
+    "width": 60,
+    "height": 60,
+    "css": "opacity:0.2",
+    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/ra/assets/tile-civ-3.svg",
+    "movable": false
+  },
+  "example-civ-4": {
+    "id": "example-civ-4",
+    "x": 785,
+    "y": 195,
+    "width": 60,
+    "height": 60,
+    "css": "opacity:0.2",
+    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/ra/assets/tile-civ-4.svg",
+    "movable": false
+  },
+  "example-civ-5": {
+    "id": "example-civ-5",
+    "x": 855,
+    "y": 195,
+    "width": 60,
+    "height": 60,
+    "css": "opacity:0.2",
+    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/ra/assets/tile-civ-5.svg",
+    "movable": false
+  },
+  "example-monument-1": {
+    "id": "example-monument-1",
+    "x": 935,
+    "y": 195,
+    "width": 60,
+    "height": 60,
+    "css": "opacity:0.2",
+    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/ra/assets/tile-monument-1.svg",
+    "movable": false
+  },
+  "example-monument-2": {
+    "id": "example-monument-2",
+    "x": 1005,
+    "y": 195,
+    "width": 60,
+    "height": 60,
+    "css": "opacity:0.2",
+    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/ra/assets/tile-monument-2.svg",
+    "movable": false
+  },
+  "example-monument-3": {
+    "id": "example-monument-3",
+    "x": 1075,
+    "y": 195,
+    "width": 60,
+    "height": 60,
+    "css": "opacity:0.2",
+    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/ra/assets/tile-monument-3.svg",
+    "movable": false
+  },
+  "example-monument-4": {
+    "id": "example-monument-4",
+    "x": 1145,
+    "y": 195,
+    "width": 60,
+    "height": 60,
+    "css": "opacity:0.2",
+    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/ra/assets/tile-monument-4.svg",
+    "movable": false
+  },
+  "example-monument-5": {
+    "id": "example-monument-5",
+    "x": 1215,
+    "y": 195,
+    "width": 60,
+    "height": 60,
+    "css": "opacity:0.2",
+    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/ra/assets/tile-monument-5.svg",
+    "movable": false
+  },
+  "example-monument-6": {
+    "id": "example-monument-6",
+    "x": 1285,
+    "y": 195,
+    "width": 60,
+    "height": 60,
+    "css": "opacity:0.2",
+    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/ra/assets/tile-monument-6.svg",
+    "movable": false
+  },
+  "example-monument-7": {
+    "id": "example-monument-7",
+    "x": 1355,
+    "y": 195,
+    "width": 60,
+    "height": 60,
+    "css": "opacity:0.2",
+    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/ra/assets/tile-monument-7.svg",
+    "movable": false
+  },
+  "example-monument-8": {
+    "id": "example-monument-8",
+    "x": 1425,
+    "y": 195,
+    "width": 60,
+    "height": 60,
+    "css": "opacity:0.2",
+    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/ra/assets/tile-monument-8.svg",
+    "movable": false
+  },
+  "description-gold": {
+    "type": "label",
+    "id": "description-gold",
+    "x": 180,
+    "y": 260,
+    "css": "font-family:sans-serif;font-size:10px;text-align:center",
+    "text": "3VP each",
+    "width": 70
+  },
+  "description-god": {
+    "type": "label",
+    "id": "description-god",
+    "x": 260,
+    "y": 260,
+    "css": "font-family:sans-serif;font-size:10px;text-align:center",
+    "text": "2VP each",
+    "width": 70
+  },
+  "label-discard": {
+    "type": "label",
+    "id": "label-discard",
+    "x": 10,
+    "css": "font-family:sans-serif;font-size:8px;text-align:center",
+    "text": "DISCARD",
+    "width": 70,
+    "height": 10,
+    "layer": -4
+  },
+  "tiles-discard": {
+    "type": "holder",
+    "id": "tiles-discard",
+    "x": 10,
+    "y": 10,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck"
+    },
+    "onEnter": {
+      "activeFace": 0
+    },
+    "onLeave": {
+      "activeFace": 1
+    }
+  },
+  "description-pharaoh": {
+    "type": "label",
+    "id": "description-pharaoh",
+    "x": 340,
+    "y": 260,
+    "css": "font-family:sans-serif;font-size:10px;text-align:center",
+    "text": "Most: 5VP\nFewest: -2VP",
+    "width": 70
+  },
+  "description-nile-and-flood": {
+    "type": "label",
+    "id": "description-nile-and-flood",
+    "x": 420,
+    "y": 260,
+    "width": 140,
+    "css": "font-family:sans-serif;font-size:10px;text-align:center",
+    "text": "1VP each as long as at\nleast one is a Flood"
+  },
+  "description-civ": {
+    "type": "label",
+    "id": "description-civ",
+    "x": 575,
+    "y": 260,
+    "width": 340,
+    "css": "font-family:sans-serif;font-size:10px;text-align:center",
+    "text": "None: -5VP\n3/4/5 different types: 5/10/15VP"
+  },
+  "description-monuments-nb": {
+    "type": "label",
+    "id": "description-monuments-nb",
+    "x": 935,
+    "y": 260,
+    "width": 140,
+    "css": "font-family:sans-serif;font-size:10px;text-align:center",
+    "text": "- LAST EPOCH ONLY -"
+  },
+  "description-monuments": {
+    "type": "label",
+    "id": "description-monuments",
+    "x": 1075,
+    "y": 260,
+    "width": 380,
+    "css": "font-family:sans-serif;font-size:10px;text-align:center",
+    "text": "1/2/3/4/5/6/7/8 different types: 1/2/3/4/5/6/10/15VP\nEach 3/4/5 of a kind: 5/10/15VP"
+  },
+  "description-suns": {
+    "type": "label",
+    "id": "description-suns",
+    "x": 10,
+    "y": 195,
+    "width": 160,
+    "css": "font-family:sans-serif;font-size:10px;text-align:center",
+    "text": "End of Game:\nHighest sun total +5VP\nLowest sun total -5VP",
+    "height": 30
+  },
+  "p1-name": {
+    "type": "label",
+    "id": "p1-name",
+    "text": "PLAYER 1",
+    "css": "font-family:sans-serif;font-size:12px;font-weight:bold;text-align:center",
+    "width": 160,
+    "x": 10,
+    "y": 260,
+    "editable": true,
+    "height": 10
+  },
+  "p1-score": {
+    "type": "label",
+    "id": "p1-score",
+    "x": 55,
+    "y": 280,
+    "height": 14,
+    "css": "font-family:sans-serif;font-size:12px;text-align:center",
+    "editable": true,
+    "text": 0,
+    "width": 70
+  },
+  "p1-score-dec": {
+    "type": "button",
+    "id": "p1-score-dec",
+    "parent": "p1-score",
+    "x": -8,
+    "width": 20,
+    "height": 20,
+    "movableInEdit": false,
+    "clickRoutine": [
+      {
+        "func": "LABEL",
+        "label": "${PROPERTY parent}",
+        "mode": "dec",
+        "value": 1
+      }
+    ],
+    "text": "-",
+    "y": -1
+  },
+  "p1-score-inc": {
+    "type": "button",
+    "id": "p1-score-inc",
+    "parent": "p1-score",
+    "x": 58,
+    "y": -1,
+    "width": 20,
+    "height": 20,
+    "movableInEdit": false,
+    "clickRoutine": [
+      {
+        "func": "LABEL",
+        "label": "${PROPERTY parent}",
+        "mode": "inc",
+        "value": 1
+      }
+    ],
+    "text": "+"
+  },
+  "p2-sun-holder-1": {
+    "type": "holder",
+    "id": "p2-sun-holder-1",
+    "x": 10,
+    "y": 445,
+    "width": 40,
+    "height": 40,
+    "dropTarget": {
+      "type": "card",
+      "deck": "suns-deck"
+    }
+  },
+  "p2-name": {
+    "type": "label",
+    "id": "p2-name",
+    "text": "PLAYER 2",
+    "css": "font-family:sans-serif;font-size:12px;font-weight:bold;text-align:center",
+    "width": 160,
+    "x": 10,
+    "y": 400,
+    "editable": true,
+    "height": 10
+  },
+  "p2-score": {
+    "type": "label",
+    "id": "p2-score",
+    "x": 55,
+    "y": 420,
+    "height": 14,
+    "css": "font-family:sans-serif;font-size:12px;text-align:center",
+    "editable": true,
+    "text": 0,
+    "width": 70
+  },
+  "p2-score-dec": {
+    "type": "button",
+    "id": "p2-score-dec",
+    "parent": "p2-score",
+    "x": -8,
+    "width": 20,
+    "height": 20,
+    "movableInEdit": false,
+    "clickRoutine": [
+      {
+        "func": "LABEL",
+        "label": "${PROPERTY parent}",
+        "mode": "dec",
+        "value": 1
+      }
+    ],
+    "text": "-",
+    "y": -1
+  },
+  "p2-score-inc": {
+    "type": "button",
+    "id": "p2-score-inc",
+    "parent": "p2-score",
+    "x": 58,
+    "y": -1,
+    "width": 20,
+    "height": 20,
+    "movableInEdit": false,
+    "clickRoutine": [
+      {
+        "func": "LABEL",
+        "label": "${PROPERTY parent}",
+        "mode": "inc",
+        "value": 1
+      }
+    ],
+    "text": "+"
+  },
+  "p2-sun-holder-2": {
+    "type": "holder",
+    "id": "p2-sun-holder-2",
+    "x": 50,
+    "y": 445,
+    "width": 40,
+    "height": 40,
+    "dropTarget": {
+      "type": "card",
+      "deck": "suns-deck"
+    }
+  },
+  "p2-sun-holder-3": {
+    "type": "holder",
+    "id": "p2-sun-holder-3",
+    "x": 90,
+    "y": 445,
+    "width": 40,
+    "height": 40,
+    "dropTarget": {
+      "type": "card",
+      "deck": "suns-deck"
+    }
+  },
+  "p2-sun-holder-4": {
+    "type": "holder",
+    "id": "p2-sun-holder-4",
+    "x": 130,
+    "y": 445,
+    "width": 40,
+    "height": 40,
+    "dropTarget": {
+      "type": "card",
+      "deck": "suns-deck"
+    }
+  },
+  "p2-sun-holder-5": {
+    "type": "holder",
+    "id": "p2-sun-holder-5",
+    "x": 10,
+    "y": 485,
+    "width": 40,
+    "height": 40,
+    "dropTarget": {
+      "type": "card",
+      "deck": "suns-deck"
+    }
+  },
+  "p2-sun-holder-6": {
+    "type": "holder",
+    "id": "p2-sun-holder-6",
+    "x": 50,
+    "y": 485,
+    "width": 40,
+    "height": 40,
+    "dropTarget": {
+      "type": "card",
+      "deck": "suns-deck"
+    }
+  },
+  "p2-sun-holder-7": {
+    "type": "holder",
+    "id": "p2-sun-holder-7",
+    "x": 90,
+    "y": 485,
+    "width": 40,
+    "height": 40,
+    "dropTarget": {
+      "type": "card",
+      "deck": "suns-deck"
+    }
+  },
+  "p2-sun-holder-8": {
+    "type": "holder",
+    "id": "p2-sun-holder-8",
+    "x": 130,
+    "y": 485,
+    "width": 40,
+    "height": 40,
+    "dropTarget": {
+      "type": "card",
+      "deck": "suns-deck"
+    }
+  },
+  "p2-gold-holder": {
+    "type": "holder",
+    "id": "p2-gold-holder",
+    "x": 180,
+    "y": 450,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "gold"
+    }
+  },
+  "p2-god-holder": {
+    "type": "holder",
+    "id": "p2-god-holder",
+    "x": 260,
+    "y": 450,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "god"
+    }
+  },
+  "p2-pharaoh-holder": {
+    "type": "holder",
+    "id": "p2-pharaoh-holder",
+    "x": 340,
+    "y": 450,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "pharaoh"
+    }
+  },
+  "p2-nile-holder": {
+    "type": "holder",
+    "id": "p2-nile-holder",
+    "x": 420,
+    "y": 450,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "nile"
+    }
+  },
+  "p2-flood-holder": {
+    "type": "holder",
+    "id": "p2-flood-holder",
+    "x": 490,
+    "y": 450,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "flood"
+    }
+  },
+  "p2-civ1-holder": {
+    "type": "holder",
+    "id": "p2-civ1-holder",
+    "x": 570,
+    "y": 450,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "civ1"
+    }
+  },
+  "p2-civ2-holder": {
+    "type": "holder",
+    "id": "p2-civ2-holder",
+    "x": 640,
+    "y": 450,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "civ2"
+    }
+  },
+  "p2-civ3-holder": {
+    "type": "holder",
+    "id": "p2-civ3-holder",
+    "x": 710,
+    "y": 450,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "civ3"
+    }
+  },
+  "p2-civ4-holder": {
+    "type": "holder",
+    "id": "p2-civ4-holder",
+    "x": 780,
+    "y": 450,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "civ4"
+    }
+  },
+  "p2-civ5-holder": {
+    "type": "holder",
+    "id": "p2-civ5-holder",
+    "x": 850,
+    "y": 450,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "civ5"
+    }
+  },
+  "p2-monument1-holder": {
+    "type": "holder",
+    "id": "p2-monument1-holder",
+    "x": 930,
+    "y": 450,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "monument-1"
+    }
+  },
+  "p2-monument2-holder": {
+    "type": "holder",
+    "id": "p2-monument2-holder",
+    "x": 1000,
+    "y": 450,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "monument-2"
+    }
+  },
+  "p2-monument3-holder": {
+    "type": "holder",
+    "id": "p2-monument3-holder",
+    "x": 1070,
+    "y": 450,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "monument-3"
+    }
+  },
+  "p2-monument4-holder": {
+    "type": "holder",
+    "id": "p2-monument4-holder",
+    "x": 1140,
+    "y": 450,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "monument-4"
+    }
+  },
+  "p2-monument5-holder": {
+    "type": "holder",
+    "id": "p2-monument5-holder",
+    "x": 1210,
+    "y": 450,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "monument-5"
+    }
+  },
+  "p2-monument6-holder": {
+    "type": "holder",
+    "id": "p2-monument6-holder",
+    "x": 1280,
+    "y": 450,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "monument-6"
+    }
+  },
+  "p2-monument7-holder": {
+    "type": "holder",
+    "id": "p2-monument7-holder",
+    "x": 1350,
+    "y": 450,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "monument-7"
+    }
+  },
+  "p2-monument8-holder": {
+    "type": "holder",
+    "id": "p2-monument8-holder",
+    "x": 1420,
+    "y": 450,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "monument-8"
+    }
+  },
+  "holder-ra-1": {
+    "type": "holder",
+    "id": "holder-ra-1",
+    "x": 210,
+    "y": 10,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "cardType": "ra"
+    }
+  },
+  "holder-ra-2": {
+    "type": "holder",
+    "id": "holder-ra-2",
+    "x": 310,
+    "y": 10,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "cardType": "ra"
+    }
+  },
+  "holder-ra-3": {
+    "type": "holder",
+    "id": "holder-ra-3",
+    "x": 410,
+    "y": 10,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "cardType": "ra"
+    }
+  },
+  "holder-ra-4": {
+    "type": "holder",
+    "id": "holder-ra-4",
+    "x": 510,
+    "y": 10,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "cardType": "ra"
+    }
+  },
+  "holder-ra-5": {
+    "type": "holder",
+    "id": "holder-ra-5",
+    "x": 610,
+    "y": 10,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "cardType": "ra"
+    }
+  },
+  "holder-ra-6": {
+    "type": "holder",
+    "id": "holder-ra-6",
+    "x": 710,
+    "y": 10,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "cardType": "ra"
+    }
+  },
+  "auction-marker": {
+    "id": "auction-marker",
+    "x": 1070,
+    "y": 80,
+    "width": 90,
+    "height": 90,
+    "classes": "classicPiece",
+    "color": "#ff0000"
+  }
+}
