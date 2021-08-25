@@ -2193,7 +2193,7 @@
     "dropTarget": {
       "type": "card",
       "deck": "tiles-deck",
-      "cardType": "civ1"
+      "cardType": "civ-1"
     }
   },
   "p1-civ2-holder": {
@@ -2206,7 +2206,7 @@
     "dropTarget": {
       "type": "card",
       "deck": "tiles-deck",
-      "cardType": "civ2"
+      "cardType": "civ-2"
     }
   },
   "p1-civ3-holder": {
@@ -2219,7 +2219,7 @@
     "dropTarget": {
       "type": "card",
       "deck": "tiles-deck",
-      "cardType": "civ3"
+      "cardType": "civ-3"
     }
   },
   "p1-civ4-holder": {
@@ -2232,7 +2232,7 @@
     "dropTarget": {
       "type": "card",
       "deck": "tiles-deck",
-      "cardType": "civ4"
+      "cardType": "civ-4"
     }
   },
   "p1-civ5-holder": {
@@ -2245,7 +2245,7 @@
     "dropTarget": {
       "type": "card",
       "deck": "tiles-deck",
-      "cardType": "civ5"
+      "cardType": "civ-5"
     }
   },
   "p1-monument1-holder": {
@@ -2631,7 +2631,7 @@
     "width": 160,
     "css": "font-family:sans-serif;font-size:10px;text-align:center",
     "text": "End of Game:\nHighest sun total +5VP\nLowest sun total -5VP",
-    "height": 30
+    "height": 50
   },
   "p1-name": {
     "type": "label",
@@ -2652,7 +2652,7 @@
     "height": 14,
     "css": "font-family:sans-serif;font-size:12px;text-align:center",
     "editable": true,
-    "text": 0,
+    "text": 10,
     "width": 70
   },
   "p1-score-dec": {
@@ -2747,7 +2747,7 @@
     "height": 14,
     "css": "font-family:sans-serif;font-size:12px;text-align:center",
     "editable": true,
-    "text": 0,
+    "text": 10,
     "width": 70
   },
   "p2-score-dec": {
@@ -2796,7 +2796,7 @@
     "height": 14,
     "css": "font-family:sans-serif;font-size:12px;text-align:center",
     "editable": true,
-    "text": 0,
+    "text": 10,
     "width": 70
   },
   "p3-score-dec": {
@@ -3145,7 +3145,7 @@
     "dropTarget": {
       "type": "card",
       "deck": "tiles-deck",
-      "cardType": "civ1"
+      "cardType": "civ-1"
     }
   },
   "p3-civ1-holder": {
@@ -3158,7 +3158,7 @@
     "dropTarget": {
       "type": "card",
       "deck": "tiles-deck",
-      "cardType": "civ1"
+      "cardType": "civ-1"
     }
   },
   "p2-civ2-holder": {
@@ -3171,7 +3171,7 @@
     "dropTarget": {
       "type": "card",
       "deck": "tiles-deck",
-      "cardType": "civ2"
+      "cardType": "civ-2"
     }
   },
   "p2-civ3-holder": {
@@ -3184,7 +3184,7 @@
     "dropTarget": {
       "type": "card",
       "deck": "tiles-deck",
-      "cardType": "civ3"
+      "cardType": "civ-3"
     }
   },
   "p2-civ4-holder": {
@@ -3197,7 +3197,7 @@
     "dropTarget": {
       "type": "card",
       "deck": "tiles-deck",
-      "cardType": "civ4"
+      "cardType": "civ-4"
     }
   },
   "p2-civ5-holder": {
@@ -3210,7 +3210,7 @@
     "dropTarget": {
       "type": "card",
       "deck": "tiles-deck",
-      "cardType": "civ5"
+      "cardType": "civ-5"
     }
   },
   "p3-civ2-holder": {
@@ -3223,7 +3223,7 @@
     "dropTarget": {
       "type": "card",
       "deck": "tiles-deck",
-      "cardType": "civ2"
+      "cardType": "civ-2"
     }
   },
   "p3-civ3-holder": {
@@ -3236,7 +3236,7 @@
     "dropTarget": {
       "type": "card",
       "deck": "tiles-deck",
-      "cardType": "civ3"
+      "cardType": "civ-3"
     }
   },
   "p3-civ4-holder": {
@@ -3249,7 +3249,7 @@
     "dropTarget": {
       "type": "card",
       "deck": "tiles-deck",
-      "cardType": "civ4"
+      "cardType": "civ-4"
     }
   },
   "p3-civ5-holder": {
@@ -3262,7 +3262,7 @@
     "dropTarget": {
       "type": "card",
       "deck": "tiles-deck",
-      "cardType": "civ5"
+      "cardType": "civ-5"
     }
   },
   "p2-monument1-holder": {
