@@ -2141,49 +2141,31 @@
       "cardType": "business-7"
     }
   },
-  "cash-13": {
-    "type": "card",
-    "id": "cash-13",
-    "deck": "suns-deck",
-    "cardType": "sun-13",
-    "x": 1400,
-    "y": 10,
-    "z": 83
-  },
   "cash-6": {
     "type": "card",
     "id": "cash-6",
     "deck": "suns-deck",
     "cardType": "sun-6",
-    "x": 1440,
-    "y": 10,
-    "z": 152
+    "x": 1400,
+    "z": 152,
+    "y": 90
   },
   "cash-2": {
     "type": "card",
     "id": "cash-2",
     "deck": "suns-deck",
     "cardType": "sun-2",
-    "x": 1480,
+    "x": 1320,
     "y": 10,
     "z": 165
-  },
-  "cash-12": {
-    "type": "card",
-    "id": "cash-12",
-    "deck": "suns-deck",
-    "cardType": "sun-12",
-    "x": 1400,
-    "y": 50,
-    "z": 86
   },
   "cash-7": {
     "type": "card",
     "id": "cash-7",
     "deck": "suns-deck",
     "cardType": "sun-7",
-    "x": 1440,
-    "y": 50,
+    "x": 1280,
+    "y": 10,
     "z": 149
   },
   "cash-3": {
@@ -2191,7 +2173,7 @@
     "id": "cash-3",
     "deck": "suns-deck",
     "cardType": "sun-3",
-    "x": 1480,
+    "x": 1320,
     "y": 50,
     "z": 161
   },
@@ -2200,7 +2182,7 @@
     "id": "cash-11",
     "deck": "suns-deck",
     "cardType": "sun-11",
-    "x": 1400,
+    "x": 1360,
     "y": 90,
     "z": 89
   },
@@ -2209,9 +2191,9 @@
     "id": "cash-8",
     "deck": "suns-deck",
     "cardType": "sun-8",
-    "x": 1440,
-    "y": 90,
-    "z": 146
+    "x": 1280,
+    "z": 146,
+    "y": 50
   },
   "cash-4": {
     "type": "card",
@@ -2219,17 +2201,17 @@
     "deck": "suns-deck",
     "cardType": "sun-4",
     "x": 1480,
-    "y": 90,
-    "z": 158
+    "z": 158,
+    "y": 10
   },
   "cash-10": {
     "type": "card",
     "id": "cash-10",
     "deck": "suns-deck",
     "cardType": "sun-10",
-    "x": 1400,
-    "y": 130,
-    "z": 140
+    "x": 1440,
+    "z": 140,
+    "y": 50
   },
   "cash-9": {
     "type": "card",
@@ -2237,7 +2219,7 @@
     "deck": "suns-deck",
     "cardType": "sun-9",
     "x": 1440,
-    "y": 130,
+    "y": 10,
     "z": 143
   },
   "cash-5": {
@@ -2246,8 +2228,8 @@
     "deck": "suns-deck",
     "cardType": "sun-5",
     "x": 1480,
-    "y": 130,
-    "z": 155
+    "z": 155,
+    "y": 50
   },
   "cash-1": {
     "type": "card",
@@ -3202,5 +3184,403 @@
     "deck": "tiles-deck",
     "cardType": "gun",
     "z": 833
+  },
+  "p5-name": {
+    "type": "label",
+    "id": "p5-name",
+    "text": "PLAYER 5",
+    "css": "font-family:sans-serif;font-size:12px;font-weight:bold;text-align:center",
+    "width": 160,
+    "x": 10,
+    "y": 820,
+    "editable": true,
+    "height": 10
+  },
+  "p5-cash-holder-1": {
+    "type": "holder",
+    "id": "p5-cash-holder-1",
+    "x": 30,
+    "y": 865,
+    "width": 40,
+    "height": 40,
+    "dropTarget": {
+      "type": "card",
+      "deck": "suns-deck"
+    }
+  },
+  "p5-cash-holder-2": {
+    "type": "holder",
+    "id": "p5-cash-holder-2",
+    "x": 70,
+    "y": 865,
+    "width": 40,
+    "height": 40,
+    "dropTarget": {
+      "type": "card",
+      "deck": "suns-deck"
+    }
+  },
+  "p5-cash-holder-3": {
+    "type": "holder",
+    "id": "p5-cash-holder-3",
+    "x": 110,
+    "y": 865,
+    "width": 40,
+    "height": 40,
+    "dropTarget": {
+      "type": "card",
+      "deck": "suns-deck"
+    }
+  },
+  "p5-cash-holder-4": {
+    "type": "holder",
+    "id": "p5-cash-holder-4",
+    "x": 30,
+    "y": 905,
+    "width": 40,
+    "height": 40,
+    "dropTarget": {
+      "type": "card",
+      "deck": "suns-deck"
+    }
+  },
+  "p5-cash-holder-5": {
+    "type": "holder",
+    "id": "p5-cash-holder-5",
+    "x": 70,
+    "y": 905,
+    "width": 40,
+    "height": 40,
+    "dropTarget": {
+      "type": "card",
+      "deck": "suns-deck"
+    }
+  },
+  "p5-cash-holder-6": {
+    "type": "holder",
+    "id": "p5-cash-holder-6",
+    "x": 110,
+    "y": 905,
+    "width": 40,
+    "height": 40,
+    "dropTarget": {
+      "type": "card",
+      "deck": "suns-deck"
+    }
+  },
+  "p5-gold-holder": {
+    "type": "holder",
+    "id": "p5-gold-holder",
+    "x": 180,
+    "y": 870,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "gold"
+    }
+  },
+  "p5-score": {
+    "type": "label",
+    "id": "p5-score",
+    "x": 55,
+    "y": 840,
+    "height": 14,
+    "css": "font-family:sans-serif;font-size:12px;text-align:center",
+    "editable": true,
+    "text": 10,
+    "width": 70
+  },
+  "p5-score-dec": {
+    "type": "button",
+    "id": "p5-score-dec",
+    "parent": "p5-score",
+    "x": -8,
+    "width": 20,
+    "height": 20,
+    "movableInEdit": false,
+    "clickRoutine": [
+      {
+        "func": "LABEL",
+        "label": "${PROPERTY parent}",
+        "mode": "dec",
+        "value": 1
+      }
+    ],
+    "text": "-",
+    "y": -1
+  },
+  "p5-score-inc": {
+    "type": "button",
+    "id": "p5-score-inc",
+    "parent": "p5-score",
+    "x": 58,
+    "y": -1,
+    "width": 20,
+    "height": 20,
+    "movableInEdit": false,
+    "clickRoutine": [
+      {
+        "func": "LABEL",
+        "label": "${PROPERTY parent}",
+        "mode": "inc",
+        "value": 1
+      }
+    ],
+    "text": "+"
+  },
+  "p5-robber-holder": {
+    "type": "holder",
+    "id": "p5-robber-holder",
+    "x": 260,
+    "y": 870,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "robber"
+    }
+  },
+  "p5-gun-holder": {
+    "type": "holder",
+    "id": "p5-gun-holder",
+    "x": 340,
+    "y": 870,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "gun"
+    }
+  },
+  "p5-car-holder": {
+    "type": "holder",
+    "id": "p5-car-holder",
+    "x": 420,
+    "y": 870,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "car"
+    }
+  },
+  "p5-driver-holder": {
+    "type": "holder",
+    "id": "p5-driver-holder",
+    "x": 490,
+    "y": 870,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "driver"
+    }
+  },
+  "p5-trinket1-holder": {
+    "type": "holder",
+    "id": "p5-trinket1-holder",
+    "x": 570,
+    "y": 870,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "trinket-1"
+    }
+  },
+  "p5-trinket2-holder": {
+    "type": "holder",
+    "id": "p5-trinket2-holder",
+    "x": 640,
+    "y": 870,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "trinket-2"
+    }
+  },
+  "p5-trinket3-holder": {
+    "type": "holder",
+    "id": "p5-trinket3-holder",
+    "x": 710,
+    "y": 870,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "trinket-3"
+    }
+  },
+  "p5-trinket4-holder": {
+    "type": "holder",
+    "id": "p5-trinket4-holder",
+    "x": 780,
+    "y": 870,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "trinket-4"
+    }
+  },
+  "p5-trinket5-holder": {
+    "type": "holder",
+    "id": "p5-trinket5-holder",
+    "x": 850,
+    "y": 870,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "trinket-5"
+    }
+  },
+  "p5-business1-holder": {
+    "type": "holder",
+    "id": "p5-business1-holder",
+    "x": 930,
+    "y": 870,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "business-1"
+    }
+  },
+  "p5-business2-holder": {
+    "type": "holder",
+    "id": "p5-business2-holder",
+    "x": 1000,
+    "y": 870,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "business-2"
+    }
+  },
+  "p5-business3-holder": {
+    "type": "holder",
+    "id": "p5-business3-holder",
+    "x": 1070,
+    "y": 870,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "business-3"
+    }
+  },
+  "p5-business4-holder": {
+    "type": "holder",
+    "id": "p5-business4-holder",
+    "x": 1140,
+    "y": 870,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "business-4"
+    }
+  },
+  "p5-business5-holder": {
+    "type": "holder",
+    "id": "p5-business5-holder",
+    "x": 1210,
+    "y": 870,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "business-5"
+    }
+  },
+  "p5-business6-holder": {
+    "type": "holder",
+    "id": "p5-business6-holder",
+    "x": 1280,
+    "y": 870,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "business-6"
+    }
+  },
+  "p5-business7-holder": {
+    "type": "holder",
+    "id": "p5-business7-holder",
+    "x": 1350,
+    "y": 870,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "business-7"
+    }
+  },
+  "cash-16": {
+    "type": "card",
+    "id": "cash-16",
+    "deck": "suns-deck",
+    "cardType": "sun-16",
+    "x": 1240,
+    "y": 10,
+    "z": 83
+  },
+  "cash-15": {
+    "type": "card",
+    "id": "cash-15",
+    "deck": "suns-deck",
+    "cardType": "sun-15",
+    "x": 1240,
+    "y": 50,
+    "z": 83
+  },
+  "cash-14": {
+    "type": "card",
+    "id": "cash-14",
+    "deck": "suns-deck",
+    "cardType": "sun-14",
+    "x": 1400,
+    "y": 10,
+    "z": 83
+  },
+  "cash-13": {
+    "type": "card",
+    "id": "cash-13",
+    "deck": "suns-deck",
+    "cardType": "sun-13",
+    "x": 1400,
+    "y": 50,
+    "z": 86
+  },
+  "cash-12": {
+    "type": "card",
+    "id": "cash-12",
+    "deck": "suns-deck",
+    "cardType": "sun-12",
+    "x": 1320,
+    "y": 90,
+    "z": 89
   }
 }
