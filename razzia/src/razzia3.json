@@ -1,0 +1,2925 @@
+{
+  "_meta": {
+    "version": 6,
+    "info": {
+      "name": "Razzia",
+      "image": "",
+      "rules": "",
+      "bgg": "https://boardgamegeek.com/boardgame/12589/razzia",
+      "year": "2004",
+      "mode": "vs",
+      "time": "45",
+      "players": "3",
+      "language": "GB",
+      "variant": "",
+      "attribution": ""
+    }
+  },
+  "tiles-holder": {
+    "type": "holder",
+    "id": "tiles-holder",
+    "x": 10,
+    "y": 100,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck"
+    },
+    "width": 70,
+    "height": 70,
+    "onEnter": {
+      "activeFace": 0
+    },
+    "onLeave": {
+      "activeFace": 1
+    }
+  },
+  "tiles-deck": {
+    "type": "deck",
+    "id": "tiles-deck",
+    "parent": "tiles-holder",
+    "cardTypes": {
+      "razzia": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/razzia/assets/tile-razzia.svg"
+      },
+      "robber": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/razzia/assets/tile-robber.svg"
+      },
+      "gun": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/razzia/assets/tile-gun.svg"
+      },
+      "car": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/razzia/assets/tile-car.svg"
+      },
+      "driver": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/razzia/assets/tile-driver.svg"
+      },
+      "trinket-1": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/razzia/assets/tile-trinket-1.svg"
+      },
+      "trinket-2": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/razzia/assets/tile-trinket-2.svg"
+      },
+      "trinket-3": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/razzia/assets/tile-trinket-3.svg"
+      },
+      "trinket-4": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/razzia/assets/tile-trinket-4.svg"
+      },
+      "trinket-5": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/razzia/assets/tile-trinket-5.svg"
+      },
+      "gold": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/razzia/assets/tile-gold.svg"
+      },
+      "business-1": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/razzia/assets/tile-business-1.svg"
+      },
+      "business-2": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/razzia/assets/tile-business-2.svg"
+      },
+      "business-3": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/razzia/assets/tile-business-3.svg"
+      },
+      "business-4": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/razzia/assets/tile-business-4.svg"
+      },
+      "business-5": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/razzia/assets/tile-business-5.svg"
+      },
+      "business-6": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/razzia/assets/tile-business-6.svg"
+      },
+      "business-7": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/razzia/assets/tile-business-7.svg"
+      }
+    },
+    "faceTemplates": [
+      {
+        "border": false,
+        "radius": false,
+        "objects": [
+          {
+            "type": "image",
+            "x": 0,
+            "y": 0,
+            "width": 60,
+            "height": 60,
+            "value": "https://raw.githubusercontent.com/andypymont/vtt-games/main/ra/assets/tile-back.svg",
+            "color": "transparent"
+          }
+        ]
+      },
+      {
+        "border": false,
+        "radius": false,
+        "objects": [
+          {
+            "type": "image",
+            "x": 0,
+            "y": 0,
+            "width": 60,
+            "height": 60,
+            "color": "transparent",
+            "dynamicProperties": {
+              "value": "image"
+            }
+          }
+        ]
+      }
+    ],
+    "width": 60,
+    "height": 60,
+    "movableInEdit": false,
+    "cardDefaults": {
+      "height": 60,
+      "width": 60
+    }
+  },
+  "tiles-pile": {
+    "type": "pile",
+    "id": "tiles-pile",
+    "parent": "tiles-holder",
+    "width": 60,
+    "height": 60
+  },
+  "suns-deck": {
+    "type": "deck",
+    "id": "suns-deck",
+    "width": 30,
+    "height": 30,
+    "movableInEdit": false,
+    "cardDefaults": {
+      "width": 30,
+      "height": 30
+    },
+    "cardTypes": {
+      "sun-1": {
+        "text": "1"
+      },
+      "sun-2": {
+        "text": "2"
+      },
+      "sun-3": {
+        "text": "3"
+      },
+      "sun-4": {
+        "text": "4"
+      },
+      "sun-5": {
+        "text": "5"
+      },
+      "sun-6": {
+        "text": "6"
+      },
+      "sun-7": {
+        "text": "7"
+      },
+      "sun-8": {
+        "text": "8"
+      },
+      "sun-9": {
+        "text": "9"
+      },
+      "sun-10": {
+        "text": "10"
+      },
+      "sun-11": {
+        "text": "11"
+      },
+      "sun-12": {
+        "text": "12"
+      },
+      "sun-13": {
+        "text": "13"
+      },
+      "sun-14": {
+        "text": "14"
+      },
+      "sun-15": {
+        "text": "15"
+      },
+      "sun-16": {
+        "text": "16"
+      }
+    },
+    "faceTemplates": [
+      {
+        "border": false,
+        "radius": false,
+        "objects": [
+          {
+            "type": "image",
+            "x": 0,
+            "y": 0,
+            "width": 30,
+            "height": 30,
+            "value": "https://raw.githubusercontent.com/andypymont/vtt-games/main/razzia/assets/sun.svg",
+            "color": "transparent"
+          },
+          {
+            "type": "text",
+            "x": 0,
+            "y": 6,
+            "fontSize": 14,
+            "textAlign": "center",
+            "width": 30,
+            "dynamicProperties": {
+              "value": "text"
+            }
+          }
+        ]
+      }
+    ],
+    "parent": "suns-holder"
+  },
+  "suns-holder": {
+    "type": "holder",
+    "id": "suns-holder",
+    "x": -50,
+    "y": -50,
+    "width": 40,
+    "height": 40,
+    "dropTarget": {
+      "type": "card",
+      "deck": "deck-suns"
+    },
+    "z": 1
+  },
+  "tile-gold-1": {
+    "type": "card",
+    "id": "tile-gold-1",
+    "deck": "tiles-deck",
+    "cardType": "gold",
+    "z": 599,
+    "parent": "tiles-pile"
+  },
+  "tile-gold-2": {
+    "type": "card",
+    "id": "tile-gold-2",
+    "deck": "tiles-deck",
+    "cardType": "gold",
+    "z": 602,
+    "parent": "tiles-pile"
+  },
+  "tile-gold-3": {
+    "type": "card",
+    "id": "tile-gold-3",
+    "deck": "tiles-deck",
+    "cardType": "gold",
+    "z": 588,
+    "parent": "tiles-pile"
+  },
+  "holder-current-1": {
+    "type": "holder",
+    "id": "holder-current-1",
+    "x": 210,
+    "y": 100,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck"
+    }
+  },
+  "holder-current-2": {
+    "type": "holder",
+    "id": "holder-current-2",
+    "x": 310,
+    "y": 100,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck"
+    }
+  },
+  "holder-current-3": {
+    "type": "holder",
+    "id": "holder-current-3",
+    "x": 410,
+    "y": 100,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck"
+    }
+  },
+  "holder-current-4": {
+    "type": "holder",
+    "id": "holder-current-4",
+    "x": 510,
+    "y": 100,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck"
+    }
+  },
+  "holder-current-5": {
+    "type": "holder",
+    "id": "holder-current-5",
+    "x": 610,
+    "y": 100,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck"
+    }
+  },
+  "holder-current-6": {
+    "type": "holder",
+    "id": "holder-current-6",
+    "x": 710,
+    "y": 100,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck"
+    }
+  },
+  "holder-current-7": {
+    "type": "holder",
+    "id": "holder-current-7",
+    "x": 810,
+    "y": 100,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck"
+    }
+  },
+  "p1-gold-holder": {
+    "type": "holder",
+    "id": "p1-gold-holder",
+    "x": 180,
+    "y": 310,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "gold"
+    }
+  },
+  "example-gold": {
+    "id": "example-gold",
+    "x": 185,
+    "y": 195,
+    "width": 60,
+    "height": 60,
+    "css": "opacity:0.2",
+    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/razzia/assets/tile-gold.svg",
+    "movable": false
+  },
+  "description-gold": {
+    "type": "label",
+    "id": "description-gold",
+    "x": 180,
+    "y": 260,
+    "css": "font-family:sans-serif;font-size:10px;text-align:center",
+    "text": "3VP each",
+    "width": 70
+  },
+  "description-god": {
+    "type": "label",
+    "id": "description-god",
+    "x": 260,
+    "y": 260,
+    "css": "font-family:sans-serif;font-size:10px;text-align:center",
+    "text": "2VP each",
+    "width": 70
+  },
+  "label-discard": {
+    "type": "label",
+    "id": "label-discard",
+    "x": 10,
+    "css": "font-family:sans-serif;font-size:8px;text-align:center",
+    "text": "DISCARD",
+    "width": 70,
+    "height": 10,
+    "layer": -4
+  },
+  "tiles-discard": {
+    "type": "holder",
+    "id": "tiles-discard",
+    "x": 10,
+    "y": 10,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck"
+    },
+    "onEnter": {
+      "activeFace": 0
+    },
+    "onLeave": {
+      "activeFace": 1
+    }
+  },
+  "description-monuments-nb": {
+    "type": "label",
+    "id": "description-monuments-nb",
+    "x": 935,
+    "y": 260,
+    "width": 140,
+    "css": "font-family:sans-serif;font-size:10px;text-align:center",
+    "text": "- LAST ROUND ONLY -"
+  },
+  "description-suns": {
+    "type": "label",
+    "id": "description-suns",
+    "x": 10,
+    "y": 195,
+    "width": 160,
+    "css": "font-family:sans-serif;font-size:10px;text-align:center",
+    "text": "End of Game:\nHighest cash total +5VP\nLowest cash total -5VP",
+    "height": 50
+  },
+  "p1-name": {
+    "type": "label",
+    "id": "p1-name",
+    "text": "PLAYER 1",
+    "css": "font-family:sans-serif;font-size:12px;font-weight:bold;text-align:center",
+    "width": 160,
+    "x": 10,
+    "y": 260,
+    "editable": true,
+    "height": 10
+  },
+  "p1-score": {
+    "type": "label",
+    "id": "p1-score",
+    "x": 55,
+    "y": 280,
+    "height": 14,
+    "css": "font-family:sans-serif;font-size:12px;text-align:center",
+    "editable": true,
+    "text": 10,
+    "width": 70
+  },
+  "p1-score-dec": {
+    "type": "button",
+    "id": "p1-score-dec",
+    "parent": "p1-score",
+    "x": -8,
+    "width": 20,
+    "height": 20,
+    "movableInEdit": false,
+    "clickRoutine": [
+      {
+        "func": "LABEL",
+        "label": "${PROPERTY parent}",
+        "mode": "dec",
+        "value": 1
+      }
+    ],
+    "text": "-",
+    "y": -1
+  },
+  "p1-score-inc": {
+    "type": "button",
+    "id": "p1-score-inc",
+    "parent": "p1-score",
+    "x": 58,
+    "y": -1,
+    "width": 20,
+    "height": 20,
+    "movableInEdit": false,
+    "clickRoutine": [
+      {
+        "func": "LABEL",
+        "label": "${PROPERTY parent}",
+        "mode": "inc",
+        "value": 1
+      }
+    ],
+    "text": "+"
+  },
+  "p2-name": {
+    "type": "label",
+    "id": "p2-name",
+    "text": "PLAYER 2",
+    "css": "font-family:sans-serif;font-size:12px;font-weight:bold;text-align:center",
+    "width": 160,
+    "x": 10,
+    "y": 400,
+    "editable": true,
+    "height": 10
+  },
+  "p3-name": {
+    "type": "label",
+    "id": "p3-name",
+    "text": "PLAYER 3",
+    "css": "font-family:sans-serif;font-size:12px;font-weight:bold;text-align:center",
+    "width": 160,
+    "x": 10,
+    "y": 540,
+    "editable": true,
+    "height": 10
+  },
+  "p2-score": {
+    "type": "label",
+    "id": "p2-score",
+    "x": 55,
+    "y": 420,
+    "height": 14,
+    "css": "font-family:sans-serif;font-size:12px;text-align:center",
+    "editable": true,
+    "text": 10,
+    "width": 70
+  },
+  "p2-score-dec": {
+    "type": "button",
+    "id": "p2-score-dec",
+    "parent": "p2-score",
+    "x": -8,
+    "width": 20,
+    "height": 20,
+    "movableInEdit": false,
+    "clickRoutine": [
+      {
+        "func": "LABEL",
+        "label": "${PROPERTY parent}",
+        "mode": "dec",
+        "value": 1
+      }
+    ],
+    "text": "-",
+    "y": -1
+  },
+  "p2-score-inc": {
+    "type": "button",
+    "id": "p2-score-inc",
+    "parent": "p2-score",
+    "x": 58,
+    "y": -1,
+    "width": 20,
+    "height": 20,
+    "movableInEdit": false,
+    "clickRoutine": [
+      {
+        "func": "LABEL",
+        "label": "${PROPERTY parent}",
+        "mode": "inc",
+        "value": 1
+      }
+    ],
+    "text": "+"
+  },
+  "p3-score": {
+    "type": "label",
+    "id": "p3-score",
+    "x": 55,
+    "y": 560,
+    "height": 14,
+    "css": "font-family:sans-serif;font-size:12px;text-align:center",
+    "editable": true,
+    "text": 10,
+    "width": 70
+  },
+  "p3-score-dec": {
+    "type": "button",
+    "id": "p3-score-dec",
+    "parent": "p3-score",
+    "x": -8,
+    "width": 20,
+    "height": 20,
+    "movableInEdit": false,
+    "clickRoutine": [
+      {
+        "func": "LABEL",
+        "label": "${PROPERTY parent}",
+        "mode": "dec",
+        "value": 1
+      }
+    ],
+    "text": "-",
+    "y": -1
+  },
+  "p3-score-inc": {
+    "type": "button",
+    "id": "p3-score-inc",
+    "parent": "p3-score",
+    "x": 58,
+    "y": -1,
+    "width": 20,
+    "height": 20,
+    "movableInEdit": false,
+    "clickRoutine": [
+      {
+        "func": "LABEL",
+        "label": "${PROPERTY parent}",
+        "mode": "inc",
+        "value": 1
+      }
+    ],
+    "text": "+"
+  },
+  "p2-gold-holder": {
+    "type": "holder",
+    "id": "p2-gold-holder",
+    "x": 180,
+    "y": 450,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "gold"
+    }
+  },
+  "p3-gold-holder": {
+    "type": "holder",
+    "id": "p3-gold-holder",
+    "x": 180,
+    "y": 590,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "gold"
+    }
+  },
+  "auction-marker": {
+    "id": "auction-marker",
+    "x": 1087,
+    "y": 83,
+    "width": 56,
+    "height": 84,
+    "classes": "classicPiece",
+    "color": "#ff0000"
+  },
+  "holder-razzia-1": {
+    "type": "holder",
+    "id": "holder-razzia-1",
+    "x": 210,
+    "y": 10,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "cardType": "razzia"
+    }
+  },
+  "holder-razzia-2": {
+    "type": "holder",
+    "id": "holder-razzia-2",
+    "x": 310,
+    "y": 10,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "cardType": "razzia"
+    }
+  },
+  "holder-razzia-3": {
+    "type": "holder",
+    "id": "holder-razzia-3",
+    "x": 410,
+    "y": 10,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "cardType": "razzia"
+    }
+  },
+  "holder-razzia-4": {
+    "type": "holder",
+    "id": "holder-razzia-4",
+    "x": 510,
+    "y": 10,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "cardType": "razzia"
+    }
+  },
+  "holder-razzia-5": {
+    "type": "holder",
+    "id": "holder-razzia-5",
+    "x": 610,
+    "y": 10,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "cardType": "razzia"
+    }
+  },
+  "holder-razzia-6": {
+    "type": "holder",
+    "id": "holder-razzia-6",
+    "x": 710,
+    "y": 10,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "cardType": "razzia"
+    }
+  },
+  "holder-razzia-7": {
+    "type": "holder",
+    "id": "holder-razzia-7",
+    "x": 810,
+    "y": 10,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "cardType": "razzia"
+    }
+  },
+  "current-holder-cash": {
+    "type": "holder",
+    "id": "current-holder-cash",
+    "x": 125,
+    "y": 115,
+    "width": 40,
+    "height": 40,
+    "dropTarget": {
+      "type": "card",
+      "deck": "suns-deck"
+    }
+  },
+  "description-businesses": {
+    "type": "label",
+    "id": "description-businesses",
+    "x": 1075,
+    "y": 260,
+    "width": 380,
+    "css": "font-family:sans-serif;font-size:10px;text-align:center",
+    "text": "1/2/3/4/5/6/7 different types: 1/2/3/4/5/6/10\nEach 3/4 of a kind: 5/10VP"
+  },
+  "description-trinkets": {
+    "type": "label",
+    "id": "description-trinkets",
+    "x": 575,
+    "y": 260,
+    "width": 340,
+    "css": "font-family:sans-serif;font-size:10px;text-align:center",
+    "text": "None: -5VP\n3/4/5 different types: 5/10/15VP"
+  },
+  "description-cars-and-drivers": {
+    "type": "label",
+    "id": "description-cars-and-drivers",
+    "x": 420,
+    "y": 260,
+    "width": 140,
+    "css": "font-family:sans-serif;font-size:10px;text-align:center",
+    "text": "1VP each as long as at\nleast one is a Driver"
+  },
+  "description-guns": {
+    "type": "label",
+    "id": "description-guns",
+    "x": 340,
+    "y": 260,
+    "width": 70,
+    "css": "font-family:sans-serif;font-size:10px;text-align:center",
+    "text": "Most: 5VP\nFewest: -2VP"
+  },
+  "example-driver": {
+    "id": "example-driver",
+    "x": 495,
+    "y": 195,
+    "width": 60,
+    "height": 60,
+    "movable": false,
+    "css": "opacity:0.2",
+    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/razzia/assets/tile-driver.svg"
+  },
+  "example-car": {
+    "id": "example-car",
+    "x": 425,
+    "y": 195,
+    "width": 60,
+    "height": 60,
+    "movable": false,
+    "css": "opacity:0.2",
+    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/razzia/assets/tile-car.svg"
+  },
+  "example-business-7": {
+    "id": "example-business-7",
+    "x": 1355,
+    "y": 195,
+    "width": 60,
+    "height": 60,
+    "movable": false,
+    "css": "opacity:0.2",
+    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/razzia/assets/tile-business-7.svg"
+  },
+  "example-business-6": {
+    "id": "example-business-6",
+    "x": 1285,
+    "y": 195,
+    "width": 60,
+    "height": 60,
+    "movable": false,
+    "css": "opacity:0.2",
+    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/razzia/assets/tile-business-6.svg"
+  },
+  "example-business-5": {
+    "id": "example-business-5",
+    "x": 1215,
+    "y": 195,
+    "width": 60,
+    "height": 60,
+    "movable": false,
+    "css": "opacity:0.2",
+    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/razzia/assets/tile-business-5.svg"
+  },
+  "example-business-4": {
+    "id": "example-business-4",
+    "x": 1145,
+    "y": 195,
+    "width": 60,
+    "height": 60,
+    "movable": false,
+    "css": "opacity:0.2",
+    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/razzia/assets/tile-business-4.svg"
+  },
+  "example-business-3": {
+    "id": "example-business-3",
+    "x": 1075,
+    "y": 195,
+    "width": 60,
+    "height": 60,
+    "movable": false,
+    "css": "opacity:0.2",
+    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/razzia/assets/tile-business-3.svg"
+  },
+  "example-business-2": {
+    "id": "example-business-2",
+    "x": 1005,
+    "y": 195,
+    "width": 60,
+    "height": 60,
+    "movable": false,
+    "css": "opacity:0.2",
+    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/razzia/assets/tile-business-2.svg"
+  },
+  "example-business-1": {
+    "id": "example-business-1",
+    "x": 935,
+    "y": 195,
+    "width": 60,
+    "height": 60,
+    "movable": false,
+    "css": "opacity:0.2",
+    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/razzia/assets/tile-business-1.svg"
+  },
+  "example-trinket-5": {
+    "id": "example-trinket-5",
+    "x": 855,
+    "y": 195,
+    "width": 60,
+    "height": 60,
+    "movable": false,
+    "css": "opacity:0.2",
+    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/razzia/assets/tile-trinket-5.svg"
+  },
+  "example-trinket-4": {
+    "id": "example-trinket-4",
+    "x": 785,
+    "y": 195,
+    "width": 60,
+    "height": 60,
+    "movable": false,
+    "css": "opacity:0.2",
+    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/razzia/assets/tile-trinket-4.svg"
+  },
+  "example-trinket-3": {
+    "id": "example-trinket-3",
+    "x": 715,
+    "y": 195,
+    "width": 60,
+    "height": 60,
+    "movable": false,
+    "css": "opacity:0.2",
+    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/razzia/assets/tile-trinket-3.svg"
+  },
+  "example-trinket-2": {
+    "id": "example-trinket-2",
+    "x": 645,
+    "y": 195,
+    "width": 60,
+    "height": 60,
+    "movable": false,
+    "css": "opacity:0.2",
+    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/razzia/assets/tile-trinket-2.svg"
+  },
+  "example-trinket-1": {
+    "id": "example-trinket-1",
+    "x": 575,
+    "y": 195,
+    "width": 60,
+    "height": 60,
+    "movable": false,
+    "css": "opacity:0.2",
+    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/razzia/assets/tile-trinket-1.svg"
+  },
+  "example-gun": {
+    "id": "example-gun",
+    "x": 345,
+    "y": 195,
+    "width": 60,
+    "height": 60,
+    "movable": false,
+    "css": "opacity:0.2",
+    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/razzia/assets/tile-gun.svg"
+  },
+  "example-robber": {
+    "id": "example-robber",
+    "x": 265,
+    "y": 195,
+    "width": 60,
+    "height": 60,
+    "movable": false,
+    "css": "opacity:0.2",
+    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/razzia/assets/tile-robber.svg"
+  },
+  "p1-cash-holder-1": {
+    "type": "holder",
+    "id": "p1-cash-holder-1",
+    "x": 10,
+    "y": 305,
+    "width": 40,
+    "height": 40,
+    "dropTarget": {
+      "type": "card",
+      "deck": "suns-deck"
+    }
+  },
+  "p1-cash-holder-2": {
+    "type": "holder",
+    "id": "p1-cash-holder-2",
+    "y": 305,
+    "width": 40,
+    "height": 40,
+    "dropTarget": {
+      "type": "card",
+      "deck": "suns-deck"
+    },
+    "x": 50
+  },
+  "p1-cash-holder-3": {
+    "type": "holder",
+    "id": "p1-cash-holder-3",
+    "x": 90,
+    "y": 305,
+    "width": 40,
+    "height": 40,
+    "dropTarget": {
+      "type": "card",
+      "deck": "suns-deck"
+    }
+  },
+  "p2-cash-holder-1": {
+    "type": "holder",
+    "id": "p2-cash-holder-1",
+    "y": 445,
+    "width": 40,
+    "height": 40,
+    "dropTarget": {
+      "type": "card",
+      "deck": "suns-deck"
+    },
+    "x": 10
+  },
+  "p2-cash-holder-2": {
+    "type": "holder",
+    "id": "p2-cash-holder-2",
+    "y": 445,
+    "width": 40,
+    "height": 40,
+    "dropTarget": {
+      "type": "card",
+      "deck": "suns-deck"
+    },
+    "x": 50
+  },
+  "p2-cash-holder-3": {
+    "type": "holder",
+    "id": "p2-cash-holder-3",
+    "y": 445,
+    "width": 40,
+    "height": 40,
+    "dropTarget": {
+      "type": "card",
+      "deck": "suns-deck"
+    },
+    "x": 90
+  },
+  "p2-cash-holder-4": {
+    "type": "holder",
+    "id": "p2-cash-holder-4",
+    "x": 130,
+    "y": 445,
+    "width": 40,
+    "height": 40,
+    "dropTarget": {
+      "type": "card",
+      "deck": "suns-deck"
+    }
+  },
+  "p2-cash-holder-5": {
+    "type": "holder",
+    "id": "p2-cash-holder-5",
+    "y": 485,
+    "width": 40,
+    "height": 40,
+    "dropTarget": {
+      "type": "card",
+      "deck": "suns-deck"
+    },
+    "x": 10
+  },
+  "p2-cash-holder-6": {
+    "type": "holder",
+    "id": "p2-cash-holder-6",
+    "x": 50,
+    "y": 485,
+    "width": 40,
+    "height": 40,
+    "dropTarget": {
+      "type": "card",
+      "deck": "suns-deck"
+    }
+  },
+  "p3-cash-holder-1": {
+    "type": "holder",
+    "id": "p3-cash-holder-1",
+    "y": 585,
+    "width": 40,
+    "height": 40,
+    "dropTarget": {
+      "type": "card",
+      "deck": "suns-deck"
+    },
+    "x": 10
+  },
+  "p3-cash-holder-2": {
+    "type": "holder",
+    "id": "p3-cash-holder-2",
+    "y": 585,
+    "width": 40,
+    "height": 40,
+    "dropTarget": {
+      "type": "card",
+      "deck": "suns-deck"
+    },
+    "x": 50
+  },
+  "p3-cash-holder-3": {
+    "type": "holder",
+    "id": "p3-cash-holder-3",
+    "y": 585,
+    "width": 40,
+    "height": 40,
+    "dropTarget": {
+      "type": "card",
+      "deck": "suns-deck"
+    },
+    "x": 90
+  },
+  "p3-cash-holder-4": {
+    "type": "holder",
+    "id": "p3-cash-holder-4",
+    "x": 130,
+    "y": 585,
+    "width": 40,
+    "height": 40,
+    "dropTarget": {
+      "type": "card",
+      "deck": "suns-deck"
+    }
+  },
+  "p3-cash-holder-5": {
+    "type": "holder",
+    "id": "p3-cash-holder-5",
+    "x": 10,
+    "y": 625,
+    "width": 40,
+    "height": 40,
+    "dropTarget": {
+      "type": "card",
+      "deck": "suns-deck"
+    }
+  },
+  "p3-cash-holder-6": {
+    "type": "holder",
+    "id": "p3-cash-holder-6",
+    "x": 50,
+    "y": 625,
+    "width": 40,
+    "height": 40,
+    "dropTarget": {
+      "type": "card",
+      "deck": "suns-deck"
+    }
+  },
+  "p1-robber-holder": {
+    "type": "holder",
+    "id": "p1-robber-holder",
+    "x": 260,
+    "y": 310,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "robber"
+    }
+  },
+  "p2-robber-holder": {
+    "type": "holder",
+    "id": "p2-robber-holder",
+    "x": 260,
+    "y": 450,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "robber"
+    }
+  },
+  "p1-gun-holder": {
+    "type": "holder",
+    "id": "p1-gun-holder",
+    "x": 340,
+    "y": 310,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "gun"
+    }
+  },
+  "p2-gun-holder": {
+    "type": "holder",
+    "id": "p2-gun-holder",
+    "x": 340,
+    "y": 450,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "gun"
+    }
+  },
+  "p3-robber-holder": {
+    "type": "holder",
+    "id": "p3-robber-holder",
+    "x": 260,
+    "y": 590,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "robber"
+    }
+  },
+  "p3-gun-holder": {
+    "type": "holder",
+    "id": "p3-gun-holder",
+    "x": 340,
+    "y": 590,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "gun"
+    }
+  },
+  "p1-car-holder": {
+    "type": "holder",
+    "id": "p1-car-holder",
+    "x": 420,
+    "y": 310,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "car"
+    }
+  },
+  "p2-car-holder": {
+    "type": "holder",
+    "id": "p2-car-holder",
+    "x": 420,
+    "y": 450,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "car"
+    }
+  },
+  "p3-car-holder": {
+    "type": "holder",
+    "id": "p3-car-holder",
+    "x": 420,
+    "y": 590,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "car"
+    }
+  },
+  "p1-driver-holder": {
+    "type": "holder",
+    "id": "p1-driver-holder",
+    "x": 490,
+    "y": 310,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "driver"
+    }
+  },
+  "p2-driver-holder": {
+    "type": "holder",
+    "id": "p2-driver-holder",
+    "x": 490,
+    "y": 450,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "driver"
+    }
+  },
+  "p3-driver-holder": {
+    "type": "holder",
+    "id": "p3-driver-holder",
+    "x": 490,
+    "y": 590,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "driver"
+    }
+  },
+  "p1-trinket1-holder": {
+    "type": "holder",
+    "id": "p1-trinket1-holder",
+    "x": 570,
+    "y": 310,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "trinket-1"
+    }
+  },
+  "p2-trinket1-holder": {
+    "type": "holder",
+    "id": "p2-trinket1-holder",
+    "x": 570,
+    "y": 450,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "trinket-1"
+    }
+  },
+  "p3-trinket1-holder": {
+    "type": "holder",
+    "id": "p3-trinket1-holder",
+    "x": 570,
+    "y": 590,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "trinket-1"
+    }
+  },
+  "p1-trinket2-holder": {
+    "type": "holder",
+    "id": "p1-trinket2-holder",
+    "x": 640,
+    "y": 310,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "trinket-2"
+    }
+  },
+  "p2-trinket2-holder": {
+    "type": "holder",
+    "id": "p2-trinket2-holder",
+    "x": 640,
+    "y": 450,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "trinket-2"
+    }
+  },
+  "p3-trinket2-holder": {
+    "type": "holder",
+    "id": "p3-trinket2-holder",
+    "x": 640,
+    "y": 590,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "trinket-2"
+    }
+  },
+  "p1-trinket3-holder": {
+    "type": "holder",
+    "id": "p1-trinket3-holder",
+    "x": 710,
+    "y": 310,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "trinket-3"
+    }
+  },
+  "p2-trinket3-holder": {
+    "type": "holder",
+    "id": "p2-trinket3-holder",
+    "x": 710,
+    "y": 450,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "trinket-3"
+    }
+  },
+  "p3-trinket3-holder": {
+    "type": "holder",
+    "id": "p3-trinket3-holder",
+    "x": 710,
+    "y": 590,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "trinket-3"
+    }
+  },
+  "p1-trinket4-holder": {
+    "type": "holder",
+    "id": "p1-trinket4-holder",
+    "x": 780,
+    "y": 310,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "trinket-4"
+    }
+  },
+  "p2-trinket4-holder": {
+    "type": "holder",
+    "id": "p2-trinket4-holder",
+    "x": 780,
+    "y": 450,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "trinket-4"
+    }
+  },
+  "p3-trinket4-holder": {
+    "type": "holder",
+    "id": "p3-trinket4-holder",
+    "x": 780,
+    "y": 590,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "trinket-4"
+    }
+  },
+  "p1-trinket5-holder": {
+    "type": "holder",
+    "id": "p1-trinket5-holder",
+    "x": 850,
+    "y": 310,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "trinket-5"
+    }
+  },
+  "p2-trinket5-holder": {
+    "type": "holder",
+    "id": "p2-trinket5-holder",
+    "x": 850,
+    "y": 450,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "trinket-5"
+    }
+  },
+  "p3-trinket5-holder": {
+    "type": "holder",
+    "id": "p3-trinket5-holder",
+    "x": 850,
+    "y": 590,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "trinket-5"
+    }
+  },
+  "p1-business1-holder": {
+    "type": "holder",
+    "id": "p1-business1-holder",
+    "x": 930,
+    "y": 310,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "business-1"
+    }
+  },
+  "p2-business1-holder": {
+    "type": "holder",
+    "id": "p2-business1-holder",
+    "x": 930,
+    "y": 450,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "business-1"
+    }
+  },
+  "p3-business1-holder": {
+    "type": "holder",
+    "id": "p3-business1-holder",
+    "x": 930,
+    "y": 590,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "business-1"
+    }
+  },
+  "p1-business2-holder": {
+    "type": "holder",
+    "id": "p1-business2-holder",
+    "x": 1000,
+    "y": 310,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "business-2"
+    }
+  },
+  "p2-business2-holder": {
+    "type": "holder",
+    "id": "p2-business2-holder",
+    "x": 1000,
+    "y": 450,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "business-2"
+    }
+  },
+  "p3-business2-holder": {
+    "type": "holder",
+    "id": "p3-business2-holder",
+    "x": 1000,
+    "y": 590,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "business-2"
+    }
+  },
+  "p1-business3-holder": {
+    "type": "holder",
+    "id": "p1-business3-holder",
+    "x": 1070,
+    "y": 310,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "business-3"
+    }
+  },
+  "p2-business3-holder": {
+    "type": "holder",
+    "id": "p2-business3-holder",
+    "x": 1070,
+    "y": 450,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "business-3"
+    }
+  },
+  "p3-business3-holder": {
+    "type": "holder",
+    "id": "p3-business3-holder",
+    "x": 1070,
+    "y": 590,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "business-3"
+    }
+  },
+  "p1-business4-holder": {
+    "type": "holder",
+    "id": "p1-business4-holder",
+    "x": 1140,
+    "y": 310,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "business-4"
+    }
+  },
+  "p2-business4-holder": {
+    "type": "holder",
+    "id": "p2-business4-holder",
+    "x": 1140,
+    "y": 450,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "business-4"
+    }
+  },
+  "p3-business4-holder": {
+    "type": "holder",
+    "id": "p3-business4-holder",
+    "x": 1140,
+    "y": 590,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "business-4"
+    }
+  },
+  "p1-business5-holder": {
+    "type": "holder",
+    "id": "p1-business5-holder",
+    "x": 1210,
+    "y": 310,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "business-5"
+    }
+  },
+  "p2-business5-holder": {
+    "type": "holder",
+    "id": "p2-business5-holder",
+    "x": 1210,
+    "y": 450,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "business-5"
+    }
+  },
+  "p3-business5-holder": {
+    "type": "holder",
+    "id": "p3-business5-holder",
+    "x": 1210,
+    "y": 590,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "business-5"
+    }
+  },
+  "p1-business6-holder": {
+    "type": "holder",
+    "id": "p1-business6-holder",
+    "x": 1280,
+    "y": 310,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "business-6"
+    }
+  },
+  "p2-business6-holder": {
+    "type": "holder",
+    "id": "p2-business6-holder",
+    "x": 1280,
+    "y": 450,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "business-6"
+    }
+  },
+  "p3-business6-holder": {
+    "type": "holder",
+    "id": "p3-business6-holder",
+    "x": 1280,
+    "y": 590,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "business-6"
+    }
+  },
+  "p1-business7-holder": {
+    "type": "holder",
+    "id": "p1-business7-holder",
+    "x": 1350,
+    "y": 310,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "business-7"
+    }
+  },
+  "p2-business7-holder": {
+    "type": "holder",
+    "id": "p2-business7-holder",
+    "x": 1350,
+    "y": 450,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "business-7"
+    }
+  },
+  "p3-business7-holder": {
+    "type": "holder",
+    "id": "p3-business7-holder",
+    "x": 1350,
+    "y": 590,
+    "width": 70,
+    "height": 70,
+    "dropTarget": {
+      "type": "card",
+      "deck": "tiles-deck",
+      "cardType": "business-7"
+    }
+  },
+  "cash-13": {
+    "type": "card",
+    "id": "cash-13",
+    "deck": "suns-deck",
+    "cardType": "sun-13",
+    "x": 1360,
+    "y": 10,
+    "z": 83
+  },
+  "cash-6": {
+    "type": "card",
+    "id": "cash-6",
+    "deck": "suns-deck",
+    "cardType": "sun-6",
+    "x": 1440,
+    "z": 152,
+    "y": 50
+  },
+  "cash-2": {
+    "type": "card",
+    "id": "cash-2",
+    "deck": "suns-deck",
+    "cardType": "sun-2",
+    "x": 1480,
+    "y": 10,
+    "z": 165
+  },
+  "cash-12": {
+    "type": "card",
+    "id": "cash-12",
+    "deck": "suns-deck",
+    "cardType": "sun-12",
+    "x": 1360,
+    "y": 50,
+    "z": 86
+  },
+  "cash-7": {
+    "type": "card",
+    "id": "cash-7",
+    "deck": "suns-deck",
+    "cardType": "sun-7",
+    "x": 1440,
+    "y": 90,
+    "z": 149
+  },
+  "cash-3": {
+    "type": "card",
+    "id": "cash-3",
+    "deck": "suns-deck",
+    "cardType": "sun-3",
+    "x": 1480,
+    "y": 50,
+    "z": 161
+  },
+  "cash-11": {
+    "type": "card",
+    "id": "cash-11",
+    "deck": "suns-deck",
+    "cardType": "sun-11",
+    "x": 1360,
+    "y": 90,
+    "z": 89
+  },
+  "cash-8": {
+    "type": "card",
+    "id": "cash-8",
+    "deck": "suns-deck",
+    "cardType": "sun-8",
+    "x": 1400,
+    "y": 10,
+    "z": 146
+  },
+  "cash-4": {
+    "type": "card",
+    "id": "cash-4",
+    "deck": "suns-deck",
+    "cardType": "sun-4",
+    "x": 1480,
+    "y": 90,
+    "z": 158
+  },
+  "cash-10": {
+    "type": "card",
+    "id": "cash-10",
+    "deck": "suns-deck",
+    "cardType": "sun-10",
+    "x": 1400,
+    "z": 140,
+    "y": 90
+  },
+  "cash-9": {
+    "type": "card",
+    "id": "cash-9",
+    "deck": "suns-deck",
+    "cardType": "sun-9",
+    "x": 1400,
+    "y": 50,
+    "z": 143
+  },
+  "cash-5": {
+    "type": "card",
+    "id": "cash-5",
+    "deck": "suns-deck",
+    "cardType": "sun-5",
+    "x": 1440,
+    "y": 10,
+    "z": 155
+  },
+  "cash-1": {
+    "type": "card",
+    "id": "cash-1",
+    "parent": "current-holder-cash",
+    "deck": "suns-deck",
+    "cardType": "sun-1",
+    "x": 4,
+    "y": 4,
+    "z": 767
+  },
+  "tile-razzia-1": {
+    "type": "card",
+    "id": "tile-razzia-1",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "razzia",
+    "z": 174
+  },
+  "tile-razzia-10": {
+    "type": "card",
+    "id": "tile-razzia-10",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "razzia",
+    "z": 207
+  },
+  "tile-razzia-11": {
+    "type": "card",
+    "id": "tile-razzia-11",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "razzia",
+    "z": 187
+  },
+  "tile-razzia-12": {
+    "type": "card",
+    "id": "tile-razzia-12",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "razzia",
+    "z": 227
+  },
+  "tile-razzia-13": {
+    "type": "card",
+    "id": "tile-razzia-13",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "razzia",
+    "z": 183
+  },
+  "tile-razzia-14": {
+    "type": "card",
+    "id": "tile-razzia-14",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "razzia",
+    "z": 213
+  },
+  "tile-razzia-15": {
+    "type": "card",
+    "id": "tile-razzia-15",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "razzia",
+    "z": 193
+  },
+  "tile-razzia-16": {
+    "type": "card",
+    "id": "tile-razzia-16",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "razzia",
+    "z": 221
+  },
+  "tile-razzia-17": {
+    "type": "card",
+    "id": "tile-razzia-17",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "razzia",
+    "z": 217
+  },
+  "tile-razzia-18": {
+    "type": "card",
+    "id": "tile-razzia-18",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "razzia",
+    "z": 223
+  },
+  "tile-razzia-19": {
+    "type": "card",
+    "id": "tile-razzia-19",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "razzia",
+    "z": 219
+  },
+  "tile-razzia-2": {
+    "type": "card",
+    "id": "tile-razzia-2",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "razzia",
+    "z": 175
+  },
+  "tile-razzia-20": {
+    "type": "card",
+    "id": "tile-razzia-20",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "razzia",
+    "z": 215
+  },
+  "tile-razzia-21": {
+    "type": "card",
+    "id": "tile-razzia-21",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "razzia",
+    "z": 203
+  },
+  "tile-razzia-3": {
+    "type": "card",
+    "id": "tile-razzia-3",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "razzia",
+    "z": 225
+  },
+  "tile-razzia-4": {
+    "type": "card",
+    "id": "tile-razzia-4",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "razzia",
+    "z": 181
+  },
+  "tile-razzia-5": {
+    "type": "card",
+    "id": "tile-razzia-5",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "razzia",
+    "z": 236
+  },
+  "tile-razzia-6": {
+    "type": "card",
+    "id": "tile-razzia-6",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "razzia",
+    "z": 191
+  },
+  "tile-razzia-7": {
+    "type": "card",
+    "id": "tile-razzia-7",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "razzia",
+    "z": 189
+  },
+  "tile-razzia-8": {
+    "type": "card",
+    "id": "tile-razzia-8",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "razzia",
+    "z": 211
+  },
+  "tile-razzia-9": {
+    "type": "card",
+    "id": "tile-razzia-9",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "razzia",
+    "z": 199
+  },
+  "tile-trinket-1-1": {
+    "type": "card",
+    "id": "tile-trinket-1-1",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "trinket-1",
+    "z": 793
+  },
+  "tile-trinket-1-2": {
+    "type": "card",
+    "id": "tile-trinket-1-2",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "trinket-1",
+    "z": 791
+  },
+  "tile-trinket-1-3": {
+    "type": "card",
+    "id": "tile-trinket-1-3",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "trinket-1",
+    "z": 789
+  },
+  "tile-trinket-1-4": {
+    "type": "card",
+    "id": "tile-trinket-1-4",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "trinket-1",
+    "z": 795
+  },
+  "tile-trinket-2-1": {
+    "type": "card",
+    "id": "tile-trinket-2-1",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "trinket-2",
+    "z": 797
+  },
+  "tile-trinket-2-2": {
+    "type": "card",
+    "id": "tile-trinket-2-2",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "trinket-2",
+    "z": 801
+  },
+  "tile-trinket-2-3": {
+    "type": "card",
+    "id": "tile-trinket-2-3",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "trinket-2",
+    "z": 803
+  },
+  "tile-trinket-2-4": {
+    "type": "card",
+    "id": "tile-trinket-2-4",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "trinket-2",
+    "z": 799
+  },
+  "tile-trinket-3-1": {
+    "type": "card",
+    "id": "tile-trinket-3-1",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "trinket-3",
+    "z": 809
+  },
+  "tile-trinket-3-2": {
+    "type": "card",
+    "id": "tile-trinket-3-2",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "trinket-3",
+    "z": 811
+  },
+  "tile-trinket-3-3": {
+    "type": "card",
+    "id": "tile-trinket-3-3",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "trinket-3",
+    "z": 807
+  },
+  "tile-trinket-3-4": {
+    "type": "card",
+    "id": "tile-trinket-3-4",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "trinket-3",
+    "z": 805
+  },
+  "tile-trinket-4-1": {
+    "type": "card",
+    "id": "tile-trinket-4-1",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "trinket-4",
+    "z": 815
+  },
+  "tile-trinket-4-2": {
+    "type": "card",
+    "id": "tile-trinket-4-2",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "trinket-4",
+    "z": 813
+  },
+  "tile-trinket-4-3": {
+    "type": "card",
+    "id": "tile-trinket-4-3",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "trinket-4",
+    "z": 819
+  },
+  "tile-trinket-4-4": {
+    "type": "card",
+    "id": "tile-trinket-4-4",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "trinket-4",
+    "z": 817
+  },
+  "tile-trinket-5-1": {
+    "type": "card",
+    "id": "tile-trinket-5-1",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "trinket-5",
+    "z": 821
+  },
+  "tile-trinket-5-4": {
+    "type": "card",
+    "id": "tile-trinket-5-4",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "trinket-5",
+    "z": 823
+  },
+  "tile-trinket-5-3": {
+    "type": "card",
+    "id": "tile-trinket-5-3",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "trinket-5",
+    "z": 827
+  },
+  "tile-trinket-5-2": {
+    "type": "card",
+    "id": "tile-trinket-5-2",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "trinket-5",
+    "z": 825
+  },
+  "tile-driver-1": {
+    "type": "card",
+    "id": "tile-driver-1",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "driver",
+    "z": 787
+  },
+  "tile-driver-10": {
+    "type": "card",
+    "id": "tile-driver-10",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "driver",
+    "z": 785
+  },
+  "tile-driver-2": {
+    "type": "card",
+    "id": "tile-driver-2",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "driver",
+    "z": 773
+  },
+  "tile-driver-3": {
+    "type": "card",
+    "id": "tile-driver-3",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "driver",
+    "z": 775
+  },
+  "tile-driver-4": {
+    "type": "card",
+    "id": "tile-driver-4",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "driver",
+    "z": 779
+  },
+  "tile-driver-5": {
+    "type": "card",
+    "id": "tile-driver-5",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "driver",
+    "z": 777
+  },
+  "tile-driver-6": {
+    "type": "card",
+    "id": "tile-driver-6",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "driver",
+    "z": 771
+  },
+  "tile-driver-7": {
+    "type": "card",
+    "id": "tile-driver-7",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "driver",
+    "z": 781
+  },
+  "tile-driver-8": {
+    "type": "card",
+    "id": "tile-driver-8",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "driver",
+    "z": 769
+  },
+  "tile-driver-9": {
+    "type": "card",
+    "id": "tile-driver-9",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "driver",
+    "z": 783
+  },
+  "tile-car-16": {
+    "type": "card",
+    "id": "tile-car-16",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "car",
+    "z": 415
+  },
+  "tile-car-1": {
+    "type": "card",
+    "id": "tile-car-1",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "car",
+    "z": 395
+  },
+  "tile-car-10": {
+    "type": "card",
+    "id": "tile-car-10",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "car",
+    "z": 365
+  },
+  "tile-car-11": {
+    "type": "card",
+    "id": "tile-car-11",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "car",
+    "z": 399
+  },
+  "tile-car-9": {
+    "type": "card",
+    "id": "tile-car-9",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "car",
+    "z": 387
+  },
+  "tile-car-8": {
+    "type": "card",
+    "id": "tile-car-8",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "car",
+    "z": 359
+  },
+  "tile-car-7": {
+    "type": "card",
+    "id": "tile-car-7",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "car",
+    "z": 383
+  },
+  "tile-car-12": {
+    "type": "card",
+    "id": "tile-car-12",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "car",
+    "z": 363
+  },
+  "tile-car-6": {
+    "type": "card",
+    "id": "tile-car-6",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "car",
+    "z": 379
+  },
+  "tile-car-5": {
+    "type": "card",
+    "id": "tile-car-5",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "car",
+    "z": 397
+  },
+  "tile-car-4": {
+    "type": "card",
+    "id": "tile-car-4",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "car",
+    "z": 391
+  },
+  "tile-car-3": {
+    "type": "card",
+    "id": "tile-car-3",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "car",
+    "z": 373
+  },
+  "tile-car-2": {
+    "type": "card",
+    "id": "tile-car-2",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "car",
+    "z": 381
+  },
+  "tile-car-15": {
+    "type": "card",
+    "id": "tile-car-15",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "car",
+    "z": 369
+  },
+  "tile-car-14": {
+    "type": "card",
+    "id": "tile-car-14",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "car",
+    "z": 355
+  },
+  "tile-car-13": {
+    "type": "card",
+    "id": "tile-car-13",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "car",
+    "z": 377
+  },
+  "tile-robber-6": {
+    "type": "card",
+    "id": "tile-robber-6",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "robber",
+    "z": 266
+  },
+  "tile-robber-5": {
+    "type": "card",
+    "id": "tile-robber-5",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "robber",
+    "z": 259
+  },
+  "tile-robber-4": {
+    "type": "card",
+    "id": "tile-robber-4",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "robber",
+    "z": 257
+  },
+  "tile-robber-3": {
+    "type": "card",
+    "id": "tile-robber-3",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "robber",
+    "z": 253
+  },
+  "tile-robber-2": {
+    "type": "card",
+    "id": "tile-robber-2",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "robber",
+    "z": 249
+  },
+  "tile-robber-1": {
+    "type": "card",
+    "id": "tile-robber-1",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "robber",
+    "z": 247
+  },
+  "tile-business-1-1": {
+    "type": "card",
+    "id": "tile-business-1-1",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "business-1",
+    "z": 839
+  },
+  "tile-business-4-2": {
+    "type": "card",
+    "id": "tile-business-4-2",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "business-4",
+    "z": 869
+  },
+  "tile-business-7-3": {
+    "type": "card",
+    "id": "tile-business-7-3",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "business-7",
+    "z": 887
+  },
+  "tile-business-7-1": {
+    "type": "card",
+    "id": "tile-business-7-1",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "business-7",
+    "z": 891
+  },
+  "tile-business-5-3": {
+    "type": "card",
+    "id": "tile-business-5-3",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "business-5",
+    "z": 871
+  },
+  "tile-business-5-2": {
+    "type": "card",
+    "id": "tile-business-5-2",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "business-5",
+    "z": 873
+  },
+  "tile-business-7-2": {
+    "type": "card",
+    "id": "tile-business-7-2",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "business-7",
+    "z": 889
+  },
+  "tile-business-4-1": {
+    "type": "card",
+    "id": "tile-business-4-1",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "business-4",
+    "z": 865
+  },
+  "tile-business-6-3": {
+    "type": "card",
+    "id": "tile-business-6-3",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "business-6",
+    "z": 881
+  },
+  "tile-business-3-4": {
+    "type": "card",
+    "id": "tile-business-3-4",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "business-3",
+    "z": 857
+  },
+  "tile-business-2-4": {
+    "type": "card",
+    "id": "tile-business-2-4",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "business-2",
+    "z": 853
+  },
+  "tile-business-3-1": {
+    "type": "card",
+    "id": "tile-business-3-1",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "business-3",
+    "z": 859
+  },
+  "tile-business-4-3": {
+    "type": "card",
+    "id": "tile-business-4-3",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "business-4",
+    "z": 863
+  },
+  "tile-business-2-1": {
+    "type": "card",
+    "id": "tile-business-2-1",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "business-2",
+    "z": 849
+  },
+  "tile-business-4-4": {
+    "type": "card",
+    "id": "tile-business-4-4",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "business-4",
+    "z": 867
+  },
+  "tile-business-2-2": {
+    "type": "card",
+    "id": "tile-business-2-2",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "business-2",
+    "z": 847
+  },
+  "tile-business-4-5": {
+    "type": "card",
+    "id": "tile-business-4-5",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "monument-4",
+    "z": 644
+  },
+  "tile-business-6-1": {
+    "type": "card",
+    "id": "tile-business-6-1",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "business-6",
+    "z": 883
+  },
+  "tile-business-3-2": {
+    "type": "card",
+    "id": "tile-business-3-2",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "business-3",
+    "z": 861
+  },
+  "tile-business-6-2": {
+    "type": "card",
+    "id": "tile-business-6-2",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "business-6",
+    "z": 885
+  },
+  "tile-business-3-3": {
+    "type": "card",
+    "id": "tile-business-3-3",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "business-3",
+    "z": 855
+  },
+  "tile-business-5-4": {
+    "type": "card",
+    "id": "tile-business-5-4",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "business-5",
+    "z": 875
+  },
+  "tile-business-5-1": {
+    "type": "card",
+    "id": "tile-business-5-1",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "business-5",
+    "z": 877
+  },
+  "tile-business-6-4": {
+    "type": "card",
+    "id": "tile-business-6-4",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "business-6",
+    "z": 879
+  },
+  "tile-business-7-4": {
+    "type": "card",
+    "id": "tile-business-7-4",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "business-7",
+    "z": 893
+  },
+  "tile-business-2-3": {
+    "type": "card",
+    "id": "tile-business-2-3",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "business-2",
+    "z": 851
+  },
+  "tile-business-1-4": {
+    "type": "card",
+    "id": "tile-business-1-4",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "business-1",
+    "z": 843
+  },
+  "tile-business-1-3": {
+    "type": "card",
+    "id": "tile-business-1-3",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "business-1",
+    "z": 845
+  },
+  "tile-business-1-2": {
+    "type": "card",
+    "id": "tile-business-1-2",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "business-1",
+    "z": 841
+  },
+  "tile-gun-1": {
+    "type": "card",
+    "id": "tile-gun-1",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "gun",
+    "z": 274
+  },
+  "tile-gun-9": {
+    "type": "card",
+    "id": "tile-gun-9",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "gun",
+    "z": 286
+  },
+  "tile-gun-16": {
+    "type": "card",
+    "id": "tile-gun-16",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "gun",
+    "z": 290
+  },
+  "tile-gun-10": {
+    "type": "card",
+    "id": "tile-gun-10",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "gun",
+    "z": 280
+  },
+  "tile-gun-11": {
+    "type": "card",
+    "id": "tile-gun-11",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "gun",
+    "z": 278
+  },
+  "tile-gun-12": {
+    "type": "card",
+    "id": "tile-gun-12",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "gun",
+    "z": 310
+  },
+  "tile-gun-13": {
+    "type": "card",
+    "id": "tile-gun-13",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "gun",
+    "z": 284
+  },
+  "tile-gun-14": {
+    "type": "card",
+    "id": "tile-gun-14",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "gun",
+    "z": 314
+  },
+  "tile-gun-8": {
+    "type": "card",
+    "id": "tile-gun-8",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "gun",
+    "z": 312
+  },
+  "tile-gun-7": {
+    "type": "card",
+    "id": "tile-gun-7",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "gun",
+    "z": 304
+  },
+  "tile-gun-6": {
+    "type": "card",
+    "id": "tile-gun-6",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "gun",
+    "z": 829
+  },
+  "tile-gun-15": {
+    "type": "card",
+    "id": "tile-gun-15",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "gun",
+    "z": 294
+  },
+  "tile-gun-4": {
+    "type": "card",
+    "id": "tile-gun-4",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "gun",
+    "z": 835
+  },
+  "tile-gun-3": {
+    "type": "card",
+    "id": "tile-gun-3",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "gun",
+    "z": 837
+  },
+  "tile-gun-2": {
+    "type": "card",
+    "id": "tile-gun-2",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "gun",
+    "z": 831
+  },
+  "tile-gun-5": {
+    "type": "card",
+    "id": "tile-gun-5",
+    "parent": "tiles-pile",
+    "deck": "tiles-deck",
+    "cardType": "gun",
+    "z": 833
+  },
+  "p1-cash-holder-7": {
+    "type": "holder",
+    "id": "p1-cash-holder-7",
+    "x": 90,
+    "y": 345,
+    "width": 40,
+    "height": 40,
+    "dropTarget": {
+      "type": "card",
+      "deck": "suns-deck"
+    }
+  },
+  "p1-cash-holder-6": {
+    "type": "holder",
+    "id": "p1-cash-holder-6",
+    "x": 50,
+    "y": 345,
+    "width": 40,
+    "height": 40,
+    "dropTarget": {
+      "type": "card",
+      "deck": "suns-deck"
+    }
+  },
+  "p1-cash-holder-5": {
+    "type": "holder",
+    "id": "p1-cash-holder-5",
+    "x": 10,
+    "y": 345,
+    "width": 40,
+    "height": 40,
+    "dropTarget": {
+      "type": "card",
+      "deck": "suns-deck"
+    }
+  },
+  "p1-cash-holder-4": {
+    "type": "holder",
+    "id": "p1-cash-holder-4",
+    "x": 130,
+    "y": 305,
+    "width": 40,
+    "height": 40,
+    "dropTarget": {
+      "type": "card",
+      "deck": "suns-deck"
+    }
+  },
+  "p1-cash-holder-8": {
+    "type": "holder",
+    "id": "p1-cash-holder-8",
+    "x": 130,
+    "y": 345,
+    "width": 40,
+    "height": 40,
+    "dropTarget": {
+      "type": "card",
+      "deck": "suns-deck"
+    }
+  },
+  "p2-cash-holder-7": {
+    "type": "holder",
+    "id": "p2-cash-holder-7",
+    "x": 90,
+    "y": 485,
+    "width": 40,
+    "height": 40,
+    "dropTarget": {
+      "type": "card",
+      "deck": "suns-deck"
+    }
+  },
+  "p2-cash-holder-8": {
+    "type": "holder",
+    "id": "p2-cash-holder-8",
+    "x": 130,
+    "y": 485,
+    "width": 40,
+    "height": 40,
+    "dropTarget": {
+      "type": "card",
+      "deck": "suns-deck"
+    }
+  },
+  "p3-cash-holder-7": {
+    "type": "holder",
+    "id": "p3-cash-holder-7",
+    "x": 90,
+    "y": 625,
+    "width": 40,
+    "height": 40,
+    "dropTarget": {
+      "type": "card",
+      "deck": "suns-deck"
+    }
+  },
+  "p3-cash-holder-8": {
+    "type": "holder",
+    "id": "p3-cash-holder-8",
+    "x": 130,
+    "y": 625,
+    "width": 40,
+    "height": 40,
+    "dropTarget": {
+      "type": "card",
+      "deck": "suns-deck"
+    }
+  }
+}
