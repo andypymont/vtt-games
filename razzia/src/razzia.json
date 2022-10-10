@@ -2732,14 +2732,6 @@
     "cardType": "business-2",
     "z": 847
   },
-  "tile-business-4-5": {
-    "type": "card",
-    "id": "tile-business-4-5",
-    "parent": "tiles-pile",
-    "deck": "tiles-deck",
-    "cardType": "business-4",
-    "z": 644
-  },
   "tile-business-6-1": {
     "type": "card",
     "id": "tile-business-6-1",
