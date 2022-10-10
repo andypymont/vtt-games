@@ -3607,6 +3607,11 @@
     ],
     "clickRoutine": [
       {
+        "note": "Shuffle the tiles",
+        "func": "SHUFFLE",
+        "holder": "tiles-holder"
+      },
+      {
         "note": "Select all player seats",
         "func": "SELECT",
         "property": "type",
