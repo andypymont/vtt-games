@@ -3640,6 +3640,57 @@
         "turnCycle": "random"
       },
       {
+        "note": "Set the Razzia track length correctly for the number of players",
+        "func": "IF",
+        "operand1": "${COUNT}",
+        "relation": "==",
+        "operand2": 2,
+        "thenRoutine": [
+          {
+            "func": "SELECT",
+            "property": "id",
+            "value": "holder-razzia-6"
+          },
+          {
+            "func": "SET",
+            "property": "y",
+            "value": -300
+          },
+          {
+            "func": "SELECT",
+            "property": "id",
+            "value": "holder-razzia-7"
+          },
+          {
+            "func": "SET",
+            "property": "y",
+            "value": -300
+          }
+        ],
+        "elseRoutine": [
+          {
+            "func": "SELECT",
+            "property": "id",
+            "value": "holder-razzia-6"
+          },
+          {
+            "func": "SET",
+            "property": "y",
+            "value": 10
+          },
+          {
+            "func": "SELECT",
+            "property": "id",
+            "value": "holder-razzia-7"
+          },
+          {
+            "func": "SET",
+            "property": "y",
+            "value": 10
+          }
+        ]
+      },
+      {
         "note": "Distribute starting tokens in a 2-player game",
         "func": "IF",
         "operand1": "${COUNT}",
