@@ -422,9 +422,9 @@
       "activeFace": 1
     }
   },
-  "description-monuments-nb": {
+  "description-businesses-nb": {
     "type": "label",
-    "id": "description-monuments-nb",
+    "id": "description-businesses-nb",
     "x": 935,
     "y": 260,
     "width": 140,
@@ -2958,7 +2958,7 @@
     "id": "tile-business-4-5",
     "parent": "tiles-pile",
     "deck": "tiles-deck",
-    "cardType": "monument-4",
+    "cardType": "business-4",
     "z": 644
   },
   "tile-business-6-1": {
