@@ -313,7 +313,8 @@ class Card:
         raise NotImplementedError
 
     def elements(self, doc: minidom.Document) -> Iterator[minidom.Element]:
-        pass
+        for element in []:
+            yield element
 
     def svg(self) -> minidom.Element:
         doc = minidom.Document()
@@ -341,6 +342,16 @@ class Card:
 
     def render(self) -> str:
         return self.svg().toprettyxml()
+
+
+class CardBack(Card):
+    def __init__(self, colour: Colour, deckname: str):
+        super().__init__(colour)
+        self.deckname = deckname
+    
+    @property
+    def filename(self) -> str:
+        return f"card-{self.deckname}-back.svg"
 
 
 class ActionCard(Card):
@@ -616,15 +627,25 @@ action_cards = [
     ),
 ]
 
+card_backs = (
+    CardBack(Colour.CORNFLOWER_BLUE, "action"),
+    CardBack(Colour.DAFFODIL, "marriage"),
+    CardBack(Colour.SCARLET, "viking"),
+)
+
+def save_asset(asset: Card) -> None:
+    path = f"brian-boru/assets/{asset.filename}"
+
+    try:
+        os.remove(path)
+    except FileNotFoundError:
+        pass
+
+    with open(path, "w") as f:
+        f.write(card.render())
+
 if __name__ == "__main__":
-    longest_row = 0
+    for card in card_backs:
+        save_asset(card)
     for card in action_cards:
-        path = f"brian-boru/assets/{card.filename}"
-
-        try:
-            os.remove(path)
-        except FileNotFoundError:
-            pass
-
-        with open(path, "w") as f:
-            f.write(card.render())
+        save_asset(card)
