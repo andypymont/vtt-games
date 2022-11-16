@@ -5,16 +5,16 @@ from xml.dom import minidom
 
 
 class Colour(Enum):
-    YELLOW = "f8eb58"
-    RED = "ff0000"
-    BLUE = "5d6cf3"
-    WHITE = "fffde9"
     BLACK = "000000"
+    CORNFLOWER_BLUE = "6495ed"
+    DAFFODIL = "ffff31"
     GOLD = "ffd700"
-    SAND = "c2b280"
     GREEN = "008000"
-    SLATE = "708090"
+    IVORY = "fffff0"
+    SAND = "c2b280"
+    SCARLET = "ff2400"
     SIENNA = "a0522d"
+    SLATE = "708090"
 
 
 class Part:
@@ -128,7 +128,7 @@ coin_base = Circle(
 )
 triquetra = Path(
     "m 10.0,4.52 c 1.35,1.62 2.16,3.70 2.16,5.97 0,0.88 -0.12,1.72 -0.35,2.53 -1.19,-0.22 -2.41,-0.22 -3.62,0 -0.22,-0.80 -0.35,-1.65 -0.35,-2.53 0,-2.27 0.81,-4.35 2.16,-5.97 z m -0.02,9.07 c 0.54,0 1.08,0.05 1.61,0.14 -0.37,1.0 -0.91,1.93 -1.58,2.74 -0.67,-0.81 -1.21,-1.73 -1.58,-2.73 0.52,-0.09 1.04,-0.13 1.56,-0.13 z m -2.29,0.29 c 0.41,1.16 1.03,2.21 1.81,3.13 -1.70,1.74 -4.06,2.82 -6.69,2.82 -0.54,0 -1.07,-0.05 -1.58,-0.13 0.73,-1.97 2.13,-3.72 4.09,-4.85 0.76,-0.44 1.55,-0.76 2.36,-0.96 z m 4.62,0 c 2.35,0.60 4.47,2.11 5.78,4.38 0.27,0.47 0.49,0.95 0.67,1.43 -0.51,0.08 -1.04,0.13 -1.58,0.13 -2.62,0 -4.99,-1.08 -6.69,-2.82 0.78,-0.92 1.40,-1.98 1.81,-3.13 z m 7.41,6.37 -0.22,-0.71 c -0.20,-0.56 -0.46,-1.11 -0.76,-1.65 -1.40,-2.43 -3.67,-4.06 -6.20,-4.71 0.24,-0.86 0.36,-1.76 0.36,-2.69 0,-2.49 -0.90,-4.76 -2.40,-6.52 L 10.0,3.43 9.50,3.97 C 8.01,5.73 7.10,8.01 7.10,10.49 c 0,0.93 0.13,1.83 0.36,2.68 -0.86,0.22 -1.70,0.56 -2.51,1.03 -2.15,1.24 -3.67,3.16 -4.45,5.34 l -0.22,0.71 0.72,0.16 c 0.59,0.11 1.19,0.16 1.81,0.16 2.81,0 5.35,-1.15 7.18,-3.01 1.83,1.86 4.37,3.01 7.18,3.01 0.62,0 1.22,-0.06 1.81,-0.16 z",
-    fill=Colour.BLUE,
+    fill=Colour.CORNFLOWER_BLUE,
     stroke=Colour.BLACK,
     stroke_width=0.45,
 )
@@ -169,8 +169,8 @@ marriage = Icon(
         Line(10, 10, 20, 4),
         Path(
             "m 10.34,13.81 C 10.07,13.78 9.90,13.69 9.67,13.48 9.34,13.16 9.02,13.08 8.35,13.14 8.16,13.16 8.13,13.16 8.03,13.14 7.70,13.09 7.45,12.89 7.35,12.59 7.32,12.52 7.32,12.48 7.32,12.39 7.32,12.19 7.37,12.06 7.53,11.88 7.76,11.62 7.86,11.35 7.85,11.07 7.83,10.76 7.69,10.49 7.39,10.21 7.23,10.06 7.19,10.00 7.18,9.87 7.16,9.62 7.38,9.33 7.69,9.18 7.79,9.14 7.87,9.11 8.05,9.07 8.31,9.01 8.58,8.90 8.92,8.72 c 0.59,-0.31 0.70,-0.35 0.97,-0.42 0.34,-0.09 0.61,-0.08 0.81,0.02 0.05,0.03 0.14,0.11 0.34,0.30 0.44,0.44 0.53,0.48 0.97,0.50 0.28,0.01 0.34,0.02 0.46,0.08 0.21,0.10 0.32,0.31 0.30,0.54 -0.01,0.12 -0.04,0.21 -0.15,0.44 -0.18,0.38 -0.22,0.58 -0.15,0.80 0.01,0.04 0.05,0.11 0.08,0.15 0.18,0.26 0.20,0.31 0.22,0.46 0.01,0.08 0.01,0.11 0,0.19 -0.05,0.24 -0.20,0.42 -0.44,0.52 -0.17,0.07 -0.25,0.12 -0.34,0.20 -0.14,0.13 -0.23,0.27 -0.25,0.54 -0.04,0.10 -0.09,0.19 -0.10,0.22 -0.17,0.28 -0.51,0.48 -0.90,0.53 -0.12,0.01 -0.15,0.01 -0.28,0 z m 1.76,-0.26 c -0.08,-0.04 -0.12,-0.09 -0.14,-0.19 -0.04,-0.16 0.08,-0.36 0.27,-0.46 0.06,-0.03 0.08,-0.03 0.19,-0.03 0.14,0 0.17,0.01 0.24,0.08 0.05,0.05 0.07,0.09 0.07,0.16 0,0.09 -0.04,0.18 -0.15,0.28 -0.12,0.12 -0.25,0.19 -0.37,0.19 -0.05,0 -0.09,-0.01 -0.12,-0.02 z",
-            Colour.RED,
-            Colour.RED,
+            Colour.SCARLET,
+            Colour.SCARLET,
         )
     )
 )
@@ -386,7 +386,7 @@ class ActionCard(Card):
 action_cards = [
     ActionCard(
         1,
-        Colour.YELLOW,
+        Colour.DAFFODIL,
         (
             (city, marriage, marriage, coin),
             (coin, coin, coin, expand),
@@ -395,7 +395,7 @@ action_cards = [
     ),
     ActionCard(
         2,
-        Colour.RED,
+        Colour.SCARLET,
         (
             (city, viking, viking, coin),
             (coin, coin, coin, expand),
@@ -404,7 +404,7 @@ action_cards = [
     ),
     ActionCard(
         3,
-        Colour.BLUE,
+        Colour.CORNFLOWER_BLUE,
         (
             (city, church, church, coin),
             (coin, coin, coin, expand),
@@ -413,7 +413,7 @@ action_cards = [
     ),
     ActionCard(
         4,
-        Colour.YELLOW,
+        Colour.DAFFODIL,
         (
             (city, marriage, marriage),
             (coin, coin, coin, expand),
@@ -422,7 +422,7 @@ action_cards = [
     ),
     ActionCard(
         5,
-        Colour.RED,
+        Colour.SCARLET,
         (
             (city, viking, viking),
             (coin, coin, expand),
@@ -431,7 +431,7 @@ action_cards = [
     ),
     ActionCard(
         6,
-        Colour.BLUE,
+        Colour.CORNFLOWER_BLUE,
         (
             (city, church, church),
             (coin, coin, coin, expand),
@@ -440,7 +440,7 @@ action_cards = [
     ),
     ActionCard(
         7,
-        Colour.YELLOW,
+        Colour.DAFFODIL,
         (
             (city, marriage, coin),
             (coin, coin, expand),
@@ -449,7 +449,7 @@ action_cards = [
     ),
     ActionCard(
         8,
-        Colour.RED,
+        Colour.SCARLET,
         (
             (city, viking, coin),
             (coin, coin, expand),
@@ -458,7 +458,7 @@ action_cards = [
     ),
     ActionCard(
         9,
-        Colour.BLUE,
+        Colour.CORNFLOWER_BLUE,
         (
             (city, church, coin),
             (coin, coin, expand),
@@ -467,7 +467,7 @@ action_cards = [
     ),
     ActionCard(
         10,
-        Colour.YELLOW,
+        Colour.DAFFODIL,
         (
             (city, coin, coin),
             (coin, coin, expand),
@@ -476,7 +476,7 @@ action_cards = [
     ),
     ActionCard(
         11,
-        Colour.RED,
+        Colour.SCARLET,
         (
             (city, coin, coin),
             (coin, coin, expand),
@@ -485,7 +485,7 @@ action_cards = [
     ),
     ActionCard(
         12,
-        Colour.BLUE,
+        Colour.CORNFLOWER_BLUE,
         (
             (city, coin, coin),
             (coin, coin, expand),
@@ -494,7 +494,7 @@ action_cards = [
     ),
     ActionCard(
         13,
-        Colour.WHITE,
+        Colour.IVORY,
         (
             (city, coin),
             (coin, coin, expand),
@@ -503,7 +503,7 @@ action_cards = [
     ),
     ActionCard(
         14,
-        Colour.YELLOW,
+        Colour.DAFFODIL,
         (
             (city,),
             (coin, expand),
@@ -512,7 +512,7 @@ action_cards = [
     ),
     ActionCard(
         15,
-        Colour.RED,
+        Colour.SCARLET,
         (
             (city,),
             (coin, expand),
@@ -521,7 +521,7 @@ action_cards = [
     ),
     ActionCard(
         16,
-        Colour.BLUE,
+        Colour.CORNFLOWER_BLUE,
         (
             (city,),
             (coin, expand),
@@ -530,7 +530,7 @@ action_cards = [
     ),
     ActionCard(
         17,
-        Colour.YELLOW,
+        Colour.DAFFODIL,
         (
             (city, pay),
             (coin, expand),
@@ -539,7 +539,7 @@ action_cards = [
     ),
     ActionCard(
         18,
-        Colour.RED,
+        Colour.SCARLET,
         (
             (city, pay),
             (coin, expand),
@@ -548,7 +548,7 @@ action_cards = [
     ),
     ActionCard(
         19,
-        Colour.BLUE,
+        Colour.CORNFLOWER_BLUE,
         (
             (city, pay),
             (coin, expand),
@@ -557,7 +557,7 @@ action_cards = [
     ),
     ActionCard(
         20,
-        Colour.WHITE,
+        Colour.IVORY,
         (
             (city,),
             (coin, coin, expand),
@@ -565,7 +565,7 @@ action_cards = [
     ),
     ActionCard(
         21,
-        Colour.WHITE,
+        Colour.IVORY,
         (
             (city, pay),
             (coin, coin, expand),
@@ -573,7 +573,7 @@ action_cards = [
     ),
     ActionCard(
         22,
-        Colour.WHITE,
+        Colour.IVORY,
         (
             (city, pay, pay),
             (coin, coin, expand),
@@ -581,7 +581,7 @@ action_cards = [
     ),
     ActionCard(
         23,
-        Colour.YELLOW,
+        Colour.DAFFODIL,
         (
             (city, pay, pay),
             (coin, expand),
@@ -590,7 +590,7 @@ action_cards = [
     ),
     ActionCard(
         24,
-        Colour.RED,
+        Colour.SCARLET,
         (
             (city, pay, pay),
             (coin, expand),
@@ -599,7 +599,7 @@ action_cards = [
     ),
     ActionCard(
         25,
-        Colour.BLUE,
+        Colour.CORNFLOWER_BLUE,
         (
             (city, pay, pay),
             (coin, expand),
