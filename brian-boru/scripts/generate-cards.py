@@ -603,7 +603,7 @@ action_cards = [
         (
             (city, pay, pay),
             (coin, expand),
-            (marriage, marriage, marriage),
+            (church, church, church),
         ),
     ),
 ]
