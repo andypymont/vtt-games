@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="680" viewbox="0 0 960 680">
+	<rect x="0" y="0" width="960" height="680" style="fill:#bcd4e6;stroke:#000000;stoke-width:2px"/>
+	<polygon style="fill:#d0f0c0;stroke:#000000;stroke-width:2px" points="430.00,203.14 382.00,286.28 286.00,286.28 238.00,203.14 286.00,120.00 382.00,120.00"/>
+	<polygon style="fill:#d0f0c0;stroke:#000000;stroke-width:2px" points="430.00,369.42 382.00,452.55 286.00,452.55 238.00,369.42 286.00,286.28 382.00,286.28"/>
+	<polygon style="fill:#d0f0c0;stroke:#000000;stroke-width:2px" points="430.00,535.69 382.00,618.83 286.00,618.83 238.00,535.69 286.00,452.55 382.00,452.55"/>
+	<polygon style="fill:#d0f0c0;stroke:#000000;stroke-width:2px" points="574.00,120.00 526.00,203.14 430.00,203.14 382.00,120.00 430.00,36.86 526.00,36.86"/>
+	<polygon style="fill:#d0f0c0;stroke:#000000;stroke-width:2px" points="574.00,286.28 526.00,369.42 430.00,369.42 382.00,286.28 430.00,203.14 526.00,203.14"/>
+	<polygon style="fill:#d0f0c0;stroke:#000000;stroke-width:2px" points="574.00,452.55 526.00,535.69 430.00,535.69 382.00,452.55 430.00,369.42 526.00,369.42"/>
+	<polygon style="fill:#d0f0c0;stroke:#000000;stroke-width:2px" points="718.00,203.14 670.00,286.28 574.00,286.28 526.00,203.14 574.00,120.00 670.00,120.00"/>
+	<polygon style="fill:#d0f0c0;stroke:#000000;stroke-width:2px" points="718.00,369.42 670.00,452.55 574.00,452.55 526.00,369.42 574.00,286.28 670.00,286.28"/>
+</svg>

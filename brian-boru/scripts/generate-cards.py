@@ -1,3 +1,4 @@
+import math
 import os
 from enum import Enum
 from typing import Iterator, Sequence, Tuple
@@ -11,10 +12,12 @@ class Colour(Enum):
     GOLD = "ffd700"
     GREEN = "008000"
     IVORY = "fffff0"
+    PALE_AQUA = "bcd4e6"
     SAND = "c2b280"
     SCARLET = "ff2400"
     SIENNA = "a0522d"
     SLATE = "708090"
+    TEA_GREEN = "d0f0c0"
 
 
 class Part:
@@ -500,6 +503,77 @@ class VikingCard(Card):
         # axe icon
         yield viking.svg(doc, *self.position(viking, gsw, gsh, 1, 2, x_offset))
 
+class Hex(Part):
+    def __init__(self, radius: int, x: int, y: int, fill: Colour = Colour.TEA_GREEN, stroke: Colour = Colour.BLACK, stroke_width: int = 2):
+        self.radius = radius
+        self.x = x
+        self.y = y
+        self.fill = fill
+        self.stroke = stroke
+        self.stroke_width = stroke_width
+    
+    @classmethod
+    def from_doubled_coordinates(cls, col: int, row: int, radius: float) -> 'Hex':
+        x = radius * 3/2 * col
+        y = radius * math.sqrt(3)/2 * row
+        return cls(radius, x, y)
+
+    def points(self, x: float, y: float) -> Sequence[Tuple[float, float]]:
+        first = (
+            x + (self.radius * math.cos(0)),
+            y + (self.radius * math.sin(0)),
+        )
+
+        return (first,) + tuple(
+            (
+                x + (self.radius * math.cos(i * 2 * math.pi / 6)),
+                y + (self.radius * math.sin(i * 2 * math.pi / 6))
+            ) for i in range(1, 6)
+        )
+
+    def points_text(self, x: float, y: float) -> str:
+        return ' '.join(
+            f'{x:.2f},{y:.2f}' for (x, y) in self.points(x, y)
+        )
+
+    def svg(self, doc: minidom.Document, x: int, y: int) -> minidom.Element:
+        poly = doc.createElement("polygon")
+        poly.setAttribute("style", f"fill:#{self.fill.value};stroke:#{self.stroke.value};stroke-width:{self.stroke_width}px")
+        poly.setAttribute("points", self.points_text(x + self.x, y + self.y))
+        return poly
+
+def board():
+    doc = minidom.Document()
+
+    svg = doc.createElement("svg")
+    svg.setAttribute("xmlns", "http://www.w3.org/2000/svg")
+    svg.setAttribute("width", "960")
+    svg.setAttribute("height", "680")
+    svg.setAttribute("viewbox", "0 0 960 680")
+
+    rect = doc.createElement("rect")
+    rect.setAttribute("x", "0")
+    rect.setAttribute("y", "0")
+    rect.setAttribute("width", "960")
+    rect.setAttribute("height", "680")
+    rect.setAttribute("style", f"fill:#{Colour.PALE_AQUA.value};stroke:#000000;stoke-width:2px")
+    svg.appendChild(rect)
+
+    for hex in (
+        Hex.from_doubled_coordinates(1, 1, 96),
+        Hex.from_doubled_coordinates(1, 3, 96),
+        Hex.from_doubled_coordinates(1, 5, 96),
+        Hex.from_doubled_coordinates(2, 0, 96),
+        Hex.from_doubled_coordinates(2, 2, 96),
+        Hex.from_doubled_coordinates(2, 4, 96),
+        Hex.from_doubled_coordinates(3, 1, 96),
+        Hex.from_doubled_coordinates(3, 3, 96),
+    ):
+        svg.appendChild(hex.svg(doc, 190, 120))
+  
+    return svg
+
+
 action_cards = [
     ActionCard(
         1,
@@ -751,16 +825,20 @@ viking_cards = [
     VikingCard(14),
 ]
 
-def save_asset(asset: Card) -> None:
-    path = f"brian-boru/assets/{asset.filename}"
-
+def remove_file_if_exists(path: str) -> None:
     try:
         os.remove(path)
     except FileNotFoundError:
         pass
 
+def write_svg_to_file(path: str, svg: str) -> None:
     with open(path, "w") as f:
-        f.write(card.render())
+        f.write(svg)
+
+def save_asset(asset: Card) -> None:
+    path = f"brian-boru/assets/{asset.filename}"
+    remove_file_if_exists(path)
+    write_svg_to_file(path, asset.render())
 
 if __name__ == "__main__":
     for card in card_backs:
@@ -771,3 +849,6 @@ if __name__ == "__main__":
         save_asset(card)
     for card in viking_cards:
         save_asset(card)
+    
+    remove_file_if_exists("brian-boru/assets/board.svg")
+    write_svg_to_file("brian-boru/assets/board.svg", board().toprettyxml())
