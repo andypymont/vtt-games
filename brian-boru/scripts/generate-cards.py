@@ -48,6 +48,19 @@ class Path(Part):
         path.setAttribute("style", f"fill:#{self.fill.value};stroke:#{self.stroke.value};stroke-width:{self.stroke_width}px")
         return path
 
+class Polygon(Part):
+    def __init__(self, points: str, fill: Colour = Colour.BLACK, stroke: Colour = Colour.BLACK, stroke_width: int = 0.3):
+        self.points = points
+        self.fill = fill
+        self.stroke = stroke
+        self.stroke_width = stroke_width
+    
+    def svg(self, doc: minidom.Document, x: int, y: int) -> minidom.Element:
+        poly = doc.createElement("polygon")
+        poly.setAttribute("points", self.points)
+        poly.setAttribute("style", f"fill:#{self.fill.value};stroke:#{self.stroke.value};stroke-width:{self.stroke_width}px")
+        return poly
+
 class Circle(Part):
     def __init__(self, cx: int, cy: int, r: int, fill: Colour = Colour.BLACK, stroke: Colour = Colour.BLACK, stroke_width: int = 0.3):
         self.cx = cx
@@ -128,6 +141,10 @@ coin_base = Circle(
     cy=12,
     r=10,
     fill=Colour.GOLD,
+)
+hex = Polygon(
+    "20.0,10.0 15.0,18.66, 5.00,18.66 0.00,10.00 5.00,1.34 15.00,1.34",
+    Colour.TEA_GREEN,
 )
 triquetra = Path(
     "m 10.0,4.52 c 1.35,1.62 2.16,3.70 2.16,5.97 0,0.88 -0.12,1.72 -0.35,2.53 -1.19,-0.22 -2.41,-0.22 -3.62,0 -0.22,-0.80 -0.35,-1.65 -0.35,-2.53 0,-2.27 0.81,-4.35 2.16,-5.97 z m -0.02,9.07 c 0.54,0 1.08,0.05 1.61,0.14 -0.37,1.0 -0.91,1.93 -1.58,2.74 -0.67,-0.81 -1.21,-1.73 -1.58,-2.73 0.52,-0.09 1.04,-0.13 1.56,-0.13 z m -2.29,0.29 c 0.41,1.16 1.03,2.21 1.81,3.13 -1.70,1.74 -4.06,2.82 -6.69,2.82 -0.54,0 -1.07,-0.05 -1.58,-0.13 0.73,-1.97 2.13,-3.72 4.09,-4.85 0.76,-0.44 1.55,-0.76 2.36,-0.96 z m 4.62,0 c 2.35,0.60 4.47,2.11 5.78,4.38 0.27,0.47 0.49,0.95 0.67,1.43 -0.51,0.08 -1.04,0.13 -1.58,0.13 -2.62,0 -4.99,-1.08 -6.69,-2.82 0.78,-0.92 1.40,-1.98 1.81,-3.13 z m 7.41,6.37 -0.22,-0.71 c -0.20,-0.56 -0.46,-1.11 -0.76,-1.65 -1.40,-2.43 -3.67,-4.06 -6.20,-4.71 0.24,-0.86 0.36,-1.76 0.36,-2.69 0,-2.49 -0.90,-4.76 -2.40,-6.52 L 10.0,3.43 9.50,3.97 C 8.01,5.73 7.10,8.01 7.10,10.49 c 0,0.93 0.13,1.83 0.36,2.68 -0.86,0.22 -1.70,0.56 -2.51,1.03 -2.15,1.24 -3.67,3.16 -4.45,5.34 l -0.22,0.71 0.72,0.16 c 0.59,0.11 1.19,0.16 1.81,0.16 2.81,0 5.35,-1.15 7.18,-3.01 1.83,1.86 4.37,3.01 7.18,3.01 0.62,0 1.22,-0.06 1.81,-0.16 z",
@@ -302,34 +319,6 @@ digits = {
             ),
         )
     ),
-    "B": Digit(
-        ()
-    ),
-    "C": Digit(
-        ()
-    ),
-    "D": Digit(
-        ()
-    ),
-    "L": Digit(
-        ()
-    ),
-    "M": Digit(
-        ()
-    ),
-    "N": Digit(
-        (
-            Path(
-                "m 11.90,18.34 q 0.35,-0.46 0.66,-0.88 0.30,-0.42 0.58,-0.83 -0.88,0.70 -1.98,1.07 -1.10,0.37 -2.34,0.37 -1.30,0 -2.46,-0.43 Q 5.20,17.20 4.32,16.37 3.44,15.52 2.91,14.30 2.40,13.07 2.40,11.49 q 0,-1.50 0.56,-2.82 0.56,-1.31 1.57,-2.29 1.01,-0.98 2.40,-1.54 1.39,-0.56 3.06,-0.56 1.65,0 2.99,0.54 1.34,0.54 2.30,1.52 0.96,0.98 1.47,2.34 Q 17.28,10.05 17.28,11.70 q 0,0.99 -0.19,1.89 -0.18,0.88 -0.53,1.74 -0.34,0.85 -0.83,1.70 -0.50,0.83 -1.12,1.71 L 9.02,26.80 q -0.21,0.30 -0.59,0.50 -0.38,0.18 -0.88,0.18 H 4.93 Z m 2.64,-6.98 q 0,-1.07 -0.35,-1.94 -0.34,-0.88 -0.94,-1.49 -0.61,-0.61 -1.46,-0.93 -0.83,-0.34 -1.84,-0.34 -1.06,0 -1.92,0.35 -0.86,0.34 -1.49,0.94 -0.62,0.61 -0.96,1.46 Q 5.25,10.27 5.25,11.28 q 0,1.09 0.30,1.95 0.32,0.85 0.90,1.44 0.59,0.59 1.42,0.90 0.85,0.30 1.89,0.30 1.15,0 2.03,-0.37 0.90,-0.38 1.50,-1.01 0.61,-0.62 0.93,-1.44 0.32,-0.82 0.32,-1.70 z"
-            ),
-        )
-    ),
-    "S": Digit(
-        ()
-    ),
-    "U": Digit(
-        ()
-    ),
 }
 
 
@@ -434,10 +423,10 @@ class ActionCard(Card):
 
 
 class MarriageCard(Card):
-    def __init__(self, name: str, icons: Sequence[Icon]):
+    def __init__(self, name: str, icon_rows: Sequence[Sequence[Icon]]):
         super().__init__(Colour.DAFFODIL)
         self.name = name
-        self.icons = icons
+        self.icon_rows = icon_rows
     
     @property
     def filename(self) -> str:
@@ -448,16 +437,12 @@ class MarriageCard(Card):
         gsw = self.width // 4
         gsh = self.height // 4
 
-        # name path
-        # name = Icon((self.name_path,))
-        # x_offset = gsw // 2
-        # yield name.svg(doc, *self.position(name, gsw, gsh, 2, 1, x_offset))
-
         # icons
-        if self.icons:
-            x_offset = gsw * (4 - len(self.icons)) // 2
-            for x, icon in enumerate(self.icons):
-                yield icon.svg(doc, *self.position(icon, gsw, gsh, x, 2, x_offset))
+        for y, row in enumerate(self.icon_rows):
+            x_offset = gsw * (4 - len(row)) // 2
+            for x, icon in enumerate(row):
+                yield icon.svg(doc, *self.position(icon, gsw, gsh, x, 1 + y, x_offset))
+
 
 
 wreath = Path(
@@ -473,6 +458,38 @@ vp_icons = {
         wreath,
         Path("M 12.95,2.96 9.22,8.80 H 12.95 Z M 12.56,1.67 h 1.86 v 7.13 h 1.56 v 1.23 h -1.56 v 2.58 H 12.95 V 10.03 H 8.02 V 8.60 z"),
     ))
+}
+hex_icons = {
+    "C": Icon((
+        hex,
+        Path(
+            "M 14.41,5.37 V 6.93 Q 13.66,6.24 12.81,5.89 11.97,5.55 11.02,5.55 q -1.87,0 -2.87,1.15 -1.00,1.14 -1.00,3.31 0,2.16 1.00,3.31 1.00,1.14 2.87,1.14 0.95,0 1.79,-0.34 0.85,-0.34 1.60,-1.04 v 1.54541 q -0.78,0.53 -1.65,0.79 -0.86,0.26 -1.83,0.26 -2.48,0 -3.91,-1.52 -1.43,-1.52 -1.43,-4.15 0,-2.64 1.43,-4.15 1.43,-1.52 3.91,-1.52 0.98,0 1.85,0.26 0.87,0.26 1.63,0.78 z"
+        ),
+    )),
+    "L": Icon((
+        hex,
+        Path(
+            "M 6.60,4.53 H 8.08 V 14.22 H 13.40 v 1.25 H 6.60 Z"
+        ),
+    )),
+    "N": Icon((
+        hex,
+        Path(
+            "M 5.86,4.53 H 7.85 L 12.70,13.68 V 4.53 h 1.44 V 15.47 H 12.15 L 7.30,6.32 V 15.47 H 5.86 Z"
+        ),
+    )),
+    "M": Icon((
+        hex,
+        Path(
+            "M 5.00,4.53 H 7.20 L 9.99,11.97 12.80,4.53 h 2.20 V 15.47 H 13.56 V 5.87 L 10.74,13.37 H 9.95 L 6.43,5.87 V 15.47 H 5.00 Z"
+        ),
+    )),
+    "S": Icon((
+        hex,
+        Path(
+            "M 13.19,4.89 V 6.33 Q 12.35,5.93 11.60,5.73 10.85,5.54 10.16,5.54 q -1.21,0 -1.87,0.47 -0.65,0.47 -0.65,1.33 0,0.73 0.43,1.10 0.44,0.37 1.66,0.59 l 0.89,0.18 q 1.66,0.31 2.44,1.11 0.80,0.79 0.79,2.12 0,1.59 -1.07,2.41 -1.06,0.82 -3.12,0.82 -0.78,0 -1.66,-0.18 -0.87,-0.18 -1.81,-0.52 v -1.52 q 0.90,0.51 1.77,0.76 0.86,0.26 1.70,0.26 1.27,0 1.96,-0.50 0.69,-0.50 0.69,-1.42 0,-0.81 -0.50,-1.26 -0.49,-0.45 -1.62,-0.68 L 9.29,10.44 Q 7.63,10.11 6.89,9.41 6.15,8.71 6.15,7.45 q 0,-1.45 1.02,-2.29 1.03,-0.83 2.82,-0.83 0.77,0 1.57,0.14 0.80,0.14 1.63,0.42 z"
+        ),
+    )),
 }
 
 class VikingCard(Card):
@@ -806,14 +823,14 @@ card_backs = (
 )
 
 marriage_cards = [
-    MarriageCard("Niall", (vp_icons[2], Icon((triquetra,)), Icon((digits["N"],)))),
-    MarriageCard("Aodhán", (vp_icons[2], Icon((triquetra,)))), # + control Leinster
-    MarriageCard("Cormac", (vp_icons[2], Icon((triquetra,)))), # + control Connaught
-    MarriageCard("Aoife", (vp_icons[2], renown)),
-    MarriageCard("Orlaith", (vp_icons[2], Icon((triquetra,)))), # + control Munster
-    MarriageCard("Brigid", (vp_icons[4],)),
-    MarriageCard("Conall", (vp_icons[2], Icon((triquetra,)))), # + control Southern Uí Neill
-    MarriageCard("Estrid", ()), # Military Support / discard & 4vp; Establish Trade / discard & 4vp
+    MarriageCard("Aodhán", ((vp_icons[2],), (Icon((triquetra,)), hex_icons["L"]))),
+    MarriageCard("Aoife", ((vp_icons[2],), (renown,))),
+    MarriageCard("Brigid", ((vp_icons[4],), ())),
+    MarriageCard("Conall", ((vp_icons[2],), (Icon((triquetra,)), hex_icons["S"]))),
+    MarriageCard("Cormac", ((vp_icons[2],), (Icon((triquetra,)), hex_icons["C"]))),
+    MarriageCard("Niall", ((vp_icons[2],), (Icon((triquetra,)), hex_icons["N"]))),
+    MarriageCard("Orlaith", ((vp_icons[2],), (Icon((triquetra,)), hex_icons["M"]))),
+    # MarriageCard("Estrid", ()), # Military Support / discard & 4vp; Establish Trade / discard & 4vp
 ]
 
 viking_cards = [
