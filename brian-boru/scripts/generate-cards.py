@@ -587,13 +587,119 @@ def board():
         Hex.from_doubled_coordinates(3, 3, 96),
     ):
         svg.appendChild(hex.svg(doc, 190, 120))
-  
+
+    for road in (
+        (497, 61, 530, 90),
+        (530, 90, 540, 135),
+        (540, 135, 515, 180),
+        (426, 87, 415, 130),
+        (515, 180, 560, 197),
+        (605, 140, 645, 150),
+        (682, 194, 660, 240),
+        (415, 130, 300, 147),
+        (300, 147, 305, 247),
+        (440, 175, 390, 195),
+        (438, 236, 483, 230),
+        (483, 230, 525, 257),
+        (525, 257, 509, 330),
+        (509, 330, 457, 332),
+        (457, 332, 417, 290),
+        (417, 290, 438, 236),
+        (305, 247, 325, 306),
+        (325, 306, 370, 308),
+        (390, 348, 396, 390),
+        (396, 390, 373, 425),
+        (373, 425, 337, 428),
+        (463, 390, 513, 392),
+        (513, 392, 575, 380),
+        (553, 452, 608, 416),
+        (514, 449, 553, 452),
+        (514, 449, 528, 488),
+        (553, 452, 528, 488),
+        (528, 488, 500, 514),
+        (500, 514, 457, 515),
+        (457, 515, 433, 490),
+        (433, 490, 412, 454),
+        (296, 482, 298, 427),
+        (333, 494, 367, 475),
+        (386, 508, 392, 546),
+        (392, 546, 381, 579),
+        (300, 588, 273, 553),
+    ):
+        svg.appendChild(Line(*road, Colour.SLATE, 6).svg(doc, 0, 0))
+
+    for (x, y, colour) in (
+        # Northen Ui Neill:
+        (497, 61, Colour.SCARLET),
+        (530, 90, Colour.CORNFLOWER_BLUE),
+        (540, 135, Colour.DAFFODIL),
+        (515, 180, Colour.SCARLET),
+        (426, 87, Colour.SCARLET),
+        (415, 130, Colour.CORNFLOWER_BLUE),
+        (440, 175, Colour.DAFFODIL),
+        # Ulaid:
+        (605, 140, Colour.DAFFODIL),
+        (645, 150, Colour.CORNFLOWER_BLUE),
+        (682, 194, Colour.CORNFLOWER_BLUE),
+        (660, 240, Colour.SCARLET),
+        (560, 197, Colour.SCARLET),
+        # Breifne:
+        (300, 147, Colour.DAFFODIL),
+        (390, 195, Colour.CORNFLOWER_BLUE),
+        (372, 238, Colour.CORNFLOWER_BLUE),
+        (305, 247, Colour.SCARLET),
+        # Southern Ui Neill:
+        (438, 236, Colour.DAFFODIL),
+        (483, 230, Colour.SCARLET),
+        (525, 257, Colour.CORNFLOWER_BLUE),
+        (509, 330, Colour.DAFFODIL),
+        (457, 332, Colour.SCARLET),
+        (417, 290, Colour.CORNFLOWER_BLUE),
+        # Dubhlinn:
+        (585, 320, Colour.DAFFODIL),
+        (575, 380, Colour.SCARLET),
+        (608, 416, Colour.CORNFLOWER_BLUE),
+        # Connaught:
+        (325, 306, Colour.SCARLET),
+        (370, 308, Colour.DAFFODIL),
+        (390, 348, Colour.DAFFODIL),
+        (396, 390, Colour.CORNFLOWER_BLUE),
+        (373, 425, Colour.CORNFLOWER_BLUE),
+        (337, 428, Colour.DAFFODIL),
+        (298, 427, Colour.SCARLET),
+        (281, 385, Colour.SCARLET),
+        (281, 337, Colour.SCARLET),
+        # Leinster:
+        (463, 390, Colour.DAFFODIL),
+        (513, 392, Colour.CORNFLOWER_BLUE),
+        (515, 449, Colour.DAFFODIL),
+        (553, 452, Colour.CORNFLOWER_BLUE),
+        (528, 488, Colour.DAFFODIL),
+        (500, 514, Colour.CORNFLOWER_BLUE),
+        (457, 515, Colour.DAFFODIL),
+        (433, 490, Colour.SCARLET),
+        (412, 454, Colour.CORNFLOWER_BLUE),
+        # Munster:
+        (296, 482, Colour.CORNFLOWER_BLUE),
+        (333, 494, Colour.SCARLET),
+        (367, 475, Colour.DAFFODIL),
+        (386, 508, Colour.DAFFODIL),
+        (392, 546, Colour.CORNFLOWER_BLUE),
+        (381, 579, Colour.SCARLET),
+        (343, 600, Colour.CORNFLOWER_BLUE),
+        (300, 588, Colour.SCARLET),
+        (273, 553, Colour.SCARLET),
+        (269, 517, Colour.DAFFODIL),
+    ):
+        city = Circle(x, y, 12, colour)
+        svg.appendChild(city.svg(doc, 0, 0))
+
     return svg
 
 
 action_cards = [
     ActionCard(
-        1,
+        1,  
         Colour.DAFFODIL,
         (
             (city, marriage, marriage, coin),
