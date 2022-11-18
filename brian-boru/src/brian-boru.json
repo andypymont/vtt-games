@@ -1,0 +1,29 @@
+{
+  "_meta": {
+    "version": 8,
+    "info": {
+      "name": "Brian Boru",
+      "image": "https://cf.geekdo-images.com/S-Ro5X2B6x2V6bana2f0fA__imagepage/img/qeQ-jO77MeGluz6KBn8tqBQJzTA=/fit-in/900x600/filters:no_upscale():strip_icc()/pic6149105.jpg",
+      "rules": "",
+      "bgg": "https://boardgamegeek.com/boardgame/337765/brian-boru-high-king-ireland",
+      "year": "2021",
+      "mode": "vs",
+      "time": "90",
+      "players": "2-4",
+      "language": "US",
+      "variant": "",
+      "attribution": ""
+    }
+  },
+  "board": {
+    "id": "board",
+    "y": 170,
+    "width": 960,
+    "height": 680,
+    "layer": -4,
+    "z": 1,
+    "movable": false,
+    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/board.svg",
+    "x": 640
+  }
+}
