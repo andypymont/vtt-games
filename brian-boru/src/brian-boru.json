@@ -175,6 +175,20 @@
     "editable": false,
     "movable": false
   },
+  "p1-played": {
+    "id": "p1-played",
+    "type": "holder",
+    "parent": "p1-area",
+    "x": 530,
+    "y": 10,
+    "width": 100,
+    "height": 148,
+    "dropOffsetX": 0,
+    "dropOffsetY": 0,
+    "onEnter": {
+      "activeFace": 1
+    }
+  },
   "p2-area": {
     "id": "p2-area",
     "linkedToSeat": "p2-seat",
@@ -324,6 +338,20 @@
     "text": "0",
     "editable": false,
     "movable": false
+  },
+  "p2-played": {
+    "id": "p2-played",
+    "type": "holder",
+    "parent": "p2-area",
+    "x": 530,
+    "y": 10,
+    "width": 100,
+    "height": 148,
+    "dropOffsetX": 0,
+    "dropOffsetY": 0,
+    "onEnter": {
+      "activeFace": 1
+    }
   },
   "p3-area": {
     "id": "p3-area",
@@ -475,6 +503,20 @@
     "editable": false,
     "movable": false
   },
+  "p3-played": {
+    "id": "p3-played",
+    "type": "holder",
+    "parent": "p3-area",
+    "x": 530,
+    "y": 10,
+    "width": 100,
+    "height": 148,
+    "dropOffsetX": 0,
+    "dropOffsetY": 0,
+    "onEnter": {
+      "activeFace": 1
+    }
+  },
   "p4-area": {
     "id": "p4-area",
     "linkedToSeat": "p4-seat",
@@ -625,6 +667,20 @@
     "editable": false,
     "movable": false
   },
+  "p4-played": {
+    "id": "p4-played",
+    "type": "holder",
+    "parent": "p4-area",
+    "x": 530,
+    "y": 10,
+    "width": 100,
+    "height": 148,
+    "dropOffsetX": 0,
+    "dropOffsetY": 0,
+    "onEnter": {
+      "activeFace": 1
+    }
+  },
   "p5-area": {
     "id": "p5-area",
     "linkedToSeat": "p5-seat",
@@ -774,6 +830,20 @@
     "text": "0",
     "editable": false,
     "movable": false
+  },
+  "p5-played": {
+    "id": "p5-played",
+    "type": "holder",
+    "parent": "p5-area",
+    "x": 530,
+    "y": 10,
+    "width": 100,
+    "height": 148,
+    "dropOffsetX": 0,
+    "dropOffsetY": 0,
+    "onEnter": {
+      "activeFace": 1
+    }
   },
   "hand-left": {
     "id": "hand-left",
@@ -940,7 +1010,7 @@
   "cards-action-holder": {
     "id": "cards-action-holder",
     "type": "holder",
-    "x": 1400,
+    "x": 1500,
     "y": 11,
     "height": 148,
     "width": 100,
@@ -953,7 +1023,7 @@
   "cards-action-discard": {
     "id": "cards-action-discard",
     "type": "holder",
-    "x": 1500,
+    "x": 1385,
     "y": 11,
     "height": 148,
     "width": 100,
