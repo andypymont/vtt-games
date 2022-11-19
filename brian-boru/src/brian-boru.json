@@ -2522,5 +2522,78 @@
       "width": 24,
       "height": 24
     }
+  },
+  "token-coin-holder": {
+    "id": "token-coin-holder",
+    "type": "holder",
+    "x": 660,
+    "y": 25,
+    "width": 30,
+    "height": 30,
+    "dropOffsetX": 0,
+    "dropOffsetY": 0,
+    "dropTarget": {
+      "deck": "token-deck"
+    }
+  },
+  "token-coin-pile": {
+    "id": "token-coin-pile",
+    "type": "pile",
+    "parent": "token-coin-holder",
+    "x": 0,
+    "y": 0,
+    "width": 30,
+    "height": 30,
+  },
+  "token-coin-01": {
+    "id": "token-coin-01",
+    "type": "coin",
+    "parent": "token-coin-pile",
+    "deck": "token-deck",
+    "cardType": "tokentype-coin",
+    "z": 1
+  },
+  "token-coin-02": {
+    "id": "token-coin-02",
+    "type": "coin",
+    "parent": "token-coin-pile",
+    "deck": "token-deck",
+    "cardType": "tokentype-coin",
+    "z": 2
+  },
+  "token-deck": {
+    "id": "token-deck",
+    "type": "deck",
+    "parent": "token-coin-holder",
+    "x": 0,
+    "y": 0,
+    "cardTypes": {
+      "tokentype-coin": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/token-coin.svg"
+      }
+    },
+    "faceTemplates": [
+      {
+        "border": false,
+        "radius": false,
+        "objects": [
+          {
+            "type": "image",
+            "x": 0,
+            "y": 0,
+            "width": 30,
+            "height": 30,
+            "dynamicProperties": {
+              "value": "image"
+            },
+            "color": "transparent"
+          }
+        ]
+      }
+    ],
+    "cardDefaults": {
+      "width": 30,
+      "height": 30
+    }
   }
 }
