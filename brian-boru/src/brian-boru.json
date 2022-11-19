@@ -88,7 +88,7 @@
     "width": 140,
     "height": 35,
     "css": "color:#000000;font-size:30px",
-    "text": "0",
+    "text": "10",
     "editable": true
   },
   "p1-score-dec": {
@@ -473,7 +473,7 @@
     "width": 140,
     "height": 35,
     "css": "color:#000000;font-size:30px",
-    "text": "0",
+    "text": "10",
     "editable": true
   },
   "p2-score-dec": {
@@ -858,7 +858,7 @@
     "width": 140,
     "height": 35,
     "css": "color:#000000;font-size:30px",
-    "text": "0",
+    "text": "10",
     "editable": true
   },
   "p3-score-dec": {
@@ -1243,7 +1243,7 @@
     "width": 140,
     "height": 35,
     "css": "color:#000000;font-size:30px",
-    "text": "0",
+    "text": "10",
     "editable": true
   },
   "p4-score-dec": {
@@ -1628,7 +1628,7 @@
     "width": 140,
     "height": 35,
     "css": "color:#000000;font-size:30px",
-    "text": "0",
+    "text": "10",
     "editable": true
   },
   "p5-score-dec": {
