@@ -17,13 +17,92 @@
   },
   "board": {
     "id": "board",
+    "layer": -4,
+    "x": 640,
     "y": 170,
     "width": 960,
     "height": 680,
-    "layer": -4,
-    "z": 1,
     "movable": false,
-    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/board.svg",
-    "x": 640
+    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/board.svg"
+  },
+  "p1-area": {
+    "id": "p1-area",
+    "layer": -4,
+    "x": 0,
+    "y": 170,
+    "width": 640,
+    "height": 136,
+    "movable": false,
+    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/player-area.svg"
+  },
+  "p2-area": {
+    "id": "p2-area",
+    "layer": -4,
+    "x": 0,
+    "y": 306,
+    "width": 640,
+    "height": 136,
+    "movable": false,
+    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/player-area.svg"
+  },
+  "p3-area": {
+    "id": "p3-area",
+    "layer": -4,
+    "x": 0,
+    "y": 442,
+    "width": 640,
+    "height": 136,
+    "movable": false,
+    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/player-area.svg"
+  },
+  "p4-area": {
+    "id": "p4-area",
+    "layer": -4,
+    "x": 0,
+    "y": 578,
+    "width": 640,
+    "height": 136,
+    "movable": false,
+    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/player-area.svg"
+  },
+  "p5-area": {
+    "id": "p5-area",
+    "layer": -4,
+    "x": 0,
+    "y": 714,
+    "width": 640,
+    "height": 136,
+    "movable": false,
+    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/player-area.svg"
+  },
+  "hand-left": {
+    "id": "hand-left",
+    "type": "holder",
+    "childrenPerOwner": true,
+    "layer": 1,
+    "x": 0,
+    "y": 850,
+    "width": 800,
+    "height": 150,
+    "dropOffsetX": 100,
+    "dropOffsetY": 0,
+    "onEnter": {
+      "activeFace": 1
+    }
+  },
+  "hand-right": {
+    "id": "hand-right",
+    "type": "holder",
+    "childrenPerOwner": true,
+    "layer": 1,
+    "x": 800,
+    "y": 850,
+    "width": 800,
+    "height": 150,
+    "dropOffsetX": 100,
+    "dropOffsetY": 0,
+    "onEnter": {
+      "activeFace": 1
+    }
   }
 }
