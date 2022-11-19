@@ -9,7 +9,7 @@
       "year": "2021",
       "mode": "vs",
       "time": "90",
-      "players": "2-4",
+      "players": "3-5",
       "language": "US",
       "variant": "",
       "attribution": ""
@@ -299,13 +299,15 @@
     "id": "hand-left",
     "type": "holder",
     "childrenPerOwner": true,
-    "layer": 1,
+    "layer": -3,
     "x": 0,
     "y": 850,
     "width": 800,
     "height": 150,
-    "dropOffsetX": 100,
+    "dropOffsetX": 0,
     "dropOffsetY": 0,
+    "stackOffsetX": 100,
+    "stackOffsetY": 0,
     "onEnter": {
       "activeFace": 1
     }
@@ -314,15 +316,368 @@
     "id": "hand-right",
     "type": "holder",
     "childrenPerOwner": true,
-    "layer": 1,
+    "layer": -3,
     "x": 800,
     "y": 850,
     "width": 800,
     "height": 150,
-    "dropOffsetX": 100,
+    "dropOffsetX": 0,
     "dropOffsetY": 0,
+    "stackOffsetX": 100,
+    "stackOffsetY": 0,
     "onEnter": {
       "activeFace": 1
     }
+  },
+  "cards-action-holder": {
+    "id": "cards-action-holder",
+    "type": "holder",
+    "x": 1400,
+    "y": 11,
+    "height": 148,
+    "width": 100,
+    "dropOffsetX": 0,
+    "dropOffsetY": 0
+  },
+  "cards-action-discard": {
+    "id": "cards-action-discard",
+    "type": "holder",
+    "x": 1500,
+    "y": 11,
+    "height": 148,
+    "width": 100,
+    "dropOffsetX": 0,
+    "dropOffsetY": 0
+  },
+  "cards-action-deck": {
+    "id": "cards-action-deck",
+    "type": "deck",
+    "parent": "cards-action-holder",
+    "x": 4,
+    "y": 4,
+    "cardTypes": {
+      "cardtype-action-01": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/card-action-01.svg"
+      },
+      "cardtype-action-02": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/card-action-02.svg"
+      },
+      "cardtype-action-03": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/card-action-03.svg"
+      },
+      "cardtype-action-04": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/card-action-04.svg"
+      },
+      "cardtype-action-05": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/card-action-05.svg"
+      },
+      "cardtype-action-06": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/card-action-06.svg"
+      },
+      "cardtype-action-07": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/card-action-07.svg"
+      },
+      "cardtype-action-08": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/card-action-08.svg"
+      },
+      "cardtype-action-09": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/card-action-09.svg"
+      },
+      "cardtype-action-10": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/card-action-10.svg"
+      },
+      "cardtype-action-11": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/card-action-11.svg"
+      },
+      "cardtype-action-12": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/card-action-12.svg"
+      },
+      "cardtype-action-13": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/card-action-13.svg"
+      },
+      "cardtype-action-14": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/card-action-14.svg"
+      },
+      "cardtype-action-15": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/card-action-15.svg"
+      },
+      "cardtype-action-16": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/card-action-16.svg"
+      },
+      "cardtype-action-17": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/card-action-17.svg"
+      },
+      "cardtype-action-18": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/card-action-18.svg"
+      },
+      "cardtype-action-19": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/card-action-19.svg"
+      },
+      "cardtype-action-20": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/card-action-20.svg"
+      },
+      "cardtype-action-21": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/card-action-21.svg"
+      },
+      "cardtype-action-22": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/card-action-22.svg"
+      },
+      "cardtype-action-23": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/card-action-23.svg"
+      },
+      "cardtype-action-24": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/card-action-24.svg"
+      },
+      "cardtype-action-25": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/card-action-25.svg"
+      }
+    },
+    "faceTemplates": [
+      {
+        "border": false,
+        "radius": false,
+        "objects": [
+          {
+            "type": "image",
+            "x": 0,
+            "y": 0,
+            "width": 100,
+            "height": 148,
+            "value": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/card-action-back.svg",
+            "color": "transparent"
+          }
+        ]
+      },
+      {
+        "border": false,
+        "radius": false,
+        "objects": [
+          {
+            "type": "image",
+            "x": 0,
+            "y": 0,
+            "width": 100,
+            "height": 148,
+            "dynamicProperties": {
+              "value": "image"
+            },
+            "color": "transparent"
+          }
+        ]
+      }
+    ],
+    "cardDefaults": {
+      "width": 100,
+      "height": 148
+    }
+  },
+  "cards-action-pile": {
+    "id": "cards-action-pile",
+    "type": "pile",
+    "parent": "cards-action-holder",
+    "x": 0,
+    "y": 0,
+    "width": 100,
+    "height": 148
+  },
+  "cards-action-01": {
+    "id": "cards-action-01",
+    "type": "card",
+    "deck": "cards-action-deck",
+    "cardType": "cardtype-action-01",
+    "z": 25,
+    "parent": "cards-action-pile"
+  },
+  "cards-action-02": {
+    "id": "cards-action-02",
+    "type": "card",
+    "deck": "cards-action-deck",
+    "cardType": "cardtype-action-02",
+    "z": 24,
+    "parent": "cards-action-pile"
+  },
+  "cards-action-03": {
+    "id": "cards-action-03",
+    "type": "card",
+    "deck": "cards-action-deck",
+    "cardType": "cardtype-action-03",
+    "z": 23,
+    "parent": "cards-action-pile"
+  },
+  "cards-action-04": {
+    "id": "cards-action-04",
+    "type": "card",
+    "deck": "cards-action-deck",
+    "cardType": "cardtype-action-04",
+    "z": 22,
+    "parent": "cards-action-pile"
+  },
+  "cards-action-05": {
+    "id": "cards-action-05",
+    "type": "card",
+    "deck": "cards-action-deck",
+    "cardType": "cardtype-action-05",
+    "z": 21,
+    "parent": "cards-action-pile"
+  },
+  "cards-action-06": {
+    "id": "cards-action-06",
+    "type": "card",
+    "deck": "cards-action-deck",
+    "cardType": "cardtype-action-06",
+    "z": 20,
+    "parent": "cards-action-pile"
+  },
+  "cards-action-07": {
+    "id": "cards-action-07",
+    "type": "card",
+    "deck": "cards-action-deck",
+    "cardType": "cardtype-action-07",
+    "z": 19,
+    "parent": "cards-action-pile"
+  },
+  "cards-action-08": {
+    "id": "cards-action-08",
+    "type": "card",
+    "deck": "cards-action-deck",
+    "cardType": "cardtype-action-08",
+    "z": 18,
+    "parent": "cards-action-pile"
+  },
+  "cards-action-09": {
+    "id": "cards-action-09",
+    "type": "card",
+    "deck": "cards-action-deck",
+    "cardType": "cardtype-action-09",
+    "z": 17,
+    "parent": "cards-action-pile"
+  },
+  "cards-action-10": {
+    "id": "cards-action-10",
+    "type": "card",
+    "deck": "cards-action-deck",
+    "cardType": "cardtype-action-10",
+    "z": 16,
+    "parent": "cards-action-pile"
+  },
+  "cards-action-11": {
+    "id": "cards-action-11",
+    "type": "card",
+    "deck": "cards-action-deck",
+    "cardType": "cardtype-action-11",
+    "z": 15,
+    "parent": "cards-action-pile"
+  },
+  "cards-action-12": {
+    "id": "cards-action-12",
+    "type": "card",
+    "deck": "cards-action-deck",
+    "cardType": "cardtype-action-12",
+    "z": 14,
+    "parent": "cards-action-pile"
+  },
+  "cards-action-13": {
+    "id": "cards-action-13",
+    "type": "card",
+    "deck": "cards-action-deck",
+    "cardType": "cardtype-action-13",
+    "z": 13,
+    "parent": "cards-action-pile"
+  },
+  "cards-action-14": {
+    "id": "cards-action-14",
+    "type": "card",
+    "deck": "cards-action-deck",
+    "cardType": "cardtype-action-14",
+    "z": 12,
+    "parent": "cards-action-pile"
+  },
+  "cards-action-15": {
+    "id": "cards-action-15",
+    "type": "card",
+    "deck": "cards-action-deck",
+    "cardType": "cardtype-action-15",
+    "z": 11,
+    "parent": "cards-action-pile"
+  },
+  "cards-action-16": {
+    "id": "cards-action-16",
+    "type": "card",
+    "deck": "cards-action-deck",
+    "cardType": "cardtype-action-16",
+    "z": 10,
+    "parent": "cards-action-pile"
+  },
+  "cards-action-17": {
+    "id": "cards-action-17",
+    "type": "card",
+    "deck": "cards-action-deck",
+    "cardType": "cardtype-action-17",
+    "z": 9,
+    "parent": "cards-action-pile"
+  },
+  "cards-action-18": {
+    "id": "cards-action-18",
+    "type": "card",
+    "deck": "cards-action-deck",
+    "cardType": "cardtype-action-18",
+    "z": 8,
+    "parent": "cards-action-pile"
+  },
+  "cards-action-19": {
+    "id": "cards-action-19",
+    "type": "card",
+    "deck": "cards-action-deck",
+    "cardType": "cardtype-action-19",
+    "z": 7,
+    "parent": "cards-action-pile"
+  },
+  "cards-action-20": {
+    "id": "cards-action-20",
+    "type": "card",
+    "deck": "cards-action-deck",
+    "cardType": "cardtype-action-20",
+    "z": 6,
+    "parent": "cards-action-pile"
+  },
+  "cards-action-21": {
+    "id": "cards-action-21",
+    "type": "card",
+    "deck": "cards-action-deck",
+    "cardType": "cardtype-action-21",
+    "z": 5,
+    "parent": "cards-action-pile"
+  },
+  "cards-action-22": {
+    "id": "cards-action-22",
+    "type": "card",
+    "deck": "cards-action-deck",
+    "cardType": "cardtype-action-22",
+    "z": 4,
+    "parent": "cards-action-pile"
+  },
+  "cards-action-23": {
+    "id": "cards-action-23",
+    "type": "card",
+    "deck": "cards-action-deck",
+    "cardType": "cardtype-action-23",
+    "z": 3,
+    "parent": "cards-action-pile"
+  },
+  "cards-action-24": {
+    "id": "cards-action-24",
+    "type": "card",
+    "deck": "cards-action-deck",
+    "cardType": "cardtype-action-24",
+    "z": 2,
+    "parent": "cards-action-pile"
+  },
+  "cards-action-25": {
+    "id": "cards-action-25",
+    "type": "card",
+    "deck": "cards-action-deck",
+    "cardType": "cardtype-action-25",
+    "z": 1,
+    "parent": "cards-action-pile"
   }
 }
