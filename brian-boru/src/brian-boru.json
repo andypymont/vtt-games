@@ -79,6 +79,56 @@
       }
     ]
   },
+  "p1-score": {
+    "id": "p1-score",
+    "type": "label",
+    "parent": "p1-area",
+    "x": 8,
+    "y": 50,
+    "width": 140,
+    "height": 35,
+    "css": "color:#000000;font-size:30px",
+    "text": 0,
+    "editable": true
+  },
+  "p1-score-dec": {
+    "id": "p1-score-dec",
+    "type": "button",
+    "parent": "p1-score",
+    "x": 4,
+    "y": -2,
+    "width": 36,
+    "height": 36,
+    "text": "-",
+    "movableInEdit": false,
+    "clickRoutine": [
+      {
+        "func": "LABEL",
+        "label": "p1-score",
+        "mode": "dec",
+        "value": 1
+      }
+    ]
+  },
+  "p1-score-inc": {
+    "id": "p1-score-inc",
+    "type": "button",
+    "parent": "p1-score",
+    "x": 100,
+    "y": -2,
+    "width": 36,
+    "height": 36,
+    "text": "+",
+    "movableInEdit": false,
+    "clickRoutine": [
+      {
+        "func": "LABEL",
+        "label": "p1-score",
+        "mode": "inc",
+        "value": 1
+      }
+    ]
+  },
   "p2-area": {
     "id": "p2-area",
     "linkedToSeat": "p2-seat",
@@ -130,6 +180,56 @@
         "func": "CLICK",
         "collection": "thisButton",
         "mode": "ignoreClickRoutine"
+      }
+    ]
+  },
+  "p2-score": {
+    "id": "p2-score",
+    "type": "label",
+    "parent": "p2-area",
+    "x": 8,
+    "y": 50,
+    "width": 140,
+    "height": 35,
+    "css": "color:#000000;font-size:30px",
+    "text": 0,
+    "editable": true
+  },
+  "p2-score-dec": {
+    "id": "p2-score-dec",
+    "type": "button",
+    "parent": "p2-score",
+    "x": 4,
+    "y": -2,
+    "width": 36,
+    "height": 36,
+    "text": "-",
+    "movableInEdit": false,
+    "clickRoutine": [
+      {
+        "func": "LABEL",
+        "label": "p2-score",
+        "mode": "dec",
+        "value": 1
+      }
+    ]
+  },
+  "p2-score-inc": {
+    "id": "p2-score-inc",
+    "type": "button",
+    "parent": "p2-score",
+    "x": 100,
+    "y": -2,
+    "width": 36,
+    "height": 36,
+    "text": "+",
+    "movableInEdit": false,
+    "clickRoutine": [
+      {
+        "func": "LABEL",
+        "label": "p2-score",
+        "mode": "inc",
+        "value": 1
       }
     ]
   },
@@ -187,6 +287,56 @@
       }
     ]
   },
+  "p3-score": {
+    "id": "p3-score",
+    "type": "label",
+    "parent": "p3-area",
+    "x": 8,
+    "y": 50,
+    "width": 140,
+    "height": 35,
+    "css": "color:#000000;font-size:30px",
+    "text": 0,
+    "editable": true
+  },
+  "p3-score-dec": {
+    "id": "p3-score-dec",
+    "type": "button",
+    "parent": "p3-score",
+    "x": 4,
+    "y": -2,
+    "width": 36,
+    "height": 36,
+    "text": "-",
+    "movableInEdit": false,
+    "clickRoutine": [
+      {
+        "func": "LABEL",
+        "label": "p3-score",
+        "mode": "dec",
+        "value": 1
+      }
+    ]
+  },
+  "p3-score-inc": {
+    "id": "p3-score-inc",
+    "type": "button",
+    "parent": "p3-score",
+    "x": 100,
+    "y": -2,
+    "width": 36,
+    "height": 36,
+    "text": "+",
+    "movableInEdit": false,
+    "clickRoutine": [
+      {
+        "func": "LABEL",
+        "label": "p3-score",
+        "mode": "inc",
+        "value": 1
+      }
+    ]
+  },
   "p4-area": {
     "id": "p4-area",
     "linkedToSeat": "p4-seat",
@@ -241,6 +391,56 @@
       }
     ]
   },
+  "p4-score": {
+    "id": "p4-score",
+    "type": "label",
+    "parent": "p4-area",
+    "x": 8,
+    "y": 50,
+    "width": 140,
+    "height": 35,
+    "css": "color:#000000;font-size:30px",
+    "text": 0,
+    "editable": true
+  },
+  "p4-score-dec": {
+    "id": "p4-score-dec",
+    "type": "button",
+    "parent": "p4-score",
+    "x": 4,
+    "y": -2,
+    "width": 36,
+    "height": 36,
+    "text": "-",
+    "movableInEdit": false,
+    "clickRoutine": [
+      {
+        "func": "LABEL",
+        "label": "p4-score",
+        "mode": "dec",
+        "value": 1
+      }
+    ]
+  },
+  "p4-score-inc": {
+    "id": "p4-score-inc",
+    "type": "button",
+    "parent": "p4-score",
+    "x": 100,
+    "y": -2,
+    "width": 36,
+    "height": 36,
+    "text": "+",
+    "movableInEdit": false,
+    "clickRoutine": [
+      {
+        "func": "LABEL",
+        "label": "p4-score",
+        "mode": "inc",
+        "value": 1
+      }
+    ]
+  },
   "p5-area": {
     "id": "p5-area",
     "linkedToSeat": "p5-seat",
@@ -292,6 +492,56 @@
         "func": "CLICK",
         "collection": "thisButton",
         "mode": "ignoreClickRoutine"
+      }
+    ]
+  },
+  "p5-score": {
+    "id": "p5-score",
+    "type": "label",
+    "parent": "p5-area",
+    "x": 8,
+    "y": 50,
+    "width": 140,
+    "height": 35,
+    "css": "color:#000000;font-size:30px",
+    "text": 0,
+    "editable": true
+  },
+  "p5-score-dec": {
+    "id": "p5-score-dec",
+    "type": "button",
+    "parent": "p5-score",
+    "x": 4,
+    "y": -2,
+    "width": 36,
+    "height": 36,
+    "text": "-",
+    "movableInEdit": false,
+    "clickRoutine": [
+      {
+        "func": "LABEL",
+        "label": "p5-score",
+        "mode": "dec",
+        "value": 1
+      }
+    ]
+  },
+  "p5-score-inc": {
+    "id": "p5-score-inc",
+    "type": "button",
+    "parent": "p5-score",
+    "x": 100,
+    "y": -2,
+    "width": 36,
+    "height": 36,
+    "text": "+",
+    "movableInEdit": false,
+    "clickRoutine": [
+      {
+        "func": "LABEL",
+        "label": "p5-score",
+        "mode": "inc",
+        "value": 1
       }
     ]
   },
