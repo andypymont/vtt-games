@@ -27,6 +27,7 @@
   },
   "p1-area": {
     "id": "p1-area",
+    "linkedToSeat": "p1-seat",
     "layer": -4,
     "x": 0,
     "y": 170,
@@ -35,8 +36,52 @@
     "movable": false,
     "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/player-area.svg"
   },
+  "p1-seat": {
+    "id": "p1-seat",
+    "type": "seat",
+    "parent": "p1-area",
+    "x": 0,
+    "y": 2,
+    "height": 25,
+    "width": 140,
+    "hideWhenUnused": true,
+    "clickRoutine": [
+      "var playerPrefix = substr ${playerName} 0 5",
+      {
+        "func": "IF",
+        "operand1": "${playerPrefix}",
+        "operand2": "Guest",
+        "thenRoutine": [
+          {
+            "func": "INPUT",
+            "header": "Enter your name and choice of player color.",
+            "fields": [
+              {
+                "type": "string",
+                "label": "Name",
+                "variable": "playerName",
+                "value": "${playerName}"
+              },
+              {
+                "type": "color",
+                "label": "Color",
+                "variable": "playerColor",
+                "value": "${playerColor}"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "func": "CLICK",
+        "collection": "thisButton",
+        "mode": "ignoreClickRoutine"
+      }
+    ]
+  },
   "p2-area": {
     "id": "p2-area",
+    "linkedToSeat": "p2-seat",
     "layer": -4,
     "x": 0,
     "y": 306,
@@ -45,8 +90,52 @@
     "movable": false,
     "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/player-area.svg"
   },
+  "p2-seat": {
+    "id": "p2-seat",
+    "type": "seat",
+    "parent": "p2-area",
+    "x": 0,
+    "y": 2,
+    "height": 25,
+    "width": 140,
+    "hideWhenUnused": true,
+    "clickRoutine": [
+      "var playerPrefix = substr ${playerName} 0 5",
+      {
+        "func": "IF",
+        "operand1": "${playerPrefix}",
+        "operand2": "Guest",
+        "thenRoutine": [
+          {
+            "func": "INPUT",
+            "header": "Enter your name and choice of player color.",
+            "fields": [
+              {
+                "type": "string",
+                "label": "Name",
+                "variable": "playerName",
+                "value": "${playerName}"
+              },
+              {
+                "type": "color",
+                "label": "Color",
+                "variable": "playerColor",
+                "value": "${playerColor}"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "func": "CLICK",
+        "collection": "thisButton",
+        "mode": "ignoreClickRoutine"
+      }
+    ]
+  },
   "p3-area": {
     "id": "p3-area",
+    "linkedToSeat": "p3-seat",
     "layer": -4,
     "x": 0,
     "y": 442,
@@ -55,8 +144,52 @@
     "movable": false,
     "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/player-area.svg"
   },
+  "p3-seat": {
+    "id": "p3-seat",
+    "type": "seat",
+    "parent": "p3-area",
+    "x": 0,
+    "y": 2,
+    "height": 25,
+    "width": 140,
+    "hideWhenUnused": true,
+    "clickRoutine": [
+      "var playerPrefix = substr ${playerName} 0 5",
+      {
+        "func": "IF",
+        "operand1": "${playerPrefix}",
+        "operand2": "Guest",
+        "thenRoutine": [
+          {
+            "func": "INPUT",
+            "header": "Enter your name and choice of player color.",
+            "fields": [
+              {
+                "type": "string",
+                "label": "Name",
+                "variable": "playerName",
+                "value": "${playerName}"
+              },
+              {
+                "type": "color",
+                "label": "Color",
+                "variable": "playerColor",
+                "value": "${playerColor}"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "func": "CLICK",
+        "collection": "thisButton",
+        "mode": "ignoreClickRoutine"
+      }
+    ]
+  },
   "p4-area": {
     "id": "p4-area",
+    "linkedToSeat": "p4-seat",
     "layer": -4,
     "x": 0,
     "y": 578,
@@ -65,8 +198,52 @@
     "movable": false,
     "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/player-area.svg"
   },
+  "p4-seat": {
+    "id": "p4-seat",
+    "type": "seat",
+    "parent": "p4-area",
+    "x": 0,
+    "y": 2,
+    "height": 25,
+    "width": 140,
+    "hideWhenUnused": true,
+    "clickRoutine": [
+      "var playerPrefix = substr ${playerName} 0 5",
+      {
+        "func": "IF",
+        "operand1": "${playerPrefix}",
+        "operand2": "Guest",
+        "thenRoutine": [
+          {
+            "func": "INPUT",
+            "header": "Enter your name and choice of player color.",
+            "fields": [
+              {
+                "type": "string",
+                "label": "Name",
+                "variable": "playerName",
+                "value": "${playerName}"
+              },
+              {
+                "type": "color",
+                "label": "Color",
+                "variable": "playerColor",
+                "value": "${playerColor}"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "func": "CLICK",
+        "collection": "thisButton",
+        "mode": "ignoreClickRoutine"
+      }
+    ]
+  },
   "p5-area": {
     "id": "p5-area",
+    "linkedToSeat": "p5-seat",
     "layer": -4,
     "x": 0,
     "y": 714,
@@ -74,6 +251,49 @@
     "height": 136,
     "movable": false,
     "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/player-area.svg"
+  },
+  "p5-seat": {
+    "id": "p5-seat",
+    "type": "seat",
+    "parent": "p5-area",
+    "x": 0,
+    "y": 2,
+    "height": 25,
+    "width": 140,
+    "hideWhenUnused": true,
+    "clickRoutine": [
+      "var playerPrefix = substr ${playerName} 0 5",
+      {
+        "func": "IF",
+        "operand1": "${playerPrefix}",
+        "operand2": "Guest",
+        "thenRoutine": [
+          {
+            "func": "INPUT",
+            "header": "Enter your name and choice of player color.",
+            "fields": [
+              {
+                "type": "string",
+                "label": "Name",
+                "variable": "playerName",
+                "value": "${playerName}"
+              },
+              {
+                "type": "color",
+                "label": "Color",
+                "variable": "playerColor",
+                "value": "${playerColor}"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "func": "CLICK",
+        "collection": "thisButton",
+        "mode": "ignoreClickRoutine"
+      }
+    ]
   },
   "hand-left": {
     "id": "hand-left",
