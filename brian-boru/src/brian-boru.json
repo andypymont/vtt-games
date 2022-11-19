@@ -791,6 +791,9 @@
     "onEnter": {
       "activeFace": 1
     },
+    "onLeave": {
+      "activeFace": 0
+    },
     "countRoutine": [
       {
         "func": "FOREACH",
@@ -868,6 +871,9 @@
     "stackOffsetY": 0,
     "onEnter": {
       "activeFace": 1
+    },
+    "onLeave": {
+      "activeFace": 0
     },
     "countRoutine": [
       {
