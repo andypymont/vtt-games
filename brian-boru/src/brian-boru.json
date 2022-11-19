@@ -2263,7 +2263,8 @@
     ],
     "cardDefaults": {
       "width": 100,
-      "height": 148
+      "height": 148,
+      "enlarge": 2
     }
   },
   "cards-action-pile": {
