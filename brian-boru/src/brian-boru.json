@@ -2314,7 +2314,10 @@
     "cardDefaults": {
       "width": 100,
       "height": 148,
-      "enlarge": 2
+      "enlarge": 2,
+      "onPileCreation": {
+        "onlyPileWith": "card-action"
+      }
     }
   },
   "cards-action-pile": {
@@ -2534,19 +2537,34 @@
     "y": 0,
     "cardTypes": {
       "player-cube-type-ltblue": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/player-cube-ltblue.svg"
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/player-cube-ltblue.svg",
+        "onPileCreation": {
+          "onlyPileWith": "player-cube-type-ltblue"
+        }
       },
       "player-cube-type-purple": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/player-cube-purple.svg"
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/player-cube-purple.svg",
+        "onPileCreation": {
+          "onlyPileWith": "player-cube-type-purple"
+        }
       },
       "player-cube-type-orange": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/player-cube-orange.svg"
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/player-cube-orange.svg",
+        "onPileCreation": {
+          "onlyPileWith": "player-cube-type-orange"
+        }
       },
       "player-cube-type-green": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/player-cube-green.svg"
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/player-cube-green.svg",
+        "onPileCreation": {
+          "onlyPileWith": "player-cube-type-green"
+        }
       },
       "player-cube-type-yellow": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/player-cube-yellow.svg"
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/player-cube-yellow.svg",
+        "onPileCreation": {
+          "onlyPileWith": "player-cube-type-yellow"
+        }
       }
     },
     "faceTemplates": [
@@ -3083,11 +3101,29 @@
     "x": 0,
     "y": 0,
     "cardTypes": {
+      "tokentype-axe": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/token-axe.svg",
+        "onPileCreation": {
+          "onlyPileWith": "tokentype-axe"
+        }
+      },
       "tokentype-coin": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/token-coin.svg"
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/token-coin.svg",
+        "onPileCreation": {
+          "onlyPileWith": "tokentype-coin"
+        }
       },
       "tokentype-renown": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/token-renown.svg"
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/token-renown.svg",
+        "onPileCreation": {
+          "onlyPileWith": "tokentype-renown"
+        }
+      },
+      "tokentype-shield": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/token-shield.svg",
+        "onPileCreation": {
+          "onlyPileWith": "tokentype-shield"
+        }
       }
     },
     "faceTemplates": [
@@ -3253,5 +3289,371 @@
     "deck": "token-deck",
     "cardType": "tokentype-renown",
     "z": 9
+  },
+  "token-shield-holder": {
+    "id": "token-shield-holder",
+    "type": "holder",
+    "x": 720,
+    "y": 25,
+    "width": 30,
+    "height": 30,
+    "dropOffsetX": 0,
+    "dropOffsetY": 0,
+    "dropTarget": {
+      "deck": "token-deck",
+      "cardType": "tokentype-shield"
+    }
+  },
+  "token-shield-pile": {
+    "id": "token-shield-pile",
+    "type": "pile",
+    "parent": "token-shield-holder",
+    "x": 0,
+    "y": 0,
+    "width": 30,
+    "height": 30
+  },
+  "token-shield-01": {
+    "id": "token-shield-01",
+    "type": "card",
+    "parent": "token-shield-pile",
+    "deck": "token-deck",
+    "cardType": "tokentype-shield",
+    "z": 1
+  },
+  "token-shield-02": {
+    "id": "token-shield-02",
+    "type": "card",
+    "parent": "token-shield-pile",
+    "deck": "token-deck",
+    "cardType": "tokentype-shield",
+    "z": 2
+  },
+  "token-shield-03": {
+    "id": "token-shield-03",
+    "type": "card",
+    "parent": "token-shield-pile",
+    "deck": "token-deck",
+    "cardType": "tokentype-shield",
+    "z": 3
+  },
+  "token-shield-04": {
+    "id": "token-shield-04",
+    "type": "card",
+    "parent": "token-shield-pile",
+    "deck": "token-deck",
+    "cardType": "tokentype-shield",
+    "z": 4
+  },
+  "token-shield-05": {
+    "id": "token-shield-05",
+    "type": "card",
+    "parent": "token-shield-pile",
+    "deck": "token-deck",
+    "cardType": "tokentype-shield",
+    "z": 5
+  },
+  "token-shield-06": {
+    "id": "token-shield-06",
+    "type": "card",
+    "parent": "token-shield-pile",
+    "deck": "token-deck",
+    "cardType": "tokentype-shield",
+    "z": 6
+  },
+  "token-shield-07": {
+    "id": "token-shield-07",
+    "type": "card",
+    "parent": "token-shield-pile",
+    "deck": "token-deck",
+    "cardType": "tokentype-shield",
+    "z": 7
+  },
+  "token-shield-08": {
+    "id": "token-shield-08",
+    "type": "card",
+    "parent": "token-shield-pile",
+    "deck": "token-deck",
+    "cardType": "tokentype-shield",
+    "z": 8
+  },
+  "token-shield-09": {
+    "id": "token-shield-09",
+    "type": "card",
+    "parent": "token-shield-pile",
+    "deck": "token-deck",
+    "cardType": "tokentype-shield",
+    "z": 9
+  },
+  "token-shield-10": {
+    "id": "token-shield-10",
+    "type": "card",
+    "parent": "token-shield-pile",
+    "deck": "token-deck",
+    "cardType": "tokentype-shield",
+    "z": 10
+  },
+  "token-axe-holder": {
+    "id": "token-axe-holder",
+    "type": "holder",
+    "x": 720,
+    "y": 70,
+    "width": 30,
+    "height": 30,
+    "dropOffsetX": 0,
+    "dropOffsetY": 0,
+    "dropTarget": {
+      "deck": "token-deck",
+      "cardType": "tokentype-axe"
+    }
+  },
+  "token-axe-pile": {
+    "id": "token-axe-pile",
+    "type": "pile",
+    "parent": "token-axe-holder",
+    "x": 0,
+    "y": 0,
+    "width": 30,
+    "height": 30
+  },
+  "token-axe-01": {
+    "id": "token-axe-01",
+    "type": "card",
+    "parent": "token-axe-pile",
+    "deck": "token-deck",
+    "cardType": "tokentype-axe",
+    "z": 1
+  },
+  "token-axe-02": {
+    "id": "token-axe-02",
+    "type": "card",
+    "parent": "token-axe-pile",
+    "deck": "token-deck",
+    "cardType": "tokentype-axe",
+    "z": 2
+  },
+  "token-axe-03": {
+    "id": "token-axe-03",
+    "type": "card",
+    "parent": "token-axe-pile",
+    "deck": "token-deck",
+    "cardType": "tokentype-axe",
+    "z": 3
+  },
+  "token-axe-04": {
+    "id": "token-axe-04",
+    "type": "card",
+    "parent": "token-axe-pile",
+    "deck": "token-deck",
+    "cardType": "tokentype-axe",
+    "z": 4
+  },
+  "token-axe-05": {
+    "id": "token-axe-05",
+    "type": "card",
+    "parent": "token-axe-pile",
+    "deck": "token-deck",
+    "cardType": "tokentype-axe",
+    "z": 5
+  },
+  "token-axe-06": {
+    "id": "token-axe-06",
+    "type": "card",
+    "parent": "token-axe-pile",
+    "deck": "token-deck",
+    "cardType": "tokentype-axe",
+    "z": 6
+  },
+  "token-axe-07": {
+    "id": "token-axe-07",
+    "type": "card",
+    "parent": "token-axe-pile",
+    "deck": "token-deck",
+    "cardType": "tokentype-axe",
+    "z": 7
+  },
+  "token-axe-08": {
+    "id": "token-axe-08",
+    "type": "card",
+    "parent": "token-axe-pile",
+    "deck": "token-deck",
+    "cardType": "tokentype-axe",
+    "z": 8
+  },
+  "token-axe-09": {
+    "id": "token-axe-09",
+    "type": "card",
+    "parent": "token-axe-pile",
+    "deck": "token-deck",
+    "cardType": "tokentype-axe",
+    "z": 9
+  },
+  "token-axe-10": {
+    "id": "token-axe-10",
+    "type": "card",
+    "parent": "token-axe-pile",
+    "deck": "token-deck",
+    "cardType": "tokentype-axe",
+    "z": 10
+  },
+  "token-axe-11": {
+    "id": "token-axe-11",
+    "type": "card",
+    "parent": "token-axe-pile",
+    "deck": "token-deck",
+    "cardType": "tokentype-axe",
+    "z": 11
+  },
+  "token-axe-12": {
+    "id": "token-axe-12",
+    "type": "card",
+    "parent": "token-axe-pile",
+    "deck": "token-deck",
+    "cardType": "tokentype-axe",
+    "z": 12
+  },
+  "token-axe-13": {
+    "id": "token-axe-13",
+    "type": "card",
+    "parent": "token-axe-pile",
+    "deck": "token-deck",
+    "cardType": "tokentype-axe",
+    "z": 13
+  },
+  "token-axe-14": {
+    "id": "token-axe-14",
+    "type": "card",
+    "parent": "token-axe-pile",
+    "deck": "token-deck",
+    "cardType": "tokentype-axe",
+    "z": 14
+  },
+  "token-axe-15": {
+    "id": "token-axe-15",
+    "type": "card",
+    "parent": "token-axe-pile",
+    "deck": "token-deck",
+    "cardType": "tokentype-axe",
+    "z": 15
+  },
+  "token-axe-16": {
+    "id": "token-axe-16",
+    "type": "card",
+    "parent": "token-axe-pile",
+    "deck": "token-deck",
+    "cardType": "tokentype-axe",
+    "z": 16
+  },
+  "token-axe-17": {
+    "id": "token-axe-17",
+    "type": "card",
+    "parent": "token-axe-pile",
+    "deck": "token-deck",
+    "cardType": "tokentype-axe",
+    "z": 17
+  },
+  "token-axe-18": {
+    "id": "token-axe-18",
+    "type": "card",
+    "parent": "token-axe-pile",
+    "deck": "token-deck",
+    "cardType": "tokentype-axe",
+    "z": 18
+  },
+  "token-axe-19": {
+    "id": "token-axe-19",
+    "type": "card",
+    "parent": "token-axe-pile",
+    "deck": "token-deck",
+    "cardType": "tokentype-axe",
+    "z": 19
+  },
+  "token-axe-20": {
+    "id": "token-axe-20",
+    "type": "card",
+    "parent": "token-axe-pile",
+    "deck": "token-deck",
+    "cardType": "tokentype-axe",
+    "z": 20
+  },
+  "token-axe-21": {
+    "id": "token-axe-21",
+    "type": "card",
+    "parent": "token-axe-pile",
+    "deck": "token-deck",
+    "cardType": "tokentype-axe",
+    "z": 21
+  },
+  "token-axe-22": {
+    "id": "token-axe-22",
+    "type": "card",
+    "parent": "token-axe-pile",
+    "deck": "token-deck",
+    "cardType": "tokentype-axe",
+    "z": 22
+  },
+  "token-axe-23": {
+    "id": "token-axe-23",
+    "type": "card",
+    "parent": "token-axe-pile",
+    "deck": "token-deck",
+    "cardType": "tokentype-axe",
+    "z": 23
+  },
+  "token-axe-24": {
+    "id": "token-axe-24",
+    "type": "card",
+    "parent": "token-axe-pile",
+    "deck": "token-deck",
+    "cardType": "tokentype-axe",
+    "z": 24
+  },
+  "token-axe-25": {
+    "id": "token-axe-25",
+    "type": "card",
+    "parent": "token-axe-pile",
+    "deck": "token-deck",
+    "cardType": "tokentype-axe",
+    "z": 25
+  },
+  "token-axe-26": {
+    "id": "token-axe-26",
+    "type": "card",
+    "parent": "token-axe-pile",
+    "deck": "token-deck",
+    "cardType": "tokentype-axe",
+    "z": 26
+  },
+  "token-axe-27": {
+    "id": "token-axe-27",
+    "type": "card",
+    "parent": "token-axe-pile",
+    "deck": "token-deck",
+    "cardType": "tokentype-axe",
+    "z": 27
+  },
+  "token-axe-28": {
+    "id": "token-axe-28",
+    "type": "card",
+    "parent": "token-axe-pile",
+    "deck": "token-deck",
+    "cardType": "tokentype-axe",
+    "z": 28
+  },
+  "token-axe-29": {
+    "id": "token-axe-29",
+    "type": "card",
+    "parent": "token-axe-pile",
+    "deck": "token-deck",
+    "cardType": "tokentype-axe",
+    "z": 29
+  },
+  "token-axe-30": {
+    "id": "token-axe-30",
+    "type": "card",
+    "parent": "token-axe-pile",
+    "deck": "token-deck",
+    "cardType": "tokentype-axe",
+    "z": 30
   }
 }
