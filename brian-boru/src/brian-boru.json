@@ -3655,5 +3655,197 @@
     "deck": "token-deck",
     "cardType": "tokentype-axe",
     "z": 30
+  },
+  "token-monastery-holder": {
+    "id": "token-monastery-holder",
+    "type": "holder",
+    "x": 780,
+    "y": 68,
+    "width": 34,
+    "height": 34,
+    "dropOffsetX": 0,
+    "dropOffsetY": 0,
+    "dropTarget": {
+      "deck": "token-monastery-deck",
+      "cardType": "tokentype-monastery"
+    }
+  },
+  "token-monastery-deck": {
+    "id": "token-monastery-deck",
+    "type": "deck",
+    "parent": "token-monastery-holder",
+    "x": 0,
+    "y": 0,
+    "cardTypes": {
+      "tokentype-monastery": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/token-monastery.svg"
+      }
+    },
+    "faceTemplates": [
+      {
+        "border": false,
+        "radius": false,
+        "objects": [
+          {
+            "type": "image",
+            "x": 0,
+            "y": 0,
+            "width": 34,
+            "height": 34,
+            "value": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/token-monastery.svg",
+            "color": "transparent"
+          }
+        ]
+      }
+    ],
+    "cardDefaults": {
+      "width": 34,
+      "height": 34
+    }
+  },
+  "token-monastery-pile": {
+    "id": "token-monastery-pile",
+    "type": "pile",
+    "parent": "token-monastery-holder",
+    "x": 0,
+    "y": 0,
+    "width": 34,
+    "height": 34
+  },
+  "token-monastery-01": {
+    "id": "token-monastery-01",
+    "type": "card",
+    "parent": "token-monastery-pile",
+    "deck": "token-monastery-deck",
+    "cardType": "tokentype-monastery",
+    "z": 1
+  },
+  "token-monastery-02": {
+    "id": "token-monastery-02",
+    "type": "card",
+    "parent": "token-monastery-pile",
+    "deck": "token-monastery-deck",
+    "cardType": "tokentype-monastery",
+    "z": 2
+  },
+  "token-monastery-03": {
+    "id": "token-monastery-03",
+    "type": "card",
+    "parent": "token-monastery-pile",
+    "deck": "token-monastery-deck",
+    "cardType": "tokentype-monastery",
+    "z": 3
+  },
+  "token-monastery-04": {
+    "id": "token-monastery-04",
+    "type": "card",
+    "parent": "token-monastery-pile",
+    "deck": "token-monastery-deck",
+    "cardType": "tokentype-monastery",
+    "z": 4
+  },
+  "token-monastery-05": {
+    "id": "token-monastery-05",
+    "type": "card",
+    "parent": "token-monastery-pile",
+    "deck": "token-monastery-deck",
+    "cardType": "tokentype-monastery",
+    "z": 5
+  },
+  "token-monastery-06": {
+    "id": "token-monastery-06",
+    "type": "card",
+    "parent": "token-monastery-pile",
+    "deck": "token-monastery-deck",
+    "cardType": "tokentype-monastery",
+    "z": 6
+  },
+  "token-monastery-07": {
+    "id": "token-monastery-07",
+    "type": "card",
+    "parent": "token-monastery-pile",
+    "deck": "token-monastery-deck",
+    "cardType": "tokentype-monastery",
+    "z": 7
+  },
+  "token-monastery-08": {
+    "id": "token-monastery-08",
+    "type": "card",
+    "parent": "token-monastery-pile",
+    "deck": "token-monastery-deck",
+    "cardType": "tokentype-monastery",
+    "z": 8
+  },
+  "token-monastery-09": {
+    "id": "token-monastery-09",
+    "type": "card",
+    "parent": "token-monastery-pile",
+    "deck": "token-monastery-deck",
+    "cardType": "tokentype-monastery",
+    "z": 9
+  },
+  "token-monastery-10": {
+    "id": "token-monastery-10",
+    "type": "card",
+    "parent": "token-monastery-pile",
+    "deck": "token-monastery-deck",
+    "cardType": "tokentype-monastery",
+    "z": 10
+  },
+  "token-monastery-11": {
+    "id": "token-monastery-11",
+    "type": "card",
+    "parent": "token-monastery-pile",
+    "deck": "token-monastery-deck",
+    "cardType": "tokentype-monastery",
+    "z": 11
+  },
+  "token-monastery-12": {
+    "id": "token-monastery-12",
+    "type": "card",
+    "parent": "token-monastery-pile",
+    "deck": "token-monastery-deck",
+    "cardType": "tokentype-monastery",
+    "z": 12
+  },
+  "token-monastery-13": {
+    "id": "token-monastery-13",
+    "type": "card",
+    "parent": "token-monastery-pile",
+    "deck": "token-monastery-deck",
+    "cardType": "tokentype-monastery",
+    "z": 13
+  },
+  "token-monastery-14": {
+    "id": "token-monastery-14",
+    "type": "card",
+    "parent": "token-monastery-pile",
+    "deck": "token-monastery-deck",
+    "cardType": "tokentype-monastery",
+    "z": 14
+  },
+  "token-monastery-15": {
+    "id": "token-monastery-15",
+    "type": "card",
+    "parent": "token-monastery-pile",
+    "deck": "token-monastery-deck",
+    "cardType": "tokentype-monastery",
+    "z": 15
+  },
+  "token-monastery-16": {
+    "id": "token-monastery-16",
+    "type": "card",
+    "parent": "token-monastery-pile",
+    "deck": "token-monastery-deck",
+    "cardType": "tokentype-monastery",
+    "z": 16
+  },
+  "token-active-city": {
+    "id": "token-active-city",
+    "x": 780,
+    "y": 23,
+    "width": 34,
+    "height": 34,
+    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/token-active.svg"
   }
 }
