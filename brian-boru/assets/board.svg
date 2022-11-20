@@ -119,4 +119,164 @@
 		d="M 844.92,74.61 V 53.26 h -9.49 -9.49 V 48.21 43.19 h 9.49 9.49 l 0.03,-9.53 0.03,-9.53 4.99,-0.03 4.99,-0.03 0.03,9.53 0.03,9.53 9.53,0.03 9.53,0.03 v 5.02 5.02 h -9.56 -9.56 v 21.36 21.36 h -5.02 -5.02 z"
 		style="fill:none;stroke:#000000;stroke-width:1px"
     />
+	<circle
+		cx="30"
+		cy="650"
+		r="20"
+		style="fill:none;stroke:#000000;stroke-width:1px"
+    />
+	<circle
+		cx="30"
+		cy="610"
+		r="15"
+		style="fill:none;stroke:#000000;stroke-width:1px"
+	/>
+	<circle
+		cx="30"
+		cy="575"
+		r="15"
+		style="fill:none;stroke:#000000;stroke-width:1px"
+	/>
+	<g transform="translate(51.83,563.00)">
+		<circle
+			cx="10"
+			cy="12"
+			r="10"
+			style="fill:#ffd700;stroke:#000000;stroke-width:0.3px"
+		/>
+		<path
+			d="m 11.02,4.19 v 6.77 h 6.77 v 2.07 H 11.02 V 19.8 H 8.98 V 13.03 H 2.21 V 10.97 H 8.98 V 4.19 Z"
+			style="fill:#008000;stroke:#000000;stroke-width:0.3px"
+		/>
+	</g>
+	<circle
+		cx="30"
+		cy="540"
+		r="15"
+		style="fill:none;stroke:#000000;stroke-width:1px"
+	/>
+	<g transform="translate(51.83,528.00)">
+		<circle
+			cx="10"
+			cy="12"
+			r="10"
+			style="fill:#ffd700;stroke:#000000;stroke-width:0.3px"
+		/>
+		<path
+			d="m 11.02,4.19 v 6.77 h 6.77 v 2.07 H 11.02 V 19.8 H 8.98 V 13.03 H 2.21 V 10.97 H 8.98 V 4.19 Z"
+			style="fill:#008000;stroke:#000000;stroke-width:0.3px"
+		/>
+	</g>
+	<circle
+		cx="30"
+		cy="505"
+		r="15"
+		style="fill:none;stroke:#000000;stroke-width:1px"
+	/>
+	<g transform="translate(51.83,493.00)">
+		<circle
+			cx="10"
+			cy="12"
+			r="10"
+			style="fill:#ffd700;stroke:#000000;stroke-width:0.3px"
+		/>
+		<path
+			d="m 11.02,4.19 v 6.77 h 6.77 v 2.07 H 11.02 V 19.8 H 8.98 V 13.03 H 2.21 V 10.97 H 8.98 V 4.19 Z"
+			style="fill:#008000;stroke:#000000;stroke-width:0.3px"
+		/>
+	</g>
+	<circle
+		cx="30"
+		cy="470"
+		r="15"
+		style="fill:none;stroke:#000000;stroke-width:1px"
+	/>
+	<g transform="translate(51.83,458.00)">
+		<circle
+			cx="10"
+			cy="12"
+			r="10"
+			style="fill:#ffd700;stroke:#000000;stroke-width:0.3px"
+		/>
+		<path
+			d="m 11.02,4.19 v 6.77 h 6.77 v 2.07 H 11.02 V 19.8 H 8.98 V 13.03 H 2.21 V 10.97 H 8.98 V 4.19 Z"
+			style="fill:#008000;stroke:#000000;stroke-width:0.3px"
+		/>
+	</g>
+	<g transform="translate(73.83,458.00)">
+		<circle
+			cx="10"
+			cy="12"
+			r="10"
+			style="fill:#ffd700;stroke:#000000;stroke-width:0.3px"
+		/>
+		<path
+			d="m 11.02,4.19 v 6.77 h 6.77 v 2.07 H 11.02 V 19.8 H 8.98 V 13.03 H 2.21 V 10.97 H 8.98 V 4.19 Z"
+			style="fill:#008000;stroke:#000000;stroke-width:0.3px"
+		/>
+	</g>
+	<circle
+		cx="30"
+		cy="435"
+		r="15"
+		style="fill:none;stroke:#000000;stroke-width:1px"
+	/>
+	<g transform="translate(51.83,423.00)">
+		<circle
+			cx="10"
+			cy="12"
+			r="10"
+			style="fill:#ffd700;stroke:#000000;stroke-width:0.3px"
+		/>
+		<path
+			d="m 11.02,4.19 v 6.77 h 6.77 v 2.07 H 11.02 V 19.8 H 8.98 V 13.03 H 2.21 V 10.97 H 8.98 V 4.19 Z"
+			style="fill:#008000;stroke:#000000;stroke-width:0.3px"
+		/>
+	</g>
+	<g transform="translate(73.83,423.00)">
+		<circle
+			cx="10"
+			cy="12"
+			r="10"
+			style="fill:#ffd700;stroke:#000000;stroke-width:0.3px"
+		/>
+		<path
+			d="m 11.02,4.19 v 6.77 h 6.77 v 2.07 H 11.02 V 19.8 H 8.98 V 13.03 H 2.21 V 10.97 H 8.98 V 4.19 Z"
+			style="fill:#008000;stroke:#000000;stroke-width:0.3px"
+		/>
+	</g>
+	<circle
+		cx="30"
+		cy="400"
+		r="15"
+		style="fill:none;stroke:#000000;stroke-width:1px"
+	/>
+	<g transform="translate(51.83, 388.00)">
+		<path
+			d="m 10,2.91 c -0.94,0 -2.77,4.6 -3.53,5.15 -0.76,0.55 -5.7,0.87 -5.99,1.77 -0.29,0.89 3.52,4.05 3.81,4.94 0.29,0.89 -0.93,5.69 -0.17,6.25 0.75,0.55 4.94,-2.1 5.88,-2.1 0.94,0 5.13,2.64 5.88,2.09 0.76,-0.55 -0.46,-5.35 -0.17,-6.24 C 16,13.88 19.81,10.72 19.52,9.83 19.23,8.93 14.29,8.61 13.53,8.06 12.77,7.51 10.94,2.91 10,2.91 Z"
+       		style="fill:#ffd700;stroke:#000000;stroke-width:0.3px"
+		/>
+	</g>
+	<circle
+		cx="30"
+		cy="365"
+		r="15"
+		style="fill:none;stroke:#000000;stroke-width:1px"
+	/>
+	<circle
+		cx="61.83"
+		cy="365.00"
+		r="11.55"
+		style="fill:none;stroke:#000000;stroke-width:1px"
+	/>
+	<path
+		d="m 61.83,354.69 c 1.35,1.62 2.16,3.7 2.16,5.97 0,0.88 -0.12,1.72 -0.35,2.53 -1.19,-0.22 -2.41,-0.22 -3.62,0 -0.22,-0.8 -0.35,-1.65 -0.35,-2.53 0,-2.27 0.81,-4.35 2.16,-5.97 z m -0.02,9.07 c 0.54,0 1.08,0.05 1.61,0.14 -0.37,1 -0.91,1.93 -1.58,2.74 -0.67,-0.81 -1.21,-1.73 -1.58,-2.73 0.52,-0.09 1.04,-0.13 1.56,-0.13 z m -2.29,0.29 c 0.41,1.16 1.03,2.21 1.81,3.13 -1.7,1.74 -4.06,2.82 -6.69,2.82 -0.54,0 -1.07,-0.05 -1.58,-0.13 0.73,-1.97 2.13,-3.72 4.09,-4.85 0.76,-0.44 1.55,-0.76 2.36,-0.96 z m 4.62,0 c 2.35,0.6 4.47,2.11 5.78,4.38 0.27,0.47 0.49,0.95 0.67,1.43 -0.51,0.08 -1.04,0.13 -1.58,0.13 -2.62,0 -4.99,-1.08 -6.69,-2.82 0.78,-0.92 1.4,-1.98 1.81,-3.13 z m 7.41,6.37 -0.22,-0.71 c -0.2,-0.56 -0.46,-1.11 -0.76,-1.65 -1.4,-2.43 -3.67,-4.06 -6.2,-4.71 0.24,-0.86 0.36,-1.76 0.36,-2.69 0,-2.49 -0.9,-4.76 -2.4,-6.52 l -0.5,-0.54 -0.5,0.54 c -1.49,1.76 -2.4,4.04 -2.4,6.52 0,0.93 0.13,1.83 0.36,2.68 -0.86,0.22 -1.7,0.56 -2.51,1.03 -2.15,1.24 -3.67,3.16 -4.45,5.34 l -0.22,0.71 0.72,0.16 c 0.59,0.11 1.19,0.16 1.81,0.16 2.81,0 5.35,-1.15 7.18,-3.01 1.83,1.86 4.37,3.01 7.18,3.01 0.62,0 1.22,-0.06 1.81,-0.16 z"
+		style="fill:#6495ed;stroke:#000000;stoke-width:0.3px"
+	/>
+	<circle
+		cx="30"
+		cy="330"
+		r="15"
+		style="fill:none;stroke:#000000;stroke-width:1px"
+	/>
 </svg>
