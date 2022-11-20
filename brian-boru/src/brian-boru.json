@@ -2177,6 +2177,9 @@
     "width": 100,
     "dropOffsetX": 0,
     "dropOffsetY": 0,
+    "dropTarget": {
+      "deck": "cards-action-deck"
+    },
     "onEnter": {
       "activeFace": 0
     }
@@ -2190,6 +2193,9 @@
     "width": 100,
     "dropOffsetX": 0,
     "dropOffsetY": 0,
+    "dropTarget": {
+      "deck": "cards-action-deck"
+    },
     "onEnter": {
       "activeFace": 1
     }
@@ -3847,5 +3853,170 @@
     "width": 34,
     "height": 34,
     "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/token-active.svg"
+  },
+  "cards-viking-holder": {
+    "id": "cards-viking-holder",
+    "type": "holder",
+    "x": 955,
+    "y": 11,
+    "height": 148,
+    "width": 100,
+    "dropOffsetX": 0,
+    "dropOffsetY": 0,
+    "dropTarget": {
+      "deck": "cards-viking-deck"
+    },
+    "onEnter": {
+      "activeFace": 0
+    }
+  },
+  "cards-viking-discard": {
+    "id": "cards-viking-discard",
+    "type": "holder",
+    "x": 840,
+    "y": 11,
+    "height": 148,
+    "width": 100,
+    "dropOffsetX": 0,
+    "dropOffsetY": 0,
+    "dropTarget": {
+      "deck": "cards-viking-deck"
+    },
+    "onEnter": {
+      "activeFace": 1
+    }
+  },
+  "cards-viking-deck": {
+    "id": "cards-viking-deck",
+    "type": "deck",
+    "parent": "cards-viking-holder",
+    "x": 4,
+    "y": 4,
+    "cardTypes": {
+      "cardtype-viking-09": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/card-viking-09.svg"
+      },
+      "cardtype-viking-10": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/card-viking-10.svg"
+      },
+      "cardtype-viking-11": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/card-viking-11.svg"
+      },
+      "cardtype-viking-12": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/card-viking-12.svg"
+      },
+      "cardtype-viking-13": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/card-viking-13.svg"
+      },
+      "cardtype-viking-14": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/card-viking-14.svg"
+      }
+    },
+    "faceTemplates": [
+      {
+        "border": false,
+        "radius": false,
+        "objects": [
+          {
+            "type": "image",
+            "x": 0,
+            "y": 0,
+            "width": 100,
+            "height": 148,
+            "value": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/card-viking-back.svg",
+            "color": "transparent"
+          }
+        ]
+      },
+      {
+        "border": false,
+        "radius": false,
+        "objects": [
+          {
+            "type": "image",
+            "x": 0,
+            "y": 0,
+            "width": 100,
+            "height": 148,
+            "dynamicProperties": {
+              "value": "image"
+            },
+            "color": "transparent"
+          }
+        ]
+      }
+    ],
+    "cardDefaults": {
+      "width": 100,
+      "height": 148,
+      "onPileCreation": {
+        "onlyPileWith": "card-viking"
+      }
+    }
+  },
+  "cards-viking-pile": {
+    "id": "cards-viking-pile",
+    "type": "pile",
+    "parent": "cards-viking-holder",
+    "x": 0,
+    "y": 0,
+    "width": 100,
+    "height": 148
+  },
+  "cards-viking-09": {
+    "id": "cards-viking-09",
+    "type": "card",
+    "deck": "cards-viking-deck",
+    "cardType": "cardtype-viking-09",
+    "z": 7,
+    "parent": "cards-viking-pile"
+  },
+  "cards-viking-10": {
+    "id": "cards-viking-10",
+    "type": "card",
+    "deck": "cards-viking-deck",
+    "cardType": "cardtype-viking-10",
+    "z": 6,
+    "parent": "cards-viking-pile"
+  },
+  "cards-viking-11": {
+    "id": "cards-viking-11",
+    "type": "card",
+    "deck": "cards-viking-deck",
+    "cardType": "cardtype-viking-11",
+    "z": 5,
+    "parent": "cards-viking-pile"
+  },
+  "cards-viking-12-1": {
+    "id": "cards-viking-12-1",
+    "type": "card",
+    "deck": "cards-viking-deck",
+    "cardType": "cardtype-viking-12",
+    "z": 4,
+    "parent": "cards-viking-pile"
+  },
+  "cards-viking-12-2": {
+    "id": "cards-viking-12-2",
+    "type": "card",
+    "deck": "cards-viking-deck",
+    "cardType": "cardtype-viking-12",
+    "z": 3,
+    "parent": "cards-viking-pile"
+  },
+  "cards-viking-13": {
+    "id": "cards-viking-13",
+    "type": "card",
+    "deck": "cards-viking-deck",
+    "cardType": "cardtype-viking-13",
+    "z": 2,
+    "parent": "cards-viking-pile"
+  },
+  "cards-viking-14": {
+    "id": "cards-viking-14",
+    "type": "card",
+    "deck": "cards-viking-deck",
+    "cardType": "cardtype-viking-14",
+    "z": 1,
+    "parent": "cards-viking-pile"
   }
 }
