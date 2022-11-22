@@ -25,6 +25,78 @@
     "movable": false,
     "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/board.svg"
   },
+  "claim-b": {
+    "id": "claim-b",
+    "x": 960,
+    "y": 350,
+    "width": 45,
+    "height": 45,
+    "enlarge": 3,
+    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/claim-b.svg"
+  },
+  "claim-c": {
+    "id": "claim-c",
+    "x": 950,
+    "y": 515,
+    "width": 45,
+    "height": 45,
+    "enlarge": 3,
+    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/claim-c.svg"
+  },
+  "claim-d": {
+    "id": "claim-d",
+    "x": 1245,
+    "y": 515,
+    "width": 45,
+    "height": 45,
+    "enlarge": 3,
+    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/claim-d.svg"
+  },
+  "claim-l": {
+    "id": "claim-l",
+    "x": 1090,
+    "y": 600,
+    "width": 45,
+    "height": 45,
+    "enlarge": 3,
+    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/claim-l.svg"
+  },
+  "claim-m": {
+    "id": "claim-m",
+    "x": 950,
+    "y": 685,
+    "width": 45,
+    "height": 45,
+    "enlarge": 3,
+    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/claim-m.svg"
+  },
+  "claim-n": {
+    "id": "claim-n",
+    "x": 1095,
+    "y": 265,
+    "width": 45,
+    "height": 45,
+    "enlarge": 3,
+    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/claim-n.svg"
+  },
+  "claim-s": {
+    "id": "claim-s",
+    "x": 1090,
+    "y": 430,
+    "width": 45,
+    "height": 45,
+    "enlarge": 3,
+    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/claim-s.svg"
+  },
+  "claim-u": {
+    "id": "claim-u",
+    "x": 1235,
+    "y": 345,
+    "width": 45,
+    "height": 45,
+    "enlarge": 3,
+    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/claim-u.svg"
+  },
   "p1-area": {
     "id": "p1-area",
     "linkedToSeat": "p1-seat",
