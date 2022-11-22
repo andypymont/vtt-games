@@ -1,8 +1,36 @@
-<svg xmlns="http://www.w3.org/2000/svg" height="36" width="36" viewbox="0 0 36 36">
+<svg xmlns="http://www.w3.org/2000/svg" height="40" width="40" viewbox="0 0 40 40">
     <circle
-        cx="18"
-        cy="18"
+        cx="20"
+        cy="20"
         r="16"
-        style="fill:none;stroke:#ff8c00;stroke-width:4px"
+        style="fill:none;stroke:#8b0000;stroke-width:4px"
+    />
+    <line
+        x1="20"
+        y1="0"
+        x2="20"
+        y2="12"
+        style="fill:none;stroke:#8b0000;stroke-width:4px"
+    />
+    <line
+        x1="0"
+        y1="20"
+        x2="12"
+        y2="20"
+        style="fill:none;stroke:#8b0000;stroke-width:4px"
+    />
+    <line
+        x1="20"
+        y1="28"
+        x2="20"
+        y2="40"
+        style="fill:none;stroke:#8b0000;stroke-width:4px"
+    />
+    <line
+        x1="28"
+        y1="20"
+        x2="40"
+        y2="20"
+        style="fill:none;stroke:#8b0000;stroke-width:4px"
     />
 </svg>

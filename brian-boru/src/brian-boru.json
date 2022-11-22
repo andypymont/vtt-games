@@ -4104,10 +4104,10 @@
   },
   "token-active-city": {
     "id": "token-active-city",
-    "x": 717,
+    "x": 715,
     "y": 115,
-    "width": 36,
-    "height": 36,
+    "width": 40,
+    "height": 40,
     "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/token-active.svg"
   },
   "cards-viking-holder": {
