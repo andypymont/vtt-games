@@ -117,6 +117,7 @@
     "height": 25,
     "width": 140,
     "hideWhenUnused": true,
+    "hand": "hand-right",
     "clickRoutine": [
       "var playerPrefix = substr ${playerName} 0 5",
       {
@@ -512,6 +513,7 @@
     "height": 25,
     "width": 140,
     "hideWhenUnused": true,
+    "hand": "hand-right",
     "clickRoutine": [
       "var playerPrefix = substr ${playerName} 0 5",
       {
@@ -907,6 +909,7 @@
     "height": 25,
     "width": 140,
     "hideWhenUnused": true,
+    "hand": "hand-right",
     "clickRoutine": [
       "var playerPrefix = substr ${playerName} 0 5",
       {
@@ -1302,6 +1305,7 @@
     "height": 25,
     "width": 140,
     "hideWhenUnused": true,
+    "hand": "hand-right",
     "clickRoutine": [
       "var playerPrefix = substr ${playerName} 0 5",
       {
@@ -1697,6 +1701,7 @@
     "height": 25,
     "width": 140,
     "hideWhenUnused": true,
+    "hand": "hand-right",
     "clickRoutine": [
       "var playerPrefix = substr ${playerName} 0 5",
       {
@@ -2237,6 +2242,175 @@
       {
         "func": "CALL",
         "routine": "countRoutine"
+      }
+    ]
+  },
+  "button-deal-hands": {
+    "id": "button-deal-hands",
+    "type": "button",
+    "text": "DEAL HANDS",
+    "x": 1420,
+    "y": 30,
+    "width": 80,
+    "height": 80,
+    "movable": false,
+    "movableInEdit": true,
+    "clickRoutine": [
+      {
+        "func": "SELECT",
+        "type": "seat",
+        "property": "player",
+        "relation": "!=",
+        "value": ""
+      },
+      {
+        "func": "COUNT",
+        "collection": "DEFAULT"
+      },
+      {
+        "func": "IF",
+        "operand1": "${COUNT}",
+        "relation": "==",
+        "operand2": 5,
+        "thenRoutine": [
+          "var cardsToDeal = 5"
+        ],
+        "elseRoutine": [
+          {
+            "func": "IF",
+            "operand1": "${COUNT}",
+            "relation": "==",
+            "operand2": 4,
+            "thenRoutine": [
+              "var cardsToDeal = 6"
+            ],
+            "elseRoutine": [
+              "var cardsToDeal = 8"
+            ]
+          }
+        ]
+      },
+      {
+        "func": "SHUFFLE",
+        "holder": "cards-action-holder"
+      },
+      {
+        "func": "FOREACH",
+        "loopRoutine": [
+          {
+            "func": "MOVE",
+            "count": "${cardsToDeal}",
+            "from": "cards-action-holder",
+            "to": "${widgetID}"
+          }
+        ]
+      }
+    ]
+  },
+  "button-pass-right-hands": {
+    "id": "button-pass-right-hands",
+    "type": "button",
+    "text": "PASS RIGHT HANDS",
+    "x": 1510,
+    "y": 30,
+    "width": 80,
+    "height": 80,
+    "movable": false,
+    "movableInEdit": true,
+    "clickRoutine": [
+      {
+        "func": "SELECT",
+        "type": "seat",
+        "property": "player",
+        "relation": "!=",
+        "value": ""
+      },
+      {
+        "func": "GET",
+        "aggregation": "array",
+        "property": "index",
+        "variable": "activeIndex"
+      },
+      {
+        "func": "GET",
+        "aggregation": "array",
+        "property": "player",
+        "variable": "activeOwner"
+      },
+      "var length = ${activeIndex} length",
+      {
+        "func": "FOREACH",
+        "in": "${activeIndex}",
+        "loopRoutine": [
+          "var thisIndex = ${activeIndex.$key}",
+          "var thisOwner = ${activeOwner.$key}",
+          "var playerDesc = 'p' + ${thisIndex}",
+          "var tempPlace = playerDesc + '-score'",
+          {
+            "func": "SELECT",
+            "property": "owner",
+            "value": "${thisOwner}"
+          },
+          {
+            "func": "SET",
+            "property": "parent",
+            "value": "${tempPlace}"
+          }
+        ]
+      },
+      {
+        "func": "CALL",
+        "routine": "passDownRoutine"
+      }
+    ],
+    "passDownRoutine": [
+      {
+        "func": "FOREACH",
+        "in": "${activeIndex}",
+        "loopRoutine": [
+          "var thisIndex = ${activeIndex.$key}",
+          "var thisOwner = ${activeOwner.$key}",
+          "var playerDesc = 'p' + ${thisIndex}",
+          "var tempPlace = playerDesc + '-score'",
+          "var newKey = ${key} + 1",
+          {
+            "func": "IF",
+            "operand1": "${newKey}",
+            "operand2": "${length}",
+            "relation": "==",
+            "thenRoutine": [
+              "var newKey = 0"
+            ]
+          },
+          "var newOwner = ${activeOwner.$newKey}",
+          {
+            "func": "SELECT",
+            "type": "card",
+            "property": "parent",
+            "value": "${tempPlace}"
+          },
+          {
+            "func": "SELECT",
+            "source": "DEFAULT",
+            "property": "owner",
+            "value": "${thisOwner}"
+          },
+          {
+            "func": "SET",
+            "property": "parent",
+            "value": "hand-right"
+          },
+          {
+            "func": "SET",
+            "property": "owner",
+            "value": "${newOwner}"
+          },
+          {
+            "func": "SORT",
+            "holder": "hand-right",
+            "key": "cardType"
+          }
+        ]
       }
     ]
   },
