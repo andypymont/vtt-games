@@ -1,6 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" height="34" width="34" viewbox="0 0 34 34">
-    <path
-        style="fill:#a0d6b4;stroke:#000000;stroke-width:0.6px"
-        d="M -0.13,17.07 V 0 H 16.93 34 v 17.07 17.07 H 16.93 -0.13 Z m 32.13,0 V 2.01 H 16.93 1.87 V 17.07 32.13 H 16.93 31.99 Z"
+<svg xmlns="http://www.w3.org/2000/svg" height="45" width="36" viewbox="0 0 36 36">
+    <circle
+        cx="18"
+        cy="27"
+        r="16"
+        style="fill:none;stroke:#a0d6b4;stroke-width:4px"
+    />
+    <line
+        x1="18"
+        y1="0"
+        x2="18"
+        y2="11"
+        style="fill:none;stroke:#a0d6b4;stroke-width:4px"
+    />
+    <line
+        x1="13"
+        y1="4.5"
+        x2="23"
+        y2="4.5"
+        style="fill:none;stroke:#a0d6b4;stroke-width:4px"
     />
 </svg>
