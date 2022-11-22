@@ -2243,7 +2243,7 @@
   "cards-action-holder": {
     "id": "cards-action-holder",
     "type": "holder",
-    "x": 1500,
+    "x": 1300,
     "y": 11,
     "height": 148,
     "width": 100,
@@ -2259,7 +2259,7 @@
   "cards-action-discard": {
     "id": "cards-action-discard",
     "type": "holder",
-    "x": 1385,
+    "x": 1185,
     "y": 11,
     "height": 148,
     "width": 100,
@@ -4090,5 +4090,210 @@
     "cardType": "cardtype-viking-14",
     "z": 1,
     "parent": "cards-viking-pile"
+  },
+  "cards-marriage-holder": {
+    "id": "cards-marriage-holder",
+    "type": "holder",
+    "x": 1070,
+    "y": 11,
+    "height": 148,
+    "width": 100,
+    "dropOffsetX": 0,
+    "dropOffsetY": 0,
+    "dropTarget": {
+      "deck": "cards-marriage-deck"
+    },
+    "onEnter": {
+      "activeFace": 0
+    }
+  },
+  "cards-marriage-holder-draw": {
+    "id": "cards-marriage-holder-draw",
+    "type": "holder",
+    "x": 750,
+    "y": 500,
+    "height": 148,
+    "width": 100,
+    "dropOffsetX": 0,
+    "dropOffsetY": 0,
+    "dropTarget": {
+      "deck": "cards-marriage-deck"
+    },
+    "onEnter": {
+      "activeFace": 0
+    }
+  },
+  "cards-marriage-holder-current": {
+    "id": "cards-marriage-holder-current",
+    "type": "holder",
+    "x": 750,
+    "y": 660,
+    "height": 148,
+    "width": 100,
+    "dropOffsetX": 0,
+    "dropOffsetY": 0,
+    "dropTarget": {
+      "deck": "cards-marriage-deck"
+    },
+    "onEnter": {
+      "activeFace": 1
+    }
+  },
+  "cards-marriage-deck": {
+    "id": "cards-marriage-deck",
+    "type": "deck",
+    "parent": "cards-marriage-holder",
+    "x": 4,
+    "y": 4,
+    "cardTypes": {
+      "cardtype-marriage-aodhán": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/card-marriage-aodhán.svg",
+        "back": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/card-marriage-back.svg"
+      },
+      "cardtype-marriage-aoife": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/card-marriage-aoife.svg",
+        "back": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/card-marriage-back.svg"
+      },
+      "cardtype-marriage-brigid": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/card-marriage-brigid.svg",
+        "back": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/card-marriage-back.svg"
+      },
+      "cardtype-marriage-conall": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/card-marriage-conall.svg",
+        "back": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/card-marriage-back.svg"
+      },
+      "cardtype-marriage-cormac": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/card-marriage-cormac.svg",
+        "back": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/card-marriage-back.svg"
+      },
+      "cardtype-marriage-niall": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/card-marriage-niall.svg",
+        "back": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/card-marriage-back.svg"
+      },
+      "cardtype-marriage-orlaith": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/card-marriage-orlaith.svg",
+        "back": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/card-marriage-back.svg"
+      },
+      "cardtype-marriage-estrid": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/card-marriage-estrid-1.svg",
+        "back": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/card-marriage-estrid-2.svg"
+      }
+    },
+    "faceTemplates": [
+      {
+        "border": false,
+        "radius": false,
+        "objects": [
+          {
+            "type": "image",
+            "x": 0,
+            "y": 0,
+            "width": 100,
+            "height": 148,
+            "dynamicProperties": {
+              "value": "back"
+            },
+            "color": "transparent"
+          }
+        ]
+      },
+      {
+        "border": false,
+        "radius": false,
+        "objects": [
+          {
+            "type": "image",
+            "x": 0,
+            "y": 0,
+            "width": 100,
+            "height": 148,
+            "dynamicProperties": {
+              "value": "image"
+            },
+            "color": "transparent"
+          }
+        ]
+      }
+    ],
+    "cardDefaults": {
+      "width": 100,
+      "height": 148,
+      "onPileCreation": {
+        "onlyPileWith": "card-marriage"
+      }
+    }
+  },
+  "cards-marriage-pile": {
+    "id": "cards-marriage-pile",
+    "type": "pile",
+    "parent": "cards-marriage-holder",
+    "x": 0,
+    "y": 0,
+    "width": 100,
+    "height": 148
+  },
+  "card-marriage-aodhán": {
+    "id": "card-marriage-aodhán",
+    "type": "card",
+    "deck": "cards-marriage-deck",
+    "cardType": "cardtype-marriage-aodhán",
+    "z": 7,
+    "parent": "cards-marriage-pile"
+  },
+  "card-marriage-aoife": {
+    "id": "card-marriage-aoife",
+    "type": "card",
+    "deck": "cards-marriage-deck",
+    "cardType": "cardtype-marriage-aoife",
+    "z": 6,
+    "parent": "cards-marriage-pile"
+  },
+  "card-marriage-brigid": {
+    "id": "card-marriage-brigid",
+    "type": "card",
+    "deck": "cards-marriage-deck",
+    "cardType": "cardtype-marriage-brigid",
+    "z": 5,
+    "parent": "cards-marriage-pile"
+  },
+  "card-marriage-conall": {
+    "id": "card-marriage-conall",
+    "type": "card",
+    "deck": "cards-marriage-deck",
+    "cardType": "cardtype-marriage-conall",
+    "z": 4,
+    "parent": "cards-marriage-pile"
+  },
+  "card-marriage-cormac": {
+    "id": "card-marriage-cormac",
+    "type": "card",
+    "deck": "cards-marriage-deck",
+    "cardType": "cardtype-marriage-cormac",
+    "z": 3,
+    "parent": "cards-marriage-pile"
+  },
+  "card-marriage-niall": {
+    "id": "card-marriage-niall",
+    "type": "card",
+    "deck": "cards-marriage-deck",
+    "cardType": "cardtype-marriage-niall",
+    "z": 2,
+    "parent": "cards-marriage-pile"
+  },
+  "card-marriage-orlaith": {
+    "id": "card-marriage-orlaith",
+    "type": "card",
+    "deck": "cards-marriage-deck",
+    "cardType": "cardtype-marriage-orlaith",
+    "z": 1,
+    "parent": "cards-marriage-pile"
+  },
+  "card-marriage-estrid": {
+    "id": "card-marriage-estrid",
+    "type": "card",
+    "deck": "cards-marriage-deck",
+    "cardType": "cardtype-marriage-estrid",
+    "z": 0,
+    "parent": "cards-marriage-holder-draw"
   }
 }
