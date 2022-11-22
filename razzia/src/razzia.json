@@ -3842,7 +3842,7 @@
             "routine": "distributeToPlayerRoutine",
             "arguments": {
               "tokens": [
-                "cash-19",
+                "cash-10",
                 "cash-9",
                 "cash-5"
               ]

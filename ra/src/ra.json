@@ -390,7 +390,7 @@
 						"routine": "distributeToPlayerRoutine",
 						"arguments": {
 							"tokens": [
-								"cash-19",
+								"cash-10",
 								"sun-9",
 								"sun-5"
 							]
