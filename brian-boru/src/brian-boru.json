@@ -2357,6 +2357,11 @@
             "value": "${thisOwner}"
           },
           {
+            "func": "SELECT",
+            "property": "parent",
+            "value": "hand-right"
+          },
+          {
             "func": "SET",
             "property": "parent",
             "value": "${tempPlace}"
