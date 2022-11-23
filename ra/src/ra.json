@@ -390,7 +390,7 @@
 						"routine": "distributeToPlayerRoutine",
 						"arguments": {
 							"tokens": [
-								"cash-10",
+								"sun-10",
 								"sun-9",
 								"sun-5"
 							]
@@ -570,7 +570,7 @@
 		"y": 195,
 		"width": 160,
 		"css": "font-family:sans-serif;font-size:10px;text-align:center",
-		"text": "End of Game:\nHighest cash total +5VP\nLowest cash total -5VP",
+		"text": "End of Game:\nHighest suns total +5VP\nLowest suns total -5VP",
 		"height": 50
 	},
 	"example-civ-1": {
