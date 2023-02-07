@@ -328,6 +328,8 @@
             y="17"
             width="60"
             height="60"
+            rx="5"
+            ry="5"
             style="fill:none;stroke:#000000;stroke-width:1px"
         />
         <rect
@@ -336,6 +338,8 @@
             y="84"
             width="60"
             height="60"
+            rx="5"
+            ry="5"
             style="fill:none;stroke:#000000;stroke-width:1px"
         />
         <rect
@@ -344,6 +348,8 @@
             y="151"
             width="60"
             height="60"
+            rx="5"
+            ry="5"
             style="fill:none;stroke:#000000;stroke-width:1px"
         />
     </g>
@@ -362,6 +368,8 @@
             y="17"
             width="60"
             height="60"
+            rx="5"
+            ry="5"
             style="fill:none;stroke:#000000;stroke-width:1px"
         />
         <g id="B1-1-title">
@@ -387,6 +395,8 @@
             y="17"
             width="60"
             height="60"
+            rx="5"
+            ry="5"
             style="fill:none;stroke:#000000;stroke-width:1px"
         />
         <g id="B1-2-title">
@@ -412,6 +422,8 @@
             y="17"
             width="60"
             height="60"
+            rx="5"
+            ry="5"
             style="fill:none;stroke:#000000;stroke-width:1px"
         />
         <g id="B1-3-title">
@@ -437,6 +449,8 @@
             y="84"
             width="60"
             height="60"
+            rx="5"
+            ry="5"
             style="fill:none;stroke:#000000;stroke-width:1px"
         />
         <g id="B1-4-title">
@@ -462,6 +476,8 @@
             y="84"
             width="60"
             height="60"
+            rx="5"
+            ry="5"
             style="fill:none;stroke:#000000;stroke-width:1px"
         />
         <g id="B1-5-title">
@@ -494,6 +510,8 @@
             y="17"
             width="60"
             height="60"
+            rx="5"
+            ry="5"
             style="fill:none;stroke:#000000;stroke-width:1px"
         />
         <rect
@@ -502,6 +520,8 @@
             y="17"
             width="60"
             height="60"
+            rx="5"
+            ry="5"
             style="fill:none;stroke:#000000;stroke-width:1px"
         />
         <rect
@@ -510,6 +530,8 @@
             y="84"
             width="60"
             height="60"
+            rx="5"
+            ry="5"
             style="fill:none;stroke:#000000;stroke-width:1px"
         />
     </g>
@@ -525,6 +547,8 @@
             y="321"
             width="60"
             height="60"
+            rx="5"
+            ry="5"
             style="fill:none;stroke:#000000;stroke-width:1px"
         />
         <rect
@@ -533,6 +557,8 @@
             y="389"
             width="60"
             height="60"
+            rx="5"
+            ry="5"
             style="fill:none;stroke:#000000;stroke-width:1px"
         />
         <path
@@ -546,6 +572,8 @@
             y="389"
             width="60"
             height="60"
+            rx="5"
+            ry="5"
             style="fill:none;stroke:#000000;stroke-width:1px"
         />
     </g>
@@ -564,6 +592,8 @@
             y="247"
             width="60"
             height="60"
+            rx="5"
+            ry="5"
             style="fill:none;stroke:#000000;stroke-width:1px"
         />
         <rect
@@ -572,6 +602,8 @@
             y="247"
             width="60"
             height="60"
+            rx="5"
+            ry="5"
             style="fill:none;stroke:#000000;stroke-width:1px"
         />
         <rect
@@ -580,6 +612,8 @@
             y="247"
             width="60"
             height="60"
+            rx="5"
+            ry="5"
             style="fill:none;stroke:#000000;stroke-width:1px"
         />
         <rect
@@ -588,6 +622,8 @@
             y="314"
             width="60"
             height="60"
+            rx="5"
+            ry="5"
             style="fill:none;stroke:#000000;stroke-width:1px"
         />
         <rect
@@ -596,6 +632,8 @@
             y="314"
             width="60"
             height="60"
+            rx="5"
+            ry="5"
             style="fill:none;stroke:#000000;stroke-width:1px"
         />
     </g>
@@ -614,6 +652,8 @@
             y="250.5"
             width="60"
             height="60"
+            rx="5"
+            ry="5"
             style="fill:none;stroke:#000000;stroke-width:1px"
         />
     </g>
@@ -632,6 +672,8 @@
             y="250.5"
             width="60"
             height="60"
+            rx="5"
+            ry="5"
             style="fill:none;stroke:#000000;stroke-width:1px"
         />
         <path
@@ -655,6 +697,8 @@
             y="585.5"
             width="60"
             height="60"
+            rx="5"
+            ry="5"
             style="fill:none;stroke:#000000;stroke-width:1px"
         />
         <path
@@ -678,6 +722,8 @@
             y="412"
             width="60"
             height="60"
+            rx="5"
+            ry="5"
             style="fill:none;stroke:#000000;stroke-width:1px"
         />
     </g>
@@ -696,6 +742,8 @@
             y="486.5"
             width="60"
             height="60"
+            rx="5"
+            ry="5"
             style="fill:none;stroke:#000000;stroke-width:1px"
         />
         <path
@@ -709,6 +757,8 @@
             y="486.5"
             width="60"
             height="60"
+            rx="5"
+            ry="5"
             style="fill:none;stroke:#000000;stroke-width:1px"
         />
         <rect
@@ -717,6 +767,8 @@
             y="553.5"
             width="60"
             height="60"
+            rx="5"
+            ry="5"
             style="fill:none;stroke:#000000;stroke-width:1px"
         />
         <path
@@ -740,6 +792,8 @@
             y="450.5"
             width="60"
             height="60"
+            rx="5"
+            ry="5"
             style="fill:none;stroke:#000000;stroke-width:1px"
         />
     </g>
@@ -758,6 +812,8 @@
             y="789.5"
             width="60"
             height="60"
+            rx="5"
+            ry="5"
             style="fill:none;stroke:#000000;stroke-width:1px"
         />
     </g>
@@ -776,6 +832,8 @@
             y="655.5"
             width="60"
             height="60"
+            rx="5"
+            ry="5"
             style="fill:none;stroke:#000000;stroke-width:1px"
         />
         <path
@@ -789,6 +847,8 @@
             y="655.5"
             width="60"
             height="60"
+            rx="5"
+            ry="5"
             style="fill:none;stroke:#000000;stroke-width:1px"
         />
         <path
@@ -802,6 +862,8 @@
             y="722.5"
             width="60"
             height="60"
+            rx="5"
+            ry="5"
             style="fill:none;stroke:#000000;stroke-width:1px"
         />
         <path
@@ -815,6 +877,8 @@
             y="722.5"
             width="60"
             height="60"
+            rx="5"
+            ry="5"
             style="fill:none;stroke:#000000;stroke-width:1px"
         />
         <rect
@@ -823,6 +887,8 @@
             y="789.5"
             width="60"
             height="60"
+            rx="5"
+            ry="5"
             style="fill:none;stroke:#000000;stroke-width:1px"
         />
         <path
@@ -846,6 +912,8 @@
             y="789.5"
             width="60"
             height="60"
+            rx="5"
+            ry="5"
             style="fill:none;stroke:#000000;stroke-width:1px"
         />
     </g>
@@ -861,6 +929,8 @@
             y="722.5"
             width="60"
             height="60"
+            rx="5"
+            ry="5"
             style="fill:none;stroke:#000000;stroke-width:1px"
         />
         <path
@@ -874,6 +944,8 @@
             y="789.5"
             width="60"
             height="60"
+            rx="5"
+            ry="5"
             style="fill:none;stroke:#000000;stroke-width:1px"
         />
         <path
@@ -887,6 +959,8 @@
             y="789.5"
             width="60"
             height="60"
+            rx="5"
+            ry="5"
             style="fill:none;stroke:#000000;stroke-width:1px"
         />
         <path
