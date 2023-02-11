@@ -1489,6 +1489,19 @@
       }
     ]
   },
+  "holder-laurel-discard": {
+    "type": "holder",
+    "id": "holder-laurel-discard",
+    "parent": "controls-area",
+    "x": 99,
+    "y": 60,
+    "inheritFrom": "holder-laurel-multi",
+    "movable": false,
+    "movableInEdit": true,
+    "onEnter": {
+      "activeFace": 1
+    }
+  },
   "holder-laurel-1": {
     "type": "holder",
     "id": "holder-laurel-1",
@@ -2333,8 +2346,8 @@
     "parent": "controls-area",
     "width": 60,
     "height": 60,
-    "x": 90,
-    "y": 95,
+    "x": 95,
+    "y": 126,
     "dropOffsetX": 0,
     "dropOffsetY": 0,
     "dropTarget": {
