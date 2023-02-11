@@ -287,37 +287,37 @@
         <path
             id="B1-to-C2"
             d="M 476.5,210 476.5,151"
-            style="stroke:#000000;stroke-width:5px;stroke-dasharray:5,5;fill:none"
+            style="stroke:#a99a86;stroke-width:5px;stroke-dasharray:5,5;fill:none"
         />
         <path
             id="D1-to-C3"
             d="M 570.5,509.5 600,480 600,220 696.5,121"
-            style="stroke:#000000;stroke-width:5px;stroke-dasharray:5,5;fill:none"
+            style="stroke:#a99a86;stroke-width:5px;stroke-dasharray:5,5;fill:none"
         />
         <path
             id="A2-to-B2"
             d="M 148.5,348 195,301.5"
-            style="stroke:#000000;stroke-width:5px;stroke-dasharray:5,5;fill:none"
+            style="stroke:#a99a86;stroke-width:5px;stroke-dasharray:5,5;fill:none"
         />
         <path
             id="A2-to-A4"
             d="M 29.5,779 10,759.5 10,469 29.5,449.5"
-            style="stroke:#000000;stroke-width:5px;stroke-dasharray:5,5;fill:none"
+            style="stroke:#a99a86;stroke-width:5px;stroke-dasharray:5,5;fill:none"
         />
         <path
             id="D2-to-D4"
             d="M 770.5,712 785.25,697.25 785.25,295.25 770.5,280.5"
-            style="stroke:#000000;stroke-width:5px;stroke-dasharray:5,5;fill:none"
+            style="stroke:#a99a86;stroke-width:5px;stroke-dasharray:5,5;fill:none"
         />
         <path
             id="B3-to-A4"
             d="M 170.5,779 200,749.5 200,471.5 229.5,442"
-            style="stroke:#000000;stroke-width:5px;stroke-dasharray:5,5;fill:none"
+            style="stroke:#a99a86;stroke-width:5px;stroke-dasharray:5,5;fill:none"
         />
         <path
             id="C3-to-B4"
             d="M 370.5,652 429.5,593"
-            style="stroke:#000000;stroke-width:5px;stroke-dasharray:5,5;fill:none"
+            style="stroke:#a99a86;stroke-width:5px;stroke-dasharray:5,5;fill:none"
         />
     </g>
     <g id="A1">
