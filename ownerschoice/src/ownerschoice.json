@@ -335,6 +335,23 @@
     "y": 500,
     "inheritFrom": "board-space-holder-segment1-1"
   },
+  "cash-fund": {
+    "id": "cash-fund",
+    "parent": "board",
+    "x": 520,
+    "y": 110,
+    "width": 200,
+    "height": 100,
+    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/ownerschoice/assets/cash.svg",
+    "movable": false,
+    "text": 0,
+    "css": {
+      "color": "black",
+      "font-size": "70px",
+      "line-height": "100px",
+      "text-align": "center"
+    }
+  },
   "button-red-price-increase": {
     "id": "button-red-price-increase",
     "type": "button",
@@ -343,11 +360,13 @@
     "y": 367.5,
     "width": 100,
     "height": 30,
+    "css": {
+      "--wcMain": "#e34234",
+      "--wcBorder": "#000000",
+      "--wcFont": "#000000",
+      "--wcFontOH": "#ffffff"
+    },
     "text": "PRICE ↑",
-    "backgroundColor": "#e34234",
-    "borderColor": "#000000",
-    "textColor": "#000000",
-    "textColorOH": "#ffffff",
     "clickRoutine": [
       {
         "func": "CALL",
@@ -379,7 +398,12 @@
     "inheritFrom": "button-red-price-increase",
     "x": 249.5,
     "y": 503.5,
-    "backgroundColor": "#7cfc00",
+    "css": {
+      "--wcMain": "#7cfc00",
+      "--wcBorder": "#000000",
+      "--wcFont": "#000000",
+      "--wcFontOH": "#ffffff"
+    },
     "clickRoutine": [
       {
         "func": "CALL",
@@ -411,7 +435,12 @@
     "inheritFrom": "button-red-price-increase",
     "x": 249.5,
     "y": 639.5,
-    "backgroundColor": "#1e90ff",
+    "css": {
+      "--wcMain": "#1e90ff",
+      "--wcBorder": "#000000",
+      "--wcFont": "#000000",
+      "--wcFontOH": "#ffffff"
+    },
     "clickRoutine": [
       {
         "func": "CALL",
@@ -443,7 +472,12 @@
     "inheritFrom": "button-red-price-increase",
     "x": 249.5,
     "y": 775.5,
-    "backgroundColor": "#ffef00",
+    "css": {
+      "--wcMain": "#ffef00",
+      "--wcBorder": "#000000",
+      "--wcFont": "#000000",
+      "--wcFontOH": "#ffffff"
+    },
     "clickRoutine": [
       {
         "func": "CALL",
@@ -1602,6 +1636,308 @@
     "y": 100,
     "inheritFrom": "setup-holder"
   },
+  "player-area-p1": {
+    "id": "player-area-p1",
+    "layer": -3,
+    "x": 0,
+    "y": 0,
+    "width": 600,
+    "height": 200,
+    "movable": false,
+    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/ownerschoice/assets/player-area.svg",
+    "cash": "cash-p1",
+    "linkedToSeat": "seat-p1"
+  },
+  "cash-p1": {
+    "id": "cash-p1",
+    "parent": "player-area-p1",
+    "inheritFrom": "cash-fund",
+    "x": 5,
+    "y": 5,
+    "text": 690
+  },
+  "seat-p1": {
+    "id": "seat-p1",
+    "type": "seat",
+    "parent": "player-area-p1",
+    "x": 210,
+    "y": 5,
+    "width": 365,
+    "height": 20,
+    "css": {
+      "font-size": "20px"
+    },
+    "index": 1
+  },
+  "button-from-fund-p1": {
+    "id": "button-from-fund-p1",
+    "type": "button",
+    "parent": "player-area-p1",
+    "x": 5,
+    "y": 115,
+    "width": 100,
+    "height": 30,
+    "css": {
+      "font-size": "15px"
+    },
+    "text": "50 ← FUND",
+    "clickRoutine": [
+      "var area = ${PROPERTY parent}",
+      "var cash = ${PROPERTY cash OF $area}",
+      {
+        "func": "IF",
+        "operand1": "${PROPERTY text OF cash-fund}",
+        "relation": ">=",
+        "operand2": 50,
+        "thenRoutine": [
+          {
+            "func": "LABEL",
+            "label": "${cash}",
+            "mode": "inc",
+            "value": 50
+          },
+          {
+            "func": "LABEL",
+            "label": "cash-fund",
+            "mode": "dec",
+            "value": 50
+          }
+        ]
+      }
+    ]
+  },
+  "button-to-fund-p1": {
+    "id": "button-to-fund-p1",
+    "type": "button",
+    "parent": "player-area-p1",
+    "inheritFrom": "button-from-fund-p1",
+    "x": 5,
+    "y": 160,
+    "text": "50 → FUND",
+    "clickRoutine": [
+      "var area = ${PROPERTY parent}",
+      "var cash = ${PROPERTY cash OF $area}",
+      {
+        "func": "IF",
+        "operand1": "${PROPERTY text OF $cash}",
+        "relation": ">=",
+        "operand2": 50,
+        "thenRoutine": [
+          {
+            "func": "LABEL",
+            "label": "${cash}",
+            "mode": "dec",
+            "value": 50
+          },
+          {
+            "func": "LABEL",
+            "label": "cash-fund",
+            "mode": "inc",
+            "value": 50
+          }
+        ]
+      }
+    ]
+  },
+  "button-from-bank-p1": {
+    "id": "button-from-bank-p1",
+    "type": "button",
+    "parent": "player-area-p1",
+    "inheritFrom": "button-from-fund-p1",
+    "x": 105,
+    "y": 137.5,
+    "text": "100 ← BANK",
+    "clickRoutine": [
+      "var area = ${PROPERTY parent}",
+      "var cash = ${PROPERTY cash OF $area}",
+      {
+        "func": "LABEL",
+        "label": "${cash}",
+        "mode": "inc",
+        "value": 100
+      }
+    ]
+  },
+  "player-area-p2": {
+    "id": "player-area-p2",
+    "inheritFrom": "player-area-p1",
+    "x": 0,
+    "y": 200,
+    "cash": "cash-p2",
+    "linkedToSeat": "seat-p2"
+  },
+  "cash-p2": {
+    "id": "cash-p2",
+    "parent": "player-area-p2",
+    "inheritFrom": "cash-p1",
+    "text": 690
+  },
+  "seat-p2": {
+    "id": "seat-p2",
+    "type": "seat",
+    "parent": "player-area-p2",
+    "x": 210,
+    "y": 5,
+    "width": 365,
+    "height": 20,
+    "css": {
+      "font-size": "20px"
+    },
+    "index": 2
+  },
+  "button-from-fund-p2": {
+    "id": "button-from-fund-p2",
+    "type": "button",
+    "parent": "player-area-p2",
+    "inheritFrom": "button-from-fund-p1"
+  },
+  "button-to-fund-p2": {
+    "id": "button-to-fund-p2",
+    "type": "button",
+    "parent": "player-area-p2",
+    "inheritFrom": "button-to-fund-p1"
+  },
+  "button-from-bank-p2": {
+    "id": "button-from-bank-p2",
+    "type": "button",
+    "parent": "player-area-p2",
+    "inheritFrom": "button-from-bank-p1"
+  },
+  "player-area-p3": {
+    "id": "player-area-p3",
+    "inheritFrom": "player-area-p1",
+    "x": 0,
+    "y": 400,
+    "cash": "cash-p3",
+    "linkedToSeat": "seat-p3"
+  },
+  "cash-p3": {
+    "id": "cash-p3",
+    "parent": "player-area-p3",
+    "inheritFrom": "cash-p1",
+    "text": 690
+  },
+  "seat-p3": {
+    "id": "seat-p3",
+    "type": "seat",
+    "parent": "player-area-p3",
+    "x": 210,
+    "y": 5,
+    "width": 365,
+    "height": 20,
+    "css": {
+      "font-size": "20px"
+    },
+    "index": 3
+  },
+  "button-from-fund-p3": {
+    "id": "button-from-fund-p3",
+    "type": "button",
+    "parent": "player-area-p3",
+    "inheritFrom": "button-from-fund-p1"
+  },
+  "button-to-fund-p3": {
+    "id": "button-to-fund-p3",
+    "type": "button",
+    "parent": "player-area-p3",
+    "inheritFrom": "button-to-fund-p1"
+  },
+  "button-from-bank-p3": {
+    "id": "button-from-bank-p3",
+    "type": "button",
+    "parent": "player-area-p3",
+    "inheritFrom": "button-from-bank-p1"
+  },
+  "player-area-p4": {
+    "id": "player-area-p4",
+    "inheritFrom": "player-area-p1",
+    "x": 0,
+    "y": 600,
+    "cash": "cash-p4",
+    "linkedToSeat": "seat-p4"
+  },
+  "cash-p4": {
+    "id": "cash-p4",
+    "parent": "player-area-p4",
+    "inheritFrom": "cash-p1",
+    "text": 690
+  },
+  "seat-p4": {
+    "id": "seat-p4",
+    "type": "seat",
+    "parent": "player-area-p4",
+    "x": 210,
+    "y": 5,
+    "width": 365,
+    "height": 20,
+    "css": {
+      "font-size": "20px"
+    },
+    "index": 4
+  },
+  "button-from-fund-p4": {
+    "id": "button-from-fund-p4",
+    "type": "button",
+    "parent": "player-area-p4",
+    "inheritFrom": "button-from-fund-p1"
+  },
+  "button-to-fund-p4": {
+    "id": "button-to-fund-p4",
+    "type": "button",
+    "parent": "player-area-p4",
+    "inheritFrom": "button-to-fund-p1"
+  },
+  "button-from-bank-p4": {
+    "id": "button-from-bank-p4",
+    "type": "button",
+    "parent": "player-area-p4",
+    "inheritFrom": "button-from-bank-p1"
+  },
+  "player-area-p5": {
+    "id": "player-area-p5",
+    "inheritFrom": "player-area-p1",
+    "x": 0,
+    "y": 800,
+    "cash": "cash-p5",
+    "linkedToSeat": "seat-p5"
+  },
+  "cash-p5": {
+    "id": "cash-p5",
+    "parent": "player-area-p5",
+    "inheritFrom": "cash-p1",
+    "text": 690
+  },
+  "seat-p5": {
+    "id": "seat-p5",
+    "type": "seat",
+    "parent": "player-area-p5",
+    "x": 210,
+    "y": 5,
+    "width": 365,
+    "height": 20,
+    "css": {
+      "font-size": "20px"
+    },
+    "index": "seat-p5"
+  },
+  "button-from-fund-p5": {
+    "id": "button-from-fund-p5",
+    "type": "button",
+    "parent": "player-area-p5",
+    "inheritFrom": "button-from-fund-p1"
+  },
+  "button-to-fund-p5": {
+    "id": "button-to-fund-p5",
+    "type": "button",
+    "parent": "player-area-p5",
+    "inheritFrom": "button-to-fund-p1"
+  },
+  "button-from-bank-p5": {
+    "id": "button-from-bank-p5",
+    "type": "button",
+    "parent": "player-area-p5",
+    "inheritFrom": "button-from-bank-p1"
+  },
   "button-end-turn": {
     "id": "button-end-turn",
     "type": "button",
@@ -1610,7 +1946,16 @@
     "y": 243,
     "width": 100,
     "height": 30,
-    "text": "END TURN"
+    "css": {
+      "font-size": "15px"
+    },
+    "text": "END TURN",
+    "clickRoutine": [
+      {
+        "func": "TURN",
+        "turnCycle": "forward"
+      }
+    ]
   },
   "button-setup": {
     "id": "button-setup",
@@ -1620,6 +1965,9 @@
     "y": 303,
     "width": 100,
     "height": 30,
+    "css": {
+      "font-size": "15px"
+    },
     "text": "SETUP",
     "clickRoutine": [
       {
@@ -1779,6 +2127,26 @@
         "func": "SET",
         "property": "price",
         "value": 100
+      },
+      {
+        "note": "Set player starting cash to $690",
+        "func": "LABEL",
+        "label": [
+          "cash-p1",
+          "cash-p2"
+        ],
+        "value": 690
+      },
+      {
+        "note": "Set the fund to $0",
+        "func": "LABEL",
+        "label": "cash-fund",
+        "value": 0
+      },
+      {
+        "note": "Set a random player as start player",
+        "func": "TURN",
+        "turnCycle": "RANDOM"
       }
     ],
     "setupBoardSegmentRoutine": [
