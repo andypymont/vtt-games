@@ -1623,6 +1623,19 @@
     "text": "SETUP",
     "clickRoutine": [
       {
+        "note": "Check that the user really wants to set up a fresh game",
+        "func": "INPUT",
+        "header": "Set up a new game?",
+        "confirmButtonText": "Yes",
+        "cancelButtonText": "No",
+        "fields": [
+          {
+            "type": "subtitle",
+            "text": "Are you sure that you want to erase any progress and start a new game?"
+          }
+        ]
+      },
+      {
         "note": "Reset the board squares ready to set the board up",
         "func": "CALL",
         "routine": "resetSquaresRoutine"
@@ -1733,6 +1746,39 @@
         "arguments": {
           "holderPrefix": "board-space-holder-segment4-"
         }
+      },
+      {
+        "note": "Select the red share price marker",
+        "func": "SELECT",
+        "property": "id",
+        "value": "share-price-red"
+      },
+      {
+        "note": "Additionally select the green share price marker",
+        "func": "SELECT",
+        "property": "id",
+        "value": "share-price-green",
+        "mode": "add"
+      },
+      {
+        "note": "Additionally select the blue share price marker",
+        "func": "SELECT",
+        "property": "id",
+        "value": "share-price-blue",
+        "mode": "add"
+      },
+      {
+        "note": "Additionally select the yellow share price marker",
+        "func": "SELECT",
+        "property": "id",
+        "value": "share-price-yellow",
+        "mode": "add"
+      },
+      {
+        "note": "Set all stock prices to 100",
+        "func": "SET",
+        "property": "price",
+        "value": 100
       }
     ],
     "setupBoardSegmentRoutine": [
