@@ -335,6 +335,680 @@
     "y": 500,
     "inheritFrom": "board-space-holder-segment1-1"
   },
+  "button-red-price-increase": {
+    "id": "button-red-price-increase",
+    "type": "button",
+    "parent": "board",
+    "x": 249.5,
+    "y": 367.5,
+    "width": 100,
+    "height": 30,
+    "text": "PRICE ↑",
+    "backgroundColor": "#e34234",
+    "borderColor": "#000000",
+    "textColor": "#000000",
+    "textColorOH": "#ffffff",
+    "clickRoutine": [
+      {
+        "func": "CALL",
+        "widget": "share-price-red",
+        "routine": "priceIncreaseRoutine"
+      }
+    ]
+  },
+  "button-red-price-decrease": {
+    "id": "button-red-price-decrease",
+    "type": "button",
+    "parent": "board",
+    "inheritFrom": "button-red-price-increase",
+    "x": 249.5,
+    "y": 418,
+    "text": "PRICE ↓",
+    "clickRoutine": [
+      {
+        "func": "CALL",
+        "widget": "share-price-red",
+        "routine": "priceDecreaseRoutine"
+      }
+    ]
+  },
+  "button-green-price-increase": {
+    "id": "button-green-price-increase",
+    "type": "button",
+    "parent": "board",
+    "inheritFrom": "button-red-price-increase",
+    "x": 249.5,
+    "y": 503.5,
+    "backgroundColor": "#7cfc00",
+    "clickRoutine": [
+      {
+        "func": "CALL",
+        "widget": "share-price-green",
+        "routine": "priceIncreaseRoutine"
+      }
+    ]
+  },
+  "button-green-price-decrease": {
+    "id": "button-green-price-decrease",
+    "type": "button",
+    "parent": "board",
+    "inheritFrom": "button-green-price-increase",
+    "x": 249.5,
+    "y": 554,
+    "text": "PRICE ↓",
+    "clickRoutine": [
+      {
+        "func": "CALL",
+        "widget": "share-price-green",
+        "routine": "priceDecreaseRoutine"
+      }
+    ]
+  },
+  "button-blue-price-increase": {
+    "id": "button-blue-price-increase",
+    "type": "button",
+    "parent": "board",
+    "inheritFrom": "button-red-price-increase",
+    "x": 249.5,
+    "y": 639.5,
+    "backgroundColor": "#1e90ff",
+    "clickRoutine": [
+      {
+        "func": "CALL",
+        "widget": "share-price-blue",
+        "routine": "priceIncreaseRoutine"
+      }
+    ]
+  },
+  "button-blue-price-decrease": {
+    "id": "button-blue-price-decrease",
+    "type": "button",
+    "parent": "board",
+    "inheritFrom": "button-blue-price-increase",
+    "x": 249.5,
+    "y": 690,
+    "text": "PRICE ↓",
+    "clickRoutine": [
+      {
+        "func": "CALL",
+        "widget": "share-price-blue",
+        "routine": "priceDecreaseRoutine"
+      }
+    ]
+  },
+  "button-yellow-price-increase": {
+    "id": "button-yellow-price-increase",
+    "type": "button",
+    "parent": "board",
+    "inheritFrom": "button-red-price-increase",
+    "x": 249.5,
+    "y": 775.5,
+    "backgroundColor": "#ffef00",
+    "clickRoutine": [
+      {
+        "func": "CALL",
+        "widget": "share-price-yellow",
+        "routine": "priceIncreaseRoutine"
+      }
+    ]
+  },
+  "button-yellow-price-decrease": {
+    "id": "button-yellow-price-decrease",
+    "type": "button",
+    "parent": "board",
+    "inheritFrom": "button-yellow-price-increase",
+    "x": 249.5,
+    "y": 826,
+    "text": "PRICE ↓",
+    "clickRoutine": [
+      {
+        "func": "CALL",
+        "widget": "share-price-yellow",
+        "routine": "priceDecreaseRoutine"
+      }
+    ]
+  },
+  "spinner-red": {
+    "id": "spinner-red",
+    "type": "spinner",
+    "parent": "board",
+    "x": 368,
+    "y": 359,
+    "width": 130,
+    "height": 130,
+    "movable": false,
+    "movableInEdit": false,
+    "css": "background-image:URL(https://raw.githubusercontent.com/andypymont/vtt-games/main/ownerschoice/assets/spinner-red.svg); border-radius: 100%;",
+    "backgroundCSS": "display:none",
+    "valueCSS": "background-color: #000000; color:#e34234 !important; scale: 60%; font-size: 24px; font-weight: bold; line-height:0.8em;",
+    "spinnerCSS": "background-image:URL(https://raw.githubusercontent.com/andypymont/vtt-games/main/ownerschoice/assets/spinner-arrow.svg); background-position:center; scale:80%;",
+    "options": [
+      "Div",
+      "Div",
+      "+2",
+      "+2",
+      "Oth +1",
+      "Oth +1"
+    ],
+    "enlarge": 2
+  },
+  "spinner-green": {
+    "id": "spinner-green",
+    "type": "spinner",
+    "parent": "board",
+    "x": 368,
+    "y": 495,
+    "width": 130,
+    "height": 130,
+    "movable": false,
+    "movableInEdit": false,
+    "css": "background-image:URL(https://raw.githubusercontent.com/andypymont/vtt-games/main/ownerschoice/assets/spinner-green.svg); border-radius: 100%;",
+    "backgroundCSS": "display:none",
+    "valueCSS": "background-color: #000000; color:#7cfc00 !important; scale: 60%; font-size: 24px; font-weight: bold; line-height:0.8em;",
+    "spinnerCSS": "background-image:URL(https://raw.githubusercontent.com/andypymont/vtt-games/main/ownerschoice/assets/spinner-arrow.svg); background-position:center; scale:80%;",
+    "options": [
+      "Div",
+      "Div",
+      "Div",
+      "=",
+      "+2",
+      "+1"
+    ],
+    "enlarge": 2
+  },
+  "spinner-blue": {
+    "id": "spinner-blue",
+    "type": "spinner",
+    "parent": "board",
+    "x": 368,
+    "y": 631,
+    "width": 130,
+    "height": 130,
+    "movable": false,
+    "movableInEdit": false,
+    "css": "background-image:URL(https://raw.githubusercontent.com/andypymont/vtt-games/main/ownerschoice/assets/spinner-blue.svg); border-radius: 100%;",
+    "backgroundCSS": "display:none",
+    "valueCSS": "background-color: #000000; color:#1e90ff !important; scale: 60%; font-size: 24px; font-weight: bold; line-height:0.8em;",
+    "spinnerCSS": "background-image:URL(https://raw.githubusercontent.com/andypymont/vtt-games/main/ownerschoice/assets/spinner-arrow.svg); background-position:center; scale:80%;",
+    "options": [
+      "Div",
+      "+2",
+      "+1",
+      "+1",
+      "Oth -1",
+      "Oth -2"
+    ],
+    "enlarge": 2
+  },
+  "spinner-yellow": {
+    "id": "spinner-yellow",
+    "type": "spinner",
+    "parent": "board",
+    "x": 368,
+    "y": 767,
+    "width": 130,
+    "height": 130,
+    "movable": false,
+    "movableInEdit": false,
+    "css": "background-image:URL(https://raw.githubusercontent.com/andypymont/vtt-games/main/ownerschoice/assets/spinner-yellow.svg); border-radius: 100%;",
+    "backgroundCSS": "display:none",
+    "valueCSS": "background-color: #000000; color:#ffef00 !important; scale: 60%; font-size: 24px; font-weight: bold; line-height:0.8em;",
+    "spinnerCSS": "background-image:URL(https://raw.githubusercontent.com/andypymont/vtt-games/main/ownerschoice/assets/spinner-arrow.svg); background-position:center; scale:80%;",
+    "options": [
+      "Div",
+      "Div",
+      "+3",
+      "+2",
+      "+1",
+      "-1"
+    ],
+    "enlarge": 2
+  },
+  "spinner-fund": {
+    "id": "spinner-fund",
+    "type": "spinner",
+    "parent": "board",
+    "x": 102,
+    "y": 223,
+    "width": 130,
+    "height": 130,
+    "movable": false,
+    "movableInEdit": false,
+    "css": "background-image:URL(https://raw.githubusercontent.com/andypymont/vtt-games/main/ownerschoice/assets/spinner-fund.svg); border-radius: 100%;",
+    "backgroundCSS": "display:none",
+    "valueCSS": "background-color: #000000; color:#ffffff !important; scale: 60%; font-size: 24px; font-weight: bold; line-height:0.8em;",
+    "spinnerCSS": "background-image:URL(https://raw.githubusercontent.com/andypymont/vtt-games/main/ownerschoice/assets/spinner-arrow.svg); background-position:center; scale:80%;",
+    "options": [
+      "=",
+      "-1 Raid",
+      "-1 Raid",
+      "-1 Raid",
+      "-2 Raid",
+      "-2 Raid"
+    ],
+    "enlarge": 2
+  },
+  "spinner-event": {
+    "id": "spinner-event",
+    "type": "spinner",
+    "parent": "board",
+    "x": 235,
+    "y": 223,
+    "width": 130,
+    "height": 130,
+    "movable": false,
+    "movableInEdit": false,
+    "css": "background-image:URL(https://raw.githubusercontent.com/andypymont/vtt-games/main/ownerschoice/assets/spinner-event.svg); border-radius: 100%;",
+    "backgroundCSS": "display:none",
+    "valueCSS": "background-color: #000000; color:#ffffff !important; scale: 60%; font-size: 24px; font-weight: bold; line-height:0.8em;",
+    "spinnerCSS": "background-image:URL(https://raw.githubusercontent.com/andypymont/vtt-games/main/ownerschoice/assets/spinner-arrow.svg); background-position:center; scale:80%;",
+    "options": [
+      "Fund 50",
+      "Fund 50",
+      "Bank 100",
+      "Swap",
+      "Any -2",
+      "All -1"
+    ],
+    "enlarge": 2
+  },
+  "share-price-red": {
+    "id": "share-price-red",
+    "x": 1202.5,
+    "y": 622.5,
+    "width": 45,
+    "height": 45,
+    "movable": false,
+    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/ownerschoice/assets/square-red.svg",
+    "price": 100,
+    "dividend": 30,
+    "priceChangeRoutine": [
+      {
+        "func": "SELECT",
+        "property": "id",
+        "value": "${PROPERTY id}"
+      },
+      {
+        "func": "IF",
+        "operand1": "${value}",
+        "relation": "==",
+        "operand2": 0,
+        "thenRoutine": [
+          {
+            "func": "SET",
+            "property": "y",
+            "value": 837.5
+          },
+          {
+            "func": "SET",
+            "property": "dividend",
+            "value": 0
+          }
+        ]
+      },
+      {
+        "func": "IF",
+        "operand1": "${value}",
+        "relation": "==",
+        "operand2": 40,
+        "thenRoutine": [
+          {
+            "func": "SET",
+            "property": "y",
+            "value": 772.5
+          },
+          {
+            "func": "SET",
+            "property": "dividend",
+            "value": 30
+          }
+        ]
+      },
+      {
+        "func": "IF",
+        "operand1": "${value}",
+        "relation": "==",
+        "operand2": 60,
+        "thenRoutine": [
+          {
+            "func": "SET",
+            "property": "y",
+            "value": 722.5
+          },
+          {
+            "func": "SET",
+            "property": "dividend",
+            "value": 30
+          }
+        ]
+      },
+      {
+        "func": "IF",
+        "operand1": "${value}",
+        "relation": "==",
+        "operand2": 80,
+        "thenRoutine": [
+          {
+            "func": "SET",
+            "property": "y",
+            "value": 672.5
+          },
+          {
+            "func": "SET",
+            "property": "dividend",
+            "value": 30
+          }
+        ]
+      },
+      {
+        "func": "IF",
+        "operand1": "${value}",
+        "relation": "==",
+        "operand2": 100,
+        "thenRoutine": [
+          {
+            "func": "SET",
+            "property": "y",
+            "value": 622.5
+          },
+          {
+            "func": "SET",
+            "property": "dividend",
+            "value": 30
+          }
+        ]
+      },
+      {
+        "func": "IF",
+        "operand1": "${value}",
+        "relation": "==",
+        "operand2": 120,
+        "thenRoutine": [
+          {
+            "func": "SET",
+            "property": "y",
+            "value": 572.5
+          },
+          {
+            "func": "SET",
+            "property": "dividend",
+            "value": 30
+          }
+        ]
+      },
+      {
+        "func": "IF",
+        "operand1": "${value}",
+        "relation": "==",
+        "operand2": 140,
+        "thenRoutine": [
+          {
+            "func": "SET",
+            "property": "y",
+            "value": 522.5
+          },
+          {
+            "func": "SET",
+            "property": "dividend",
+            "value": 40
+          }
+        ]
+      },
+      {
+        "func": "IF",
+        "operand1": "${value}",
+        "relation": "==",
+        "operand2": 160,
+        "thenRoutine": [
+          {
+            "func": "SET",
+            "property": "y",
+            "value": 472.5
+          },
+          {
+            "func": "SET",
+            "property": "dividend",
+            "value": 40
+          }
+        ]
+      },
+      {
+        "func": "IF",
+        "operand1": "${value}",
+        "relation": "==",
+        "operand2": 190,
+        "thenRoutine": [
+          {
+            "func": "SET",
+            "property": "y",
+            "value": 422.5
+          },
+          {
+            "func": "SET",
+            "property": "dividend",
+            "value": 50
+          }
+        ]
+      },
+      {
+        "func": "IF",
+        "operand1": "${value}",
+        "relation": "==",
+        "operand2": 220,
+        "thenRoutine": [
+          {
+            "func": "SET",
+            "property": "y",
+            "value": 372.5
+          },
+          {
+            "func": "SET",
+            "property": "dividend",
+            "value": 50
+          }
+        ]
+      },
+      {
+        "func": "IF",
+        "operand1": "${value}",
+        "relation": "==",
+        "operand2": 260,
+        "thenRoutine": [
+          {
+            "func": "SET",
+            "property": "y",
+            "value": 322.5
+          },
+          {
+            "func": "SET",
+            "property": "dividend",
+            "value": 60
+          }
+        ]
+      },
+      {
+        "func": "IF",
+        "operand1": "${value}",
+        "relation": "==",
+        "operand2": 300,
+        "thenRoutine": [
+          {
+            "func": "SET",
+            "property": "y",
+            "value": 272.5
+          },
+          {
+            "func": "SET",
+            "property": "dividend",
+            "value": 80
+          }
+        ]
+      }
+    ],
+    "priceIncreaseRoutine": [
+      {
+        "func": "SELECT",
+        "property": "id",
+        "value": "${PROPERTY id}"
+      },
+      {
+        "func": "IF",
+        "operand1": "${PROPERTY price}",
+        "relation": "==",
+        "operand2": 0,
+        "thenRoutine": [
+          {
+            "func": "SET",
+            "property": "price",
+            "value": 40
+          }
+        ],
+        "elseRoutine": [
+          {
+            "func": "IF",
+            "operand1": "${PROPERTY price}",
+            "relation": "<=",
+            "operand2": 140,
+            "thenRoutine": [
+              {
+                "func": "SET",
+                "property": "price",
+                "relation": "+",
+                "value": 20
+              }
+            ],
+            "elseRoutine": [
+              {
+                "func": "IF",
+                "operand1": "${PROPERTY price}",
+                "relation": "<=",
+                "operand2": 190,
+                "thenRoutine": [
+                  {
+                    "func": "SET",
+                    "property": "price",
+                    "relation": "+",
+                    "value": 30
+                  }
+                ],
+                "elseRoutine": [
+                  {
+                    "func": "IF",
+                    "operand1": "${PROPERTY price}",
+                    "relation": "<=",
+                    "operand2": 260,
+                    "thenRoutine": [
+                      {
+                        "func": "SET",
+                        "property": "price",
+                        "relation": "+",
+                        "value": 40
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      } 
+    ],
+    "priceDecreaseRoutine": [
+      {
+        "func": "SELECT",
+        "property": "id",
+        "value": "${PROPERTY id}"
+      },
+      {
+        "func": "IF",
+        "operand1": "${PROPERTY price}",
+        "relation": "==",
+        "operand2": 40,
+        "thenRoutine": [
+          {
+            "func": "SET",
+            "property": "price",
+            "value": 0
+          }
+        ],
+        "elseRoutine": [
+          {
+            "func": "IF",
+            "operand1": "${PROPERTY price}",
+            "relation": "<=",
+            "operand2": 160,
+            "thenRoutine": [
+              {
+                "func": "SET",
+                "property": "price",
+                "relation": "-",
+                "value": 20
+              }
+            ],
+            "elseRoutine": [
+              {
+                "func": "IF",
+                "operand1": "${PROPERTY price}",
+                "relation": "<=",
+                "operand2": 220,
+                "thenRoutine": [
+                  {
+                    "func": "SET",
+                    "property": "price",
+                    "relation": "-",
+                    "value": 30
+                  }
+                ],
+                "elseRoutine": [
+                  {
+                    "func": "IF",
+                    "operand1": "${PROPERTY price}",
+                    "relation": "<=",
+                    "operand2": 300,
+                    "thenRoutine": [
+                      {
+                        "func": "SET",
+                        "property": "price",
+                        "relation": "-",
+                        "value": 40
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "share-price-green": {
+    "id": "share-price-green",
+    "inheritFrom": "share-price-red",
+    "x": 1252.5,
+    "y": 622.5,
+    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/ownerschoice/assets/square-green.svg",
+    "price": 100,
+    "dividend": 30
+  },
+  "share-price-blue": {
+    "id": "share-price-blue",
+    "inheritFrom": "share-price-red",
+    "x": 1302.5,
+    "y": 622.5,
+    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/ownerschoice/assets/square-blue.svg",
+    "price": 100,
+    "dividend": 30
+  },
+  "share-price-yellow": {
+    "id": "share-price-yellow",
+    "inheritFrom": "share-price-red",
+    "x": 1352.5,
+    "y": 622.5,
+    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/ownerschoice/assets/square-yellow.svg",
+    "price": 100,
+    "dividend": 30
+  },
   "setup-area": {
     "id": "setup-area",
     "layer": -3,
