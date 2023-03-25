@@ -2133,7 +2133,10 @@
         "func": "LABEL",
         "label": [
           "cash-p1",
-          "cash-p2"
+          "cash-p2",
+          "cash-p3",
+          "cash-p4",
+          "cash-p5"
         ],
         "value": 690
       },
