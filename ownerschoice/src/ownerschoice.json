@@ -1857,7 +1857,7 @@
     "parent": "player-area-p1",
     "inheritFrom": "shares-bank-red",
     "x": 210,
-    "y": 45,
+    "y": 40,
     "text": 0
   },
   "button-p1-red-buy": {
@@ -1865,7 +1865,7 @@
     "type": "button",
     "parent": "player-area-p1",
     "x": 210,
-    "y": 127.5,
+    "y": 121,
     "width": 80,
     "height": 25,
     "movable": false,
@@ -1945,7 +1945,7 @@
     "parent": "player-area-p1",
     "inheritFrom": "button-p1-red-buy",
     "x": 210,
-    "y": 153.5,
+    "y": 146.5,
     "text": "SELL ♥",
     "clickRoutine": [
       "var counter = ${PROPERTY counter}",
@@ -1985,12 +1985,118 @@
       }
     ]
   },
+  "button-p1-exchange-red-green": {
+    "id": "button-p1-exchange-red-green",
+    "type": "button",
+    "parent": "player-area-p1",
+    "x": 210,
+    "y": 173,
+    "width": 25,
+    "height": 25,
+    "movable": false,
+    "css": {
+      "font-size": "15px",
+      "--wcMain": "#7cfc00",
+      "--wcBorder": "#000000",
+      "--wcFont": "#000000",
+      "--wcFontOH": "#ffffff"
+    },
+    "text": "♣",
+    "counter-give": "shares-p1-red",
+    "counter-take": "shares-p1-green",
+    "supply-give": "shares-bank-red",
+    "supply-take": "shares-bank-green",
+    "clickRoutine": [
+      "var supply = ${PROPERTY supply-take}",
+      {
+        "func": "IF",
+        "operand1": "${PROPERTY text OF $supply}",
+        "relation": ">",
+        "operand2": 0,
+        "thenRoutine": [
+          "var counter = ${PROPERTY counter-give}",
+          {
+            "func": "IF",
+            "operand1": "${PROPERTY text OF $counter}",
+            "relation": ">",
+            "operand2": 0,
+            "thenRoutine": [
+              {
+                "func": "LABEL",
+                "label": "${supply}",
+                "mode": "dec",
+                "value": 1
+              },
+              {
+                "func": "LABEL",
+                "label": "${PROPERTY supply-give}",
+                "mode": "inc",
+                "value": 1
+              },
+              {
+                "func": "LABEL",
+                "label": "${PROPERTY counter-give}",
+                "mode": "dec",
+                "value": 1
+              },
+              {
+                "func": "LABEL",
+                "label": "${PROPERTY counter-take}",
+                "mode": "inc",
+                "value": 1
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "button-p1-exchange-red-blue": {
+    "id": "button-p1-exchange-red-blue",
+    "type": "button",
+    "parent": "player-area-p1",
+    "inheritFrom": "button-p1-exchange-red-green",
+    "x": 237.5,
+    "y": 173,
+    "css": {
+      "font-size": "15px",
+      "--wcMain": "#1e90ff",
+      "--wcBorder": "#000000",
+      "--wcFont": "#000000",
+      "--wcFontOH": "#ffffff"
+    },
+    "text": "♠",
+    "counter-give": "shares-p1-red",
+    "counter-take": "shares-p1-blue",
+    "supply-give": "shares-bank-red",
+    "supply-take": "shares-bank-blue"
+  },
+  "button-p1-exchange-red-yellow": {
+    "id": "button-p1-exchange-red-yellow",
+    "type": "button",
+    "parent": "player-area-p1",
+    "inheritFrom": "button-p1-exchange-red-green",
+    "x": 265,
+    "y": 173,
+    "css": {
+      "font-size": "15px",
+      "--wcMain": "#ffef00",
+      "--wcBorder": "#000000",
+      "--wcFont": "#000000",
+      "--wcFontOH": "#ffffff"
+    },
+    "text": "♦",
+    "counter-give": "shares-p1-red",
+    "counter-take": "shares-p1-yellow",
+    "supply-give": "shares-bank-red",
+    "supply-take": "shares-bank-yellow"
+  },
   "shares-p1-green": {
     "id": "shares-p1-green",
     "parent": "player-area-p1",
     "inheritFrom": "shares-bank-green",
     "x": 310,
-    "y": 45,
+    "y": 40,
     "text": 0
   },
   "button-p1-green-buy": {
@@ -1999,7 +2105,7 @@
     "parent": "player-area-p1",
     "inheritFrom": "button-p1-red-buy",
     "x": 310,
-    "y": 127.5,
+    "y": 121,
     "css": {
       "font-size": "15px",
       "--wcMain": "#7cfc00",
@@ -2020,7 +2126,7 @@
       "button-p1-green-buy": "*"
     },
     "x": 310,
-    "y": 153.5,
+    "y": 146.5,
     "text": "SELL ♣"
   },
   "shares-p1-blue": {
@@ -2028,7 +2134,7 @@
     "parent": "player-area-p1",
     "inheritFrom": "shares-bank-blue",
     "x": 410,
-    "y": 45,
+    "y": 40,
     "text": 0
   },
   "button-p1-blue-buy": {
@@ -2037,7 +2143,7 @@
     "parent": "player-area-p1",
     "inheritFrom": "button-p1-red-buy",
     "x": 410,
-    "y": 127.5,
+    "y": 121,
     "css": {
       "font-size": "15px",
       "--wcMain": "#1e90ff",
@@ -2058,7 +2164,7 @@
       "button-p1-blue-buy": "*"
     },
     "x": 410,
-    "y": 153.5,
+    "y": 146.5,
     "text": "SELL ♠"
   },
   "shares-p1-yellow": {
@@ -2066,7 +2172,7 @@
     "parent": "player-area-p1",
     "inheritFrom": "shares-bank-yellow",
     "x": 510,
-    "y": 45,
+    "y": 40,
     "text": 0
   },
   "button-p1-yellow-buy": {
@@ -2075,7 +2181,7 @@
     "parent": "player-area-p1",
     "inheritFrom": "button-p1-red-buy",
     "x": 510,
-    "y": 127.5,
+    "y": 121,
     "css": {
       "font-size": "15px",
       "--wcMain": "#ffef00",
@@ -2096,7 +2202,7 @@
       "button-p1-yellow-buy": "*"
     },
     "x": 510,
-    "y": 153.5,
+    "y": 146.5,
     "text": "SELL ♦"
   },
   "player-area-p2": {
