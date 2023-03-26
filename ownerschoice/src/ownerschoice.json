@@ -1721,7 +1721,26 @@
     "movable": false,
     "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/ownerschoice/assets/player-area.svg",
     "cash": "cash-p1",
-    "linkedToSeat": "seat-p1"
+    "linkedToSeat": "seat-p1",
+    "share-counters-prefix": "shares-p1-",
+    "getCertificateCountRoutine": [
+      "var result = 0",
+      "var prefix = ${PROPERTY share-counters-prefix}",
+      {
+        "func": "FOREACH",
+        "in": [
+          "red",
+          "green",
+          "blue",
+          "yellow"
+        ],
+        "loopRoutine": [
+          "var counter = ${prefix} + ${value}",
+          "var count = ${PROPERTY text OF $counter}",
+          "var result = ${result} + ${count}"
+        ]
+      }
+    ]
   },
   "cash-p1": {
     "id": "cash-p1",
@@ -1870,35 +1889,49 @@
         "thenRoutine": [
           {
             "func": "CALL",
-            "widget": "${supply}",
-            "routine": "getSharePriceRoutine",
-            "variable": "price"
+            "widget": "${PROPERTY parent}",
+            "routine": "getCertificateCountRoutine",
+            "variable": "certificates"
           },
-          "var area = ${PROPERTY parent}",
-          "var cash = ${PROPERTY cash OF $area}",
           {
             "func": "IF",
-            "operand1": "${PROPERTY text OF $cash}",
-            "relation": ">=",
-            "operand2": "${price}",
+            "operand1": "${certificates}",
+            "relation": "<",
+            "operand2": 12,
             "thenRoutine": [
               {
-                "func": "LABEL",
-                "label": "${cash}",
-                "mode": "dec",
-                "value": "${price}"
+                "func": "CALL",
+                "widget": "${supply}",
+                "routine": "getSharePriceRoutine",
+                "variable": "price"
               },
+              "var area = ${PROPERTY parent}",
+              "var cash = ${PROPERTY cash OF $area}",
               {
-                "func": "LABEL",
-                "label": "${supply}",
-                "mode": "dec",
-                "value": 1
-              },
-              {
-                "func": "LABEL",
-                "label": "${PROPERTY counter}",
-                "mode": "inc",
-                "value": 1
+                "func": "IF",
+                "operand1": "${PROPERTY text OF $cash}",
+                "relation": ">=",
+                "operand2": "${price}",
+                "thenRoutine": [
+                  {
+                    "func": "LABEL",
+                    "label": "${cash}",
+                    "mode": "dec",
+                    "value": "${price}"
+                  },
+                  {
+                    "func": "LABEL",
+                    "label": "${supply}",
+                    "mode": "dec",
+                    "value": 1
+                  },
+                  {
+                    "func": "LABEL",
+                    "label": "${PROPERTY counter}",
+                    "mode": "inc",
+                    "value": 1
+                  }
+                ]
               }
             ]
           }
@@ -2072,7 +2105,8 @@
     "x": 0,
     "y": 200,
     "cash": "cash-p2",
-    "linkedToSeat": "seat-p2"
+    "linkedToSeat": "seat-p2",
+    "share-counters-prefix": "shares-p2-"
   },
   "cash-p2": {
     "id": "cash-p2",
@@ -2189,7 +2223,8 @@
     "x": 0,
     "y": 400,
     "cash": "cash-p3",
-    "linkedToSeat": "seat-p3"
+    "linkedToSeat": "seat-p3",
+    "share-counters-prefix": "shares-p3-"
   },
   "cash-p3": {
     "id": "cash-p3",
@@ -2306,7 +2341,8 @@
     "x": 0,
     "y": 600,
     "cash": "cash-p4",
-    "linkedToSeat": "seat-p4"
+    "linkedToSeat": "seat-p4",
+    "share-counters-prefix": "shares-p4-"
   },
   "cash-p4": {
     "id": "cash-p4",
@@ -2423,7 +2459,8 @@
     "x": 0,
     "y": 800,
     "cash": "cash-p5",
-    "linkedToSeat": "seat-p5"
+    "linkedToSeat": "seat-p5",
+    "share-counters-prefix": "shares-p5-"
   },
   "cash-p5": {
     "id": "cash-p5",
