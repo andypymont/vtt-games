@@ -3554,7 +3554,7 @@
       {
         "note": "Set a random player as start player",
         "func": "TURN",
-        "turnCycle": "RANDOM"
+        "turnCycle": "random"
       }
     ],
     "setupBoardSegmentRoutine": [
