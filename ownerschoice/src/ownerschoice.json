@@ -390,7 +390,7 @@
     "type": "button",
     "parent": "board",
     "x": 249.5,
-    "y": 367.5,
+    "y": 372.5,
     "width": 100,
     "height": 30,
     "css": {
@@ -414,13 +414,43 @@
     "parent": "board",
     "inheritFrom": "button-red-price-increase",
     "x": 249.5,
-    "y": 418,
+    "y": 413,
     "text": "PRICE ↓",
     "clickRoutine": [
       {
         "func": "CALL",
         "widget": "share-price-red",
         "routine": "priceDecreaseRoutine"
+      }
+    ]
+  },
+  "button-red-dividend": {
+    "id": "button-red-dividend",
+    "type": "button",
+    "parent": "board",
+    "inheritFrom": "button-red-price-increase",
+    "x": 249.5,
+    "y": 453.5,
+    "text": "DIVIDEND",
+    "company": "red",
+    "clickRoutine": [
+      {
+        "func": "FOREACH",
+        "range": 5,
+        "loopRoutine": [
+          "var cash = 'cash-p' + ${value}",
+          "var marker = 'share-price-' + ${PROPERTY company}",
+          "var counter = 'shares-p' + ${value}",
+          "var counter = ${counter} + '-'",
+          "var counter = ${counter} + ${PROPERTY company}",
+          "var total = ${PROPERTY dividend OF $marker} * ${PROPERTY text OF $counter}",
+          {
+            "func": "LABEL",
+            "label": "${cash}",
+            "mode": "inc",
+            "value": "${total}"
+          }
+        ]
       }
     ]
   },
@@ -444,7 +474,7 @@
     "parent": "board",
     "inheritFrom": "button-red-price-increase",
     "x": 249.5,
-    "y": 503.5,
+    "y": 508.5,
     "css": {
       "--wcMain": "#7cfc00",
       "--wcBorder": "#000000",
@@ -465,7 +495,7 @@
     "parent": "board",
     "inheritFrom": "button-green-price-increase",
     "x": 249.5,
-    "y": 554,
+    "y": 549,
     "text": "PRICE ↓",
     "clickRoutine": [
       {
@@ -474,6 +504,21 @@
         "routine": "priceDecreaseRoutine"
       }
     ]
+  },
+  "button-green-dividend": {
+    "id": "button-green-dividend",
+    "type": "button",
+    "parent": "board",
+    "inheritFrom": {
+      "button-red-dividend": [
+        "clickRoutine",
+        "text"
+      ],
+      "button-green-price-increase": "*"
+    },
+    "x": 249.5,
+    "y": 589.5,
+    "company": "green"
   },
   "shares-bank-blue": {
     "id": "shares-bank-blue",
@@ -495,7 +540,7 @@
     "parent": "board",
     "inheritFrom": "button-red-price-increase",
     "x": 249.5,
-    "y": 639.5,
+    "y": 644.5,
     "css": {
       "--wcMain": "#1e90ff",
       "--wcBorder": "#000000",
@@ -516,7 +561,7 @@
     "parent": "board",
     "inheritFrom": "button-blue-price-increase",
     "x": 249.5,
-    "y": 690,
+    "y": 685,
     "text": "PRICE ↓",
     "clickRoutine": [
       {
@@ -525,6 +570,21 @@
         "routine": "priceDecreaseRoutine"
       }
     ]
+  },
+  "button-blue-dividend": {
+    "id": "button-blue-dividend",
+    "type": "button",
+    "parent": "board",
+    "inheritFrom": {
+      "button-red-dividend": [
+        "clickRoutine",
+        "text"
+      ],
+      "button-blue-price-increase": "*"
+    },
+    "x": 249.5,
+    "y": 725.5,
+    "company": "blue"
   },
   "shares-bank-yellow": {
     "id": "shares-bank-yellow",
@@ -546,7 +606,7 @@
     "parent": "board",
     "inheritFrom": "button-red-price-increase",
     "x": 249.5,
-    "y": 775.5,
+    "y": 780.5,
     "css": {
       "--wcMain": "#ffef00",
       "--wcBorder": "#000000",
@@ -567,7 +627,7 @@
     "parent": "board",
     "inheritFrom": "button-yellow-price-increase",
     "x": 249.5,
-    "y": 826,
+    "y": 821,
     "text": "PRICE ↓",
     "clickRoutine": [
       {
@@ -576,6 +636,21 @@
         "routine": "priceDecreaseRoutine"
       }
     ]
+  },
+  "button-yellow-dividend": {
+    "id": "button-yellow-dividend",
+    "type": "button",
+    "parent": "board",
+    "inheritFrom": {
+      "button-red-dividend": [
+        "clickRoutine",
+        "text"
+      ],
+      "button-yellow-price-increase": "*"
+    },
+    "x": 249.5,
+    "y": 861.5,
+    "company": "yellow"
   },
   "spinner-red": {
     "id": "spinner-red",
