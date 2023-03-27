@@ -369,14 +369,15 @@
     "css": {
       "font-size": "60px",
       "text-align": "center",
-      "line-height": "80px"
+      "line-height": "90px"
     },
-    "price-marker": "share-price-red",
+    "company": "red",
     "getSharePriceRoutine": [
+      "var priceMarker = 'share-price-' + ${PROPERTY company}",
       {
         "func": "SELECT",
         "property": "id",
-        "value": "${PROPERTY price-marker}"
+        "value": "${priceMarker}"
       },
       {
         "func": "GET",
@@ -384,6 +385,16 @@
         "variable": "result"
       }
     ]
+  },
+  "president-red": {
+    "id": "president-red",
+    "parent": "shares-bank-red",
+    "x": 58,
+    "y": 2,
+    "width": 20,
+    "height": 20,
+    "movable": false,
+    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/ownerschoice/assets/president.svg"
   },
   "button-red-price-increase": {
     "id": "button-red-price-increase",
@@ -466,7 +477,12 @@
       "#060d00": "symbolColor"
     },
     "text": 15,
-    "price-marker": "share-price-green"
+    "company": "green"
+  },
+  "president-green": {
+    "id": "president-green",
+    "parent": "shares-bank-green",
+    "inheritFrom": "president-red"
   },
   "button-green-price-increase": {
     "id": "button-green-price-increase",
@@ -532,7 +548,12 @@
       "#02070d": "symbolColor"
     },
     "text": 15,
-    "price-marker": "share-price-blue"
+    "company": "blue"
+  },
+  "president-blue": {
+    "id": "president-blue",
+    "parent": "shares-bank-blue",
+    "inheritFrom": "president-red"
   },
   "button-blue-price-increase": {
     "id": "button-blue-price-increase",
@@ -598,7 +619,12 @@
       "#0d0c00": "symbolColor"
     },
     "text": 15,
-    "price-marker": "share-price-yellow"
+    "company": "yellow"
+  },
+  "president-yellow": {
+    "id": "president-yellow",
+    "parent": "shares-bank-yellow",
+    "inheritFrom": "president-red"
   },
   "button-yellow-price-increase": {
     "id": "button-yellow-price-increase",
@@ -1933,7 +1959,114 @@
     "inheritFrom": "shares-bank-red",
     "x": 210,
     "y": 40,
-    "text": 0
+    "text": 0,
+    "player": 1,
+    "findOtherPresidentRoutine": [
+      "var result = ''",
+      "var highest = 0",
+      {
+        "func": "FOREACH",
+        "range": 4,
+        "loopRoutine": [
+          "var player = ${currentPlayer} + ${value}",
+          {
+            "func": "IF",
+            "operand1": "${player}",
+            "relation": ">",
+            "operand2": 5,
+            "thenRoutine": [
+              "var player = ${player} - 5"
+            ]
+          },
+          "var shareCounter = 'shares-p' + ${player}",
+          "var shareCounter = ${shareCounter} + '-'",
+          "var shareCounter = ${shareCounter} + ${PROPERTY company}",
+          "var shareCount = ${PROPERTY text OF $shareCounter}",
+          {
+            "func": "IF",
+            "operand1": "${shareCount}",
+            "relation": ">",
+            "operand2": "${highest}",
+            "thenRoutine": [
+              "var highest = ${shareCount}",
+              "var result = ${shareCounter}"
+            ]
+          }
+        ]
+      }
+    ],
+    "textChangeRoutine": [
+      "var presidency = 'president-' + ${PROPERTY company}",
+      {
+        "func": "CALL",
+        "routine": "findOtherPresidentRoutine",
+        "arguments": {
+          "currentPlayer": "${PROPERTY player}"
+        },
+        "variable": "otherCounter"
+      },
+      {
+        "func": "IF",
+        "operand1": "${otherCounter}",
+        "operand2": "",
+        "thenRoutine": [
+          "var otherCount = 0",
+          "var otherCounter = 'shares-bank-' + ${PROPERTY company}"
+        ],
+        "elseRoutine": [
+          "var otherCount = ${PROPERTY text OF $otherCounter}"
+        ]
+      },
+      {
+        "func": "SELECT",
+        "property": "id",
+        "value": "${presidency}"
+      },
+      "var owned = ${otherCount} + ${PROPERTY text}",
+      {
+        "func": "IF",
+        "operand1": "${owned}",
+        "operand2": 0,
+        "thenRoutine": [
+          "var presidency = 'president-' + ${PROPERTY company}",
+          {
+            "func": "SET",
+            "property": "parent",
+            "value": "${otherCounter}"
+          }
+        ],
+        "elseRoutine": [
+          {
+            "func": "IF",
+            "operand1": "${PROPERTY text}",
+            "relation": ">",
+            "operand2": "${otherCount}",
+            "thenRoutine": [
+              {
+                "func": "SET",
+                "property": "parent",
+                "value": "${PROPERTY id}"
+              }
+            ],
+            "elseRoutine": [
+              {
+                "func": "IF",
+                "operand1": "${PROPERTY text}",
+                "relation": "<",
+                "operand2": "${otherCount}",
+                "thenRoutine": [
+                  {
+                    "func": "SET",
+                    "property": "parent",
+                    "value": "${otherCounter}"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   "button-p1-red-buy": {
     "id": "button-p1-red-buy",
@@ -2172,10 +2305,17 @@
   "shares-p1-green": {
     "id": "shares-p1-green",
     "parent": "player-area-p1",
-    "inheritFrom": "shares-bank-green",
+    "inheritFrom": {
+      "shares-p1-red": [
+        "findOtherPresidentRoutine",
+        "textChangeRoutine"
+      ],
+      "shares-bank-green": "*"
+    },
     "x": 310,
     "y": 40,
-    "text": 0
+    "text": 0,
+    "player": 1
   },
   "button-p1-green-buy": {
     "id": "button-p1-green-buy",
@@ -2248,10 +2388,17 @@
   "shares-p1-blue": {
     "id": "shares-p1-blue",
     "parent": "player-area-p1",
-    "inheritFrom": "shares-bank-blue",
+    "inheritFrom": {
+      "shares-p1-red": [
+        "findOtherPresidentRoutine",
+        "textChangeRoutine"
+      ],
+      "shares-bank-blue": "*"
+    },
     "x": 410,
     "y": 40,
-    "text": 0
+    "text": 0,
+    "player": 1
   },
   "button-p1-blue-buy": {
     "id": "button-p1-blue-buy",
@@ -2313,10 +2460,17 @@
   "shares-p1-yellow": {
     "id": "shares-p1-yellow",
     "parent": "player-area-p1",
-    "inheritFrom": "shares-bank-yellow",
+    "inheritFrom": {
+      "shares-p1-red": [
+        "findOtherPresidentRoutine",
+        "textChangeRoutine"
+      ],
+      "shares-bank-yellow": "*"
+    },
     "x": 510,
     "y": 40,
-    "text": 0
+    "text": 0,
+    "player": 1
   },
   "button-p1-yellow-buy": {
     "id": "button-p1-yellow-buy",
@@ -2425,7 +2579,8 @@
     "id": "shares-p2-red",
     "parent": "player-area-p2",
     "inheritFrom": "shares-p1-red",
-    "text": 0
+    "text": 0,
+    "player": 2
   },
   "button-p2-red-buy": {
     "id": "button-p2-red-buy",
@@ -2461,7 +2616,8 @@
     "id": "shares-p2-green",
     "parent": "player-area-p2",
     "inheritFrom": "shares-p1-green",
-    "text": 0
+    "text": 0,
+    "player": 2
   },
   "button-p2-green-buy": {
     "id": "button-p2-green-buy",
@@ -2497,7 +2653,8 @@
     "id": "shares-p2-blue",
     "parent": "player-area-p2",
     "inheritFrom": "shares-p1-blue",
-    "text": 0
+    "text": 0,
+    "player": 2
   },
   "button-p2-blue-buy": {
     "id": "button-p2-blue-buy",
@@ -2533,7 +2690,8 @@
     "id": "shares-p2-yellow",
     "parent": "player-area-p2",
     "inheritFrom": "shares-p1-yellow",
-    "text": 0
+    "text": 0,
+    "player": 2
   },
   "button-p2-yellow-buy": {
     "id": "button-p2-yellow-buy",
@@ -2615,7 +2773,8 @@
     "id": "shares-p3-red",
     "parent": "player-area-p3",
     "inheritFrom": "shares-p1-red",
-    "text": 0
+    "text": 0,
+    "player": 3
   },
   "button-p3-red-buy": {
     "id": "button-p3-red-buy",
@@ -2651,7 +2810,8 @@
     "id": "shares-p3-green",
     "parent": "player-area-p3",
     "inheritFrom": "shares-p1-green",
-    "text": 0
+    "text": 0,
+    "player": 3
   },
   "button-p3-green-buy": {
     "id": "button-p3-green-buy",
@@ -2687,7 +2847,8 @@
     "id": "shares-p3-blue",
     "parent": "player-area-p3",
     "inheritFrom": "shares-p1-blue",
-    "text": 0
+    "text": 0,
+    "player": 3
   },
   "button-p3-blue-buy": {
     "id": "button-p3-blue-buy",
@@ -2723,7 +2884,8 @@
     "id": "shares-p3-yellow",
     "parent": "player-area-p3",
     "inheritFrom": "shares-p1-yellow",
-    "text": 0
+    "text": 0,
+    "player": 3
   },
   "button-p3-yellow-buy": {
     "id": "button-p3-yellow-buy",
@@ -2805,7 +2967,8 @@
     "id": "shares-p4-red",
     "parent": "player-area-p4",
     "inheritFrom": "shares-p1-red",
-    "text": 0
+    "text": 0,
+    "player": 4
   },
   "button-p4-red-buy": {
     "id": "button-p4-red-buy",
@@ -2841,7 +3004,8 @@
     "id": "shares-p4-green",
     "parent": "player-area-p4",
     "inheritFrom": "shares-p1-green",
-    "text": 0
+    "text": 0,
+    "player": 4
   },
   "button-p4-green-buy": {
     "id": "button-p4-green-buy",
@@ -2877,7 +3041,8 @@
     "id": "shares-p4-blue",
     "parent": "player-area-p4",
     "inheritFrom": "shares-p1-blue",
-    "text": 0
+    "text": 0,
+    "player": 4
   },
   "button-p4-blue-buy": {
     "id": "button-p4-blue-buy",
@@ -2913,7 +3078,8 @@
     "id": "shares-p4-yellow",
     "parent": "player-area-p4",
     "inheritFrom": "shares-p1-yellow",
-    "text": 0
+    "text": 0,
+    "player": 4
   },
   "button-p4-yellow-buy": {
     "id": "button-p4-yellow-buy",
@@ -2995,7 +3161,8 @@
     "id": "shares-p5-red",
     "parent": "player-area-p5",
     "inheritFrom": "shares-p1-red",
-    "text": 0
+    "text": 0,
+    "player": 5
   },
   "button-p5-red-buy": {
     "id": "button-p5-red-buy",
@@ -3031,7 +3198,8 @@
     "id": "shares-p5-green",
     "parent": "player-area-p5",
     "inheritFrom": "shares-p1-green",
-    "text": 0
+    "text": 0,
+    "player": 5
   },
   "button-p5-green-buy": {
     "id": "button-p5-green-buy",
@@ -3067,7 +3235,8 @@
     "id": "shares-p5-blue",
     "parent": "player-area-p5",
     "inheritFrom": "shares-p1-blue",
-    "text": 0
+    "text": 0,
+    "player": 5
   },
   "button-p5-blue-buy": {
     "id": "button-p5-blue-buy",
@@ -3103,7 +3272,8 @@
     "id": "shares-p5-yellow",
     "parent": "player-area-p5",
     "inheritFrom": "shares-p1-yellow",
-    "text": 0
+    "text": 0,
+    "player": 5
   },
   "button-p5-yellow-buy": {
     "id": "button-p5-yellow-buy",
