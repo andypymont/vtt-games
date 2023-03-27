@@ -2051,14 +2051,21 @@
             "elseRoutine": [
               {
                 "func": "IF",
-                "operand1": "${PROPERTY text}",
-                "relation": "<",
-                "operand2": "${otherCount}",
+                "operand1": "${PROPERTY parent OF $presidency}",
+                "operand2": "${PROPERTY id}",
                 "thenRoutine": [
                   {
-                    "func": "SET",
-                    "property": "parent",
-                    "value": "${otherCounter}"
+                    "func": "IF",
+                    "operand1": "${PROPERTY text}",
+                    "relation": "<",
+                    "operand2": "${otherCount}",
+                    "thenRoutine": [
+                      {
+                        "func": "SET",
+                        "property": "parent",
+                        "value": "${otherCounter}"
+                      }
+                    ]
                   }
                 ]
               }
