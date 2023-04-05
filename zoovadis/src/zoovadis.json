@@ -1014,6 +1014,19 @@
     "parent": "controls-area",
     "clickRoutine": [
       {
+        "note": "Check that the user really wants to set up a fresh game",
+        "func": "INPUT",
+        "header": "Set up a new game?",
+        "confirmButtonText": "Yes",
+        "cancelButtonText": "No",
+        "fields": [
+          {
+            "type": "subtitle",
+            "text": "Are you sure that you want to erase any progress and start a new game?"
+          }
+        ]
+      },
+      {
         "note": "Recall the animal playmats",
         "func": "RECALL",
         "holder": "holder-playmats"
