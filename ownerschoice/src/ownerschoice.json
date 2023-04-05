@@ -350,7 +350,29 @@
       "font-size": "70px",
       "line-height": "100px",
       "text-align": "center"
-    }
+    },
+    "clickRoutine": [
+      "var header = 'Enter new value for ' + ${PROPERTY id}",
+      {
+        "func": "INPUT",
+        "header": "${header}",
+        "confirmButtonText": "OK",
+        "cancelButtonText": "Cancel",
+        "fields": [
+          {
+            "type": "number",
+            "min": 0,
+            "value": "${PROPERTY text}",
+            "variable": "newValue"
+          }
+        ]
+      },
+      {
+        "func": "LABEL",
+        "label": "${PROPERTY id}",
+        "value": "${newValue}"
+      }
+    ]
   },
   "shares-bank-red": {
     "id": "shares-bank-red",
