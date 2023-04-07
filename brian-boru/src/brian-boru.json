@@ -197,24 +197,15 @@
     "width": 50,
     "height": 50,
     "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/hand-counter-left.svg",
-    "movable": false
-  },
-  "p1-hand-counter-left-value": {
-    "id": "p1-hand-counter-left-value",
-    "type": "label",
-    "parent": "p1-hand-counter-left",
-    "fixedParent": true,
-    "x": 6,
-    "y": 20,
-    "width": 30,
-    "height": 30,
+    "movable": false,
     "css": {
       "color": "#000000",
-      "font-size": "26px"
+      "font-size": "26px",
+      "line-height": "65px",
+      "text-indent": "-5px",
+      "text-align": "center"
     },
-    "text": 0,
-    "editable": false,
-    "movable": false
+    "text": 0
   },
   "p1-hand-counter-right": {
     "id": "p1-hand-counter-right",
@@ -224,24 +215,15 @@
     "width": 50,
     "height": 50,
     "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/hand-counter-right.svg",
-    "movable": false
-  },
-  "p1-hand-counter-right-value": {
-    "id": "p1-hand-counter-right-value",
-    "type": "label",
-    "parent": "p1-hand-counter-right",
-    "fixedParent": true,
-    "x": 14,
-    "y": 20,
-    "width": 30,
-    "height": 30,
+    "movable": false,
     "css": {
       "color": "#000000",
-      "font-size": "26px"
+      "font-size": "26px",
+      "line-height": "65px",
+      "text-indent": "6px",
+      "text-align": "center"
     },
-    "text": 0,
-    "editable": false,
-    "movable": false
+    "text": 0
   },
   "p1-cube-holder": {
     "id": "p1-cube-holder",
@@ -535,24 +517,10 @@
     "parent": "p2-area",
     "inheritFrom": "p1-hand-counter-left"
   },
-  "p2-hand-counter-left-value": {
-    "id": "p2-hand-counter-left-value",
-    "type": "label",
-    "parent": "p2-hand-counter-left",
-    "inheritFrom": "p1-hand-counter-left-value",
-    "text": 0
-  },
   "p2-hand-counter-right": {
     "id": "p2-hand-counter-right",
     "parent": "p2-area",
     "inheritFrom": "p1-hand-counter-right"
-  },
-  "p2-hand-counter-right-value": {
-    "id": "p2-hand-counter-right-value",
-    "type": "label",
-    "parent": "p2-hand-counter-right",
-    "inheritFrom": "p1-hand-counter-right-value",
-    "text": 0
   },
   "p2-cube-holder": {
     "id": "p2-cube-holder",
@@ -827,24 +795,10 @@
     "parent": "p3-area",
     "inheritFrom": "p1-hand-counter-left"
   },
-  "p3-hand-counter-left-value": {
-    "id": "p3-hand-counter-left-value",
-    "type": "label",
-    "parent": "p3-hand-counter-left",
-    "inheritFrom": "p1-hand-counter-left-value",
-    "text": 0
-  },
   "p3-hand-counter-right": {
     "id": "p3-hand-counter-right",
     "parent": "p3-area",
     "inheritFrom": "p1-hand-counter-right"
-  },
-  "p3-hand-counter-right-value": {
-    "id": "p3-hand-counter-right-value",
-    "type": "label",
-    "parent": "p3-hand-counter-right",
-    "inheritFrom": "p1-hand-counter-right-value",
-    "text": 0
   },
   "p3-cube-holder": {
     "id": "p3-cube-holder",
@@ -1119,24 +1073,10 @@
     "parent": "p4-area",
     "inheritFrom": "p1-hand-counter-left"
   },
-  "p4-hand-counter-left-value": {
-    "id": "p4-hand-counter-left-value",
-    "type": "label",
-    "parent": "p4-hand-counter-left",
-    "inheritFrom": "p1-hand-counter-left-value",
-    "text": 0
-  },
   "p4-hand-counter-right": {
     "id": "p4-hand-counter-right",
     "parent": "p4-area",
     "inheritFrom": "p1-hand-counter-right"
-  },
-  "p4-hand-counter-right-value": {
-    "id": "p4-hand-counter-right-value",
-    "type": "label",
-    "parent": "p4-hand-counter-right",
-    "inheritFrom": "p1-hand-counter-right-value",
-    "text": 0
   },
   "p4-cube-holder": {
     "id": "p4-cube-holder",
@@ -1411,24 +1351,10 @@
     "parent": "p5-area",
     "inheritFrom": "p1-hand-counter-left"
   },
-  "p5-hand-counter-left-value": {
-    "id": "p5-hand-counter-left-value",
-    "type": "label",
-    "parent": "p5-hand-counter-left",
-    "inheritFrom": "p1-hand-counter-left-value",
-    "text": 0
-  },
   "p5-hand-counter-right": {
     "id": "p5-hand-counter-right",
     "parent": "p5-area",
     "inheritFrom": "p1-hand-counter-right"
-  },
-  "p5-hand-counter-right-value": {
-    "id": "p5-hand-counter-right-value",
-    "type": "label",
-    "parent": "p5-hand-counter-right",
-    "inheritFrom": "p1-hand-counter-right-value",
-    "text": 0
   },
   "p5-cube-holder": {
     "id": "p5-cube-holder",
@@ -1681,7 +1607,7 @@
     "getCounterRoutine": [
       "var playerNo = ${playerIx} + 1",
       "var label = 'p' + ${playerNo}",
-      "var result = ${label} + '-hand-counter-left-value'"
+      "var result = ${label} + '-hand-counter-left'"
     ],
     "countRoutine": [
       {
@@ -1758,7 +1684,7 @@
     "getCounterRoutine": [
       "var playerNo = ${playerIx} + 1",
       "var label = 'p' + ${playerNo}",
-      "var result = ${label} + '-hand-counter-right-value'"
+      "var result = ${label} + '-hand-counter-right'"
     ]
   },
   "button-deal-hands": {
