@@ -3730,14 +3730,14 @@
   "cards-marriage-holder-draw": {
     "id": "cards-marriage-holder-draw",
     "type": "holder",
-    "inheritFrom": "card-marriage-holder",
+    "inheritFrom": "cards-marriage-holder",
     "x": 750,
     "y": 500
   },
   "cards-marriage-holder-current": {
     "id": "cards-marriage-holder-current",
     "type": "holder",
-    "inheritFrom": "card-marriage-holder",
+    "inheritFrom": "cards-marriage-holder",
     "x": 750,
     "y": 660,
     "onEnter": {
