@@ -36,65 +36,51 @@
   },
   "claim-c": {
     "id": "claim-c",
+    "inheritFrom": "claim-b",
     "x": 950,
     "y": 515,
-    "width": 45,
-    "height": 45,
-    "enlarge": 3,
     "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/claim-c.svg"
   },
   "claim-d": {
     "id": "claim-d",
+    "inheritFrom": "claim-b",
     "x": 1245,
     "y": 515,
-    "width": 45,
-    "height": 45,
-    "enlarge": 3,
     "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/claim-d.svg"
   },
   "claim-l": {
     "id": "claim-l",
+    "inheritFrom": "claim-b",
     "x": 1090,
     "y": 600,
-    "width": 45,
-    "height": 45,
-    "enlarge": 3,
     "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/claim-l.svg"
   },
   "claim-m": {
     "id": "claim-m",
+    "inheritFrom": "claim-b",
     "x": 950,
     "y": 685,
-    "width": 45,
-    "height": 45,
-    "enlarge": 3,
     "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/claim-m.svg"
   },
   "claim-n": {
     "id": "claim-n",
+    "inheritFrom": "claim-b",
     "x": 1095,
     "y": 265,
-    "width": 45,
-    "height": 45,
-    "enlarge": 3,
     "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/claim-n.svg"
   },
   "claim-s": {
     "id": "claim-s",
+    "inheritFrom": "claim-b",
     "x": 1090,
     "y": 430,
-    "width": 45,
-    "height": 45,
-    "enlarge": 3,
     "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/claim-s.svg"
   },
   "claim-u": {
     "id": "claim-u",
+    "inheritFrom": "claim-b",
     "x": 1235,
     "y": 345,
-    "width": 45,
-    "height": 45,
-    "enlarge": 3,
     "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/claim-u.svg"
   },
   "p1-area": {
@@ -118,6 +104,7 @@
     "width": 140,
     "hideWhenUnused": true,
     "hand": "hand-right",
+    "index": 1,
     "clickRoutine": [
       "var playerPrefix = substr ${playerName} 0 5",
       {
@@ -161,7 +148,7 @@
     "width": 140,
     "height": 35,
     "css": "color:#000000;font-size:30px",
-    "text": "10",
+    "text": 10,
     "editable": true
   },
   "p1-score-dec": {
@@ -177,7 +164,7 @@
     "clickRoutine": [
       {
         "func": "LABEL",
-        "label": "p1-score",
+        "label": "${PROPERTY parent}",
         "mode": "dec",
         "value": 1
       }
@@ -196,7 +183,7 @@
     "clickRoutine": [
       {
         "func": "LABEL",
-        "label": "p1-score",
+        "label": "${PROPERTY parent}",
         "mode": "inc",
         "value": 1
       }
@@ -216,12 +203,16 @@
     "id": "p1-hand-counter-left-value",
     "type": "label",
     "parent": "p1-hand-counter-left",
+    "fixedParent": true,
     "x": 6,
     "y": 20,
     "width": 30,
     "height": 30,
-    "css": "color:#000000;font-size:26px",
-    "text": "0",
+    "css": {
+      "color": "#000000",
+      "font-size": "26px"
+    },
+    "text": 0,
     "editable": false,
     "movable": false
   },
@@ -239,12 +230,16 @@
     "id": "p1-hand-counter-right-value",
     "type": "label",
     "parent": "p1-hand-counter-right",
+    "fixedParent": true,
     "x": 14,
     "y": 20,
     "width": 30,
     "height": 30,
-    "css": "color:#000000;font-size:26px",
-    "text": "0",
+    "css": {
+      "color": "#000000",
+      "font-size": "26px"
+    },
+    "text": 0,
     "editable": false,
     "movable": false
   },
@@ -495,168 +490,75 @@
   },
   "p2-area": {
     "id": "p2-area",
+    "inheritFrom": "p1-area",
     "linkedToSeat": "p2-seat",
-    "layer": -4,
-    "x": 0,
-    "y": 170,
-    "width": 640,
-    "height": 170,
-    "movable": false,
-    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/player-area.svg"
+    "y": 170
   },
   "p2-seat": {
     "id": "p2-seat",
     "type": "seat",
     "parent": "p2-area",
-    "x": 0,
-    "y": 2,
-    "height": 25,
-    "width": 140,
-    "hideWhenUnused": true,
-    "hand": "hand-right",
-    "clickRoutine": [
-      "var playerPrefix = substr ${playerName} 0 5",
-      {
-        "func": "IF",
-        "operand1": "${playerPrefix}",
-        "operand2": "Guest",
-        "thenRoutine": [
-          {
-            "func": "INPUT",
-            "header": "Enter your name and choice of player color.",
-            "fields": [
-              {
-                "type": "string",
-                "label": "Name",
-                "variable": "playerName",
-                "value": "${playerName}"
-              },
-              {
-                "type": "color",
-                "label": "Color",
-                "variable": "playerColor",
-                "value": "${playerColor}"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "func": "CLICK",
-        "collection": "thisButton",
-        "mode": "ignoreClickRoutine"
-      }
-    ]
+    "inheritFrom": {
+      "p1-seat": [
+        "x",
+        "y",
+        "height",
+        "width",
+        "hideWhenUnused",
+        "hand",
+        "clickRoutine"
+      ]
+    },
+    "index": 2
   },
   "p2-score": {
     "id": "p2-score",
     "type": "label",
     "parent": "p2-area",
-    "x": 8,
-    "y": 50,
-    "width": 140,
-    "height": 35,
-    "css": "color:#000000;font-size:30px",
-    "text": "10",
-    "editable": true
+    "inheritFrom": "p1-score",
+    "text": 10
   },
   "p2-score-dec": {
     "id": "p2-score-dec",
     "type": "button",
     "parent": "p2-score",
-    "x": 4,
-    "y": -2,
-    "width": 36,
-    "height": 36,
-    "text": "-",
-    "movableInEdit": false,
-    "clickRoutine": [
-      {
-        "func": "LABEL",
-        "label": "p2-score",
-        "mode": "dec",
-        "value": 1
-      }
-    ]
+    "inheritFrom": "p1-score-dec"
   },
   "p2-score-inc": {
     "id": "p2-score-inc",
     "type": "button",
     "parent": "p2-score",
-    "x": 100,
-    "y": -2,
-    "width": 36,
-    "height": 36,
-    "text": "+",
-    "movableInEdit": false,
-    "clickRoutine": [
-      {
-        "func": "LABEL",
-        "label": "p2-score",
-        "mode": "inc",
-        "value": 1
-      }
-    ]
+    "inheritFrom": "p1-score-inc"
   },
   "p2-hand-counter-left": {
     "id": "p2-hand-counter-left",
     "parent": "p2-area",
-    "x": 20,
-    "y": 100,
-    "width": 50,
-    "height": 50,
-    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/hand-counter-left.svg",
-    "movable": false
+    "inheritFrom": "p1-hand-counter-left"
   },
   "p2-hand-counter-left-value": {
     "id": "p2-hand-counter-left-value",
     "type": "label",
     "parent": "p2-hand-counter-left",
-    "x": 6,
-    "y": 20,
-    "width": 30,
-    "height": 30,
-    "css": "color:#000000;font-size:26px",
-    "text": "0",
-    "editable": false,
-    "movable": false
+    "inheritFrom": "p1-hand-counter-left-value",
+    "text": 0
   },
   "p2-hand-counter-right": {
     "id": "p2-hand-counter-right",
     "parent": "p2-area",
-    "x": 75,
-    "y": 100,
-    "width": 50,
-    "height": 50,
-    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/hand-counter-right.svg",
-    "movable": false
+    "inheritFrom": "p1-hand-counter-right"
   },
   "p2-hand-counter-right-value": {
     "id": "p2-hand-counter-right-value",
     "type": "label",
     "parent": "p2-hand-counter-right",
-    "x": 14,
-    "y": 20,
-    "width": 30,
-    "height": 30,
-    "css": "color:#000000;font-size:26px",
-    "text": "0",
-    "editable": false,
-    "movable": false
+    "inheritFrom": "p1-hand-counter-right-value",
+    "text": 0
   },
   "p2-cube-holder": {
     "id": "p2-cube-holder",
     "type": "holder",
     "parent": "p2-area",
-    "x": 180,
-    "y": 75,
-    "width": 24,
-    "height": 24,
-    "dropOffsetX": 0,
-    "dropOffsetY": 0,
-    "dropTarget": {
-      "deck": "player-cube-deck"
-    }
+    "inheritFrom": "p1-cube-holder"
   },
   "p2-cube-pile": {
     "id": "p2-cube-pile",
@@ -876,183 +778,79 @@
     "id": "p2-played",
     "type": "holder",
     "parent": "p2-area",
-    "x": 530,
-    "y": 10,
-    "width": 100,
-    "height": 148,
-    "dropOffsetX": 0,
-    "dropOffsetY": 0,
-    "dropTarget": {
-      "deck": "cards-action-deck"
-    },
-    "onEnter": {
-      "activeFace": 1
-    }
+    "inheritFrom": "p1-played"
   },
   "p3-area": {
     "id": "p3-area",
+    "inheritFrom": "p1-area",
     "linkedToSeat": "p3-seat",
-    "layer": -4,
-    "x": 0,
-    "y": 340,
-    "width": 640,
-    "height": 170,
-    "movable": false,
-    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/player-area.svg"
+    "y": 340
   },
   "p3-seat": {
     "id": "p3-seat",
     "type": "seat",
     "parent": "p3-area",
-    "x": 0,
-    "y": 2,
-    "height": 25,
-    "width": 140,
-    "hideWhenUnused": true,
-    "hand": "hand-right",
-    "clickRoutine": [
-      "var playerPrefix = substr ${playerName} 0 5",
-      {
-        "func": "IF",
-        "operand1": "${playerPrefix}",
-        "operand2": "Guest",
-        "thenRoutine": [
-          {
-            "func": "INPUT",
-            "header": "Enter your name and choice of player color.",
-            "fields": [
-              {
-                "type": "string",
-                "label": "Name",
-                "variable": "playerName",
-                "value": "${playerName}"
-              },
-              {
-                "type": "color",
-                "label": "Color",
-                "variable": "playerColor",
-                "value": "${playerColor}"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "func": "CLICK",
-        "collection": "thisButton",
-        "mode": "ignoreClickRoutine"
-      }
-    ]
+    "inheritFrom": {
+      "p1-seat": [
+        "x",
+        "y",
+        "height",
+        "width",
+        "hideWhenUnused",
+        "hand",
+        "clickRoutine"
+      ]
+    },
+    "index": 3
   },
   "p3-score": {
     "id": "p3-score",
     "type": "label",
     "parent": "p3-area",
-    "x": 8,
-    "y": 50,
-    "width": 140,
-    "height": 35,
-    "css": "color:#000000;font-size:30px",
-    "text": "10",
-    "editable": true
+    "inheritFrom": "p1-score",
+    "text": 10
   },
   "p3-score-dec": {
     "id": "p3-score-dec",
     "type": "button",
     "parent": "p3-score",
-    "x": 4,
-    "y": -2,
-    "width": 36,
-    "height": 36,
-    "text": "-",
-    "movableInEdit": false,
-    "clickRoutine": [
-      {
-        "func": "LABEL",
-        "label": "p3-score",
-        "mode": "dec",
-        "value": 1
-      }
-    ]
+    "inheritFrom": "p1-score-dec"
   },
   "p3-score-inc": {
     "id": "p3-score-inc",
     "type": "button",
     "parent": "p3-score",
-    "x": 100,
-    "y": -2,
-    "width": 36,
-    "height": 36,
-    "text": "+",
-    "movableInEdit": false,
-    "clickRoutine": [
-      {
-        "func": "LABEL",
-        "label": "p3-score",
-        "mode": "inc",
-        "value": 1
-      }
-    ]
+    "inheritFrom": "p1-score-inc"
   },
   "p3-hand-counter-left": {
     "id": "p3-hand-counter-left",
     "parent": "p3-area",
-    "x": 20,
-    "y": 100,
-    "width": 50,
-    "height": 50,
-    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/hand-counter-left.svg",
-    "movable": false
+    "inheritFrom": "p1-hand-counter-left"
   },
   "p3-hand-counter-left-value": {
     "id": "p3-hand-counter-left-value",
     "type": "label",
     "parent": "p3-hand-counter-left",
-    "x": 6,
-    "y": 20,
-    "width": 30,
-    "height": 30,
-    "css": "color:#000000;font-size:26px",
-    "text": "0",
-    "editable": false,
-    "movable": false
+    "inheritFrom": "p1-hand-counter-left-value",
+    "text": 0
   },
   "p3-hand-counter-right": {
     "id": "p3-hand-counter-right",
     "parent": "p3-area",
-    "x": 75,
-    "y": 100,
-    "width": 50,
-    "height": 50,
-    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/hand-counter-right.svg",
-    "movable": false
+    "inheritFrom": "p1-hand-counter-right"
   },
   "p3-hand-counter-right-value": {
     "id": "p3-hand-counter-right-value",
     "type": "label",
     "parent": "p3-hand-counter-right",
-    "x": 14,
-    "y": 20,
-    "width": 30,
-    "height": 30,
-    "css": "color:#000000;font-size:26px",
-    "text": "0",
-    "editable": false,
-    "movable": false
+    "inheritFrom": "p1-hand-counter-right-value",
+    "text": 0
   },
   "p3-cube-holder": {
     "id": "p3-cube-holder",
     "type": "holder",
     "parent": "p3-area",
-    "x": 180,
-    "y": 75,
-    "width": 24,
-    "height": 24,
-    "dropOffsetX": 0,
-    "dropOffsetY": 0,
-    "dropTarget": {
-      "deck": "player-cube-deck"
-    }
+    "inheritFrom": "p1-cube-holder"
   },
   "p3-cube-pile": {
     "id": "p3-cube-pile",
@@ -1272,183 +1070,79 @@
     "id": "p3-played",
     "type": "holder",
     "parent": "p3-area",
-    "x": 530,
-    "y": 10,
-    "width": 100,
-    "height": 148,
-    "dropOffsetX": 0,
-    "dropOffsetY": 0,
-    "dropTarget": {
-      "deck": "cards-action-deck"
-    },
-    "onEnter": {
-      "activeFace": 1
-    }
+    "inheritFrom": "p1-played"
   },
   "p4-area": {
     "id": "p4-area",
+    "inheritFrom": "p1-area",
     "linkedToSeat": "p4-seat",
-    "layer": -4,
-    "x": 0,
-    "y": 510,
-    "width": 640,
-    "height": 170,
-    "movable": false,
-    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/player-area.svg"
+    "y": 510
   },
   "p4-seat": {
     "id": "p4-seat",
     "type": "seat",
     "parent": "p4-area",
-    "x": 0,
-    "y": 2,
-    "height": 25,
-    "width": 140,
-    "hideWhenUnused": true,
-    "hand": "hand-right",
-    "clickRoutine": [
-      "var playerPrefix = substr ${playerName} 0 5",
-      {
-        "func": "IF",
-        "operand1": "${playerPrefix}",
-        "operand2": "Guest",
-        "thenRoutine": [
-          {
-            "func": "INPUT",
-            "header": "Enter your name and choice of player color.",
-            "fields": [
-              {
-                "type": "string",
-                "label": "Name",
-                "variable": "playerName",
-                "value": "${playerName}"
-              },
-              {
-                "type": "color",
-                "label": "Color",
-                "variable": "playerColor",
-                "value": "${playerColor}"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "func": "CLICK",
-        "collection": "thisButton",
-        "mode": "ignoreClickRoutine"
-      }
-    ]
+    "inheritFrom": {
+      "p1-seat": [
+        "x",
+        "y",
+        "height",
+        "width",
+        "hideWhenUnused",
+        "hand",
+        "clickRoutine"
+      ]
+    },
+    "index": 4
   },
   "p4-score": {
     "id": "p4-score",
     "type": "label",
     "parent": "p4-area",
-    "x": 8,
-    "y": 50,
-    "width": 140,
-    "height": 35,
-    "css": "color:#000000;font-size:30px",
-    "text": "10",
-    "editable": true
+    "inheritFrom": "p1-score",
+    "text": 10
   },
   "p4-score-dec": {
     "id": "p4-score-dec",
     "type": "button",
     "parent": "p4-score",
-    "x": 4,
-    "y": -2,
-    "width": 36,
-    "height": 36,
-    "text": "-",
-    "movableInEdit": false,
-    "clickRoutine": [
-      {
-        "func": "LABEL",
-        "label": "p4-score",
-        "mode": "dec",
-        "value": 1
-      }
-    ]
+    "inheritFrom": "p1-score-dec"
   },
   "p4-score-inc": {
     "id": "p4-score-inc",
     "type": "button",
     "parent": "p4-score",
-    "x": 100,
-    "y": -2,
-    "width": 36,
-    "height": 36,
-    "text": "+",
-    "movableInEdit": false,
-    "clickRoutine": [
-      {
-        "func": "LABEL",
-        "label": "p4-score",
-        "mode": "inc",
-        "value": 1
-      }
-    ]
+    "inheritFrom": "p1-score-inc"
   },
   "p4-hand-counter-left": {
     "id": "p4-hand-counter-left",
     "parent": "p4-area",
-    "x": 20,
-    "y": 100,
-    "width": 50,
-    "height": 50,
-    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/hand-counter-left.svg",
-    "movable": false
+    "inheritFrom": "p1-hand-counter-left"
   },
   "p4-hand-counter-left-value": {
     "id": "p4-hand-counter-left-value",
     "type": "label",
     "parent": "p4-hand-counter-left",
-    "x": 6,
-    "y": 20,
-    "width": 30,
-    "height": 30,
-    "css": "color:#000000;font-size:26px",
-    "text": "0",
-    "editable": false,
-    "movable": false
+    "inheritFrom": "p1-hand-counter-left-value",
+    "text": 0
   },
   "p4-hand-counter-right": {
     "id": "p4-hand-counter-right",
     "parent": "p4-area",
-    "x": 75,
-    "y": 100,
-    "width": 50,
-    "height": 50,
-    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/hand-counter-right.svg",
-    "movable": false
+    "inheritFrom": "p1-hand-counter-right"
   },
   "p4-hand-counter-right-value": {
     "id": "p4-hand-counter-right-value",
     "type": "label",
     "parent": "p4-hand-counter-right",
-    "x": 14,
-    "y": 20,
-    "width": 30,
-    "height": 30,
-    "css": "color:#000000;font-size:26px",
-    "text": "0",
-    "editable": false,
-    "movable": false
+    "inheritFrom": "p1-hand-counter-right-value",
+    "text": 0
   },
   "p4-cube-holder": {
     "id": "p4-cube-holder",
     "type": "holder",
     "parent": "p4-area",
-    "x": 180,
-    "y": 75,
-    "width": 24,
-    "height": 24,
-    "dropOffsetX": 0,
-    "dropOffsetY": 0,
-    "dropTarget": {
-      "deck": "player-cube-deck"
-    }
+    "inheritFrom": "p1-cube-holder"
   },
   "p4-cube-pile": {
     "id": "p4-cube-pile",
@@ -1668,183 +1362,79 @@
     "id": "p4-played",
     "type": "holder",
     "parent": "p4-area",
-    "x": 530,
-    "y": 10,
-    "width": 100,
-    "height": 148,
-    "dropOffsetX": 0,
-    "dropOffsetY": 0,
-    "dropTarget": {
-      "deck": "cards-action-deck"
-    },
-    "onEnter": {
-      "activeFace": 1
-    }
+    "inheritFrom": "p1-played"
   },
   "p5-area": {
     "id": "p5-area",
+    "inheritFrom": "p1-area",
     "linkedToSeat": "p5-seat",
-    "layer": -4,
-    "x": 0,
-    "y": 680,
-    "width": 640,
-    "height": 170,
-    "movable": false,
-    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/player-area.svg"
+    "y": 680
   },
   "p5-seat": {
     "id": "p5-seat",
     "type": "seat",
     "parent": "p5-area",
-    "x": 0,
-    "y": 2,
-    "height": 25,
-    "width": 140,
-    "hideWhenUnused": true,
-    "hand": "hand-right",
-    "clickRoutine": [
-      "var playerPrefix = substr ${playerName} 0 5",
-      {
-        "func": "IF",
-        "operand1": "${playerPrefix}",
-        "operand2": "Guest",
-        "thenRoutine": [
-          {
-            "func": "INPUT",
-            "header": "Enter your name and choice of player color.",
-            "fields": [
-              {
-                "type": "string",
-                "label": "Name",
-                "variable": "playerName",
-                "value": "${playerName}"
-              },
-              {
-                "type": "color",
-                "label": "Color",
-                "variable": "playerColor",
-                "value": "${playerColor}"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "func": "CLICK",
-        "collection": "thisButton",
-        "mode": "ignoreClickRoutine"
-      }
-    ]
+    "inheritFrom": {
+      "p1-seat": [
+        "x",
+        "y",
+        "height",
+        "width",
+        "hideWhenUnused",
+        "hand",
+        "clickRoutine"
+      ]
+    },
+    "index": 5
   },
   "p5-score": {
     "id": "p5-score",
     "type": "label",
     "parent": "p5-area",
-    "x": 8,
-    "y": 50,
-    "width": 140,
-    "height": 35,
-    "css": "color:#000000;font-size:30px",
-    "text": "10",
-    "editable": true
+    "inheritFrom": "p1-score",
+    "text": 10
   },
   "p5-score-dec": {
     "id": "p5-score-dec",
     "type": "button",
     "parent": "p5-score",
-    "x": 4,
-    "y": -2,
-    "width": 36,
-    "height": 36,
-    "text": "-",
-    "movableInEdit": false,
-    "clickRoutine": [
-      {
-        "func": "LABEL",
-        "label": "p5-score",
-        "mode": "dec",
-        "value": 1
-      }
-    ]
+    "inheritFrom": "p1-score-dec"
   },
   "p5-score-inc": {
     "id": "p5-score-inc",
     "type": "button",
     "parent": "p5-score",
-    "x": 100,
-    "y": -2,
-    "width": 36,
-    "height": 36,
-    "text": "+",
-    "movableInEdit": false,
-    "clickRoutine": [
-      {
-        "func": "LABEL",
-        "label": "p5-score",
-        "mode": "inc",
-        "value": 1
-      }
-    ]
+    "inheritFrom": "p1-score-inc"
   },
   "p5-hand-counter-left": {
     "id": "p5-hand-counter-left",
     "parent": "p5-area",
-    "x": 20,
-    "y": 100,
-    "width": 50,
-    "height": 50,
-    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/hand-counter-left.svg",
-    "movable": false
+    "inheritFrom": "p1-hand-counter-left"
   },
   "p5-hand-counter-left-value": {
     "id": "p5-hand-counter-left-value",
     "type": "label",
     "parent": "p5-hand-counter-left",
-    "x": 6,
-    "y": 20,
-    "width": 30,
-    "height": 30,
-    "css": "color:#000000;font-size:26px",
-    "text": "0",
-    "editable": false,
-    "movable": false
+    "inheritFrom": "p1-hand-counter-left-value",
+    "text": 0
   },
   "p5-hand-counter-right": {
     "id": "p5-hand-counter-right",
     "parent": "p5-area",
-    "x": 75,
-    "y": 100,
-    "width": 50,
-    "height": 50,
-    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/hand-counter-right.svg",
-    "movable": false
+    "inheritFrom": "p1-hand-counter-right"
   },
   "p5-hand-counter-right-value": {
     "id": "p5-hand-counter-right-value",
     "type": "label",
     "parent": "p5-hand-counter-right",
-    "x": 14,
-    "y": 20,
-    "width": 30,
-    "height": 30,
-    "css": "color:#000000;font-size:26px",
-    "text": "0",
-    "editable": false,
-    "movable": false
+    "inheritFrom": "p1-hand-counter-right-value",
+    "text": 0
   },
   "p5-cube-holder": {
     "id": "p5-cube-holder",
     "type": "holder",
     "parent": "p5-area",
-    "x": 180,
-    "y": 75,
-    "width": 24,
-    "height": 24,
-    "dropOffsetX": 0,
-    "dropOffsetY": 0,
-    "dropTarget": {
-      "deck": "player-cube-deck"
-    }
+    "inheritFrom": "p1-cube-holder"
   },
   "p5-cube-pile": {
     "id": "p5-cube-pile",
@@ -2064,18 +1654,7 @@
     "id": "p5-played",
     "type": "holder",
     "parent": "p5-area",
-    "x": 530,
-    "y": 10,
-    "width": 100,
-    "height": 148,
-    "dropOffsetX": 0,
-    "dropOffsetY": 0,
-    "dropTarget": {
-      "deck": "cards-action-deck"
-    },
-    "onEnter": {
-      "activeFace": 1
-    }
+    "inheritFrom": "p1-played"
   },
   "hand-left": {
     "id": "hand-left",
@@ -2099,6 +1678,11 @@
     "onLeave": {
       "activeFace": 0
     },
+    "getCounterRoutine": [
+      "var playerNo = ${playerIx} + 1",
+      "var label = 'p' + ${playerNo}",
+      "var result = ${label} + '-hand-counter-left-value'"
+    ],
     "countRoutine": [
       {
         "func": "FOREACH",
@@ -2134,15 +1718,19 @@
             "func": "COUNT",
             "collection": "cardsInHand"
           },
-          "var labelNum = ${key} + 1",
-          "var labelPlayer = 'p' + ${labelNum}",
-          "var labelName = ${labelPlayer} + '-hand-counter-left-value'",
+          {
+            "func": "CALL",
+            "routine": "getCounterRoutine",
+            "arguments": {
+              "playerIx": "${key}"
+            },
+            "variable": "labelName"
+          },
           {
             "func": "LABEL",
             "collection": [
               "${labelName}"
             ],
-            "mode": "SET",
             "value": "${COUNT}"
           }
         ]
@@ -2164,85 +1752,13 @@
   "hand-right": {
     "id": "hand-right",
     "type": "holder",
-    "childrenPerOwner": true,
-    "layer": -3,
+    "inheritFrom": "hand-left",
     "x": 800,
     "y": 850,
-    "width": 800,
-    "height": 150,
-    "dropOffsetX": 0,
-    "dropOffsetY": 0,
-    "stackOffsetX": 100,
-    "stackOffsetY": 0,
-    "dropTarget": {
-      "deck": "cards-action-deck"
-    },
-    "onEnter": {
-      "activeFace": 1
-    },
-    "onLeave": {
-      "activeFace": 0
-    },
-    "countRoutine": [
-      {
-        "func": "FOREACH",
-        "in": [
-          "p1-seat",
-          "p2-seat",
-          "p3-seat",
-          "p4-seat",
-          "p5-seat"
-        ],
-        "loopRoutine": [
-          {
-            "func": "GET",
-            "collection": [
-              "${value}"
-            ],
-            "property": "player",
-            "variable": "pID"
-          },
-          {
-            "func": "SELECT",
-            "property": "parent",
-            "value": "${PROPERTY id}"
-          },
-          {
-            "func": "SELECT",
-            "source": "DEFAULT",
-            "property": "owner",
-            "value": "${pID}",
-            "collection": "cardsInHand"
-          },
-          {
-            "func": "COUNT",
-            "collection": "cardsInHand"
-          },
-          "var labelNum = ${key} + 1",
-          "var labelPlayer = 'p' + ${labelNum}",
-          "var labelName = ${labelPlayer} + '-hand-counter-right-value'",
-          {
-            "func": "LABEL",
-            "collection": [
-              "${labelName}"
-            ],
-            "mode": "SET",
-            "value": "${COUNT}"
-          }
-        ]
-      }
-    ],
-    "enterRoutine": [
-      {
-        "func": "CALL",
-        "routine": "countRoutine"
-      }
-    ],
-    "leaveRoutine": [
-      {
-        "func": "CALL",
-        "routine": "countRoutine"
-      }
+    "getCounterRoutine": [
+      "var playerNo = ${playerIx} + 1",
+      "var label = 'p' + ${playerNo}",
+      "var result = ${label} + '-hand-counter-right-value'"
     ]
   },
   "button-deal-hands": {
@@ -2445,13 +1961,7 @@
     "type": "holder",
     "x": 1185,
     "y": 11,
-    "height": 148,
-    "width": 100,
-    "dropOffsetX": 0,
-    "dropOffsetY": 0,
-    "dropTarget": {
-      "deck": "cards-action-deck"
-    },
+    "inheritFrom": "cards-action-holder",
     "onEnter": {
       "activeFace": 1
     }
@@ -4294,31 +3804,16 @@
   "cards-marriage-holder-draw": {
     "id": "cards-marriage-holder-draw",
     "type": "holder",
+    "inheritFrom": "card-marriage-holder",
     "x": 750,
-    "y": 500,
-    "height": 148,
-    "width": 100,
-    "dropOffsetX": 0,
-    "dropOffsetY": 0,
-    "dropTarget": {
-      "deck": "cards-marriage-deck"
-    },
-    "onEnter": {
-      "activeFace": 0
-    }
+    "y": 500
   },
   "cards-marriage-holder-current": {
     "id": "cards-marriage-holder-current",
     "type": "holder",
+    "inheritFrom": "card-marriage-holder",
     "x": 750,
     "y": 660,
-    "height": 148,
-    "width": 100,
-    "dropOffsetX": 0,
-    "dropOffsetY": 0,
-    "dropTarget": {
-      "deck": "cards-marriage-deck"
-    },
     "onEnter": {
       "activeFace": 1
     }
