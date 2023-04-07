@@ -1810,11 +1810,6 @@
     "onLeave": {
       "activeFace": 0
     },
-    "getCounterRoutine": [
-      "var playerNo = ${playerIx} + 1",
-      "var label = 'p' + ${playerNo}",
-      "var result = ${label} + '-hand-counter-left'"
-    ],
     "countRoutine": [
       {
         "func": "FOREACH",
@@ -1850,19 +1845,11 @@
             "func": "COUNT",
             "collection": "cardsInHand"
           },
-          {
-            "func": "CALL",
-            "routine": "getCounterRoutine",
-            "arguments": {
-              "playerIx": "${key}"
-            },
-            "variable": "labelName"
-          },
+          "var playerNo = ${key} + 1",
+          "var hand = substr ${PROPERTY id} 5 8",
           {
             "func": "LABEL",
-            "collection": [
-              "${labelName}"
-            ],
+            "label": "p${playerNo}-hand-counter-${hand}",
             "value": "${COUNT}"
           }
         ]
@@ -1886,12 +1873,7 @@
     "type": "holder",
     "inheritFrom": "hand-left",
     "x": 800,
-    "y": 850,
-    "getCounterRoutine": [
-      "var playerNo = ${playerIx} + 1",
-      "var label = 'p' + ${playerNo}",
-      "var result = ${label} + '-hand-counter-right'"
-    ]
+    "y": 850
   },
   "button-deal-hands": {
     "id": "button-deal-hands",
