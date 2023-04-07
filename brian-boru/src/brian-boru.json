@@ -136,6 +136,16 @@
         "func": "CLICK",
         "collection": "thisButton",
         "mode": "ignoreClickRoutine"
+      },
+      {
+        "func": "SELECT",
+        "property": "cardType",
+        "value": "player-cube-p${PROPERTY index}"
+      },
+      {
+        "func": "SET",
+        "property": "color",
+        "value": "${PROPERTY color}"
       }
     ]
   },
@@ -316,10 +326,10 @@
     "id": "p1-cube-holder",
     "type": "holder",
     "parent": "p1-area",
-    "x": 203,
-    "y": 23,
-    "width": 24,
-    "height": 24,
+    "x": 200,
+    "y": 20,
+    "width": 30,
+    "height": 30,
     "dropOffsetX": 0,
     "dropOffsetY": 0,
     "dropTarget": {
@@ -338,7 +348,7 @@
     "type": "card",
     "parent": "p1-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-ltblue",
+    "cardType": "player-cube-p1",
     "z": 1
   },
   "p1-cube-02": {
@@ -346,7 +356,7 @@
     "type": "card",
     "parent": "p1-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-ltblue",
+    "cardType": "player-cube-p1",
     "z": 2
   },
   "p1-cube-03": {
@@ -354,7 +364,7 @@
     "type": "card",
     "parent": "p1-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-ltblue",
+    "cardType": "player-cube-p1",
     "z": 3
   },
   "p1-cube-04": {
@@ -362,7 +372,7 @@
     "type": "card",
     "parent": "p1-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-ltblue",
+    "cardType": "player-cube-p1",
     "z": 4
   },
   "p1-cube-05": {
@@ -370,7 +380,7 @@
     "type": "card",
     "parent": "p1-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-ltblue",
+    "cardType": "player-cube-p1",
     "z": 5
   },
   "p1-cube-06": {
@@ -378,7 +388,7 @@
     "type": "card",
     "parent": "p1-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-ltblue",
+    "cardType": "player-cube-p1",
     "z": 6
   },
   "p1-cube-07": {
@@ -386,7 +396,7 @@
     "type": "card",
     "parent": "p1-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-ltblue",
+    "cardType": "player-cube-p1",
     "z": 7
   },
   "p1-cube-08": {
@@ -394,7 +404,7 @@
     "type": "card",
     "parent": "p1-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-ltblue",
+    "cardType": "player-cube-p1",
     "z": 8
   },
   "p1-cube-09": {
@@ -402,7 +412,7 @@
     "type": "card",
     "parent": "p1-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-ltblue",
+    "cardType": "player-cube-p1",
     "z": 9
   },
   "p1-cube-10": {
@@ -410,7 +420,7 @@
     "type": "card",
     "parent": "p1-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-ltblue",
+    "cardType": "player-cube-p1",
     "z": 10
   },
   "p1-cube-11": {
@@ -418,7 +428,7 @@
     "type": "card",
     "parent": "p1-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-ltblue",
+    "cardType": "player-cube-p1",
     "z": 11
   },
   "p1-cube-12": {
@@ -426,7 +436,7 @@
     "type": "card",
     "parent": "p1-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-ltblue",
+    "cardType": "player-cube-p1",
     "z": 12
   },
   "p1-cube-13": {
@@ -434,7 +444,7 @@
     "type": "card",
     "parent": "p1-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-ltblue",
+    "cardType": "player-cube-p1",
     "z": 13
   },
   "p1-cube-14": {
@@ -442,7 +452,7 @@
     "type": "card",
     "parent": "p1-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-ltblue",
+    "cardType": "player-cube-p1",
     "z": 14
   },
   "p1-cube-15": {
@@ -450,7 +460,7 @@
     "type": "card",
     "parent": "p1-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-ltblue",
+    "cardType": "player-cube-p1",
     "z": 15
   },
   "p1-cube-16": {
@@ -458,7 +468,7 @@
     "type": "card",
     "parent": "p1-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-ltblue",
+    "cardType": "player-cube-p1",
     "z": 16
   },
   "p1-cube-17": {
@@ -466,7 +476,7 @@
     "type": "card",
     "parent": "p1-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-ltblue",
+    "cardType": "player-cube-p1",
     "z": 17
   },
   "p1-cube-18": {
@@ -474,7 +484,7 @@
     "type": "card",
     "parent": "p1-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-ltblue",
+    "cardType": "player-cube-p1",
     "z": 18
   },
   "p1-cube-19": {
@@ -482,7 +492,7 @@
     "type": "card",
     "parent": "p1-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-ltblue",
+    "cardType": "player-cube-p1",
     "z": 19
   },
   "p1-cube-20": {
@@ -490,7 +500,7 @@
     "type": "card",
     "parent": "p1-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-ltblue",
+    "cardType": "player-cube-p1",
     "z": 20
   },
   "p1-cube-21": {
@@ -498,7 +508,7 @@
     "type": "card",
     "parent": "p1-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-ltblue",
+    "cardType": "player-cube-p1",
     "z": 21
   },
   "p1-cube-22": {
@@ -506,7 +516,7 @@
     "type": "card",
     "parent": "p1-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-ltblue",
+    "cardType": "player-cube-p1",
     "z": 22
   },
   "p1-cube-23": {
@@ -514,7 +524,7 @@
     "type": "card",
     "parent": "p1-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-ltblue",
+    "cardType": "player-cube-p1",
     "z": 23
   },
   "p1-cube-24": {
@@ -522,7 +532,7 @@
     "type": "card",
     "parent": "p1-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-ltblue",
+    "cardType": "player-cube-p1",
     "z": 24
   },
   "p1-cube-25": {
@@ -530,7 +540,7 @@
     "type": "card",
     "parent": "p1-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-ltblue",
+    "cardType": "player-cube-p1",
     "z": 25
   },
   "p1-played": {
@@ -656,7 +666,7 @@
     "type": "card",
     "parent": "p2-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-purple",
+    "cardType": "player-cube-p2",
     "z": 1
   },
   "p2-cube-02": {
@@ -664,7 +674,7 @@
     "type": "card",
     "parent": "p2-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-purple",
+    "cardType": "player-cube-p2",
     "z": 2
   },
   "p2-cube-03": {
@@ -672,7 +682,7 @@
     "type": "card",
     "parent": "p2-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-purple",
+    "cardType": "player-cube-p2",
     "z": 3
   },
   "p2-cube-04": {
@@ -680,7 +690,7 @@
     "type": "card",
     "parent": "p2-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-purple",
+    "cardType": "player-cube-p2",
     "z": 4
   },
   "p2-cube-05": {
@@ -688,7 +698,7 @@
     "type": "card",
     "parent": "p2-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-purple",
+    "cardType": "player-cube-p2",
     "z": 5
   },
   "p2-cube-06": {
@@ -696,7 +706,7 @@
     "type": "card",
     "parent": "p2-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-purple",
+    "cardType": "player-cube-p2",
     "z": 6
   },
   "p2-cube-07": {
@@ -704,7 +714,7 @@
     "type": "card",
     "parent": "p2-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-purple",
+    "cardType": "player-cube-p2",
     "z": 7
   },
   "p2-cube-08": {
@@ -712,7 +722,7 @@
     "type": "card",
     "parent": "p2-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-purple",
+    "cardType": "player-cube-p2",
     "z": 8
   },
   "p2-cube-09": {
@@ -720,7 +730,7 @@
     "type": "card",
     "parent": "p2-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-purple",
+    "cardType": "player-cube-p2",
     "z": 9
   },
   "p2-cube-10": {
@@ -728,7 +738,7 @@
     "type": "card",
     "parent": "p2-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-purple",
+    "cardType": "player-cube-p2",
     "z": 10
   },
   "p2-cube-11": {
@@ -736,7 +746,7 @@
     "type": "card",
     "parent": "p2-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-purple",
+    "cardType": "player-cube-p2",
     "z": 11
   },
   "p2-cube-12": {
@@ -744,7 +754,7 @@
     "type": "card",
     "parent": "p2-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-purple",
+    "cardType": "player-cube-p2",
     "z": 12
   },
   "p2-cube-13": {
@@ -752,7 +762,7 @@
     "type": "card",
     "parent": "p2-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-purple",
+    "cardType": "player-cube-p2",
     "z": 13
   },
   "p2-cube-14": {
@@ -760,7 +770,7 @@
     "type": "card",
     "parent": "p2-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-purple",
+    "cardType": "player-cube-p2",
     "z": 14
   },
   "p2-cube-15": {
@@ -768,7 +778,7 @@
     "type": "card",
     "parent": "p2-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-purple",
+    "cardType": "player-cube-p2",
     "z": 15
   },
   "p2-cube-16": {
@@ -776,7 +786,7 @@
     "type": "card",
     "parent": "p2-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-purple",
+    "cardType": "player-cube-p2",
     "z": 16
   },
   "p2-cube-17": {
@@ -784,7 +794,7 @@
     "type": "card",
     "parent": "p2-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-purple",
+    "cardType": "player-cube-p2",
     "z": 17
   },
   "p2-cube-18": {
@@ -792,7 +802,7 @@
     "type": "card",
     "parent": "p2-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-purple",
+    "cardType": "player-cube-p2",
     "z": 18
   },
   "p2-cube-19": {
@@ -800,7 +810,7 @@
     "type": "card",
     "parent": "p2-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-purple",
+    "cardType": "player-cube-p2",
     "z": 19
   },
   "p2-cube-20": {
@@ -808,7 +818,7 @@
     "type": "card",
     "parent": "p2-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-purple",
+    "cardType": "player-cube-p2",
     "z": 20
   },
   "p2-cube-21": {
@@ -816,7 +826,7 @@
     "type": "card",
     "parent": "p2-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-purple",
+    "cardType": "player-cube-p2",
     "z": 21
   },
   "p2-cube-22": {
@@ -824,7 +834,7 @@
     "type": "card",
     "parent": "p2-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-purple",
+    "cardType": "player-cube-p2",
     "z": 22
   },
   "p2-cube-23": {
@@ -832,7 +842,7 @@
     "type": "card",
     "parent": "p2-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-purple",
+    "cardType": "player-cube-p2",
     "z": 23
   },
   "p2-cube-24": {
@@ -840,7 +850,7 @@
     "type": "card",
     "parent": "p2-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-purple",
+    "cardType": "player-cube-p2",
     "z": 24
   },
   "p2-cube-25": {
@@ -848,7 +858,7 @@
     "type": "card",
     "parent": "p2-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-purple",
+    "cardType": "player-cube-p2",
     "z": 25
   },
   "p2-played": {
@@ -963,7 +973,7 @@
     "type": "card",
     "parent": "p3-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-orange",
+    "cardType": "player-cube-p3",
     "z": 1
   },
   "p3-cube-02": {
@@ -971,7 +981,7 @@
     "type": "card",
     "parent": "p3-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-orange",
+    "cardType": "player-cube-p3",
     "z": 2
   },
   "p3-cube-03": {
@@ -979,7 +989,7 @@
     "type": "card",
     "parent": "p3-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-orange",
+    "cardType": "player-cube-p3",
     "z": 3
   },
   "p3-cube-04": {
@@ -987,7 +997,7 @@
     "type": "card",
     "parent": "p3-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-orange",
+    "cardType": "player-cube-p3",
     "z": 4
   },
   "p3-cube-05": {
@@ -995,7 +1005,7 @@
     "type": "card",
     "parent": "p3-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-orange",
+    "cardType": "player-cube-p3",
     "z": 5
   },
   "p3-cube-06": {
@@ -1003,7 +1013,7 @@
     "type": "card",
     "parent": "p3-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-orange",
+    "cardType": "player-cube-p3",
     "z": 6
   },
   "p3-cube-07": {
@@ -1011,7 +1021,7 @@
     "type": "card",
     "parent": "p3-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-orange",
+    "cardType": "player-cube-p3",
     "z": 7
   },
   "p3-cube-08": {
@@ -1019,7 +1029,7 @@
     "type": "card",
     "parent": "p3-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-orange",
+    "cardType": "player-cube-p3",
     "z": 8
   },
   "p3-cube-09": {
@@ -1027,7 +1037,7 @@
     "type": "card",
     "parent": "p3-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-orange",
+    "cardType": "player-cube-p3",
     "z": 9
   },
   "p3-cube-10": {
@@ -1035,7 +1045,7 @@
     "type": "card",
     "parent": "p3-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-orange",
+    "cardType": "player-cube-p3",
     "z": 10
   },
   "p3-cube-11": {
@@ -1043,7 +1053,7 @@
     "type": "card",
     "parent": "p3-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-orange",
+    "cardType": "player-cube-p3",
     "z": 11
   },
   "p3-cube-12": {
@@ -1051,7 +1061,7 @@
     "type": "card",
     "parent": "p3-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-orange",
+    "cardType": "player-cube-p3",
     "z": 12
   },
   "p3-cube-13": {
@@ -1059,7 +1069,7 @@
     "type": "card",
     "parent": "p3-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-orange",
+    "cardType": "player-cube-p3",
     "z": 13
   },
   "p3-cube-14": {
@@ -1067,7 +1077,7 @@
     "type": "card",
     "parent": "p3-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-orange",
+    "cardType": "player-cube-p3",
     "z": 14
   },
   "p3-cube-15": {
@@ -1075,7 +1085,7 @@
     "type": "card",
     "parent": "p3-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-orange",
+    "cardType": "player-cube-p3",
     "z": 15
   },
   "p3-cube-16": {
@@ -1083,7 +1093,7 @@
     "type": "card",
     "parent": "p3-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-orange",
+    "cardType": "player-cube-p3",
     "z": 16
   },
   "p3-cube-17": {
@@ -1091,7 +1101,7 @@
     "type": "card",
     "parent": "p3-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-orange",
+    "cardType": "player-cube-p3",
     "z": 17
   },
   "p3-cube-18": {
@@ -1099,7 +1109,7 @@
     "type": "card",
     "parent": "p3-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-orange",
+    "cardType": "player-cube-p3",
     "z": 18
   },
   "p3-cube-19": {
@@ -1107,7 +1117,7 @@
     "type": "card",
     "parent": "p3-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-orange",
+    "cardType": "player-cube-p3",
     "z": 19
   },
   "p3-cube-20": {
@@ -1115,7 +1125,7 @@
     "type": "card",
     "parent": "p3-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-orange",
+    "cardType": "player-cube-p3",
     "z": 20
   },
   "p3-cube-21": {
@@ -1123,7 +1133,7 @@
     "type": "card",
     "parent": "p3-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-orange",
+    "cardType": "player-cube-p3",
     "z": 21
   },
   "p3-cube-22": {
@@ -1131,7 +1141,7 @@
     "type": "card",
     "parent": "p3-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-orange",
+    "cardType": "player-cube-p3",
     "z": 22
   },
   "p3-cube-23": {
@@ -1139,7 +1149,7 @@
     "type": "card",
     "parent": "p3-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-orange",
+    "cardType": "player-cube-p3",
     "z": 23
   },
   "p3-cube-24": {
@@ -1147,7 +1157,7 @@
     "type": "card",
     "parent": "p3-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-orange",
+    "cardType": "player-cube-p3",
     "z": 24
   },
   "p3-cube-25": {
@@ -1155,7 +1165,7 @@
     "type": "card",
     "parent": "p3-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-orange",
+    "cardType": "player-cube-p3",
     "z": 25
   },
   "p3-played": {
@@ -1270,7 +1280,7 @@
     "type": "card",
     "parent": "p4-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-green",
+    "cardType": "player-cube-p4",
     "z": 1
   },
   "p4-cube-02": {
@@ -1278,7 +1288,7 @@
     "type": "card",
     "parent": "p4-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-green",
+    "cardType": "player-cube-p4",
     "z": 2
   },
   "p4-cube-03": {
@@ -1286,7 +1296,7 @@
     "type": "card",
     "parent": "p4-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-green",
+    "cardType": "player-cube-p4",
     "z": 3
   },
   "p4-cube-04": {
@@ -1294,7 +1304,7 @@
     "type": "card",
     "parent": "p4-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-green",
+    "cardType": "player-cube-p4",
     "z": 4
   },
   "p4-cube-05": {
@@ -1302,7 +1312,7 @@
     "type": "card",
     "parent": "p4-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-green",
+    "cardType": "player-cube-p4",
     "z": 5
   },
   "p4-cube-06": {
@@ -1310,7 +1320,7 @@
     "type": "card",
     "parent": "p4-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-green",
+    "cardType": "player-cube-p4",
     "z": 6
   },
   "p4-cube-07": {
@@ -1318,7 +1328,7 @@
     "type": "card",
     "parent": "p4-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-green",
+    "cardType": "player-cube-p4",
     "z": 7
   },
   "p4-cube-08": {
@@ -1326,7 +1336,7 @@
     "type": "card",
     "parent": "p4-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-green",
+    "cardType": "player-cube-p4",
     "z": 8
   },
   "p4-cube-09": {
@@ -1334,7 +1344,7 @@
     "type": "card",
     "parent": "p4-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-green",
+    "cardType": "player-cube-p4",
     "z": 9
   },
   "p4-cube-10": {
@@ -1342,7 +1352,7 @@
     "type": "card",
     "parent": "p4-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-green",
+    "cardType": "player-cube-p4",
     "z": 10
   },
   "p4-cube-11": {
@@ -1350,7 +1360,7 @@
     "type": "card",
     "parent": "p4-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-green",
+    "cardType": "player-cube-p4",
     "z": 11
   },
   "p4-cube-12": {
@@ -1358,7 +1368,7 @@
     "type": "card",
     "parent": "p4-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-green",
+    "cardType": "player-cube-p4",
     "z": 12
   },
   "p4-cube-13": {
@@ -1366,7 +1376,7 @@
     "type": "card",
     "parent": "p4-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-green",
+    "cardType": "player-cube-p4",
     "z": 13
   },
   "p4-cube-14": {
@@ -1374,7 +1384,7 @@
     "type": "card",
     "parent": "p4-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-green",
+    "cardType": "player-cube-p4",
     "z": 14
   },
   "p4-cube-15": {
@@ -1382,7 +1392,7 @@
     "type": "card",
     "parent": "p4-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-green",
+    "cardType": "player-cube-p4",
     "z": 15
   },
   "p4-cube-16": {
@@ -1390,7 +1400,7 @@
     "type": "card",
     "parent": "p4-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-green",
+    "cardType": "player-cube-p4",
     "z": 16
   },
   "p4-cube-17": {
@@ -1398,7 +1408,7 @@
     "type": "card",
     "parent": "p4-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-green",
+    "cardType": "player-cube-p4",
     "z": 17
   },
   "p4-cube-18": {
@@ -1406,7 +1416,7 @@
     "type": "card",
     "parent": "p4-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-green",
+    "cardType": "player-cube-p4",
     "z": 18
   },
   "p4-cube-19": {
@@ -1414,7 +1424,7 @@
     "type": "card",
     "parent": "p4-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-green",
+    "cardType": "player-cube-p4",
     "z": 19
   },
   "p4-cube-20": {
@@ -1422,7 +1432,7 @@
     "type": "card",
     "parent": "p4-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-green",
+    "cardType": "player-cube-p4",
     "z": 20
   },
   "p4-cube-21": {
@@ -1430,7 +1440,7 @@
     "type": "card",
     "parent": "p4-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-green",
+    "cardType": "player-cube-p4",
     "z": 21
   },
   "p4-cube-22": {
@@ -1438,7 +1448,7 @@
     "type": "card",
     "parent": "p4-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-green",
+    "cardType": "player-cube-p4",
     "z": 22
   },
   "p4-cube-23": {
@@ -1446,7 +1456,7 @@
     "type": "card",
     "parent": "p4-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-green",
+    "cardType": "player-cube-p4",
     "z": 23
   },
   "p4-cube-24": {
@@ -1454,7 +1464,7 @@
     "type": "card",
     "parent": "p4-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-green",
+    "cardType": "player-cube-p4",
     "z": 24
   },
   "p4-cube-25": {
@@ -1462,7 +1472,7 @@
     "type": "card",
     "parent": "p4-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-green",
+    "cardType": "player-cube-p4",
     "z": 25
   },
   "p4-played": {
@@ -1577,7 +1587,7 @@
     "type": "card",
     "parent": "p5-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-yellow",
+    "cardType": "player-cube-p5",
     "z": 1
   },
   "p5-cube-02": {
@@ -1585,7 +1595,7 @@
     "type": "card",
     "parent": "p5-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-yellow",
+    "cardType": "player-cube-p5",
     "z": 2
   },
   "p5-cube-03": {
@@ -1593,7 +1603,7 @@
     "type": "card",
     "parent": "p5-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-yellow",
+    "cardType": "player-cube-p5",
     "z": 3
   },
   "p5-cube-04": {
@@ -1601,7 +1611,7 @@
     "type": "card",
     "parent": "p5-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-yellow",
+    "cardType": "player-cube-p5",
     "z": 4
   },
   "p5-cube-05": {
@@ -1609,7 +1619,7 @@
     "type": "card",
     "parent": "p5-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-yellow",
+    "cardType": "player-cube-p5",
     "z": 5
   },
   "p5-cube-06": {
@@ -1617,7 +1627,7 @@
     "type": "card",
     "parent": "p5-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-yellow",
+    "cardType": "player-cube-p5",
     "z": 6
   },
   "p5-cube-07": {
@@ -1625,7 +1635,7 @@
     "type": "card",
     "parent": "p5-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-yellow",
+    "cardType": "player-cube-p5",
     "z": 7
   },
   "p5-cube-08": {
@@ -1633,7 +1643,7 @@
     "type": "card",
     "parent": "p5-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-yellow",
+    "cardType": "player-cube-p5",
     "z": 8
   },
   "p5-cube-09": {
@@ -1641,7 +1651,7 @@
     "type": "card",
     "parent": "p5-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-yellow",
+    "cardType": "player-cube-p5",
     "z": 9
   },
   "p5-cube-10": {
@@ -1649,7 +1659,7 @@
     "type": "card",
     "parent": "p5-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-yellow",
+    "cardType": "player-cube-p5",
     "z": 10
   },
   "p5-cube-11": {
@@ -1657,7 +1667,7 @@
     "type": "card",
     "parent": "p5-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-yellow",
+    "cardType": "player-cube-p5",
     "z": 11
   },
   "p5-cube-12": {
@@ -1665,7 +1675,7 @@
     "type": "card",
     "parent": "p5-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-yellow",
+    "cardType": "player-cube-p5",
     "z": 12
   },
   "p5-cube-13": {
@@ -1673,7 +1683,7 @@
     "type": "card",
     "parent": "p5-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-yellow",
+    "cardType": "player-cube-p5",
     "z": 13
   },
   "p5-cube-14": {
@@ -1681,7 +1691,7 @@
     "type": "card",
     "parent": "p5-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-yellow",
+    "cardType": "player-cube-p5",
     "z": 14
   },
   "p5-cube-15": {
@@ -1689,7 +1699,7 @@
     "type": "card",
     "parent": "p5-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-yellow",
+    "cardType": "player-cube-p5",
     "z": 15
   },
   "p5-cube-16": {
@@ -1697,7 +1707,7 @@
     "type": "card",
     "parent": "p5-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-yellow",
+    "cardType": "player-cube-p5",
     "z": 16
   },
   "p5-cube-17": {
@@ -1705,7 +1715,7 @@
     "type": "card",
     "parent": "p5-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-yellow",
+    "cardType": "player-cube-p5",
     "z": 17
   },
   "p5-cube-18": {
@@ -1713,7 +1723,7 @@
     "type": "card",
     "parent": "p5-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-yellow",
+    "cardType": "player-cube-p5",
     "z": 18
   },
   "p5-cube-19": {
@@ -1721,7 +1731,7 @@
     "type": "card",
     "parent": "p5-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-yellow",
+    "cardType": "player-cube-p5",
     "z": 19
   },
   "p5-cube-20": {
@@ -1729,7 +1739,7 @@
     "type": "card",
     "parent": "p5-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-yellow",
+    "cardType": "player-cube-p5",
     "z": 20
   },
   "p5-cube-21": {
@@ -1737,7 +1747,7 @@
     "type": "card",
     "parent": "p5-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-yellow",
+    "cardType": "player-cube-p5",
     "z": 21
   },
   "p5-cube-22": {
@@ -1745,7 +1755,7 @@
     "type": "card",
     "parent": "p5-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-yellow",
+    "cardType": "player-cube-p5",
     "z": 22
   },
   "p5-cube-23": {
@@ -1753,7 +1763,7 @@
     "type": "card",
     "parent": "p5-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-yellow",
+    "cardType": "player-cube-p5",
     "z": 23
   },
   "p5-cube-24": {
@@ -1761,7 +1771,7 @@
     "type": "card",
     "parent": "p5-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-yellow",
+    "cardType": "player-cube-p5",
     "z": 24
   },
   "p5-cube-25": {
@@ -1769,7 +1779,7 @@
     "type": "card",
     "parent": "p5-cube-pile",
     "deck": "player-cube-deck",
-    "cardType": "player-cube-type-yellow",
+    "cardType": "player-cube-p5",
     "z": 25
   },
   "p5-played": {
@@ -2429,35 +2439,32 @@
     "parent": "p1-cube-holder",
     "x": 0,
     "y": 0,
+    "width": 30,
+    "height": 30,
     "cardTypes": {
-      "player-cube-type-ltblue": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/player-cube-ltblue.svg",
+      "player-cube-p1": {
         "onPileCreation": {
-          "onlyPileWith": "player-cube-type-ltblue"
+          "onlyPileWith": "player-cube-p1"
         }
       },
-      "player-cube-type-purple": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/player-cube-purple.svg",
+      "player-cube-p2": {
         "onPileCreation": {
-          "onlyPileWith": "player-cube-type-purple"
+          "onlyPileWith": "player-cube-p2"
         }
       },
-      "player-cube-type-orange": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/player-cube-orange.svg",
+      "player-cube-p3": {
         "onPileCreation": {
-          "onlyPileWith": "player-cube-type-orange"
+          "onlyPileWith": "player-cube-p3"
         }
       },
-      "player-cube-type-green": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/player-cube-green.svg",
+      "player-cube-p4": {
         "onPileCreation": {
-          "onlyPileWith": "player-cube-type-green"
+          "onlyPileWith": "player-cube-p4"
         }
       },
-      "player-cube-type-yellow": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/player-cube-yellow.svg",
+      "player-cube-p5": {
         "onPileCreation": {
-          "onlyPileWith": "player-cube-type-yellow"
+          "onlyPileWith": "player-cube-p5"
         }
       }
     },
@@ -2470,19 +2477,27 @@
             "type": "image",
             "x": 0,
             "y": 0,
-            "width": 24,
-            "height": 24,
-            "dynamicProperties": {
-              "value": "image"
-            },
-            "color": "transparent"
+            "width": 30,
+            "height": 30,
+            "value": "/i/game-pieces/3D/Cube-3D.svg",
+            "color": "transparent",
+            "svgReplaces": {
+              "#primaryColor": "color",
+              "#secondaryColor": "secondaryColor",
+              "#borderColor": "borderColor",
+              "#borderWidth": "borderWidth"
+            }
           }
         ]
       }
     ],
     "cardDefaults": {
-      "width": 24,
-      "height": 24
+      "width": 30,
+      "height": 30,
+      "secondaryColor": "black",
+      "borderWidth": 1,
+      "borderColor": "white",
+      "color": "gray"
     }
   },
   "token-deck": {
