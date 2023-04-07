@@ -225,12 +225,99 @@
     },
     "text": 0
   },
+  "p1-coins": {
+    "id": "p1-coins",
+    "parent": "p1-area",
+    "fixedParent": true,
+    "x": 200,
+    "y": 70,
+    "width": 30,
+    "height": 30,
+    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/token-coin.svg",
+    "movable": false,
+    "css": {
+      "text-align": "center",
+      "font-size": "18px",
+      "line-height": "30px"
+    },
+    "text": 3
+  },
+  "p1-coins-dec": {
+    "id": "p1-coins-dec",
+    "type": "button",
+    "parent": "p1-coins",
+    "fixedParent": true,
+    "x": -35,
+    "y": 0,
+    "width": 30,
+    "height": 30,
+    "css": {
+      "font-size": "30px"
+    },
+    "text": "-",
+    "clickRoutine": [
+      "var counter = ${PROPERTY parent}",
+      "var currentValue = ${PROPERTY text OF $counter}",
+      {
+        "func": "IF",
+        "operand1": "${currentValue}",
+        "relation": ">",
+        "operand2": 0,
+        "thenRoutine": [
+          {
+            "func": "LABEL",
+            "label": "${counter}",
+            "mode": "dec",
+            "value": 1
+          }
+        ]
+      }
+    ]
+  },
+  "p1-coins-inc": {
+    "id": "p1-coins-inc",
+    "type": "button",
+    "parent": "p1-coins",
+    "inheritFrom": "p1-coins-dec",
+    "x": 35,
+    "text": "+",
+    "clickRoutine": [
+      {
+        "func": "LABEL",
+        "label": "${PROPERTY parent}",
+        "mode": "inc",
+        "value": 1
+      }
+    ]
+  },
+  "p1-renown": {
+    "id": "p1-renown",
+    "parent": "p1-area",
+    "fixedParent": true,
+    "inheritFrom": "p1-coins",
+    "x": 200,
+    "y": 120,
+    "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/token-renown.svg",
+    "text": 1
+  },
+  "p1-renown-dec": {
+    "id": "p1-renown-dec",
+    "type": "button",
+    "parent": "p1-renown",
+    "inheritFrom": "p1-coins-dec"
+  },
+  "p1-renown-inc": {
+    "id": "p1-renown-inc",
+    "type": "button",
+    "parent": "p1-renown",
+    "inheritFrom": "p1-coins-inc"
+  },
   "p1-cube-holder": {
     "id": "p1-cube-holder",
     "type": "holder",
     "parent": "p1-area",
-    "x": 180,
-    "y": 75,
+    "x": 203,
+    "y": 23,
     "width": 24,
     "height": 24,
     "dropOffsetX": 0,
@@ -446,13 +533,6 @@
     "cardType": "player-cube-type-ltblue",
     "z": 25
   },
-  "p1-coin-pile": {
-    "id": "p1-coin-pile",
-    "type": "pile",
-    "parent": "p1-area",
-    "x": 225,
-    "y": 50
-  },
   "p1-played": {
     "id": "p1-played",
     "type": "holder",
@@ -521,6 +601,42 @@
     "id": "p2-hand-counter-right",
     "parent": "p2-area",
     "inheritFrom": "p1-hand-counter-right"
+  },
+  "p2-coins": {
+    "id": "p2-coins",
+    "parent": "p2-area",
+    "inheritFrom": "p1-coins",
+    "text": 3
+  },
+  "p2-coins-dec": {
+    "id": "p2-coins-dec",
+    "type": "button",
+    "parent": "p2-coins",
+    "inheritFrom": "p1-coins-dec"
+  },
+  "p2-coins-inc": {
+    "id": "p2-coins-inc",
+    "type": "button",
+    "parent": "p2-coins",
+    "inheritFrom": "p1-coins-inc"
+  },
+  "p2-renown": {
+    "id": "p2-renown",
+    "parent": "p2-area",
+    "inheritFrom": "p1-renown",
+    "text": 1
+  },
+  "p2-renown-dec": {
+    "id": "p2-renown-dec",
+    "type": "button",
+    "parent": "p2-renown",
+    "inheritFrom": "p1-renown-dec"
+  },
+  "p2-renown-inc": {
+    "id": "p2-renown-inc",
+    "type": "button",
+    "parent": "p2-renown",
+    "inheritFrom": "p1-renown-inc"
   },
   "p2-cube-holder": {
     "id": "p2-cube-holder",
@@ -735,13 +851,6 @@
     "cardType": "player-cube-type-purple",
     "z": 25
   },
-  "p2-coin-pile": {
-    "id": "p2-coin-pile",
-    "type": "pile",
-    "parent": "p2-area",
-    "x": 225,
-    "y": 50
-  },
   "p2-played": {
     "id": "p2-played",
     "type": "holder",
@@ -799,6 +908,42 @@
     "id": "p3-hand-counter-right",
     "parent": "p3-area",
     "inheritFrom": "p1-hand-counter-right"
+  },
+  "p3-coins": {
+    "id": "p3-coins",
+    "parent": "p3-area",
+    "inheritFrom": "p1-coins",
+    "text": 3
+  },
+  "p3-coins-dec": {
+    "id": "p3-coins-dec",
+    "type": "button",
+    "parent": "p3-coins",
+    "inheritFrom": "p1-coins-dec"
+  },
+  "p3-coins-inc": {
+    "id": "p3-coins-inc",
+    "type": "button",
+    "parent": "p3-coins",
+    "inheritFrom": "p1-coins-inc"
+  },
+  "p3-renown": {
+    "id": "p3-renown",
+    "parent": "p3-area",
+    "inheritFrom": "p1-renown",
+    "text": 1
+  },
+  "p3-renown-dec": {
+    "id": "p3-renown-dec",
+    "type": "button",
+    "parent": "p3-renown",
+    "inheritFrom": "p1-renown-dec"
+  },
+  "p3-renown-inc": {
+    "id": "p3-renown-inc",
+    "type": "button",
+    "parent": "p3-renown",
+    "inheritFrom": "p1-renown-inc"
   },
   "p3-cube-holder": {
     "id": "p3-cube-holder",
@@ -1013,13 +1158,6 @@
     "cardType": "player-cube-type-orange",
     "z": 25
   },
-  "p3-coin-pile": {
-    "id": "p3-coin-pile",
-    "type": "pile",
-    "parent": "p3-area",
-    "x": 225,
-    "y": 50
-  },
   "p3-played": {
     "id": "p3-played",
     "type": "holder",
@@ -1077,6 +1215,42 @@
     "id": "p4-hand-counter-right",
     "parent": "p4-area",
     "inheritFrom": "p1-hand-counter-right"
+  },
+  "p4-coins": {
+    "id": "p4-coins",
+    "parent": "p4-area",
+    "inheritFrom": "p1-coins",
+    "text": 3
+  },
+  "p4-coins-dec": {
+    "id": "p4-coins-dec",
+    "type": "button",
+    "parent": "p4-coins",
+    "inheritFrom": "p1-coins-dec"
+  },
+  "p4-coins-inc": {
+    "id": "p4-coins-inc",
+    "type": "button",
+    "parent": "p4-coins",
+    "inheritFrom": "p1-coins-inc"
+  },
+  "p4-renown": {
+    "id": "p4-renown",
+    "parent": "p4-area",
+    "inheritFrom": "p1-renown",
+    "text": 1
+  },
+  "p4-renown-dec": {
+    "id": "p4-renown-dec",
+    "type": "button",
+    "parent": "p4-renown",
+    "inheritFrom": "p1-renown-dec"
+  },
+  "p4-renown-inc": {
+    "id": "p4-renown-inc",
+    "type": "button",
+    "parent": "p4-renown",
+    "inheritFrom": "p1-renown-inc"
   },
   "p4-cube-holder": {
     "id": "p4-cube-holder",
@@ -1291,13 +1465,6 @@
     "cardType": "player-cube-type-green",
     "z": 25
   },
-  "p4-coin-pile": {
-    "id": "p4-coin-pile",
-    "type": "pile",
-    "parent": "p4-area",
-    "x": 225,
-    "y": 50
-  },
   "p4-played": {
     "id": "p4-played",
     "type": "holder",
@@ -1355,6 +1522,42 @@
     "id": "p5-hand-counter-right",
     "parent": "p5-area",
     "inheritFrom": "p1-hand-counter-right"
+  },
+  "p5-coins": {
+    "id": "p5-coins",
+    "parent": "p5-area",
+    "inheritFrom": "p1-coins",
+    "text": 3
+  },
+  "p5-coins-dec": {
+    "id": "p5-coins-dec",
+    "type": "button",
+    "parent": "p5-coins",
+    "inheritFrom": "p1-coins-dec"
+  },
+  "p5-coins-inc": {
+    "id": "p5-coins-inc",
+    "type": "button",
+    "parent": "p5-coins",
+    "inheritFrom": "p1-coins-inc"
+  },
+  "p5-renown": {
+    "id": "p5-renown",
+    "parent": "p5-area",
+    "inheritFrom": "p1-renown",
+    "text": 1
+  },
+  "p5-renown-dec": {
+    "id": "p5-renown-dec",
+    "type": "button",
+    "parent": "p5-renown",
+    "inheritFrom": "p1-renown-dec"
+  },
+  "p5-renown-inc": {
+    "id": "p5-renown-inc",
+    "type": "button",
+    "parent": "p5-renown",
+    "inheritFrom": "p1-renown-inc"
   },
   "p5-cube-holder": {
     "id": "p5-cube-holder",
@@ -1568,13 +1771,6 @@
     "deck": "player-cube-deck",
     "cardType": "player-cube-type-yellow",
     "z": 25
-  },
-  "p5-coin-pile": {
-    "id": "p5-coin-pile",
-    "type": "pile",
-    "parent": "p5-area",
-    "x": 225,
-    "y": 50
   },
   "p5-played": {
     "id": "p5-played",
@@ -1823,7 +2019,7 @@
           "var thisIndex = ${activeIndex.$key}",
           "var thisOwner = ${activeOwner.$key}",
           "var playerDesc = 'p' + ${thisIndex}",
-          "var tempPlace = playerDesc + '-score'",
+          "var tempPlace = ${playerDesc} + '-score'",
           "var newKey = ${key} + 1",
           {
             "func": "IF",
@@ -2289,513 +2485,10 @@
       "height": 24
     }
   },
-  "token-coin-holder": {
-    "id": "token-coin-holder",
-    "type": "holder",
-    "x": 660,
-    "y": 25,
-    "width": 30,
-    "height": 30,
-    "dropOffsetX": 0,
-    "dropOffsetY": 0,
-    "dropTarget": {
-      "deck": "token-deck",
-      "cardType": "tokentype-coin"
-    }
-  },
-  "token-coin-pile": {
-    "id": "token-coin-pile",
-    "type": "pile",
-    "parent": "token-coin-holder",
-    "x": 0,
-    "y": 0,
-    "width": 30,
-    "height": 30
-  },
-  "token-coin-01": {
-    "id": "token-coin-01",
-    "type": "card",
-    "parent": "p1-coin-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-coin",
-    "z": 1
-  },
-  "token-coin-02": {
-    "id": "token-coin-02",
-    "type": "card",
-    "parent": "p1-coin-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-coin",
-    "z": 2
-  },
-  "token-coin-03": {
-    "id": "token-coin-03",
-    "type": "card",
-    "parent": "p1-coin-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-coin",
-    "z": 3
-  },
-  "token-coin-04": {
-    "id": "token-coin-04",
-    "type": "card",
-    "parent": "p2-coin-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-coin",
-    "z": 4
-  },
-  "token-coin-05": {
-    "id": "token-coin-05",
-    "type": "card",
-    "parent": "p2-coin-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-coin",
-    "z": 5
-  },
-  "token-coin-06": {
-    "id": "token-coin-06",
-    "type": "card",
-    "parent": "p2-coin-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-coin",
-    "z": 6
-  },
-  "token-coin-07": {
-    "id": "token-coin-07",
-    "type": "card",
-    "parent": "p3-coin-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-coin",
-    "z": 7
-  },
-  "token-coin-08": {
-    "id": "token-coin-08",
-    "type": "card",
-    "parent": "p3-coin-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-coin",
-    "z": 8
-  },
-  "token-coin-09": {
-    "id": "token-coin-09",
-    "type": "card",
-    "parent": "p3-coin-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-coin",
-    "z": 9
-  },
-  "token-coin-10": {
-    "id": "token-coin-10",
-    "type": "card",
-    "parent": "p4-coin-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-coin",
-    "z": 10
-  },
-  "token-coin-11": {
-    "id": "token-coin-11",
-    "type": "card",
-    "parent": "p4-coin-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-coin",
-    "z": 11
-  },
-  "token-coin-12": {
-    "id": "token-coin-12",
-    "type": "card",
-    "parent": "p4-coin-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-coin",
-    "z": 12
-  },
-  "token-coin-13": {
-    "id": "token-coin-13",
-    "type": "card",
-    "parent": "p5-coin-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-coin",
-    "z": 13
-  },
-  "token-coin-14": {
-    "id": "token-coin-14",
-    "type": "card",
-    "parent": "p5-coin-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-coin",
-    "z": 14
-  },
-  "token-coin-15": {
-    "id": "token-coin-15",
-    "type": "card",
-    "parent": "p5-coin-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-coin",
-    "z": 15
-  },
-  "token-coin-16": {
-    "id": "token-coin-16",
-    "type": "card",
-    "parent": "token-coin-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-coin",
-    "z": 16
-  },
-  "token-coin-17": {
-    "id": "token-coin-17",
-    "type": "card",
-    "parent": "token-coin-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-coin",
-    "z": 17
-  },
-  "token-coin-18": {
-    "id": "token-coin-18",
-    "type": "card",
-    "parent": "token-coin-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-coin",
-    "z": 18
-  },
-  "token-coin-19": {
-    "id": "token-coin-19",
-    "type": "card",
-    "parent": "token-coin-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-coin",
-    "z": 19
-  },
-  "token-coin-20": {
-    "id": "token-coin-20",
-    "type": "card",
-    "parent": "token-coin-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-coin",
-    "z": 20
-  },
-  "token-coin-21": {
-    "id": "token-coin-21",
-    "type": "card",
-    "parent": "token-coin-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-coin",
-    "z": 21
-  },
-  "token-coin-22": {
-    "id": "token-coin-22",
-    "type": "card",
-    "parent": "token-coin-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-coin",
-    "z": 22
-  },
-  "token-coin-23": {
-    "id": "token-coin-23",
-    "type": "card",
-    "parent": "token-coin-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-coin",
-    "z": 23
-  },
-  "token-coin-24": {
-    "id": "token-coin-24",
-    "type": "card",
-    "parent": "token-coin-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-coin",
-    "z": 24
-  },
-  "token-coin-25": {
-    "id": "token-coin-25",
-    "type": "card",
-    "parent": "token-coin-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-coin",
-    "z": 25
-  },
-  "token-coin-26": {
-    "id": "token-coin-26",
-    "type": "card",
-    "parent": "token-coin-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-coin",
-    "z": 26
-  },
-  "token-coin-27": {
-    "id": "token-coin-27",
-    "type": "card",
-    "parent": "token-coin-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-coin",
-    "z": 27
-  },
-  "token-coin-28": {
-    "id": "token-coin-28",
-    "type": "card",
-    "parent": "token-coin-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-coin",
-    "z": 28
-  },
-  "token-coin-29": {
-    "id": "token-coin-29",
-    "type": "card",
-    "parent": "token-coin-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-coin",
-    "z": 29
-  },
-  "token-coin-30": {
-    "id": "token-coin-30",
-    "type": "card",
-    "parent": "token-coin-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-coin",
-    "z": 30
-  },
-  "token-coin-31": {
-    "id": "token-coin-31",
-    "type": "card",
-    "parent": "token-coin-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-coin",
-    "z": 31
-  },
-  "token-coin-32": {
-    "id": "token-coin-32",
-    "type": "card",
-    "parent": "token-coin-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-coin",
-    "z": 32
-  },
-  "token-coin-33": {
-    "id": "token-coin-33",
-    "type": "card",
-    "parent": "token-coin-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-coin",
-    "z": 33
-  },
-  "token-coin-34": {
-    "id": "token-coin-34",
-    "type": "card",
-    "parent": "token-coin-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-coin",
-    "z": 34
-  },
-  "token-coin-35": {
-    "id": "token-coin-35",
-    "type": "card",
-    "parent": "token-coin-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-coin",
-    "z": 35
-  },
-  "token-coin-36": {
-    "id": "token-coin-36",
-    "type": "card",
-    "parent": "token-coin-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-coin",
-    "z": 36
-  },
-  "token-coin-37": {
-    "id": "token-coin-37",
-    "type": "card",
-    "parent": "token-coin-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-coin",
-    "z": 37
-  },
-  "token-coin-38": {
-    "id": "token-coin-38",
-    "type": "card",
-    "parent": "token-coin-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-coin",
-    "z": 38
-  },
-  "token-coin-39": {
-    "id": "token-coin-39",
-    "type": "card",
-    "parent": "token-coin-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-coin",
-    "z": 39
-  },
-  "token-coin-40": {
-    "id": "token-coin-40",
-    "type": "card",
-    "parent": "token-coin-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-coin",
-    "z": 40
-  },
-  "token-coin-41": {
-    "id": "token-coin-41",
-    "type": "card",
-    "parent": "token-coin-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-coin",
-    "z": 41
-  },
-  "token-coin-42": {
-    "id": "token-coin-42",
-    "type": "card",
-    "parent": "token-coin-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-coin",
-    "z": 42
-  },
-  "token-coin-43": {
-    "id": "token-coin-43",
-    "type": "card",
-    "parent": "token-coin-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-coin",
-    "z": 43
-  },
-  "token-coin-44": {
-    "id": "token-coin-44",
-    "type": "card",
-    "parent": "token-coin-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-coin",
-    "z": 44
-  },
-  "token-coin-45": {
-    "id": "token-coin-45",
-    "type": "card",
-    "parent": "token-coin-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-coin",
-    "z": 45
-  },
-  "token-coin-46": {
-    "id": "token-coin-46",
-    "type": "card",
-    "parent": "token-coin-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-coin",
-    "z": 46
-  },
-  "token-coin-47": {
-    "id": "token-coin-47",
-    "type": "card",
-    "parent": "token-coin-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-coin",
-    "z": 47
-  },
-  "token-coin-48": {
-    "id": "token-coin-48",
-    "type": "card",
-    "parent": "token-coin-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-coin",
-    "z": 48
-  },
-  "token-coin-49": {
-    "id": "token-coin-49",
-    "type": "card",
-    "parent": "token-coin-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-coin",
-    "z": 49
-  },
-  "token-coin-50": {
-    "id": "token-coin-50",
-    "type": "card",
-    "parent": "token-coin-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-coin",
-    "z": 50
-  },
-  "token-coin-51": {
-    "id": "token-coin-51",
-    "type": "card",
-    "parent": "token-coin-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-coin",
-    "z": 51
-  },
-  "token-coin-52": {
-    "id": "token-coin-52",
-    "type": "card",
-    "parent": "token-coin-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-coin",
-    "z": 52
-  },
-  "token-coin-53": {
-    "id": "token-coin-53",
-    "type": "card",
-    "parent": "token-coin-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-coin",
-    "z": 53
-  },
-  "token-coin-54": {
-    "id": "token-coin-54",
-    "type": "card",
-    "parent": "token-coin-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-coin",
-    "z": 54
-  },
-  "token-coin-55": {
-    "id": "token-coin-55",
-    "type": "card",
-    "parent": "token-coin-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-coin",
-    "z": 55
-  },
-  "token-coin-56": {
-    "id": "token-coin-56",
-    "type": "card",
-    "parent": "token-coin-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-coin",
-    "z": 56
-  },
-  "token-coin-57": {
-    "id": "token-coin-57",
-    "type": "card",
-    "parent": "token-coin-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-coin",
-    "z": 57
-  },
-  "token-coin-58": {
-    "id": "token-coin-58",
-    "type": "card",
-    "parent": "token-coin-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-coin",
-    "z": 58
-  },
-  "token-coin-59": {
-    "id": "token-coin-59",
-    "type": "card",
-    "parent": "token-coin-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-coin",
-    "z": 59
-  },
-  "token-coin-60": {
-    "id": "token-coin-60",
-    "type": "card",
-    "parent": "token-coin-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-coin",
-    "z": 60
-  },
   "token-deck": {
     "id": "token-deck",
     "type": "deck",
-    "parent": "token-coin-holder",
+    "parent": "token-axe-holder",
     "x": 0,
     "y": 0,
     "cardTypes": {
@@ -2805,19 +2498,7 @@
           "onlyPileWith": "tokentype-axe"
         }
       },
-      "tokentype-coin": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/token-coin.svg",
-        "onPileCreation": {
-          "onlyPileWith": "tokentype-coin"
-        }
-      },
-      "tokentype-renown": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/token-renown.svg",
-        "onPileCreation": {
-          "onlyPileWith": "tokentype-renown"
-        }
-      },
-      "tokentype-shield": {
+     "tokentype-shield": {
         "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/token-shield.svg",
         "onPileCreation": {
           "onlyPileWith": "tokentype-shield"
@@ -2848,151 +2529,11 @@
       "height": 30
     }
   },
-  "token-renown-holder": {
-    "id": "token-renown-holder",
-    "type": "holder",
-    "x": 660,
-    "y": 70,
-    "width": 30,
-    "height": 30,
-    "dropOffsetX": 0,
-    "dropOffsetY": 0,
-    "dropTarget": {
-      "deck": "token-deck",
-      "cardType": "tokentype-renown"
-    }
-  },
-  "token-renown-pile": {
-    "id": "token-renown-pile",
-    "type": "pile",
-    "parent": "token-renown-holder",
-    "x": 0,
-    "y": 0,
-    "width": 30,
-    "height": 30
-  },
-  "token-renown-01": {
-    "id": "token-renown-01",
-    "type": "card",
-    "parent": "p1-area",
-    "deck": "token-deck",
-    "cardType": "tokentype-renown",
-    "x": 225,
-    "y": 90
-  },
-  "token-renown-02": {
-    "id": "token-renown-02",
-    "type": "card",
-    "parent": "p2-area",
-    "deck": "token-deck",
-    "cardType": "tokentype-renown",
-    "x": 225,
-    "y": 90
-  },
-  "token-renown-03": {
-    "id": "token-renown-03",
-    "type": "card",
-    "parent": "p3-area",
-    "deck": "token-deck",
-    "cardType": "tokentype-renown",
-    "x": 225,
-    "y": 90
-  },
-  "token-renown-04": {
-    "id": "token-renown-04",
-    "type": "card",
-    "parent": "p4-area",
-    "deck": "token-deck",
-    "cardType": "tokentype-renown",
-    "x": 225,
-    "y": 90
-  },
-  "token-renown-05": {
-    "id": "token-renown-05",
-    "type": "card",
-    "parent": "p5-area",
-    "deck": "token-deck",
-    "cardType": "tokentype-renown",
-    "x": 225,
-    "y": 90
-  },
-  "token-renown-06": {
-    "id": "token-renown-06",
-    "type": "card",
-    "parent": "token-renown-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-renown",
-    "z": 1
-  },
-  "token-renown-07": {
-    "id": "token-renown-07",
-    "type": "card",
-    "parent": "token-renown-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-renown",
-    "z": 2
-  },
-  "token-renown-08": {
-    "id": "token-renown-08",
-    "type": "card",
-    "parent": "token-renown-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-renown",
-    "z": 3
-  },
-  "token-renown-09": {
-    "id": "token-renown-09",
-    "type": "card",
-    "parent": "token-renown-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-renown",
-    "z": 4
-  },
-  "token-renown-10": {
-    "id": "token-renown-10",
-    "type": "card",
-    "parent": "token-renown-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-renown",
-    "z": 5
-  },
-  "token-renown-11": {
-    "id": "token-renown-11",
-    "type": "card",
-    "parent": "token-renown-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-renown",
-    "z": 6
-  },
-  "token-renown-12": {
-    "id": "token-renown-12",
-    "type": "card",
-    "parent": "token-renown-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-renown",
-    "z": 7
-  },
-  "token-renown-13": {
-    "id": "token-renown-13",
-    "type": "card",
-    "parent": "token-renown-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-renown",
-    "z": 8
-  },
-  "token-renown-14": {
-    "id": "token-renown-14",
-    "type": "card",
-    "parent": "token-renown-pile",
-    "deck": "token-deck",
-    "cardType": "tokentype-renown",
-    "z": 9
-  },
   "token-shield-holder": {
     "id": "token-shield-holder",
     "type": "holder",
     "x": 720,
-    "y": 25,
+    "y": 50,
     "width": 30,
     "height": 30,
     "dropOffsetX": 0,
@@ -3094,8 +2635,8 @@
   "token-axe-holder": {
     "id": "token-axe-holder",
     "type": "holder",
-    "x": 720,
-    "y": 70,
+    "x": 660,
+    "y": 50,
     "width": 30,
     "height": 30,
     "dropOffsetX": 0,
@@ -3358,7 +2899,7 @@
     "id": "token-monastery-holder",
     "type": "holder",
     "x": 779,
-    "y": 57,
+    "y": 37,
     "width": 36,
     "height": 45,
     "dropOffsetX": 0,
@@ -3541,7 +3082,7 @@
   "token-active-city": {
     "id": "token-active-city",
     "x": 715,
-    "y": 115,
+    "y": 105,
     "width": 40,
     "height": 40,
     "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/brian-boru/assets/token-active.svg"
