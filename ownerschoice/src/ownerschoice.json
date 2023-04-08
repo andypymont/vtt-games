@@ -3563,15 +3563,15 @@
         "func": "RECALL",
         "holder": "setup-holder"
       },
-      {
-        "note": "Select the board randomiser cards",
-        "func": "SELECT",
-        "property": "deck",
-        "value": "deck-setup"
-      },
-      {
-        "note": "...and randomise their active face",
+     {
+        "note": "Randomise the active face of the cards",
         "func": "FLIP",
+        "collection": [
+          "card-setup-1",
+          "card-setup-2",
+          "card-setup-3",
+          "card-setup-4"
+        ],
         "faceCycle": "random"
       },
       {
@@ -3589,78 +3589,41 @@
         "holder": "setup-holder"
       },
       {
-        "note": "Setup segment 1 from the board 1 card",
-        "func": "CALL",
-        "routine": "setupBoardSegmentRoutine",
-        "arguments": {
-          "holderPrefix": "board-space-holder-segment1-"
-        }
-      },
-      {
-        "note": "Move the board 1 card to the discard",
-        "func": "MOVE",
-        "from": "setup-holder-active",
-        "to": "setup-holder-discard",
-        "count": 1
-      },
-      {
-        "note": "Move the card for segment 2 into the active holder",
-        "func": "MOVE",
-        "from": "setup-holder",
-        "to": "setup-holder-active",
-        "count": 1
-      },
-      {
-        "note": "Setup segment 2 from the board 1 card",
-        "func": "CALL",
-        "routine": "setupBoardSegmentRoutine",
-        "arguments": {
-          "holderPrefix": "board-space-holder-segment2-"
-        }
-      },
-      {
-        "note": "Move the card for segment 2 to the discard",
-        "func": "MOVE",
-        "from": "setup-holder-active",
-        "to": "setup-holder-discard",
-        "count": 1
-      },
-      {
-        "note": "Move the card for segment 3 into the active holder",
-        "func": "MOVE",
-        "from": "setup-holder",
-        "to": "setup-holder-active",
-        "count": 1
-      },
-      {
-        "note": "Setup segment 3 from the board 1 card",
-        "func": "CALL",
-        "routine": "setupBoardSegmentRoutine",
-        "arguments": {
-          "holderPrefix": "board-space-holder-segment3-"
-        }
-      },
-      {
-        "note": "Move the card for segment 3 to the discard",
-        "func": "MOVE",
-        "from": "setup-holder-active",
-        "to": "setup-holder-discard",
-        "count": 1
-      },
-      {
-        "note": "Move the card for segment 4 into the active holder",
-        "func": "MOVE",
-        "from": "setup-holder",
-        "to": "setup-holder-active",
-        "count": 1
-      },
-      {
-        "note": "Setup segment 4 from the board 1 card",
-        "func": "CALL",
-        "routine": "setupBoardSegmentRoutine",
-        "arguments": {
-          "holderPrefix": "board-space-holder-segment4-"
-        }
+        "note": "Setup the board segments from each of the 4 cards",
+        "func": "FOREACH",
+        "range": 4,
+        "loopRoutine": [
+          {
+            "note": "If this isn't the first board segment, move in the next card",
+            "func": "IF",
+            "operand1": "${value}",
+            "relation": ">",
+            "operand2": 1,
+            "thenRoutine": [
+              {
+                "func": "MOVE",
+                "from": "setup-holder",
+                "to": "setup-holder-active",
+                "count": 1
+              }
+            ]
+          },
+          {
+            "note": "Set up the current segment from the active card",
+            "func": "CALL",
+            "routine": "setupBoardSegmentRoutine",
+            "arguments": {
+              "holderPrefix": "board-space-holder-segment${value}-"
+            }
+          },
+          {
+            "note": "Move the card to the discard",
+            "func": "MOVE",
+            "from": "setup-holder-active",
+            "to": "setup-holder-discard",
+            "count": 1
+          }
+        ]
       },
       {
         "note": "Set all stock prices to 100",
@@ -3731,20 +3694,20 @@
         "value": 15
       },
       {
-        "note": "Move the pawn to the Start space 1/3",
-        "func": "SELECT",
-        "property": "id",
-        "value": "pawn"
-      },
-      {
-        "note": "Move the pawn to the Start space 2/3",
+        "note": "Move the pawn to the Start space 1/2",
         "func": "SET",
+        "collection": [
+          "pawn"
+        ],
         "property": "x",
         "value": 625
       },
       {
-        "note": "Move the pawn to the Start space 3/3",
+        "note": "Move the pawn to the Start space 2/2",
         "func": "SET",
+        "collection": [
+          "pawn"
+        ],
         "property": "y",
         "value": 900
       },
