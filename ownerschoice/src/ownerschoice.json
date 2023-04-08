@@ -3575,14 +3575,11 @@
         "faceCycle": "random"
       },
       {
-        "note": "Select the board 1 card",
-        "func": "SELECT",
-        "property": "id",
-        "value": "card-setup-1"
-      },
-      {
         "note": "Move the board 1 card to the active holder",
         "func": "SET",
+        "collection": [
+          "card-setup-1"
+        ],
         "property": "parent",
         "value": "setup-holder-active"
       },
@@ -3666,35 +3663,14 @@
         }
       },
       {
-        "note": "Select the red share price marker",
-        "func": "SELECT",
-        "property": "id",
-        "value": "share-price-red"
-      },
-      {
-        "note": "Additionally select the green share price marker",
-        "func": "SELECT",
-        "property": "id",
-        "value": "share-price-green",
-        "mode": "add"
-      },
-      {
-        "note": "Additionally select the blue share price marker",
-        "func": "SELECT",
-        "property": "id",
-        "value": "share-price-blue",
-        "mode": "add"
-      },
-      {
-        "note": "Additionally select the yellow share price marker",
-        "func": "SELECT",
-        "property": "id",
-        "value": "share-price-yellow",
-        "mode": "add"
-      },
-      {
         "note": "Set all stock prices to 100",
         "func": "SET",
+        "collection": [
+          "share-price-red",
+          "share-price-green",
+          "share-price-blue",
+          "share-price-yellow"
+        ],
         "property": "price",
         "value": 100
       },
@@ -3818,112 +3794,33 @@
         "holder": "setup-holder-start"
       },
       {
-        "note": "Select the Goal square",
-        "func": "SELECT",
-        "property": "cardType",
-        "value": "cardtype-square-goal"
-      },
-      {
-        "note": "...and move to its holder",
-        "func": "SET",
-        "property": "parent",
-        "value": "setup-holder-goal"
-      },
-      {
-        "note": "Select the Red squares",
-        "func": "SELECT",
-        "property": "cardType",
-        "value": "cardtype-square-red"
-      },
-      {
-        "note": "...and move them to their holder",
-        "func": "SET",
-        "property": "parent",
-        "value": "setup-holder-red"
-      },
-      {
-        "note": "Select the Green squares",
-        "func": "SELECT",
-        "property": "cardType",
-        "value": "cardtype-square-green"
-      },
-      {
-        "note": "...and move them to their holder",
-        "func": "SET",
-        "property": "parent",
-        "value": "setup-holder-green"
-      },
-      {
-        "note": "Select the Blue squares",
-        "func": "SELECT",
-        "property": "cardType",
-        "value": "cardtype-square-blue"
-      },
-      {
-        "note": "...and move them to their holder",
-        "func": "SET",
-        "property": "parent",
-        "value": "setup-holder-blue"
-      },
-      {
-        "note": "Select the Yellow squares",
-        "func": "SELECT",
-        "property": "cardType",
-        "value": "cardtype-square-yellow"
-      },
-      {
-        "note": "...and move them to their holder",
-        "func": "SET",
-        "property": "parent",
-        "value": "setup-holder-yellow"
-      },
-      {
-        "note": "Select the Almighty squares",
-        "func": "SELECT",
-        "property": "cardType",
-        "value": "cardtype-square-almighty"
-      },
-      {
-        "note": "...and move them to their holder",
-        "func": "SET",
-        "property": "parent",
-        "value": "setup-holder-almighty"
-      },
-      {
-        "note": "Select the President squares",
-        "func": "SELECT",
-        "property": "cardType",
-        "value": "cardtype-square-president"
-      },
-      {
-        "note": "...and move them to their holder",
-        "func": "SET",
-        "property": "parent",
-        "value": "setup-holder-president"
-      },
-      {
-        "note": "Select the Event squares",
-        "func": "SELECT",
-        "property": "cardType",
-        "value": "cardtype-square-event"
-      },
-      {
-        "note": "...and move them to their holder",
-        "func": "SET",
-        "property": "parent",
-        "value": "setup-holder-event"
-      },
-      {
-        "note": "Select the Dividend squares",
-        "func": "SELECT",
-        "property": "cardType",
-        "value": "cardtype-square-dividend"
-      },
-      {
-        "note": "...and move them to their holder",
-        "func": "SET",
-        "property": "parent",
-        "value": "setup-holder-dividend"
+        "note": "Move each card type into its own holder",
+        "func": "FOREACH",
+        "in": [
+          "goal",
+          "red",
+          "green",
+          "blue",
+          "yellow",
+          "almighty",
+          "president",
+          "event",
+          "dividend"
+        ],
+        "loopRoutine": [
+          {
+            "note": "Select all the squares of the given type",
+            "func": "SELECT",
+            "property": "cardType",
+            "value": "cardtype-square-${value}"
+          },
+          {
+            "note": "...and move them to their holder",
+            "func": "SET",
+            "property": "parent",
+            "value": "setup-holder-${value}"
+          }
+        ]
       }
     ]
   },
