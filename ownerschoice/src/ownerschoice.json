@@ -1735,16 +1735,104 @@
     },
     "cardTypes": {
       "cardtype-setup-1": {
-        "value": 1
+        "value": 1,
+        "squaresA": [
+          "blue",
+          "green",
+          "yellow",
+          "red",
+          "start",
+          "goal",
+          "event",
+          "dividend",
+          "almighty"
+        ],
+        "squaresB": [
+          "green",
+          "red",
+          "yellow",
+          "blue",
+          "start",
+          "goal",
+          "almighty",
+          "president",
+          "event"
+        ]
       },
       "cardtype-setup-2": {
-        "value": 2
+        "value": 2,
+        "squaresA": [
+          "dividend",
+          "red",
+          "green",
+          "blue",
+          "yellow",
+          "event",
+          "blue",
+          "green",
+          "red"
+        ],
+        "squaresB": [
+          "dividend",
+          "blue",
+          "almighty",
+          "red",
+          "president",
+          "green",
+          "yellow",
+          "event",
+          "red"
+        ]
       },
       "cardtype-setup-3": {
-        "value": 3
+        "value": 3,
+        "squaresA": [
+          "dividend",
+          "yellow",
+          "blue",
+          "event",
+          "green",
+          "almighty",
+          "red",
+          "yellow",
+          "blue"
+        ],
+        "squaresB": [
+          "president",
+          "green",
+          "yellow",
+          "almighty",
+          "red",
+          "blue",
+          "event",
+          "red",
+          "yellow"
+        ]
       },
       "cardtype-setup-4": {
-        "value": 4
+        "value": 4,
+        "squaresA": [
+          "president",
+          "event",
+          "green",
+          "yellow",
+          "blue",
+          "red",
+          "almighty",
+          "yellow",
+          "green"
+        ],
+        "squaresB": [
+          "president",
+          "blue",
+          "red",
+          "green",
+          "event",
+          "yellow",
+          "green",
+          "blue",
+          "event"
+        ]
       }
     },
     "faceTemplates": [
@@ -1762,7 +1850,10 @@
               "value": "value"
             }
           }
-        ]
+        ],
+        "properties": {
+          "squareList": "squaresA"
+        }
       },
       {
         "objects": [
@@ -1778,7 +1869,10 @@
               "value": "value"
             }
           }
-        ]
+        ],
+        "properties": {
+          "squareList": "squaresB"
+        }
       }
     ]
   },
@@ -3692,811 +3786,29 @@
         "value": "setup-holder-active"
       },
       {
-        "note": "Determine which card it is",
+        "note": "Determine which squares list to used based on the active face",
         "func": "GET",
-        "property": "cardType"
+        "property": "squareList"
       },
       {
-        "note": "Determine which card face is active",
+        "note": "Get the relevant list of squares",
         "func": "GET",
-        "property": "activeFace"
+        "property": "${squareList}",
+        "variable": "squares"
       },
       {
-        "note": "Handle the card if it is the card for board 1",
-        "func": "IF",
-        "operand1": "${cardType}",
-        "operand2": "cardtype-setup-1",
-        "thenRoutine": [
+        "note": "Loop through the squares and place each of them",
+        "func": "FOREACH",
+        "in": "${squares}",
+        "loopRoutine": [
+          "var pos = ${key} + 1",
           {
-            "func": "IF",
-            "operand1": "${activeFace}",
-            "operand2": 0,
-            "thenRoutine": [
-              {
-                "note": "Board 1, Side 0, Square 1: Blue",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 1,
-                  "fromHolder": "setup-holder-blue"
-                }
-              },
-              {
-                "note": "Board 1, Side 0, Square 2: Green",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 2,
-                  "fromHolder": "setup-holder-green"
-                }
-              },
-              {
-                "note": "Board 1, Side 0, Square 3: Yellow",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 3,
-                  "fromHolder": "setup-holder-yellow"
-                }
-              },
-              {
-                "note": "Board 1, Side 0, Square 4: Red",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 4,
-                  "fromHolder": "setup-holder-red"
-                }
-              },
-              {
-                "note": "Board 1, Side 0, Square 5: Start",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 5,
-                  "fromHolder": "setup-holder-start"
-                }
-              },
-              {
-                "note": "Board 1, Side 0, Square 6: Goal",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 6,
-                  "fromHolder": "setup-holder-goal"
-                }
-              },
-              {
-                "note": "Board 1, Side 0, Square 7: Event",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 7,
-                  "fromHolder": "setup-holder-event"
-                }
-              },
-              {
-                "note": "Board 1, Side 0, Square 8: Dividend",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 8,
-                  "fromHolder": "setup-holder-dividend"
-                }
-              },
-              {
-                "note": "Board 1, Side 0, Square 9: Almighty",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 9,
-                  "fromHolder": "setup-holder-almighty"
-                }
-              }
-            ],
-            "elseRoutine": [
-              {
-                "note": "Board 1, Side 1, Square 1: Green",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 1,
-                  "fromHolder": "setup-holder-green"
-                }
-              },
-              {
-                "note": "Board 1, Side 1, Square 2: Red",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 2,
-                  "fromHolder": "setup-holder-red"
-                }
-              },
-              {
-                "note": "Board 1, Side 1, Square 3: Yellow",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 3,
-                  "fromHolder": "setup-holder-yellow"
-                }
-              },
-              {
-                "note": "Board 1, Side 1, Square 4: Blue",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 4,
-                  "fromHolder": "setup-holder-blue"
-                }
-              },
-              {
-                "note": "Board 1, Side 1, Square 5: Start",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 5,
-                  "fromHolder": "setup-holder-start"
-                }
-              },
-              {
-                "note": "Board 1, Side 1, Square 6: Goal",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 6,
-                  "fromHolder": "setup-holder-goal"
-                }
-              },
-              {
-                "note": "Board 1, Side 1, Square 7: Almighty",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 7,
-                  "fromHolder": "setup-holder-almighty"
-                }
-              },
-              {
-                "note": "Board 1, Side 1, Square 8: President",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 8,
-                  "fromHolder": "setup-holder-president"
-                }
-              },
-              {
-                "note": "Board 1, Side 1, Square 9: Event",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 9,
-                  "fromHolder": "setup-holder-event"
-                }
-              }
-            ]
+            "func": "MOVE",
+            "from": "setup-holder-${value}",
+            "to": "${holderPrefix}${pos}",
+            "count": 1
           }
         ]
-      },
-      {
-        "note": "Handle the card if it is the card for board 2",
-        "func": "IF",
-        "operand1": "${cardType}",
-        "operand2": "cardtype-setup-2",
-        "thenRoutine": [
-          {
-            "func": "IF",
-            "operand1": "${activeFace}",
-            "operand2": 0,
-            "thenRoutine": [
-              {
-                "note": "Board 2, Side 0, Square 1: Dividend",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 1,
-                  "fromHolder": "setup-holder-dividend"
-                }
-              },
-              {
-                "note": "Board 2, Side 0, Square 2: Red",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 2,
-                  "fromHolder": "setup-holder-red"
-                }
-              },
-              {
-                "note": "Board 2, Side 0, Square 3: Green",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 3,
-                  "fromHolder": "setup-holder-green"
-                }
-              },
-              {
-                "note": "Board 2, Side 0, Square 4: Blue",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 4,
-                  "fromHolder": "setup-holder-blue"
-                }
-              },
-              {
-                "note": "Board 2, Side 0, Square 5: Yellow",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 5,
-                  "fromHolder": "setup-holder-yellow"
-                }
-              },
-              {
-                "note": "Board 2, Side 0, Square 6: Event",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 6,
-                  "fromHolder": "setup-holder-event"
-                }
-              },
-              {
-                "note": "Board 2, Side 0, Square 7: Blue",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 7,
-                  "fromHolder": "setup-holder-blue"
-                }
-              },
-              {
-                "note": "Board 2, Side 0, Square 8: Green",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 8,
-                  "fromHolder": "setup-holder-green"
-                }
-              },
-              {
-                "note": "Board 2, Side 0, Square 9: Red",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 9,
-                  "fromHolder": "setup-holder-red"
-                }
-              }
-            ],
-            "elseRoutine": [
-              {
-                "note": "Board 2, Side 1, Square 1: Event",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 1,
-                  "fromHolder": "setup-holder-dividend"
-                }
-              },
-              {
-                "note": "Board 2, Side 1, Square 2: Blue",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 2,
-                  "fromHolder": "setup-holder-blue"
-                }
-              },
-              {
-                "note": "Board 2, Side 1, Square 3: Almighty",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 3,
-                  "fromHolder": "setup-holder-almighty"
-                }
-              },
-              {
-                "note": "Board 2, Side 1, Square 4: Red",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 4,
-                  "fromHolder": "setup-holder-red"
-                }
-              },
-              {
-                "note": "Board 2, Side 1, Square 5: President",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 5,
-                  "fromHolder": "setup-holder-president"
-                }
-              },
-              {
-                "note": "Board 2, Side 1, Square 6: Green",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 6,
-                  "fromHolder": "setup-holder-green"
-                }
-              },
-              {
-                "note": "Board 2, Side 1, Square 7: Yellow",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 7,
-                  "fromHolder": "setup-holder-yellow"
-                }
-              },
-              {
-                "note": "Board 2, Side 1, Square 8: Event",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 8,
-                  "fromHolder": "setup-holder-event"
-                }
-              },
-              {
-                "note": "Board 2, Side 1, Square 9: Red",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 9,
-                  "fromHolder": "setup-holder-red"
-                }
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "note": "Handle the card if it is the card for board 3",
-        "func": "IF",
-        "operand1": "${cardType}",
-        "operand2": "cardtype-setup-3",
-        "thenRoutine": [
-          {
-            "func": "IF",
-            "operand1": "${activeFace}",
-            "operand2": 0,
-            "thenRoutine": [
-              {
-                "note": "Board 3, Side 0, Square 1: Dividend",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 1,
-                  "fromHolder": "setup-holder-dividend"
-                }
-              },
-              {
-                "note": "Board 3, Side 0, Square 2: Yellow",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 2,
-                  "fromHolder": "setup-holder-yellow"
-                }
-              },
-              {
-                "note": "Board 3, Side 0, Square 3: Blue",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 3,
-                  "fromHolder": "setup-holder-blue"
-                }
-              },
-              {
-                "note": "Board 3, Side 0, Square 4: Event",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 4,
-                  "fromHolder": "setup-holder-event"
-                }
-              },
-              {
-                "note": "Board 3, Side 0, Square 5: Green",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 5,
-                  "fromHolder": "setup-holder-green"
-                }
-              },
-              {
-                "note": "Board 3, Side 0, Square 6: Almighty",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 6,
-                  "fromHolder": "setup-holder-almighty"
-                }
-              },
-              {
-                "note": "Board 3, Side 0, Square 7: Red",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 7,
-                  "fromHolder": "setup-holder-red"
-                }
-              },
-              {
-                "note": "Board 3, Side 0, Square 8: Yellow",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 8,
-                  "fromHolder": "setup-holder-yellow"
-                }
-              },
-              {
-                "note": "Board 3, Side 0, Square 9: Blue",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 9,
-                  "fromHolder": "setup-holder-blue"
-                }
-              }
-            ],
-            "elseRoutine": [
-              {
-                "note": "Board 3, Side 1, Square 1: President",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 1,
-                  "fromHolder": "setup-holder-president"
-                }
-              },
-              {
-                "note": "Board 3, Side 1, Square 2: Green",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 2,
-                  "fromHolder": "setup-holder-green"
-                }
-              },
-              {
-                "note": "Board 3, Side 1, Square 3: Yellow",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 3,
-                  "fromHolder": "setup-holder-yellow"
-                }
-              },
-              {
-                "note": "Board 3, Side 1, Square 4: Almighty",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 4,
-                  "fromHolder": "setup-holder-almighty"
-                }
-              },
-              {
-                "note": "Board 3, Side 1, Square 5: Red",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 5,
-                  "fromHolder": "setup-holder-red"
-                }
-              },
-              {
-                "note": "Board 3, Side 1, Square 6: Blue",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 6,
-                  "fromHolder": "setup-holder-blue"
-                }
-              },
-              {
-                "note": "Board 3, Side 1, Square 7: Event",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 7,
-                  "fromHolder": "setup-holder-event"
-                }
-              },
-              {
-                "note": "Board 3, Side 1, Square 8: Red",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 8,
-                  "fromHolder": "setup-holder-red"
-                }
-              },
-              {
-                "note": "Board 3, Side 1, Square 9: Yellow",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 9,
-                  "fromHolder": "setup-holder-yellow"
-                }
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "note": "Handle the card if it is the card for board 4",
-        "func": "IF",
-        "operand1": "${cardType}",
-        "operand2": "cardtype-setup-4",
-        "thenRoutine": [
-          {
-            "func": "IF",
-            "operand1": "${activeFace}",
-            "operand2": 0,
-            "thenRoutine": [
-              {
-                "note": "Board 4, Side 0, Square 1: President",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 1,
-                  "fromHolder": "setup-holder-president"
-                }
-              },
-              {
-                "note": "Board 4, Side 0, Square 2: Event",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 2,
-                  "fromHolder": "setup-holder-event"
-                }
-              },
-              {
-                "note": "Board 4, Side 0, Square 3: Green",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 3,
-                  "fromHolder": "setup-holder-green"
-                }
-              },
-              {
-                "note": "Board 4, Side 0, Square 4: Yellow",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 4,
-                  "fromHolder": "setup-holder-yellow"
-                }
-              },
-              {
-                "note": "Board 4, Side 0, Square 5: Blue",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 5,
-                  "fromHolder": "setup-holder-blue"
-                }
-              },
-              {
-                "note": "Board 4, Side 0, Square 6: Red",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 6,
-                  "fromHolder": "setup-holder-red"
-                }
-              },
-              {
-                "note": "Board 4, Side 0, Square 7: Almighty",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 7,
-                  "fromHolder": "setup-holder-almighty"
-                }
-              },
-              {
-                "note": "Board 4, Side 0, Square 8: Yellow",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 8,
-                  "fromHolder": "setup-holder-yellow"
-                }
-              },
-              {
-                "note": "Board 4, Side 0, Square 9: Green",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 9,
-                  "fromHolder": "setup-holder-green"
-                }
-              }
-            ],
-            "elseRoutine": [
-              {
-                "note": "Board 4, Side 1, Square 1: President",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 1,
-                  "fromHolder": "setup-holder-president"
-                }
-              },
-              {
-                "note": "Board 4, Side 1, Square 2: Blue",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 2,
-                  "fromHolder": "setup-holder-blue"
-                }
-              },
-              {
-                "note": "Board 4, Side 1, Square 3: Red",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 3,
-                  "fromHolder": "setup-holder-red"
-                }
-              },
-              {
-                "note": "Board 4, Side 1, Square 4: Green",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 4,
-                  "fromHolder": "setup-holder-green"
-                }
-              },
-              {
-                "note": "Board 4, Side 1, Square 5: Event",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 5,
-                  "fromHolder": "setup-holder-event"
-                }
-              },
-              {
-                "note": "Board 4, Side 1, Square 6: Yellow",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 6,
-                  "fromHolder": "setup-holder-yellow"
-                }
-              },
-              {
-                "note": "Board 4, Side 1, Square 7: Green",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 7,
-                  "fromHolder": "setup-holder-green"
-                }
-              },
-              {
-                "note": "Board 4, Side 1, Square 8: Blue",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 8,
-                  "fromHolder": "setup-holder-blue"
-                }
-              },
-              {
-                "note": "Board 4, Side 1, Square 9: Event",
-                "func": "CALL",
-                "routine": "placeSquareRoutine",
-                "arguments": {
-                  "holderPrefix": "${holderPrefix}",
-                  "squareNumber": 9,
-                  "fromHolder": "setup-holder-event"
-                }
-              }
-            ]
-          }
-        ]
-      }
-    ],
-    "placeSquareRoutine": [
-      "var toHolder = ${holderPrefix} + ${squareNumber}",
-      {
-        "func": "MOVE",
-        "from": "${fromHolder}",
-        "to": "${toHolder}",
-        "count": 1
       }
     ],
     "resetSquaresRoutine": [
