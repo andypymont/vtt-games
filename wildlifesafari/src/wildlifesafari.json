@@ -1,1603 +1,1381 @@
 {
-    "_meta": {
-        "version": 3,
-        "info": {
-            "name": "Wildlife Safari",
-            "image": "",
-            "rules": "",
-            "bgg": "",
-            "year": "2014",
-            "mode": "vs",
-            "time": "30",
-            "players": "2-5",
-            "language": "UN",
-            "variant": "",
-            "attribution": ""
-        }
-    },
-    "cards-holder": {
-        "type": "holder",
-        "id": "cards-holder",
-        "x": 15,
-        "y": 90,
-        "z": 1,
-        "height": 170,
-        "width": 110
-    },
-    "deck-cards": {
-        "type": "deck",
-        "id": "deck-cards",
-        "x": 4,
-        "y": 4,
-        "z": 2,
-        "cardTypes": {
-            "elephant-0": {
-                "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/card-elephant-0.svg"
-            },
-            "elephant-1": {
-                "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/card-elephant-1.svg"
-            },
-            "elephant-2": {
-                "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/card-elephant-2.svg"
-            },
-            "elephant-3": {
-                "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/card-elephant-3.svg"
-            },
-            "elephant-4": {
-                "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/card-elephant-4.svg"
-            },
-            "elephant-5": {
-                "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/card-elephant-5.svg"
-            },
-            "lion-0": {
-                "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/card-lion-0.svg"
-            },
-            "lion-1": {
-                "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/card-lion-1.svg"
-            },
-            "lion-2": {
-                "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/card-lion-2.svg"
-            },
-            "lion-3": {
-                "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/card-lion-3.svg"
-            },
-            "lion-4": {
-                "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/card-lion-4.svg"
-            },
-            "lion-5": {
-                "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/card-lion-5.svg"
-            },
-            "zebra-0": {
-                "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/card-zebra-0.svg"
-            },
-            "zebra-1": {
-                "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/card-zebra-1.svg"
-            },
-            "zebra-2": {
-                "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/card-zebra-2.svg"
-            },
-            "zebra-3": {
-                "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/card-zebra-3.svg"
-            },
-            "zebra-4": {
-                "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/card-zebra-4.svg"
-            },
-            "zebra-5": {
-                "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/card-zebra-5.svg"
-            },
-            "leopard-0": {
-                "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/card-leopard-0.svg"
-            },
-            "leopard-1": {
-                "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/card-leopard-1.svg"
-            },
-            "leopard-2": {
-                "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/card-leopard-2.svg"
-            },
-            "leopard-3": {
-                "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/card-leopard-3.svg"
-            },
-            "leopard-4": {
-                "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/card-leopard-4.svg"
-            },
-            "leopard-5": {
-                "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/card-leopard-5.svg"
-            },
-            "rhino-0": {
-                "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/card-rhino-0.svg"
-            },
-            "rhino-1": {
-                "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/card-rhino-1.svg"
-            },
-            "rhino-2": {
-                "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/card-rhino-2.svg"
-            },
-            "rhino-3": {
-                "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/card-rhino-3.svg"
-            },
-            "rhino-4": {
-                "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/card-rhino-4.svg"
-            },
-            "rhino-5": {
-                "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/card-rhino-5.svg"
-            }
-        },
-        "faceTemplates": [
-            {
-                "border": false,
-                "radius": false,
-                "objects": [
-                    {
-                        "type": "image",
-                        "x": 0,
-                        "y": 0,
-                        "width": 103,
-                        "height": 160,
-                        "valueType": "static",
-                        "value": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/card-back.svg",
-                        "color": "transparent"
-                    }
-                ]
-            },
-            {
-                "border": false,
-                "radius": false,
-                "objects": [
-                    {
-                        "type": "image",
-                        "x": 0,
-                        "y": 0,
-                        "width": 103,
-                        "height": 160,
-                        "valueType": "dynamic",
-                        "value": "image",
-                        "color": "transparent"
-                    }
-                ]
-            }
-        ],
-        "parent": "cards-holder",
-        "cardDefaults": {
-            "width": 103,
-            "height": 160
-        }
-    },
-    "button-new-round": {
-        "id": "button-new-round",
-        "type": "button",
-        "parent": "cards-holder",
-        "y": -50,
-        "x": 5,
-        "width": 100,
-        "height": 40,
-        "text": "New Round",
-        "clickRoutine": [
-            {
-                "func": "RECALL",
-                "holder": "cards-holder"
-            },
-            {
-                "func": "FLIP",
-                "holder": "cards-holder",
-                "face": 0
-            },
-            {
-                "func": "SHUFFLE",
-                "holder": "cards-holder"
-            },
-            {
-                "func": "RECALL",
-                "holder": "holder-elephant-tiles"
-            },
-            {
-                "func": "RECALL",
-                "holder": "holder-lion-tiles"
-            },
-            {
-                "func": "RECALL",
-                "holder": "holder-zebra-tiles"
-            },
-            {
-                "func": "RECALL",
-                "holder": "holder-leopard-tiles"
-            },
-            {
-                "func": "RECALL",
-                "holder": "holder-rhino-tiles"
-            },
-            "var total1 = ${PROPERTY text OF player1-score} + ${PROPERTY text OF player1-total}",
-            {
-                "func": "LABEL",
-                "label": "player1-total",
-                "mode": "set",
-                "value": "${total1}"
-            },
-            {
-                "func": "LABEL",
-                "label": "player1-score",
-                "mode": "set",
-                "value": 0
-            },
-            "var total2 = ${PROPERTY text OF player2-score} + ${PROPERTY text OF player2-total}",
-            {
-                "func": "LABEL",
-                "label": "player2-total",
-                "mode": "set",
-                "value": "${total2}"
-            },
-            {
-                "func": "LABEL",
-                "label": "player2-score",
-                "mode": "set",
-                "value": 0
-            },
-            "var total3 = ${PROPERTY text OF player3-score} + ${PROPERTY text OF player3-total}",
-            {
-                "func": "LABEL",
-                "label": "player3-total",
-                "mode": "set",
-                "value": "${total3}"
-            },
-            {
-                "func": "LABEL",
-                "label": "player3-score",
-                "mode": "set",
-                "value": 0
-            },
-            "var total4 = ${PROPERTY text OF player4-score} + ${PROPERTY text OF player4-total}",
-            {
-                "func": "LABEL",
-                "label": "player4-total",
-                "mode": "set",
-                "value": "${total4}"
-            },
-            {
-                "func": "LABEL",
-                "label": "player4-score",
-                "mode": "set",
-                "value": 0
-            },
-            "var total5 = ${PROPERTY text OF player5-score} + ${PROPERTY text OF player5-total}",
-            {
-                "func": "LABEL",
-                "label": "player5-total",
-                "mode": "set",
-                "value": "${total5}"
-            },
-            {
-                "func": "LABEL",
-                "label": "player5-score",
-                "mode": "set",
-                "value": 0
-            }
-        ]
-    },
-    "cards-pile": {
-        "id": "cards-pile",
-        "type": "pile",
-        "parent": "cards-holder",
-        "x": 4,
-        "y": 4,
-        "width": 103,
-        "height": 160
-    },
-    "card-elephant-0": {
-        "id": "card-elephant-0",
-        "type": "card",
-        "deck": "deck-cards",
-        "cardType": "elephant-0",
-        "z": 3,
-        "parent": "cards-pile"
-    },
-    "card-elephant-1": {
-        "id": "card-elephant-1",
-        "type": "card",
-        "deck": "deck-cards",
-        "cardType": "elephant-1",
-        "z": 4,
-        "parent": "cards-pile"
-    },
-    "card-elephant-2": {
-        "id": "card-elephant-2",
-        "type": "card",
-        "deck": "deck-cards",
-        "cardType": "elephant-2",
-        "z": 5,
-        "parent": "cards-pile"
-    },
-    "card-elephant-3": {
-        "id": "card-elephant-3",
-        "type": "card",
-        "deck": "deck-cards",
-        "cardType": "elephant-3",
-        "z": 6,
-        "parent": "cards-pile"
-    },
-    "card-elephant-4": {
-        "id": "card-elephant-4",
-        "type": "card",
-        "deck": "deck-cards",
-        "cardType": "elephant-4",
-        "z": 7,
-        "parent": "cards-pile"
-    },
-    "card-elephant-5": {
-        "id": "card-elephant-5",
-        "type": "card",
-        "deck": "deck-cards",
-        "cardType": "elephant-5",
-        "z": 8,
-        "parent": "cards-pile"
-    },
-    "card-lion-0": {
-        "id": "card-lion-0",
-        "type": "card",
-        "deck": "deck-cards",
-        "cardType": "lion-0",
-        "z": 9,
-        "parent": "cards-pile"
-    },
-    "card-lion-1": {
-        "id": "card-lion-1",
-        "type": "card",
-        "deck": "deck-cards",
-        "cardType": "lion-1",
-        "z": 10,
-        "parent": "cards-pile"
-    },
-    "card-lion-2": {
-        "id": "card-lion-2",
-        "type": "card",
-        "deck": "deck-cards",
-        "cardType": "lion-2",
-        "z": 11,
-        "parent": "cards-pile"
-    },
-    "card-lion-3": {
-        "id": "card-lion-3",
-        "type": "card",
-        "deck": "deck-cards",
-        "cardType": "lion-3",
-        "z": 12,
-        "parent": "cards-pile"
-    },
-    "card-lion-4": {
-        "id": "card-lion-4",
-        "type": "card",
-        "deck": "deck-cards",
-        "cardType": "lion-4",
-        "z": 13,
-        "parent": "cards-pile"
-    },
-    "card-lion-5": {
-        "id": "card-lion-5",
-        "type": "card",
-        "deck": "deck-cards",
-        "cardType": "lion-5",
-        "z": 14,
-        "parent": "cards-pile"
-    },
-    "card-zebra-0": {
-        "id": "card-zebra-0",
-        "type": "card",
-        "deck": "deck-cards",
-        "cardType": "zebra-0",
-        "z": 15,
-        "parent": "cards-pile"
-    },
-    "card-zebra-1": {
-        "id": "card-zebra-1",
-        "type": "card",
-        "deck": "deck-cards",
-        "cardType": "zebra-1",
-        "z": 16,
-        "parent": "cards-pile"
-    },
-    "card-zebra-2": {
-        "id": "card-zebra-2",
-        "type": "card",
-        "deck": "deck-cards",
-        "cardType": "zebra-2",
-        "z": 17,
-        "parent": "cards-pile"
-    },
-    "card-zebra-3": {
-        "id": "card-zebra-3",
-        "type": "card",
-        "deck": "deck-cards",
-        "cardType": "zebra-3",
-        "z": 18,
-        "parent": "cards-pile"
-    },
-    "card-zebra-4": {
-        "id": "card-zebra-4",
-        "type": "card",
-        "deck": "deck-cards",
-        "cardType": "zebra-4",
-        "z": 19,
-        "parent": "cards-pile"
-    },
-    "card-zebra-5": {
-        "id": "card-zebra-5",
-        "type": "card",
-        "deck": "deck-cards",
-        "cardType": "zebra-5",
-        "z": 20,
-        "parent": "cards-pile"
-    },
-    "card-leopard-0": {
-        "id": "card-leopard-0",
-        "type": "card",
-        "deck": "deck-cards",
-        "cardType": "leopard-0",
-        "z": 21,
-        "parent": "cards-pile"
-    },
-    "card-leopard-1": {
-        "id": "card-leopard-1",
-        "type": "card",
-        "deck": "deck-cards",
-        "cardType": "leopard-1",
-        "z": 22,
-        "parent": "cards-pile"
-    },
-    "card-leopard-2": {
-        "id": "card-leopard-2",
-        "type": "card",
-        "deck": "deck-cards",
-        "cardType": "leopard-2",
-        "z": 23,
-        "parent": "cards-pile"
-    },
-    "card-leopard-3": {
-        "id": "card-leopard-3",
-        "type": "card",
-        "deck": "deck-cards",
-        "cardType": "leopard-3",
-        "z": 24,
-        "parent": "cards-pile"
-    },
-    "card-leopard-4": {
-        "id": "card-leopard-4",
-        "type": "card",
-        "deck": "deck-cards",
-        "cardType": "leopard-4",
-        "z": 25,
-        "parent": "cards-pile"
-    },
-    "card-leopard-5": {
-        "id": "card-leopard-5",
-        "type": "card",
-        "deck": "deck-cards",
-        "cardType": "leopard-5",
-        "z": 26,
-        "parent": "cards-pile"
-    },
-    "card-rhino-0": {
-        "id": "card-rhino-0",
-        "type": "card",
-        "deck": "deck-cards",
-        "cardType": "rhino-0",
-        "z": 27,
-        "parent": "cards-pile"
-    },
-    "card-rhino-1": {
-        "id": "card-rhino-1",
-        "type": "card",
-        "deck": "deck-cards",
-        "cardType": "rhino-1",
-        "z": 28,
-        "parent": "cards-pile"
-    },
-    "card-rhino-2": {
-        "id": "card-rhino-2",
-        "type": "card",
-        "deck": "deck-cards",
-        "cardType": "rhino-2",
-        "z": 29,
-        "parent": "cards-pile"
-    },
-    "card-rhino-3": {
-        "id": "card-rhino-3",
-        "type": "card",
-        "deck": "deck-cards",
-        "cardType": "rhino-3",
-        "z": 30,
-        "parent": "cards-pile"
-    },
-    "card-rhino-4": {
-        "id": "card-rhino-4",
-        "type": "card",
-        "deck": "deck-cards",
-        "cardType": "rhino-4",
-        "z": 31,
-        "parent": "cards-pile"
-    },
-    "card-rhino-5": {
-        "id": "card-rhino-5",
-        "type": "card",
-        "deck": "deck-cards",
-        "cardType": "rhino-5",
-        "z": 32,
-        "parent": "cards-pile"
-    },
-    "holder-elephant-cards": {
-        "id": "holder-elephant-cards",
-        "type": "holder",
-        "x": 220,
-        "y": 90,
-        "z": 33,
-        "dropTarget": {
-            "deck": "deck-cards"
-        },
-        "stackOffsetY": 45,
-        "width": 110,
-        "height": 395
-    },
-    "holder-lion-cards": {
-        "id": "holder-lion-cards",
-        "type": "holder",
-        "x": 350,
-        "y": 90,
-        "z": 34,
-        "dropTarget": {
-            "deck": "deck-cards"
-        },
-        "stackOffsetY": 45,
-        "width": 110,
-        "height": 395
-    },
-    "holder-zebra-cards": {
-        "id": "holder-zebra-cards",
-        "type": "holder",
-        "x": 480,
-        "y": 90,
-        "z": 35,
-        "dropTarget": {
-            "deck": "deck-cards"
-        },
-        "stackOffsetY": 45,
-        "width": 110,
-        "height": 395
-    },
-    "holder-leopard-cards": {
-        "id": "holder-leopard-cards",
-        "type": "holder",
-        "x": 610,
-        "y": 90,
-        "z": 36,
-        "dropTarget": {
-            "deck": "deck-cards"
-        },
-        "stackOffsetY": 45,
-        "width": 110,
-        "height": 395
-    },
-    "holder-rhino-cards": {
-        "id": "holder-rhino-cards",
-        "type": "holder",
-        "x": 740,
-        "y": 90,
-        "z": 37,
-        "dropTarget": {
-            "deck": "deck-cards"
-        },
-        "stackOffsetY": 45,
-        "width": 110,
-        "height": 395
-    },
-    "holder-elephant-tiles": {
-        "id": "holder-elephant-tiles",
-        "type": "holder",
-        "dropTarget": {
-            "deck": "deck-elephant-tiles"
-        },
-        "x": 242,
-        "y": 495,
-        "z": 38,
-        "width": 63,
-        "height": 63
-    },
-    "deck-elephant-tiles": {
-        "id": "deck-elephant-tiles",
-        "type": "deck",
-        "parent": "holder-elephant-tiles",
-        "x": 0,
-        "y": 0,
-        "z": 39,
-        "cardTypes": {
-            "elephant-tile": {
-                "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/tile-elephant.svg"
-            }
-        },
-        "faceTemplates": [
-            {
-                "border": false,
-                "radius": false,
-                "objects": [
-                    {
-                        "type": "image",
-                        "x": 0,
-                        "y": 0,
-                        "width": 60,
-                        "height": 60,
-                        "valueType": "dynamic",
-                        "value": "image",
-                        "color": "transparent"
-                    }
-                ]
-            }
-        ],
-        "cardDefaults": {
-            "width": 60,
-            "height": 60
-        }
-    },
-    "pile-elephant-tiles": {
-        "id": "pile-elephant-tiles",
-        "type": "pile",
-        "parent": "holder-elephant-tiles",
-        "x": 1,
-        "y": 1,
-        "z": 40,
-        "width": 60,
-        "height": 60
-    },
-    "elephant-tile-1": {
-        "id": "elephant-tile-1",
-        "type": "card",
-        "deck": "deck-elephant-tiles",
-        "cardType": "elephant-tile",
-        "parent": "pile-elephant-tiles",
-        "z": 41
-    },
-    "elephant-tile-2": {
-        "id": "elephant-tile-2",
-        "type": "card",
-        "deck": "deck-elephant-tiles",
-        "cardType": "elephant-tile",
-        "parent": "pile-elephant-tiles",
-        "z": 42
-    },
-    "elephant-tile-3": {
-        "id": "elephant-tile-3",
-        "type": "card",
-        "deck": "deck-elephant-tiles",
-        "cardType": "elephant-tile",
-        "parent": "pile-elephant-tiles",
-        "z": 43
-    },
-    "elephant-tile-4": {
-        "id": "elephant-tile-4",
-        "type": "card",
-        "deck": "deck-elephant-tiles",
-        "cardType": "elephant-tile",
-        "parent": "pile-elephant-tiles",
-        "z": 44
-    },
-    "elephant-tile-5": {
-        "id": "elephant-tile-5",
-        "type": "card",
-        "deck": "deck-elephant-tiles",
-        "cardType": "elephant-tile",
-        "parent": "pile-elephant-tiles",
-        "z": 45
-    },
-    "holder-lion-tiles": {
-        "id": "holder-lion-tiles",
-        "type": "holder",
-        "dropTarget": {
-            "deck": "deck-lion-tiles"
-        },
-        "x": 372,
-        "y": 495,
-        "z": 46,
-        "width": 63,
-        "height": 63
-    },
-    "deck-lion-tiles": {
-        "type": "deck",
-        "id": "deck-lion-tiles",
-        "parent": "holder-lion-tiles",
-        "x": 0,
-        "y": 0,
-        "z": 47,
-        "cardTypes": {
-            "lion-tile": {
-                "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/tile-lion.svg"
-            }
-        },
-        "faceTemplates": [
-            {
-                "border": false,
-                "radius": false,
-                "objects": [
-                    {
-                        "type": "image",
-                        "x": 0,
-                        "y": 0,
-                        "width": 60,
-                        "height": 60,
-                        "valueType": "dynamic",
-                        "value": "image",
-                        "color": "transparent"
-                    }
-                ]
-            }
-        ],
-        "cardDefaults": {
-            "width": 60,
-            "height": 60
-        }
-    },
-    "pile-lion-tiles": {
-        "id": "pile-lion-tiles",
-        "type": "pile",
-        "parent": "holder-lion-tiles",
-        "x": 1,
-        "y": 1,
-        "z": 48,
-        "width": 60,
-        "height": 60
-    },
-    "lion-tile-1": {
-        "id": "lion-tile-1",
-        "type": "card",
-        "deck": "deck-lion-tiles",
-        "cardType": "lion-tile",
-        "parent": "pile-lion-tiles",
-        "z": 49
-    },
-    "lion-tile-2": {
-        "id": "lion-tile-2",
-        "type": "card",
-        "deck": "deck-lion-tiles",
-        "cardType": "lion-tile",
-        "parent": "pile-lion-tiles",
-        "z": 50
-    },
-    "lion-tile-3": {
-        "id": "lion-tile-3",
-        "type": "card",
-        "deck": "deck-lion-tiles",
-        "cardType": "lion-tile",
-        "parent": "pile-lion-tiles",
-        "z": 51
-    },
-    "lion-tile-4": {
-        "id": "lion-tile-4",
-        "type": "card",
-        "deck": "deck-lion-tiles",
-        "cardType": "lion-tile",
-        "parent": "pile-lion-tiles",
-        "z": 52
-    },
-    "lion-tile-5": {
-        "id": "lion-tile-5",
-        "type": "card",
-        "deck": "deck-lion-tiles",
-        "cardType": "lion-tile",
-        "parent": "pile-lion-tiles",
-        "z": 53
-    },
-    "holder-zebra-tiles": {
-        "id": "holder-zebra-tiles",
-        "type": "holder",
-        "dropTarget": {
-            "deck": "deck-zebra-tiles"
-        },
-        "x": 502,
-        "y": 495,
-        "z": 54,
-        "width": 63,
-        "height": 63
-    },
-    "deck-zebra-tiles": {
-        "type": "deck",
-        "id": "deck-zebra-tiles",
-        "parent": "holder-zebra-tiles",
-        "x": 0,
-        "y": 0,
-        "z": 55,
-        "cardTypes": {
-            "zebra-tile": {
-                "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/tile-zebra.svg"
-            }
-        },
-        "faceTemplates": [
-            {
-                "border": false,
-                "radius": false,
-                "objects": [
-                    {
-                        "type": "image",
-                        "x": 0,
-                        "y": 0,
-                        "width": 60,
-                        "height": 60,
-                        "valueType": "dynamic",
-                        "value": "image",
-                        "color": "transparent"
-                    }
-                ]
-            }
-        ],
-        "cardDefaults": {
-            "width": 60,
-            "height": 60
-        }
-    },
-    "pile-zebra-tiles": {
-        "id": "pile-zebra-tiles",
-        "type": "pile",
-        "parent": "holder-zebra-tiles",
-        "x": 1,
-        "y": 1,
-        "z": 56,
-        "width": 60,
-        "height": 60
-    },
-    "zebra-tile-1": {
-        "id": "zebra-tile-1",
-        "type": "card",
-        "deck": "deck-zebra-tiles",
-        "cardType": "zebra-tile",
-        "parent": "pile-zebra-tiles",
-        "z": 57
-    },
-    "zebra-tile-2": {
-        "id": "zebra-tile-2",
-        "type": "card",
-        "deck": "deck-zebra-tiles",
-        "cardType": "zebra-tile",
-        "parent": "pile-zebra-tiles",
-        "z": 58
-    },
-    "zebra-tile-3": {
-        "id": "zebra-tile-3",
-        "type": "card",
-        "deck": "deck-zebra-tiles",
-        "cardType": "zebra-tile",
-        "parent": "pile-zebra-tiles",
-        "z": 59
-    },
-    "zebra-tile-4": {
-        "id": "zebra-tile-4",
-        "type": "card",
-        "deck": "deck-zebra-tiles",
-        "cardType": "zebra-tile",
-        "parent": "pile-zebra-tiles",
-        "z": 60
-    },
-    "zebra-tile-5": {
-        "id": "zebra-tile-5",
-        "type": "card",
-        "deck": "deck-zebra-tiles",
-        "cardType": "zebra-tile",
-        "parent": "pile-zebra-tiles",
-        "z": 61
-    },
-    "holder-leopard-tiles": {
-        "id": "holder-leopard-tiles",
-        "type": "holder",
-        "dropTarget": {
-            "deck": "deck-leopard-tiles"
-        },
-        "x": 632,
-        "y": 495,
-        "z": 62,
-        "width": 63,
-        "height": 63
-    },
-    "pile-leopard-tiles": {
-        "id": "pile-leopard-tiles",
-        "type": "pile",
-        "parent": "holder-leopard-tiles",
-        "x": 1,
-        "y": 1,
-        "z": 63,
-        "width": 60,
-        "height": 60
-    },
-    "deck-leopard-tiles": {
-        "type": "deck",
-        "id": "deck-leopard-tiles",
-        "parent": "holder-leopard-tiles",
-        "x": 0,
-        "y": 0,
-        "z": 64,
-        "cardTypes": {
-            "leopard-tile": {
-                "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/tile-leopard.svg"
-            }
-        },
-        "faceTemplates": [
-            {
-                "border": false,
-                "radius": false,
-                "objects": [
-                    {
-                        "type": "image",
-                        "x": 0,
-                        "y": 0,
-                        "width": 60,
-                        "height": 60,
-                        "valueType": "dynamic",
-                        "value": "image",
-                        "color": "transparent"
-                    }
-                ]
-            }
-        ],
-        "cardDefaults": {
-            "width": 60,
-            "height": 60
-        }
-    },
-    "leopard-tile-1": {
-        "id": "leopard-tile-1",
-        "type": "card",
-        "deck": "deck-leopard-tiles",
-        "cardType": "leopard-tile",
-        "parent": "pile-leopard-tiles",
-        "z": 65
-    },
-    "leopard-tile-2": {
-        "id": "leopard-tile-2",
-        "type": "card",
-        "deck": "deck-leopard-tiles",
-        "cardType": "leopard-tile",
-        "parent": "pile-leopard-tiles",
-        "z": 66
-    },
-    "leopard-tile-3": {
-        "id": "leopard-tile-3",
-        "type": "card",
-        "deck": "deck-leopard-tiles",
-        "cardType": "leopard-tile",
-        "parent": "pile-leopard-tiles",
-        "z": 67
-    },
-    "leopard-tile-4": {
-        "id": "leopard-tile-4",
-        "type": "card",
-        "deck": "deck-leopard-tiles",
-        "cardType": "leopard-tile",
-        "parent": "pile-leopard-tiles",
-        "z": 68
-    },
-    "leopard-tile-5": {
-        "id": "leopard-tile-5",
-        "type": "card",
-        "deck": "deck-leopard-tiles",
-        "cardType": "leopard-tile",
-        "parent": "pile-leopard-tiles",
-        "z": 69
-    },
-    "holder-rhino-tiles": {
-        "id": "holder-rhino-tiles",
-        "type": "holder",
-        "dropTarget": {
-            "deck": "deck-rhino-tiles"
-        },
-        "x": 762,
-        "y": 495,
-        "z": 70,
-        "width": 63,
-        "height": 63
-    },
-    "deck-rhino-tiles": {
-        "type": "deck",
-        "id": "deck-rhino-tiles",
-        "parent": "holder-rhino-tiles",
-        "x": 0,
-        "y": 0,
-        "z": 71,
-        "cardTypes": {
-            "rhino-tile": {
-                "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/tile-rhino.svg"
-            }
-        },
-        "faceTemplates": [
-            {
-                "border": false,
-                "radius": false,
-                "objects": [
-                    {
-                        "type": "image",
-                        "x": 0,
-                        "y": 0,
-                        "width": 60,
-                        "height": 60,
-                        "valueType": "dynamic",
-                        "value": "image",
-                        "color": "transparent"
-                    }
-                ]
-            }
-        ],
-        "cardDefaults": {
-            "width": 60,
-            "height": 60
-        }
-    },
-    "pile-rhino-tiles": {
-        "id": "pile-rhino-tiles",
-        "type": "pile",
-        "parent": "holder-rhino-tiles",
-        "x": 1,
-        "y": 1,
-        "z": 72,
-        "width": 60,
-        "height": 60
-    },
-    "rhino-tile-1": {
-        "id": "rhino-tile-1",
-        "type": "card",
-        "deck": "deck-rhino-tiles",
-        "cardType": "rhino-tile",
-        "parent": "pile-rhino-tiles",
-        "z": 73
-    },
-    "rhino-tile-2": {
-        "id": "rhino-tile-2",
-        "type": "card",
-        "deck": "deck-rhino-tiles",
-        "cardType": "rhino-tile",
-        "parent": "pile-rhino-tiles",
-        "z": 74
-    },
-    "rhino-tile-3": {
-        "id": "rhino-tile-3",
-        "type": "card",
-        "deck": "deck-rhino-tiles",
-        "cardType": "rhino-tile",
-        "parent": "pile-rhino-tiles",
-        "z": 75
-    },
-    "rhino-tile-4": {
-        "id": "rhino-tile-4",
-        "type": "card",
-        "deck": "deck-rhino-tiles",
-        "cardType": "rhino-tile",
-        "parent": "pile-rhino-tiles",
-        "z": 76
-    },
-    "rhino-tile-5": {
-        "id": "rhino-tile-5",
-        "type": "card",
-        "deck": "deck-rhino-tiles",
-        "cardType": "rhino-tile",
-        "parent": "pile-rhino-tiles",
-        "z": 77
-    },
-    "player1-area": {
-        "id": "player1-area",
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/player-area.svg",
-        "movable": false,
-        "x": 880,
-        "y": 20,
-        "z": 78,
-        "width": 700,
-        "height": 150,
-        "layer": -4
-    },
-    "player1-name": {
-        "id": "player1-name",
-        "type": "label",
-        "parent": "player1-area",
-        "x": 4,
-        "y": 4,
-        "movable": false,
-        "editable": true,
-        "text": "PLAYER 1",
-        "css": "font-weight:bold"
-    },
-    "player1-score-label": {
-        "id": "player1-score-label",
-        "type": "label",
-        "parent": "player1-area",
-        "x": 4,
-        "y": 50,
-        "movable": false,
-        "editable": false,
-        "text": "Score:",
-        "css": "font-weight:bold"
-    },
-    "player1-score": {
-        "id": "player1-score",
-        "type": "label",
-        "parent": "player1-area",
-        "x": 75,
-        "y": 50,
-        "movable": false,
-        "editable": false,
-        "text": 0
-    },
-    "player1-score-dec": {
-        "id": "player1-score-dec",
-        "parent": "player1-score",
-        "type": "button",
-        "x": 15,
-        "y": -2,
-        "width": 20,
-        "height": 20,
-        "movableInEdit": false,
-        "text": "-",
-        "clickRoutine": [
-            {
-                "func": "LABEL",
-                "label": "player1-score",
-                "mode": "dec",
-                "value": 1
-            }
-        ]
-    },
-    "player1-score-inc": {
-        "id": "player1-score-inc",
-        "parent": "player1-score",
-        "type": "button",
-        "x": 65,
-        "y": -2,
-        "width": 20,
-        "height": 20,
-        "movableInEdit": false,
-        "text": "+",
-        "clickRoutine": [
-            {
-                "func": "LABEL",
-                "label": "player1-score",
-                "mode": "inc",
-                "value": 1
-            }
-        ]
-    },
-    "player1-total-label": {
-        "id": "player1-total-label",
-        "type": "label",
-        "parent": "player1-area",
-        "x": 4,
-        "y": 100,
-        "movable": false,
-        "editable": false,
-        "text": "Total:",
-        "css": "font-weight:bold"
-    },
-    "player1-total": {
-        "id": "player1-total",
-        "type": "label",
-        "parent": "player1-area",
-        "x": 75,
-        "y": 100,
-        "movable": false,
-        "editable": false,
-        "text": 0
-    },
-    "player2-area": {
-        "id": "player2-area",
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/player-area.svg",
-        "movable": false,
-        "x": 880,
-        "y": 190,
-        "z": 79,
-        "width": 700,
-        "height": 150,
-        "layer": -4
-    },
-    "player2-name": {
-        "id": "player2-name",
-        "type": "label",
-        "parent": "player2-area",
-        "x": 4,
-        "y": 4,
-        "movable": false,
-        "editable": true,
-        "text": "PLAYER 2",
-        "css": "font-weight:bold"
-    },
-    "player2-score-label": {
-        "id": "player2-score-label",
-        "type": "label",
-        "parent": "player2-area",
-        "x": 4,
-        "y": 50,
-        "movable": false,
-        "editable": false,
-        "text": "Score:",
-        "css": "font-weight:bold"
-    },
-    "player2-score": {
-        "id": "player2-score",
-        "type": "label",
-        "parent": "player2-area",
-        "x": 75,
-        "y": 50,
-        "movable": false,
-        "editable": false,
-        "text": 0
-    },
-    "player2-score-dec": {
-        "id": "player2-score-dec",
-        "parent": "player2-score",
-        "type": "button",
-        "x": 15,
-        "y": -2,
-        "width": 20,
-        "height": 20,
-        "movableInEdit": false,
-        "text": "-",
-        "clickRoutine": [
-            {
-                "func": "LABEL",
-                "label": "player2-score",
-                "mode": "dec",
-                "value": 1
-            }
-        ]
-    },
-    "player2-score-inc": {
-        "id": "player2-score-inc",
-        "parent": "player2-score",
-        "type": "button",
-        "x": 65,
-        "y": -2,
-        "width": 20,
-        "height": 20,
-        "movableInEdit": false,
-        "text": "+",
-        "clickRoutine": [
-            {
-                "func": "LABEL",
-                "label": "player2-score",
-                "mode": "inc",
-                "value": 1
-            }
-        ]
-    },
-    "player2-total-label": {
-        "id": "player2-total-label",
-        "type": "label",
-        "parent": "player2-area",
-        "x": 4,
-        "y": 100,
-        "movable": false,
-        "editable": false,
-        "text": "Total:",
-        "css": "font-weight:bold"
-    },
-    "player2-total": {
-        "id": "player2-total",
-        "type": "label",
-        "parent": "player2-area",
-        "x": 75,
-        "y": 100,
-        "movable": false,
-        "editable": false,
-        "text": 0
-    },
-    "player3-area": {
-        "id": "player3-area",
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/player-area.svg",
-        "movable": false,
-        "x": 880,
-        "y": 360,
-        "z": 80,
-        "width": 700,
-        "height": 150,
-        "layer": -4
-    },
-    "player3-name": {
-        "id": "player3-name",
-        "type": "label",
-        "parent": "player3-area",
-        "x": 4,
-        "y": 4,
-        "movable": false,
-        "editable": true,
-        "text": "PLAYER 3",
-        "css": "font-weight:bold"
-    },
-    "player3-score-label": {
-        "id": "player3-score-label",
-        "type": "label",
-        "parent": "player3-area",
-        "x": 4,
-        "y": 50,
-        "movable": false,
-        "editable": false,
-        "text": "Score:",
-        "css": "font-weight:bold"
-    },
-    "player3-score": {
-        "id": "player3-score",
-        "type": "label",
-        "parent": "player3-area",
-        "x": 75,
-        "y": 50,
-        "movable": false,
-        "editable": false,
-        "text": 0
-    },
-    "player3-score-dec": {
-        "id": "player3-score-dec",
-        "parent": "player3-score",
-        "type": "button",
-        "x": 15,
-        "y": -2,
-        "width": 20,
-        "height": 20,
-        "movableInEdit": false,
-        "text": "-",
-        "clickRoutine": [
-            {
-                "func": "LABEL",
-                "label": "player3-score",
-                "mode": "dec",
-                "value": 1
-            }
-        ]
-    },
-    "player3-score-inc": {
-        "id": "player3-score-inc",
-        "parent": "player3-score",
-        "type": "button",
-        "x": 65,
-        "y": -2,
-        "width": 20,
-        "height": 20,
-        "movableInEdit": false,
-        "text": "+",
-        "clickRoutine": [
-            {
-                "func": "LABEL",
-                "label": "player3-score",
-                "mode": "inc",
-                "value": 1
-            }
-        ]
-    },
-    "player3-total-label": {
-        "id": "player3-total-label",
-        "type": "label",
-        "parent": "player3-area",
-        "x": 4,
-        "y": 100,
-        "movable": false,
-        "editable": false,
-        "text": "Total:",
-        "css": "font-weight:bold"
-    },
-    "player3-total": {
-        "id": "player3-total",
-        "type": "label",
-        "parent": "player3-area",
-        "x": 75,
-        "y": 100,
-        "movable": false,
-        "editable": false,
-        "text": 0
-    },
-    "player4-area": {
-        "id": "player4-area",
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/player-area.svg",
-        "movable": false,
-        "x": 880,
-        "y": 530,
-        "z": 81,
-        "width": 700,
-        "height": 150,
-        "layer": -4
-    },
-    "player4-name": {
-        "id": "player4-name",
-        "type": "label",
-        "parent": "player4-area",
-        "x": 4,
-        "y": 4,
-        "movable": false,
-        "editable": true,
-        "text": "PLAYER 4",
-        "css": "font-weight:bold"
-    },
-    "player4-score-label": {
-        "id": "player4-score-label",
-        "type": "label",
-        "parent": "player4-area",
-        "x": 4,
-        "y": 50,
-        "movable": false,
-        "editable": false,
-        "text": "Score:",
-        "css": "font-weight:bold"
-    },
-    "player4-score": {
-        "id": "player4-score",
-        "type": "label",
-        "parent": "player4-area",
-        "x": 75,
-        "y": 50,
-        "movable": false,
-        "editable": false,
-        "text": 0
-    },
-    "player4-score-dec": {
-        "id": "player4-score-dec",
-        "parent": "player4-score",
-        "type": "button",
-        "x": 15,
-        "y": -2,
-        "width": 20,
-        "height": 20,
-        "movableInEdit": false,
-        "text": "-",
-        "clickRoutine": [
-            {
-                "func": "LABEL",
-                "label": "player4-score",
-                "mode": "dec",
-                "value": 1
-            }
-        ]
-    },
-    "player4-score-inc": {
-        "id": "player4-score-inc",
-        "parent": "player4-score",
-        "type": "button",
-        "x": 65,
-        "y": -2,
-        "width": 20,
-        "height": 20,
-        "movableInEdit": false,
-        "text": "+",
-        "clickRoutine": [
-            {
-                "func": "LABEL",
-                "label": "player4-score",
-                "mode": "inc",
-                "value": 1
-            }
-        ]
-    },
-    "player4-total-label": {
-        "id": "player4-total-label",
-        "type": "label",
-        "parent": "player4-area",
-        "x": 4,
-        "y": 100,
-        "movable": false,
-        "editable": false,
-        "text": "Total:",
-        "css": "font-weight:bold"
-    },
-    "player4-total": {
-        "id": "player4-total",
-        "type": "label",
-        "parent": "player4-area",
-        "x": 75,
-        "y": 100,
-        "movable": false,
-        "editable": false,
-        "text": 0
-    },
-    "player5-area": {
-        "id": "player5-area",
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/player-area.svg",
-        "movable": false,
-        "x": 880,
-        "y": 700,
-        "z": 82,
-        "width": 700,
-        "height": 150,
-        "layer": -4
-    },
-    "player5-name": {
-        "id": "player5-name",
-        "type": "label",
-        "parent": "player5-area",
-        "x": 4,
-        "y": 4,
-        "movable": false,
-        "editable": true,
-        "text": "PLAYER 5",
-        "css": "font-weight:bold"
-    },
-    "player5-score-label": {
-        "id": "player5-score-label",
-        "type": "label",
-        "parent": "player5-area",
-        "x": 4,
-        "y": 50,
-        "movable": false,
-        "editable": false,
-        "text": "Score:",
-        "css": "font-weight:bold"
-    },
-    "player5-score": {
-        "id": "player5-score",
-        "type": "label",
-        "parent": "player5-area",
-        "x": 75,
-        "y": 50,
-        "movable": false,
-        "editable": false,
-        "text": 0
-    },
-    "player5-score-dec": {
-        "id": "player5-score-dec",
-        "parent": "player5-score",
-        "type": "button",
-        "x": 15,
-        "y": -2,
-        "width": 20,
-        "height": 20,
-        "movableInEdit": false,
-        "text": "-",
-        "clickRoutine": [
-            {
-                "func": "LABEL",
-                "label": "player5-score",
-                "mode": "dec",
-                "value": 1
-            }
-        ]
-    },
-    "player5-score-inc": {
-        "id": "player5-score-inc",
-        "parent": "player5-score",
-        "type": "button",
-        "x": 65,
-        "y": -2,
-        "width": 20,
-        "height": 20,
-        "movableInEdit": false,
-        "text": "+",
-        "clickRoutine": [
-            {
-                "func": "LABEL",
-                "label": "player5-score",
-                "mode": "inc",
-                "value": 1
-            }
-        ]
-    },
-    "player5-total-label": {
-        "id": "player5-total-label",
-        "type": "label",
-        "parent": "player5-area",
-        "x": 4,
-        "y": 100,
-        "movable": false,
-        "editable": false,
-        "text": "Total:",
-        "css": "font-weight:bold"
-    },
-    "player5-total": {
-        "id": "player5-total",
-        "type": "label",
-        "parent": "player5-area",
-        "x": 75,
-        "y": 100,
-        "movable": false,
-        "editable": false,
-        "text": 0
-    },
-    "hand-area": {
-        "id": "hand-area",
-        "type": "holder",
-        "onEnter": {
-            "activeFace": 1
-        },
-        "dropTarget": {
-            "deck": "deck-cards"
-        },
-        "dropOffsetX": 10,
-        "dropOffsetY": 15,
-        "stackOffsetX": 65,
-        "childrenPerOwner": true,
-        "x": 20,
-        "y": 790,
-        "z": 79,
-        "width": 840,
-        "height": 190
+  "_meta": {
+    "version": 11,
+    "info": {
+      "name": "Wildlife Safari",
+      "image": "",
+      "rules": "",
+      "bgg": "https://boardgamegeek.com/boardgame/398/wildlife-safari",
+      "year": 1994,
+      "mode": "vs",
+      "time": 30,
+      "attribution": "Game layout and scripting by Andy Pymont, provided under the MIT License.\n\nAnimal graphics are from https:///thenounproject.com/ and are used under the CC BY 3.0 license:\n\nEucalyp:\n- Safari https://thenounproject.com/icon/safari-4932030/\nFran Couto:\n- Zebra https://thenounproject.com/icon/zebra-3785903/\nIconic:\n- Elephant https://thenounproject.com/icon/elephant-1046624/\nIronSV:\n- Lion https://thenounproject.com/icon/lion-3063323/\ntulpahn:\n- Leopard https://thenounproject.com/icon/leopard-3839691/\n- Rhino https://thenounproject.com/icon/rhino-3839674/",
+      "lastUpdate": 1680963140205,
+      "showName": true,
+      "description": "Can you collect the most valuable animals?",
+      "helpText": "",
+      "similarImage": "",
+      "similarName": "",
+      "similarAwards": "",
+      "ruleText": "",
+      "players": "2-5",
+      "language": "en-GB"
     }
+  },
+  "hand": {
+    "id": "hand",
+    "type": "holder",
+    "childrenPerOwner": true,
+    "x": 297.5,
+    "y": 852.5,
+    "width": 1005,
+    "height": 145,
+    "dropTarget": {
+      "deck": "deck-cards"
+    },
+    "dropOffsetX": 2.5,
+    "dropOffsetY": 2.5,
+    "stackOffsetX": 100,
+    "stackOffsetY": 0,
+    "onEnter": {
+      "activeFace": 1
+    },
+    "countRoutine": [
+      {
+        "func": "FOREACH",
+        "range": 5,
+        "loopRoutine": [
+          {
+            "func": "GET",
+            "collection": [
+              "seat-p${value}"
+            ],
+            "property": "player",
+            "variable": "pID"
+          },
+          {
+            "func": "SELECT",
+            "property": "parent",
+            "value": "${PROPERTY id}"
+          },
+          {
+            "func": "SELECT",
+            "source": "DEFAULT",
+            "property": "owner",
+            "value": "${pID}"
+          },
+          {
+            "func": "COUNT"
+          },
+          {
+            "func": "LABEL",
+            "label": "hand-counter-p${value}",
+            "value": "${COUNT}"
+          }
+        ]
+      }
+    ],
+    "enterRoutine": [
+      {
+        "func": "CALL",
+        "routine": "countRoutine"
+      }
+    ],
+    "leaveRoutine": [
+      {
+        "func": "CALL",
+        "routine": "countRoutine"
+      }
+    ]
+  },
+  "scoreboard": {
+    "id": "scoreboard",
+    "type": "scoreboard",
+    "x": 25,
+    "y": 105,
+    "width": 450,
+    "height": 400,
+    "movable": false,
+    "movableInEdit": false
+  },
+  "holder-cards": {
+    "id": "holder-cards",
+    "type": "holder",
+    "x": 100,
+    "y": 550,
+    "width": 100,
+    "height": 140,
+    "dropTarget": {
+      "deck": "deck-cards"
+    },
+    "dropOffsetX": 0,
+    "dropOffsetY": 0,
+    "onEnter": {
+      "activeFace": 0
+    }
+  },
+  "round-counter": {
+    "id": "round-counter",
+    "type": "label",
+    "x": 285,
+    "y": 590,
+    "width": 65,
+    "height": 40,
+    "css": {
+      "font-size": "30px"
+    },
+    "editable": false,
+    "text": 0
+  },
+  "round-counter-title": {
+    "id": "round-counter-title",
+    "type": "label",
+    "parent": "round-counter",
+    "fixedParent": true,
+    "x": 0,
+    "y": -20,
+    "width": 65,
+    "height": 30,
+    "css": {
+      "font-size": "16px",
+      "font-weight": "bold"
+    },
+    "editable": false,
+    "movable": false,
+    "movableInEdit": false,
+    "text": "ROUND"
+  },
+  "button-new-round": {
+    "id": "button-new-round",
+    "type": "button",
+    "parent": "round-counter",
+    "fixedParent": true,
+    "x": -25,
+    "y": 40,
+    "width": 120,
+    "height": 30,
+    "movable": false,
+    "movableInEdit": false,
+    "css": {
+      "font-size": "16px"
+    },
+    "text": "New Round",
+    "clickRoutine": [
+    ]
+  },
+  "deck-cards": {
+    "id": "deck-cards",
+    "type": "deck",
+    "parent": "holder-cards",
+    "cardTypes": {
+      "card-elephant-0": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/wildlifesafari-v2/wildlifesafari/assets/card-elephant-0.svg",
+        "suit": "elephant",
+        "value": 0
+      },
+      "card-elephant-1": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/wildlifesafari-v2/wildlifesafari/assets/card-elephant-1.svg",
+        "suit": "elephant",
+        "value": 1
+      },
+      "card-elephant-2": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/wildlifesafari-v2/wildlifesafari/assets/card-elephant-2.svg",
+        "suit": "elephant",
+        "value": 2
+      },
+      "card-elephant-3": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/wildlifesafari-v2/wildlifesafari/assets/card-elephant-3.svg",
+        "suit": "elephant",
+        "value": 3
+      },
+      "card-elephant-4": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/wildlifesafari-v2/wildlifesafari/assets/card-elephant-4.svg",
+        "suit": "elephant",
+        "value": 4
+      },
+      "card-elephant-5": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/wildlifesafari-v2/wildlifesafari/assets/card-elephant-5.svg",
+        "suit": "elephant",
+        "value": 5
+      },
+      "card-leopard-0": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/wildlifesafari-v2/wildlifesafari/assets/card-leopard-0.svg",
+        "suit": "leopard",
+        "value": 0
+      },
+      "card-leopard-1": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/wildlifesafari-v2/wildlifesafari/assets/card-leopard-1.svg",
+        "suit": "leopard",
+        "value": 1
+      },
+      "card-leopard-2": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/wildlifesafari-v2/wildlifesafari/assets/card-leopard-2.svg",
+        "suit": "leopard",
+        "value": 2
+      },
+      "card-leopard-3": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/wildlifesafari-v2/wildlifesafari/assets/card-leopard-3.svg",
+        "suit": "leopard",
+        "value": 3
+      },
+      "card-leopard-4": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/wildlifesafari-v2/wildlifesafari/assets/card-leopard-4.svg",
+        "suit": "leopard",
+        "value": 4
+      },
+      "card-leopard-5": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/wildlifesafari-v2/wildlifesafari/assets/card-leopard-5.svg",
+        "suit": "leopard",
+        "value": 5
+      },
+      "card-lion-0": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/wildlifesafari-v2/wildlifesafari/assets/card-lion-0.svg",
+        "suit": "lion",
+        "value": 0
+      },
+      "card-lion-1": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/wildlifesafari-v2/wildlifesafari/assets/card-lion-1.svg",
+        "suit": "lion",
+        "value": 1
+      },
+      "card-lion-2": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/wildlifesafari-v2/wildlifesafari/assets/card-lion-2.svg",
+        "suit": "lion",
+        "value": 2
+      },
+      "card-lion-3": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/wildlifesafari-v2/wildlifesafari/assets/card-lion-3.svg",
+        "suit": "lion",
+        "value": 3
+      },
+      "card-lion-4": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/wildlifesafari-v2/wildlifesafari/assets/card-lion-4.svg",
+        "suit": "lion",
+        "value": 4
+      },
+      "card-lion-5": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/wildlifesafari-v2/wildlifesafari/assets/card-lion-5.svg",
+        "suit": "lion",
+        "value": 5
+      },
+      "card-rhino-0": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/wildlifesafari-v2/wildlifesafari/assets/card-rhino-0.svg",
+        "suit": "rhino",
+        "value": 0
+      },
+      "card-rhino-1": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/wildlifesafari-v2/wildlifesafari/assets/card-rhino-1.svg",
+        "suit": "rhino",
+        "value": 1
+      },
+      "card-rhino-2": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/wildlifesafari-v2/wildlifesafari/assets/card-rhino-2.svg",
+        "suit": "rhino",
+        "value": 2
+      },
+      "card-rhino-3": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/wildlifesafari-v2/wildlifesafari/assets/card-rhino-3.svg",
+        "suit": "rhino",
+        "value": 3
+      },
+      "card-rhino-4": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/wildlifesafari-v2/wildlifesafari/assets/card-rhino-4.svg",
+        "suit": "rhino",
+        "value": 4
+      },
+      "card-rhino-5": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/wildlifesafari-v2/wildlifesafari/assets/card-rhino-5.svg",
+        "suit": "rhino",
+        "value": 5
+      },
+      "card-zebra-0": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/wildlifesafari-v2/wildlifesafari/assets/card-zebra-0.svg",
+        "suit": "zebra",
+        "value": 0
+      },
+      "card-zebra-1": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/wildlifesafari-v2/wildlifesafari/assets/card-zebra-1.svg",
+        "suit": "zebra",
+        "value": 1
+      },
+      "card-zebra-2": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/wildlifesafari-v2/wildlifesafari/assets/card-zebra-2.svg",
+        "suit": "zebra",
+        "value": 2
+      },
+      "card-zebra-3": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/wildlifesafari-v2/wildlifesafari/assets/card-zebra-3.svg",
+        "suit": "zebra",
+        "value": 3
+      },
+      "card-zebra-4": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/wildlifesafari-v2/wildlifesafari/assets/card-zebra-4.svg",
+        "suit": "zebra",
+        "value": 4
+      },
+      "card-zebra-5": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/wildlifesafari-v2/wildlifesafari/assets/card-zebra-5.svg",
+        "suit": "zebra",
+        "value": 5
+      }
+    },
+    "faceTemplates": [
+      {
+        "border": false,
+        "radius": false,
+        "objects": [
+          {
+            "type": "image",
+            "x": 0,
+            "y": 0,
+            "width": 100,
+            "height": 140,
+            "value": "https://raw.githubusercontent.com/andypymont/vtt-games/wildlifesafari-v2/wildlifesafari/assets/card-back.svg",
+            "color": "transparent"
+          }
+        ]
+      },
+      {
+        "border": false,
+        "radius": false,
+        "objects": [
+          {
+            "type": "image",
+            "x": 0,
+            "y": 0,
+            "width": 100,
+            "height": 140,
+            "dynamicProperties": {
+              "value": "image"
+            },
+            "color": "transparent"
+          }
+        ]
+      }
+    ],
+    "cardDefaults": {
+      "width": 100,
+      "height": 140,
+      "onPileCreation": {
+        "handleCSS": {
+          "background": "black",
+          "color": "white"
+        }
+      }
+    }
+  },
+  "holder-cards-elephant": {
+    "id": "holder-cards-elephant",
+    "type": "holder",
+    "x": 530,
+    "y": 105,
+    "width": 250,
+    "height": 140,
+    "dropTarget": {
+      "deck": "deck-cards",
+      "suit": "elephant"
+    },
+    "dropOffsetX": 0,
+    "dropOffsetY": 0,
+    "stackOffsetX": 30,
+    "stackOffsetY": 0,
+    "onEnter": {
+      "activeFace": 1
+    }
+  },
+  "holder-cards-leopard": {
+    "id": "holder-cards-leopard",
+    "type": "holder",
+    "inheritFrom": "holder-cards-elephant",
+    "y": 255,
+    "dropTarget": {
+      "deck": "deck-cards",
+      "suit": "leopard"
+    }
+  },
+  "holder-cards-lion": {
+    "id": "holder-cards-lion",
+    "type": "holder",
+    "inheritFrom": "holder-cards-elephant",
+    "y": 405,
+    "dropTarget": {
+      "deck": "deck-cards",
+      "suit": "lion"
+    }
+  },
+  "holder-cards-rhino": {
+    "id": "holder-cards-rhino",
+    "type": "holder",
+    "inheritFrom": "holder-cards-elephant",
+    "y": 555,
+    "dropTarget": {
+      "deck": "deck-cards",
+      "suit": "rhino"
+    }
+  },
+  "holder-cards-zebra": {
+    "id": "holder-cards-zebra",
+    "type": "holder",
+    "inheritFrom": "holder-cards-elephant",
+    "y": 705,
+    "dropTarget": {
+      "deck": "deck-cards",
+      "suit": "zebra"
+    }
+  },
+  "seat-p1": {
+    "id": "seat-p1",
+    "type": "seat",
+    "index": 1,
+    "x": 960,
+    "y": 35,
+    "width": 100,
+    "height": 30,
+    "css": {
+      "font-size": "14px"
+    },
+    "hideWhenUnused": true
+  },
+  "hand-counter-p1": {
+    "id": "hand-counter-p1",
+    "parent": "seat-p1",
+    "x": -20,
+    "y": -20,
+    "width": 30,
+    "height": 30,
+    "borderRadius": 100,
+    "movable": false,
+    "movableInEdit": false,
+    "clickable": false,
+    "css": {
+      "font-size": "16px",
+      "display": "flex",
+      "align-items": "center",
+      "justify-content": "center",
+      "color": "#6d6d6d",
+      "background": "#e4e4e4",
+      "border": "2px solid #999999"
+    },
+    "text": 0
+  },
+  "seat-p2": {
+    "id": "seat-p2",
+    "type": "seat",
+    "index": 2,
+    "x": 1090,
+    "inheritFrom": {
+      "seat-p1": [
+        "y",
+        "width",
+        "height",
+        "css",
+        "hideWhenUnused"
+      ]
+    }
+  },
+  "hand-counter-p2": {
+    "id": "hand-counter-p2",
+    "parent": "seat-p2",
+    "text": 0,
+    "inheritFrom": "hand-counter-p1"
+  },
+  "seat-p3": {
+    "id": "seat-p3",
+    "type": "seat",
+    "index": 3,
+    "x": 1220,
+    "inheritFrom": {
+      "seat-p1": [
+        "y",
+        "width",
+        "height",
+        "css",
+        "hideWhenUnused"
+      ]
+    }
+  },
+  "hand-counter-p3": {
+    "id": "hand-counter-p3",
+    "parent": "seat-p3",
+    "text": 0,
+    "inheritFrom": "hand-counter-p1"
+  },
+  "seat-p4": {
+    "id": "seat-p4",
+    "type": "seat",
+    "index": 4,
+    "x": 1350,
+    "inheritFrom": {
+      "seat-p1": [
+        "y",
+        "width",
+        "height",
+        "css",
+        "hideWhenUnused"
+      ]
+    }
+  },
+  "hand-counter-p4": {
+    "id": "hand-counter-p4",
+    "parent": "seat-p4",
+    "text": 0,
+    "inheritFrom": "hand-counter-p1"
+  },
+  "seat-p5": {
+    "id": "seat-p5",
+    "type": "seat",
+    "index": 5,
+    "x": 1480,
+    "inheritFrom": {
+      "seat-p1": [
+        "y",
+        "width",
+        "height",
+        "css",
+        "hideWhenUnused"
+      ]
+    }
+  },
+  "hand-counter-p5": {
+    "id": "hand-counter-p5",
+    "parent": "seat-p5",
+    "text": 0,
+    "inheritFrom": "hand-counter-p1"
+  },
+  "holder-elephant": {
+    "id": "holder-elephant",
+    "type": "holder",
+    "x": 855,
+    "y": 137.5,
+    "width": 75,
+    "height": 75,
+    "dropOffsetX": 2.5,
+    "dropOffsetY": 2.5,
+    "dropTarget": {
+      "deck": "deck-tiles",
+      "cardType": "tile-elephant"
+    }
+  },
+  "deck-tiles": {
+    "id": "deck-tiles",
+    "type": "deck",
+    "parent": "holder-elephant",
+    "cardTypes": {
+      "tile-elephant": {
+        "image": "https://github.com/andypymont/vtt-games/raw/wildlifesafari-v2/wildlifesafari/assets/tile-elephant.svg"
+      },
+      "tile-leopard": {
+        "image": "https://github.com/andypymont/vtt-games/raw/wildlifesafari-v2/wildlifesafari/assets/tile-leopard.svg"
+      },
+      "tile-lion": {
+        "image": "https://github.com/andypymont/vtt-games/raw/wildlifesafari-v2/wildlifesafari/assets/tile-lion.svg"
+      },
+      "tile-rhino": {
+        "image": "https://github.com/andypymont/vtt-games/raw/wildlifesafari-v2/wildlifesafari/assets/tile-rhino.svg"
+      },
+      "tile-zebra": {
+        "image": "https://github.com/andypymont/vtt-games/raw/wildlifesafari-v2/wildlifesafari/assets/tile-zebra.svg"
+      }
+    },
+    "faceTemplates": [
+      {
+        "border": false,
+        "radius": false,
+        "objects": [
+          {
+            "type": "image",
+            "x": 0,
+            "y": 0,
+            "width": 70,
+            "height": 70,
+            "dynamicProperties": {
+              "value": "image"
+            }
+          }
+        ]
+      }
+    ],
+    "cardDefaults": {
+      "width": 70,
+      "height": 70,
+      "onPileCreation": {
+        "handleCSS": {
+          "background": "black",
+          "color": "white"
+        },
+        "handlePosition": "top left"
+      },
+      "value": 0
+    }
+  },
+  "holder-elephant-p1": {
+    "id": "holder-elephant-p1",
+    "type": "holder",
+    "inheritFrom": "holder-elephant",
+    "x": 980,
+    "linkedToSeat": "seat-p1"
+  },
+  "holder-elephant-p2": {
+    "id": "holder-elephant-p2",
+    "type": "holder",
+    "inheritFrom": "holder-elephant",
+    "x": 1110,
+    "linkedToSeat": "seat-p2"
+  },
+  "holder-elephant-p3": {
+    "id": "holder-elephant-p3",
+    "type": "holder",
+    "inheritFrom": "holder-elephant",
+    "x": 1240,
+    "linkedToSeat": "seat-p3"
+  },
+  "holder-elephant-p4": {
+    "id": "holder-elephant-p4",
+    "type": "holder",
+    "inheritFrom": "holder-elephant",
+    "x": 1370,
+    "linkedToSeat": "seat-p4"
+  },
+  "holder-elephant-p5": {
+    "id": "holder-elephant-p5",
+    "type": "holder",
+    "inheritFrom": "holder-elephant",
+    "x": 1500,
+    "linkedToSeat": "seat-p5"
+  },
+  "holder-leopard": {
+    "id": "holder-leopard",
+    "type": "holder",
+    "inheritFrom": "holder-elephant",
+    "y": 285.5,
+    "dropTarget": {
+      "deck": "deck-tiles",
+      "cardType": "tile-leopard"
+    }
+  },
+  "holder-leopard-p1": {
+    "id": "holder-leopard-p1",
+    "type": "holder",
+    "inheritFrom": {
+      "holder-elephant-p1": [
+        "x",
+        "linkedToSeat"
+      ],
+      "holder-leopard": "*"
+    }
+  },
+  "holder-leopard-p2": {
+    "id": "holder-leopard-p2",
+    "type": "holder",
+    "inheritFrom": {
+      "holder-elephant-p2": [
+        "x",
+        "linkedToSeat"
+      ],
+      "holder-leopard": "*"
+    }
+  },
+  "holder-leopard-p3": {
+    "id": "holder-leopard-p3",
+    "type": "holder",
+    "inheritFrom": {
+      "holder-elephant-p3": [
+        "x",
+        "linkedToSeat"
+      ],
+      "holder-leopard": "*"
+    }
+  },
+  "holder-leopard-p4": {
+    "id": "holder-leopard-p4",
+    "type": "holder",
+    "inheritFrom": {
+      "holder-elephant-p4": [
+        "x",
+        "linkedToSeat"
+      ],
+      "holder-leopard": "*"
+    }
+  },
+  "holder-leopard-p5": {
+    "id": "holder-leopard-p5",
+    "type": "holder",
+    "inheritFrom": {
+      "holder-elephant-p5": [
+        "x",
+        "linkedToSeat"
+      ],
+      "holder-leopard": "*"
+    }
+  },
+  "holder-lion": {
+    "id": "holder-lion",
+    "type": "holder",
+    "inheritFrom": "holder-elephant",
+    "y": 437.5,
+    "dropTarget": {
+      "deck": "deck-tiles",
+      "cardType": "tile-lion"
+    }
+  },
+  "holder-lion-p1": {
+    "id": "holder-lion-p1",
+    "type": "holder",
+    "inheritFrom": {
+      "holder-elephant-p1": [
+        "x",
+        "linkedToSeat"
+      ],
+      "holder-lion": "*"
+    }
+  },
+  "holder-lion-p2": {
+    "id": "holder-lion-p2",
+    "type": "holder",
+    "inheritFrom": {
+      "holder-elephant-p2": [
+        "x",
+        "linkedToSeat"
+      ],
+      "holder-lion": "*"
+    }
+  },
+  "holder-lion-p3": {
+    "id": "holder-lion-p3",
+    "type": "holder",
+    "inheritFrom": {
+      "holder-elephant-p3": [
+        "x",
+        "linkedToSeat"
+      ],
+      "holder-lion": "*"
+    }
+  },
+  "holder-lion-p4": {
+    "id": "holder-lion-p4",
+    "type": "holder",
+    "inheritFrom": {
+      "holder-elephant-p4": [
+        "x",
+        "linkedToSeat"
+      ],
+      "holder-lion": "*"
+    }
+  },
+  "holder-lion-p5": {
+    "id": "holder-lion-p5",
+    "type": "holder",
+    "inheritFrom": {
+      "holder-elephant-p5": [
+        "x",
+        "linkedToSeat"
+      ],
+      "holder-lion": "*"
+    }
+  },
+  "holder-rhino": {
+    "id": "holder-rhino",
+    "type": "holder",
+    "inheritFrom": "holder-elephant",
+    "y": 587.5,
+    "dropTarget": {
+      "deck": "deck-tiles",
+      "cardType": "tile-rhino"
+    }
+  },
+  "holder-rhino-p1": {
+    "id": "holder-rhino-p1",
+    "type": "holder",
+    "inheritFrom": {
+      "holder-elephant-p1": [
+        "x",
+        "linkedToSeat"
+      ],
+      "holder-rhino": "*"
+    }
+  },
+  "holder-rhino-p2": {
+    "id": "holder-rhino-p2",
+    "type": "holder",
+    "inheritFrom": {
+      "holder-elephant-p2": [
+        "x",
+        "linkedToSeat"
+      ],
+      "holder-rhino": "*"
+    }
+  },
+  "holder-rhino-p3": {
+    "id": "holder-rhino-p3",
+    "type": "holder",
+    "inheritFrom": {
+      "holder-elephant-p3": [
+        "x",
+        "linkedToSeat"
+      ],
+      "holder-rhino": "*"
+    }
+  },
+  "holder-rhino-p4": {
+    "id": "holder-rhino-p4",
+    "type": "holder",
+    "inheritFrom": {
+      "holder-elephant-p4": [
+        "x",
+        "linkedToSeat"
+      ],
+      "holder-rhino": "*"
+    }
+  },
+  "holder-rhino-p5": {
+    "id": "holder-rhino-p5",
+    "type": "holder",
+    "inheritFrom": {
+      "holder-elephant-p5": [
+        "x",
+        "linkedToSeat"
+      ],
+      "holder-rhino": "*"
+    }
+  },
+  "holder-zebra": {
+    "id": "holder-zebra",
+    "type": "holder",
+    "inheritFrom": "holder-elephant",
+    "y": 737.5,
+    "dropTarget": {
+      "deck": "deck-tiles",
+      "cardType": "tile-zebra"
+    }
+  },
+  "holder-zebra-p1": {
+    "id": "holder-zebra-p1",
+    "type": "holder",
+    "inheritFrom": {
+      "holder-elephant-p1": [
+        "x",
+        "linkedToSeat"
+      ],
+      "holder-zebra": "*"
+    }
+  },
+  "holder-zebra-p2": {
+    "id": "holder-zebra-p2",
+    "type": "holder",
+    "inheritFrom": {
+      "holder-elephant-p2": [
+        "x",
+        "linkedToSeat"
+      ],
+      "holder-zebra": "*"
+    }
+  },
+  "holder-zebra-p3": {
+    "id": "holder-zebra-p3",
+    "type": "holder",
+    "inheritFrom": {
+      "holder-elephant-p3": [
+        "x",
+        "linkedToSeat"
+      ],
+      "holder-zebra": "*"
+    }
+  },
+  "holder-zebra-p4": {
+    "id": "holder-zebra-p4",
+    "type": "holder",
+    "inheritFrom": {
+      "holder-elephant-p4": [
+        "x",
+        "linkedToSeat"
+      ],
+      "holder-zebra": "*"
+    }
+  },
+  "holder-zebra-p5": {
+    "id": "holder-zebra-p5",
+    "type": "holder",
+    "inheritFrom": {
+      "holder-elephant-p5": [
+        "x",
+        "linkedToSeat"
+      ],
+      "holder-zebra": "*"
+    }
+  },
+  "pile-tile-elephant": {
+    "id": "pile-tile-elephant",
+    "type": "pile",
+    "parent": "holder-elephant",
+    "x": 2.5,
+    "y": 2.5,
+    "width": 70,
+    "height": 70,
+    "handleCSS": {
+      "background": "black",
+      "color": "white"
+    },
+    "handlePosition": "top left"
+  },
+  "tile-elephant-1": {
+    "id": "tile-elephant-1",
+    "type": "card",
+    "parent": "pile-tile-elephant",
+    "deck": "deck-tiles",
+    "cardType": "tile-elephant"
+  },
+  "tile-elephant-2": {
+    "id": "tile-elephant-2",
+    "type": "card",
+    "parent": "pile-tile-elephant",
+    "deck": "deck-tiles",
+    "cardType": "tile-elephant"
+  },
+  "tile-elephant-3": {
+    "id": "tile-elephant-3",
+    "type": "card",
+    "parent": "pile-tile-elephant",
+    "deck": "deck-tiles",
+    "cardType": "tile-elephant"
+  },
+  "tile-elephant-4": {
+    "id": "tile-elephant-4",
+    "type": "card",
+    "parent": "pile-tile-elephant",
+    "deck": "deck-tiles",
+    "cardType": "tile-elephant"
+  },
+  "tile-elephant-5": {
+    "id": "tile-elephant-5",
+    "type": "card",
+    "parent": "pile-tile-elephant",
+    "deck": "deck-tiles",
+    "cardType": "tile-elephant"
+  },
+  "pile-tile-leopard": {
+    "id": "pile-tile-leopard",
+    "type": "pile",
+    "parent": "holder-leopard",
+    "x": 2.5,
+    "y": 2.5,
+    "width": 70,
+    "height": 70,
+    "handleCSS": {
+      "background": "black",
+      "color": "white"
+    },
+    "handlePosition": "top left"
+  },
+  "tile-leopard-1": {
+    "id": "tile-leopard-1",
+    "type": "card",
+    "parent": "pile-tile-leopard",
+    "deck": "deck-tiles",
+    "cardType": "tile-leopard"
+  },
+  "tile-leopard-2": {
+    "id": "tile-leopard-2",
+    "type": "card",
+    "parent": "pile-tile-leopard",
+    "deck": "deck-tiles",
+    "cardType": "tile-leopard"
+  },
+  "tile-leopard-3": {
+    "id": "tile-leopard-3",
+    "type": "card",
+    "parent": "pile-tile-leopard",
+    "deck": "deck-tiles",
+    "cardType": "tile-leopard"
+  },
+  "tile-leopard-4": {
+    "id": "tile-leopard-4",
+    "type": "card",
+    "parent": "pile-tile-leopard",
+    "deck": "deck-tiles",
+    "cardType": "tile-leopard"
+  },
+  "tile-leopard-5": {
+    "id": "tile-leopard-5",
+    "type": "card",
+    "parent": "pile-tile-leopard",
+    "deck": "deck-tiles",
+    "cardType": "tile-leopard"
+  },
+  "pile-tile-lion": {
+    "id": "pile-tile-lion",
+    "type": "pile",
+    "parent": "holder-lion",
+    "x": 2.5,
+    "y": 2.5,
+    "width": 70,
+    "height": 70,
+    "handleCSS": {
+      "background": "black",
+      "color": "white"
+    },
+    "handlePosition": "top left"
+  },
+  "tile-lion-1": {
+    "id": "tile-lion-1",
+    "type": "card",
+    "parent": "pile-tile-lion",
+    "deck": "deck-tiles",
+    "cardType": "tile-lion"
+  },
+  "tile-lion-2": {
+    "id": "tile-lion-2",
+    "type": "card",
+    "parent": "pile-tile-lion",
+    "deck": "deck-tiles",
+    "cardType": "tile-lion"
+  },
+  "tile-lion-2": {
+    "id": "tile-lion-2",
+    "type": "card",
+    "parent": "pile-tile-lion",
+    "deck": "deck-tiles",
+    "cardType": "tile-lion"
+  },
+  "tile-lion-3": {
+    "id": "tile-lion-3",
+    "type": "card",
+    "parent": "pile-tile-lion",
+    "deck": "deck-tiles",
+    "cardType": "tile-lion"
+  },
+  "tile-lion-4": {
+    "id": "tile-lion-4",
+    "type": "card",
+    "parent": "pile-tile-lion",
+    "deck": "deck-tiles",
+    "cardType": "tile-lion"
+  },
+  "tile-lion-5": {
+    "id": "tile-lion-5",
+    "type": "card",
+    "parent": "pile-tile-lion",
+    "deck": "deck-tiles",
+    "cardType": "tile-lion"
+  },
+  "pile-tile-rhino": {
+    "id": "pile-tile-rhino",
+    "type": "pile",
+    "parent": "holder-rhino",
+    "x": 2.5,
+    "y": 2.5,
+    "width": 70,
+    "height": 70,
+    "handleCSS": {
+      "background": "black",
+      "color": "white"
+    },
+    "handlePosition": "top left"
+  },
+  "tile-rhino-1": {
+    "id": "tile-rhino-1",
+    "type": "card",
+    "parent": "pile-tile-rhino",
+    "deck": "deck-tiles",
+    "cardType": "tile-rhino"
+  },
+  "tile-rhino-2": {
+    "id": "tile-rhino-2",
+    "type": "card",
+    "parent": "pile-tile-rhino",
+    "deck": "deck-tiles",
+    "cardType": "tile-rhino"
+  },
+  "tile-rhino-3": {
+    "id": "tile-rhino-3",
+    "type": "card",
+    "parent": "pile-tile-rhino",
+    "deck": "deck-tiles",
+    "cardType": "tile-rhino"
+  },
+  "tile-rhino-4": {
+    "id": "tile-rhino-4",
+    "type": "card",
+    "parent": "pile-tile-rhino",
+    "deck": "deck-tiles",
+    "cardType": "tile-rhino"
+  },
+  "tile-rhino-5": {
+    "id": "tile-rhino-5",
+    "type": "card",
+    "parent": "pile-tile-rhino",
+    "deck": "deck-tiles",
+    "cardType": "tile-rhino"
+  },
+  "pile-tile-zebra": {
+    "id": "pile-tile-zebra",
+    "type": "pile",
+    "parent": "holder-zebra",
+    "x": 2.5,
+    "y": 2.5,
+    "width": 70,
+    "height": 70,
+    "handleCSS": {
+      "background": "black",
+      "color": "white"
+    },
+    "handlePosition": "top left"
+  },
+  "tile-zebra-1": {
+    "id": "tile-zebra-1",
+    "type": "card",
+    "parent": "pile-tile-zebra",
+    "deck": "deck-tiles",
+    "cardType": "tile-zebra"
+  },
+  "tile-zebra-2": {
+    "id": "tile-zebra-2",
+    "type": "card",
+    "parent": "pile-tile-zebra",
+    "deck": "deck-tiles",
+    "cardType": "tile-zebra"
+  },
+  "tile-zebra-3": {
+    "id": "tile-zebra-3",
+    "type": "card",
+    "parent": "pile-tile-zebra",
+    "deck": "deck-tiles",
+    "cardType": "tile-zebra"
+  },
+  "tile-zebra-4": {
+    "id": "tile-zebra-4",
+    "type": "card",
+    "parent": "pile-tile-zebra",
+    "deck": "deck-tiles",
+    "cardType": "tile-zebra"
+  },
+  "tile-zebra-5": {
+    "id": "tile-zebra-5",
+    "type": "card",
+    "parent": "pile-tile-zebra",
+    "deck": "deck-tiles",
+    "cardType": "tile-zebra"
+  },
+  "pile-draw": {
+    "id": "pile-draw",
+    "type": "pile",
+    "parent": "holder-cards",
+    "x": 0,
+    "y": 0,
+    "width": 100,
+    "height": 140,
+    "handleCSS": {
+      "background": "black",
+      "color": "white"
+    }
+  },
+  "card-elephant-0": {
+    "id": "card-elephant-0",
+    "type": "card",
+    "parent": "pile-draw",
+    "deck": "deck-cards",
+    "cardType": "card-elephant-0"
+  },
+  "card-elephant-1": {
+    "id": "card-elephant-1",
+    "type": "card",
+    "parent": "pile-draw",
+    "deck": "deck-cards",
+    "cardType": "card-elephant-1"
+  },
+  "card-elephant-2": {
+    "id": "card-elephant-2",
+    "type": "card",
+    "parent": "pile-draw",
+    "deck": "deck-cards",
+    "cardType": "card-elephant-2"
+  },
+  "card-elephant-3": {
+    "id": "card-elephant-3",
+    "type": "card",
+    "parent": "pile-draw",
+    "deck": "deck-cards",
+    "cardType": "card-elephant-3"
+  },
+  "card-elephant-4": {
+    "id": "card-elephant-4",
+    "type": "card",
+    "parent": "pile-draw",
+    "deck": "deck-cards",
+    "cardType": "card-elephant-4"
+  },
+  "card-elephant-5": {
+    "id": "card-elephant-5",
+    "type": "card",
+    "parent": "pile-draw",
+    "deck": "deck-cards",
+    "cardType": "card-elephant-5"
+  },
+  "card-leopard-0": {
+    "id": "card-leopard-0",
+    "type": "card",
+    "parent": "pile-draw",
+    "deck": "deck-cards",
+    "cardType": "card-leopard-0"
+  },
+  "card-leopard-1": {
+    "id": "card-leopard-1",
+    "type": "card",
+    "parent": "pile-draw",
+    "deck": "deck-cards",
+    "cardType": "card-leopard-1"
+  },
+  "card-leopard-2": {
+    "id": "card-leopard-2",
+    "type": "card",
+    "parent": "pile-draw",
+    "deck": "deck-cards",
+    "cardType": "card-leopard-2"
+  },
+  "card-leopard-3": {
+    "id": "card-leopard-3",
+    "type": "card",
+    "parent": "pile-draw",
+    "deck": "deck-cards",
+    "cardType": "card-leopard-3"
+  },
+  "card-leopard-4": {
+    "id": "card-leopard-4",
+    "type": "card",
+    "parent": "pile-draw",
+    "deck": "deck-cards",
+    "cardType": "card-leopard-4"
+  },
+  "card-leopard-5": {
+    "id": "card-leopard-5",
+    "type": "card",
+    "parent": "pile-draw",
+    "deck": "deck-cards",
+    "cardType": "card-leopard-5"
+  },
+  "card-lion-0": {
+    "id": "card-lion-0",
+    "type": "card",
+    "parent": "pile-draw",
+    "deck": "deck-cards",
+    "cardType": "card-lion-0"
+  },
+  "card-lion-1": {
+    "id": "card-lion-1",
+    "type": "card",
+    "parent": "pile-draw",
+    "deck": "deck-cards",
+    "cardType": "card-lion-1"
+  },
+  "card-lion-2": {
+    "id": "card-lion-2",
+    "type": "card",
+    "parent": "pile-draw",
+    "deck": "deck-cards",
+    "cardType": "card-lion-2"
+  },
+  "card-lion-3": {
+    "id": "card-lion-3",
+    "type": "card",
+    "parent": "pile-draw",
+    "deck": "deck-cards",
+    "cardType": "card-lion-3"
+  },
+  "card-lion-4": {
+    "id": "card-lion-4",
+    "type": "card",
+    "parent": "pile-draw",
+    "deck": "deck-cards",
+    "cardType": "card-lion-4"
+  },
+  "card-lion-5": {
+    "id": "card-lion-5",
+    "type": "card",
+    "parent": "pile-draw",
+    "deck": "deck-cards",
+    "cardType": "card-lion-5"
+  },
+  "card-rhino-0": {
+    "id": "card-rhino-0",
+    "type": "card",
+    "parent": "pile-draw",
+    "deck": "deck-cards",
+    "cardType": "card-rhino-0"
+  },
+  "card-rhino-1": {
+    "id": "card-rhino-1",
+    "type": "card",
+    "parent": "pile-draw",
+    "deck": "deck-cards",
+    "cardType": "card-rhino-1"
+  },
+  "card-rhino-2": {
+    "id": "card-rhino-2",
+    "type": "card",
+    "parent": "pile-draw",
+    "deck": "deck-cards",
+    "cardType": "card-rhino-2"
+  },
+  "card-rhino-3": {
+    "id": "card-rhino-3",
+    "type": "card",
+    "parent": "pile-draw",
+    "deck": "deck-cards",
+    "cardType": "card-rhino-3"
+  },
+  "card-rhino-4": {
+    "id": "card-rhino-4",
+    "type": "card",
+    "parent": "pile-draw",
+    "deck": "deck-cards",
+    "cardType": "card-rhino-4"
+  },
+  "card-rhino-5": {
+    "id": "card-rhino-5",
+    "type": "card",
+    "parent": "pile-draw",
+    "deck": "deck-cards",
+    "cardType": "card-rhino-5"
+  },
+  "card-zebra-0": {
+    "id": "card-zebra-0",
+    "type": "card",
+    "parent": "pile-draw",
+    "deck": "deck-cards",
+    "cardType": "card-zebra-0"
+  },
+  "card-zebra-1": {
+    "id": "card-zebra-1",
+    "type": "card",
+    "parent": "pile-draw",
+    "deck": "deck-cards",
+    "cardType": "card-zebra-1"
+  },
+  "card-zebra-2": {
+    "id": "card-zebra-2",
+    "type": "card",
+    "parent": "pile-draw",
+    "deck": "deck-cards",
+    "cardType": "card-zebra-2"
+  },
+  "card-zebra-3": {
+    "id": "card-zebra-3",
+    "type": "card",
+    "parent": "pile-draw",
+    "deck": "deck-cards",
+    "cardType": "card-zebra-3"
+  },
+  "card-zebra-4": {
+    "id": "card-zebra-4",
+    "type": "card",
+    "parent": "pile-draw",
+    "deck": "deck-cards",
+    "cardType": "card-zebra-4"
+  },
+  "card-zebra-5": {
+    "id": "card-zebra-5",
+    "type": "card",
+    "parent": "pile-draw",
+    "deck": "deck-cards",
+    "cardType": "card-zebra-5"
+  }
 }
