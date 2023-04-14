@@ -381,7 +381,52 @@
     "stackOffsetY": 0,
     "onEnter": {
       "activeFace": 1
-    }
+    },
+    "suit": "elephant",
+    "enterRoutine": [
+      {
+        "func": "CALL",
+        "routine": "setAnimalValueRoutine"
+      }
+    ],
+    "leaveRoutine": [
+      {
+        "func": "CALL",
+        "routine": "setAnimalValueRoutine"
+      }
+    ],
+    "setAnimalValueRoutine": [
+      {
+        "func": "SELECT",
+        "property": "parent",
+        "value": "${PROPERTY id}"
+      },
+      {
+        "func": "GET",
+        "property": "z",
+        "aggregation": "max"
+      },
+      {
+        "func": "SELECT",
+        "source": "DEFAULT",
+        "property": "z",
+        "value": "${z}"
+      },
+      {
+        "func": "GET",
+        "property": "value"
+      },
+      {
+        "func": "SELECT",
+        "property": "cardType",
+        "value": "tile-${PROPERTY suit}"
+      },
+      {
+        "func": "SET",
+        "property": "value",
+        "value": "${value}"
+      }
+    ]
   },
   "holder-cards-leopard": {
     "id": "holder-cards-leopard",
@@ -391,7 +436,8 @@
     "dropTarget": {
       "deck": "deck-cards",
       "suit": "leopard"
-    }
+    },
+    "suit": "leopard"
   },
   "holder-cards-lion": {
     "id": "holder-cards-lion",
@@ -401,7 +447,8 @@
     "dropTarget": {
       "deck": "deck-cards",
       "suit": "lion"
-    }
+    },
+    "suit": "lion"
   },
   "holder-cards-rhino": {
     "id": "holder-cards-rhino",
@@ -411,7 +458,8 @@
     "dropTarget": {
       "deck": "deck-cards",
       "suit": "rhino"
-    }
+    },
+    "suit": "rhino"
   },
   "holder-cards-zebra": {
     "id": "holder-cards-zebra",
@@ -421,7 +469,8 @@
     "dropTarget": {
       "deck": "deck-cards",
       "suit": "zebra"
-    }
+    },
+    "suit": "zebra"
   },
   "seat-p1": {
     "id": "seat-p1",
