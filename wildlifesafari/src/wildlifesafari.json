@@ -358,6 +358,7 @@
         ]
       },
       {
+        "note": "Deal players their hands for the new round",
         "func": "FOREACH",
         "collection": "DEFAULT",
         "loopRoutine": [
@@ -368,6 +369,12 @@
             "count": "${handSize}"
           }
         ]
+      },
+      {
+        "note": "Sort players' hands by id (effectively by suit, then by value)",
+        "func": "SORT",
+        "holder": "hand",
+        "key": "id"
       }
     ]
   },
