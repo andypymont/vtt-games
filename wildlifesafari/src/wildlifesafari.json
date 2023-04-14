@@ -26,9 +26,9 @@
     "id": "hand",
     "type": "holder",
     "childrenPerOwner": true,
-    "x": 297.5,
+    "x": 97.5,
     "y": 852.5,
-    "width": 1005,
+    "width": 1405,
     "height": 145,
     "dropTarget": {
       "deck": "deck-cards"
@@ -96,8 +96,93 @@
     "width": 450,
     "height": 400,
     "movable": false,
-    "movableInEdit": false
-  },
+    "movableInEdit": false,
+    "calculateScoresRoutine": [
+      {
+        "note": "Reset scores for this round to zero",
+        "func": "SCORE",
+        "mode": "set",
+        "round": "${PROPERTY text OF round-counter}",
+        "value": 0
+      },
+      {
+        "note": "Iterate through animals and add them to the scores",
+        "func": "FOREACH",
+        "in": [
+          "elephant",
+          "leopard",
+          "lion",
+          "rhino",
+          "zebra"
+        ],
+        "loopRoutine": [
+          "var suit = ${value}",
+          {
+            "note": "Inspect the played cards for this animal",
+            "func": "SELECT",
+            "property": "parent",
+            "value": "holder-cards-${suit}"
+          },
+          {
+            "note": "Count how many cards this is",
+            "func": "COUNT"
+          },
+          {
+            "note": "If no cards have been played, the value of this suit is zero",
+            "func": "IF",
+            "operand1": "${COUNT}",
+            "operand2": 0,
+            "thenRoutine": [
+              "var suitValue = 0"
+            ],
+            "elseRoutine": [
+              {
+                "note": "If cards have been played, find the z-value of the highest/latest",
+                "func": "GET",
+                "property": "z",
+                "aggregation": "max"
+              },
+              {
+                "note": "Select the latest card using that z-value",
+                "func": "SELECT",
+                "source": "DEFAULT",
+                "property": "z",
+                "value": "${z}"
+              },
+              {
+                "note": "Use that card's value for this suit",
+                "func": "GET",
+                "property": "value",
+                "variable": "suitValue"
+              }
+            ]
+          },
+          {
+            "note": "Iterate through player seats and add their value of each suit",
+            "func": "FOREACH",
+            "range": 5,
+            "loopRoutine": [
+              "var player = ${value}",
+              {
+                "note": "Count this player's tiles of this suit",
+                "func": "COUNT",
+                "holder": "holder-${suit}-p${player}"
+              },
+              "var subtotal = ${COUNT} * ${suitValue}",
+              {
+                "note": "Add the suit subtotal to the player's score",
+                "func": "SCORE",
+                "mode": "inc",
+                "seats": "seat-p${player}",
+                "round": "${PROPERTY text OF round-counter}",
+                "value": "${subtotal}"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+ },
   "holder-cards": {
     "id": "holder-cards",
     "type": "holder",
@@ -160,7 +245,130 @@
       "font-size": "16px"
     },
     "text": "New Round",
+    "getHandSizeFromPlayerCountRoutine": [
+    ],
     "clickRoutine": [
+      {
+        "note": "Unless starting the 1st round, record the scores",
+        "func": "IF",
+        "operand1": "${PROPERTY text OF round-counter}",
+        "relation": ">",
+        "operand2": 0,
+        "thenRoutine": [
+          {
+            "func": "CALL",
+            "widget": "scoreboard",
+            "routine": "calculateScoresRoutine"
+          }
+        ]
+      },
+      {
+        "note": "Increment the round number",
+        "func": "LABEL",
+        "label": "round-counter",
+        "mode": "inc",
+        "value": 1
+      },
+      {
+        "note": "Recall the tiles",
+        "func": "RECALL",
+        "holder": "holder-elephant"
+      },
+      {
+        "note": "Move the tiles into their respective suit holders",
+        "func": "FOREACH",
+        "in": [
+          "elephant",
+          "leopard",
+          "lion",
+          "rhino",
+          "zebra"
+        ],
+        "loopRoutine": [
+          {
+            "func": "SELECT",
+            "property": "cardType",
+            "value": "tile-${value}"
+          },
+          {
+            "func": "SET",
+            "property": "parent",
+            "value": "holder-${value}"
+          }
+        ]
+      },
+      {
+        "note": "Recall the cards",
+        "func": "RECALL",
+        "holder": "holder-cards"
+      },
+      {
+        "note": "Shuffle the cards",
+        "func": "SHUFFLE",
+        "holder": "holder-cards"
+      },
+      {
+        "note": "Select all player seats",
+        "func": "SELECT",
+        "property": "type",
+        "value": "seat"
+      },
+      {
+        "note": "Filter out empty seats",
+        "func": "SELECT",
+        "mode": "remove",
+        "source": "DEFAULT",
+        "property": "player",
+        "value": ""
+      },
+      {
+        "note": "Determine the player count",
+        "func": "COUNT",
+        "collection": "DEFAULT"
+      },
+      {
+        "func": "IF",
+        "operand1": "${COUNT}",
+        "operand2": 5,
+        "thenRoutine": [
+          "var handSize = 6"
+        ],
+        "elseRoutine": [
+          {
+            "func": "IF",
+            "operand1": "${COUNT}",
+            "operand2": 4,
+            "thenRoutine": [
+              "var handSize = 7"
+            ],
+            "elseRoutine": [
+              {
+                "func": "IF",
+                "operand1": "${COUNT}",
+                "operand2": 3,
+                "thenRoutine": [
+                  "var handSize = 9"
+                ],
+                "elseRoutine": [
+                  "var handSize = 14"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "func": "FOREACH",
+        "collection": "DEFAULT",
+        "loopRoutine": [
+          {
+            "func": "MOVE",
+            "from": "holder-cards",
+            "to": "${widgetID}",
+            "count": "${handSize}"
+          }
+        ]
+      }
     ]
   },
   "deck-cards": {
@@ -169,152 +377,152 @@
     "parent": "holder-cards",
     "cardTypes": {
       "card-elephant-0": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/wildlifesafari-v2/wildlifesafari/assets/card-elephant-0.svg",
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/card-elephant-0.svg",
         "suit": "elephant",
         "value": 0
       },
       "card-elephant-1": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/wildlifesafari-v2/wildlifesafari/assets/card-elephant-1.svg",
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/card-elephant-1.svg",
         "suit": "elephant",
         "value": 1
       },
       "card-elephant-2": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/wildlifesafari-v2/wildlifesafari/assets/card-elephant-2.svg",
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/card-elephant-2.svg",
         "suit": "elephant",
         "value": 2
       },
       "card-elephant-3": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/wildlifesafari-v2/wildlifesafari/assets/card-elephant-3.svg",
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/card-elephant-3.svg",
         "suit": "elephant",
         "value": 3
       },
       "card-elephant-4": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/wildlifesafari-v2/wildlifesafari/assets/card-elephant-4.svg",
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/card-elephant-4.svg",
         "suit": "elephant",
         "value": 4
       },
       "card-elephant-5": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/wildlifesafari-v2/wildlifesafari/assets/card-elephant-5.svg",
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/card-elephant-5.svg",
         "suit": "elephant",
         "value": 5
       },
       "card-leopard-0": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/wildlifesafari-v2/wildlifesafari/assets/card-leopard-0.svg",
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/card-leopard-0.svg",
         "suit": "leopard",
         "value": 0
       },
       "card-leopard-1": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/wildlifesafari-v2/wildlifesafari/assets/card-leopard-1.svg",
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/card-leopard-1.svg",
         "suit": "leopard",
         "value": 1
       },
       "card-leopard-2": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/wildlifesafari-v2/wildlifesafari/assets/card-leopard-2.svg",
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/card-leopard-2.svg",
         "suit": "leopard",
         "value": 2
       },
       "card-leopard-3": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/wildlifesafari-v2/wildlifesafari/assets/card-leopard-3.svg",
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/card-leopard-3.svg",
         "suit": "leopard",
         "value": 3
       },
       "card-leopard-4": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/wildlifesafari-v2/wildlifesafari/assets/card-leopard-4.svg",
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/card-leopard-4.svg",
         "suit": "leopard",
         "value": 4
       },
       "card-leopard-5": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/wildlifesafari-v2/wildlifesafari/assets/card-leopard-5.svg",
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/card-leopard-5.svg",
         "suit": "leopard",
         "value": 5
       },
       "card-lion-0": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/wildlifesafari-v2/wildlifesafari/assets/card-lion-0.svg",
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/card-lion-0.svg",
         "suit": "lion",
         "value": 0
       },
       "card-lion-1": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/wildlifesafari-v2/wildlifesafari/assets/card-lion-1.svg",
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/card-lion-1.svg",
         "suit": "lion",
         "value": 1
       },
       "card-lion-2": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/wildlifesafari-v2/wildlifesafari/assets/card-lion-2.svg",
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/card-lion-2.svg",
         "suit": "lion",
         "value": 2
       },
       "card-lion-3": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/wildlifesafari-v2/wildlifesafari/assets/card-lion-3.svg",
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/card-lion-3.svg",
         "suit": "lion",
         "value": 3
       },
       "card-lion-4": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/wildlifesafari-v2/wildlifesafari/assets/card-lion-4.svg",
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/card-lion-4.svg",
         "suit": "lion",
         "value": 4
       },
       "card-lion-5": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/wildlifesafari-v2/wildlifesafari/assets/card-lion-5.svg",
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/card-lion-5.svg",
         "suit": "lion",
         "value": 5
       },
       "card-rhino-0": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/wildlifesafari-v2/wildlifesafari/assets/card-rhino-0.svg",
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/card-rhino-0.svg",
         "suit": "rhino",
         "value": 0
       },
       "card-rhino-1": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/wildlifesafari-v2/wildlifesafari/assets/card-rhino-1.svg",
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/card-rhino-1.svg",
         "suit": "rhino",
         "value": 1
       },
       "card-rhino-2": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/wildlifesafari-v2/wildlifesafari/assets/card-rhino-2.svg",
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/card-rhino-2.svg",
         "suit": "rhino",
         "value": 2
       },
       "card-rhino-3": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/wildlifesafari-v2/wildlifesafari/assets/card-rhino-3.svg",
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/card-rhino-3.svg",
         "suit": "rhino",
         "value": 3
       },
       "card-rhino-4": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/wildlifesafari-v2/wildlifesafari/assets/card-rhino-4.svg",
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/card-rhino-4.svg",
         "suit": "rhino",
         "value": 4
       },
       "card-rhino-5": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/wildlifesafari-v2/wildlifesafari/assets/card-rhino-5.svg",
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/card-rhino-5.svg",
         "suit": "rhino",
         "value": 5
       },
       "card-zebra-0": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/wildlifesafari-v2/wildlifesafari/assets/card-zebra-0.svg",
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/card-zebra-0.svg",
         "suit": "zebra",
         "value": 0
       },
       "card-zebra-1": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/wildlifesafari-v2/wildlifesafari/assets/card-zebra-1.svg",
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/card-zebra-1.svg",
         "suit": "zebra",
         "value": 1
       },
       "card-zebra-2": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/wildlifesafari-v2/wildlifesafari/assets/card-zebra-2.svg",
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/card-zebra-2.svg",
         "suit": "zebra",
         "value": 2
       },
       "card-zebra-3": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/wildlifesafari-v2/wildlifesafari/assets/card-zebra-3.svg",
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/card-zebra-3.svg",
         "suit": "zebra",
         "value": 3
       },
       "card-zebra-4": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/wildlifesafari-v2/wildlifesafari/assets/card-zebra-4.svg",
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/card-zebra-4.svg",
         "suit": "zebra",
         "value": 4
       },
       "card-zebra-5": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/wildlifesafari-v2/wildlifesafari/assets/card-zebra-5.svg",
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/card-zebra-5.svg",
         "suit": "zebra",
         "value": 5
       }
@@ -330,7 +538,7 @@
             "y": 0,
             "width": 100,
             "height": 140,
-            "value": "https://raw.githubusercontent.com/andypymont/vtt-games/wildlifesafari-v2/wildlifesafari/assets/card-back.svg",
+            "value": "https://raw.githubusercontent.com/andypymont/vtt-games/main/wildlifesafari/assets/card-back.svg",
             "color": "transparent"
           }
         ]
@@ -381,53 +589,8 @@
     "stackOffsetY": 0,
     "onEnter": {
       "activeFace": 1
-    },
-    "suit": "elephant",
-    "enterRoutine": [
-      {
-        "func": "CALL",
-        "routine": "setAnimalValueRoutine"
-      }
-    ],
-    "leaveRoutine": [
-      {
-        "func": "CALL",
-        "routine": "setAnimalValueRoutine"
-      }
-    ],
-    "setAnimalValueRoutine": [
-      {
-        "func": "SELECT",
-        "property": "parent",
-        "value": "${PROPERTY id}"
-      },
-      {
-        "func": "GET",
-        "property": "z",
-        "aggregation": "max"
-      },
-      {
-        "func": "SELECT",
-        "source": "DEFAULT",
-        "property": "z",
-        "value": "${z}"
-      },
-      {
-        "func": "GET",
-        "property": "value"
-      },
-      {
-        "func": "SELECT",
-        "property": "cardType",
-        "value": "tile-${PROPERTY suit}"
-      },
-      {
-        "func": "SET",
-        "property": "value",
-        "value": "${value}"
-      }
-    ]
-  },
+    }
+ },
   "holder-cards-leopard": {
     "id": "holder-cards-leopard",
     "type": "holder",
@@ -436,8 +599,7 @@
     "dropTarget": {
       "deck": "deck-cards",
       "suit": "leopard"
-    },
-    "suit": "leopard"
+    }
   },
   "holder-cards-lion": {
     "id": "holder-cards-lion",
@@ -447,8 +609,7 @@
     "dropTarget": {
       "deck": "deck-cards",
       "suit": "lion"
-    },
-    "suit": "lion"
+    }
   },
   "holder-cards-rhino": {
     "id": "holder-cards-rhino",
@@ -458,8 +619,7 @@
     "dropTarget": {
       "deck": "deck-cards",
       "suit": "rhino"
-    },
-    "suit": "rhino"
+    }
   },
   "holder-cards-zebra": {
     "id": "holder-cards-zebra",
@@ -469,8 +629,7 @@
     "dropTarget": {
       "deck": "deck-cards",
       "suit": "zebra"
-    },
-    "suit": "zebra"
+    }
   },
   "seat-p1": {
     "id": "seat-p1",
@@ -484,7 +643,7 @@
       "font-size": "14px"
     },
     "hideWhenUnused": true
-  },
+ },
   "hand-counter-p1": {
     "id": "hand-counter-p1",
     "parent": "seat-p1",
@@ -611,19 +770,19 @@
     "parent": "holder-elephant",
     "cardTypes": {
       "tile-elephant": {
-        "image": "https://github.com/andypymont/vtt-games/raw/wildlifesafari-v2/wildlifesafari/assets/tile-elephant.svg"
+        "image": "https://github.com/andypymont/vtt-games/raw/main/wildlifesafari/assets/tile-elephant.svg"
       },
       "tile-leopard": {
-        "image": "https://github.com/andypymont/vtt-games/raw/wildlifesafari-v2/wildlifesafari/assets/tile-leopard.svg"
+        "image": "https://github.com/andypymont/vtt-games/raw/main/wildlifesafari/assets/tile-leopard.svg"
       },
       "tile-lion": {
-        "image": "https://github.com/andypymont/vtt-games/raw/wildlifesafari-v2/wildlifesafari/assets/tile-lion.svg"
+        "image": "https://github.com/andypymont/vtt-games/raw/main/wildlifesafari/assets/tile-lion.svg"
       },
       "tile-rhino": {
-        "image": "https://github.com/andypymont/vtt-games/raw/wildlifesafari-v2/wildlifesafari/assets/tile-rhino.svg"
+        "image": "https://github.com/andypymont/vtt-games/raw/main/wildlifesafari/assets/tile-rhino.svg"
       },
       "tile-zebra": {
-        "image": "https://github.com/andypymont/vtt-games/raw/wildlifesafari-v2/wildlifesafari/assets/tile-zebra.svg"
+        "image": "https://github.com/andypymont/vtt-games/raw/main/wildlifesafari/assets/tile-zebra.svg"
       }
     },
     "faceTemplates": [
@@ -663,32 +822,32 @@
     "inheritFrom": "holder-elephant",
     "x": 980,
     "linkedToSeat": "seat-p1"
-  },
+ },
   "holder-elephant-p2": {
     "id": "holder-elephant-p2",
     "type": "holder",
-    "inheritFrom": "holder-elephant",
+    "inheritFrom": "holder-elephant-p1",
     "x": 1110,
     "linkedToSeat": "seat-p2"
   },
   "holder-elephant-p3": {
     "id": "holder-elephant-p3",
     "type": "holder",
-    "inheritFrom": "holder-elephant",
+    "inheritFrom": "holder-elephant-p1",
     "x": 1240,
     "linkedToSeat": "seat-p3"
   },
   "holder-elephant-p4": {
     "id": "holder-elephant-p4",
     "type": "holder",
-    "inheritFrom": "holder-elephant",
+    "inheritFrom": "holder-elephant-p1",
     "x": 1370,
     "linkedToSeat": "seat-p4"
   },
   "holder-elephant-p5": {
     "id": "holder-elephant-p5",
     "type": "holder",
-    "inheritFrom": "holder-elephant",
+    "inheritFrom": "holder-elephant-p1",
     "x": 1500,
     "linkedToSeat": "seat-p5"
   },
@@ -936,7 +1095,7 @@
     "inheritFrom": {
       "holder-elephant-p4": [
         "x",
-        "linkedToSeat"
+        "linkedToSeat" 
       ],
       "holder-zebra": "*"
     }
