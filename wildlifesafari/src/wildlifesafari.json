@@ -13,7 +13,7 @@
       "lastUpdate": 1680963140205,
       "showName": true,
       "description": "Can you collect the most valuable animals?",
-      "helpText": "",
+      "helpText": "Have each player take a seat and then click the New Round button to deal a hand of cards.<br><br>On your turn:<br>- Drag and drop a card from your hand at the bottom of the screen into the area for the appropriate animal/suit, such that the latest played is the visible/right most card. (The other cards will be fanned so all players can see what has been played.)<br>- Drag and drop an animal tile from the supply column into your holder for that type of animal (vertically in line with the supply and horizontally in line with your seat/player name.)<br><br>At the end of each round, click New Round again to record current scores (based on played cards and collected tiles) and collect back, shuffle, and re deal cards. Also press this at the end of the final round to finish scoring (you'll be dealt a new hand but can simply ignore this).",
       "similarImage": "",
       "similarName": "",
       "similarAwards": "",
