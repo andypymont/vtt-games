@@ -230,8 +230,8 @@
     "movableInEdit": false,
     "text": "ROUND"
   },
-  "button-new-round": {
-    "id": "button-new-round",
+  "button-score": {
+    "id": "button-score",
     "type": "button",
     "parent": "round-counter",
     "fixedParent": true,
@@ -244,9 +244,39 @@
     "css": {
       "font-size": "16px"
     },
+    "text": "Score Round",
+    "clickRoutine": [
+      {
+        "note": "Unless 1st round hasn't started yet, calculate scores",
+        "func": "IF",
+        "operand1": "${PROPERTY text OF round-counter}",
+        "relation": ">",
+        "operand2": 0,
+        "thenRoutine": [
+          {
+            "func": "CALL",
+            "widget": "scoreboard",
+            "routine": "calculateScoresRoutine"
+          }
+        ]
+      }
+    ]
+  },
+  "button-new-round": {
+    "id": "button-new-round",
+    "type": "button",
+    "parent": "round-counter",
+    "fixedParent": true,
+    "x": -25,
+    "y": 80,
+    "width": 120,
+    "height": 30,
+    "movable": false,
+    "movableInEdit": false,
+    "css": {
+      "font-size": "16px"
+    },
     "text": "New Round",
-    "getHandSizeFromPlayerCountRoutine": [
-    ],
     "clickRoutine": [
       {
         "note": "Unless starting the 1st round, record the scores",
