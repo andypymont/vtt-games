@@ -93,7 +93,7 @@
     "type": "scoreboard",
     "x": 25,
     "y": 105,
-    "width": 450,
+    "width": 490,
     "height": 400,
     "movable": false,
     "movableInEdit": false,
@@ -187,7 +187,7 @@
     "id": "holder-cards",
     "type": "holder",
     "x": 100,
-    "y": 550,
+    "y": 600,
     "width": 100,
     "height": 140,
     "dropTarget": {
@@ -203,7 +203,7 @@
     "id": "round-counter",
     "type": "label",
     "x": 285,
-    "y": 590,
+    "y": 620,
     "width": 65,
     "height": 40,
     "css": {
@@ -582,8 +582,8 @@
   "holder-cards-elephant": {
     "id": "holder-cards-elephant",
     "type": "holder",
-    "x": 530,
-    "y": 105,
+    "x": 550,
+    "y": 85,
     "width": 250,
     "height": 140,
     "dropTarget": {
@@ -602,7 +602,7 @@
     "id": "holder-cards-leopard",
     "type": "holder",
     "inheritFrom": "holder-cards-elephant",
-    "y": 255,
+    "y": 235,
     "dropTarget": {
       "deck": "deck-cards",
       "suit": "leopard"
@@ -612,7 +612,7 @@
     "id": "holder-cards-lion",
     "type": "holder",
     "inheritFrom": "holder-cards-elephant",
-    "y": 405,
+    "y": 385,
     "dropTarget": {
       "deck": "deck-cards",
       "suit": "lion"
@@ -622,7 +622,7 @@
     "id": "holder-cards-rhino",
     "type": "holder",
     "inheritFrom": "holder-cards-elephant",
-    "y": 555,
+    "y": 535,
     "dropTarget": {
       "deck": "deck-cards",
       "suit": "rhino"
@@ -632,7 +632,7 @@
     "id": "holder-cards-zebra",
     "type": "holder",
     "inheritFrom": "holder-cards-elephant",
-    "y": 705,
+    "y": 685,
     "dropTarget": {
       "deck": "deck-cards",
       "suit": "zebra"
@@ -761,7 +761,7 @@
     "id": "holder-elephant",
     "type": "holder",
     "x": 855,
-    "y": 137.5,
+    "y": 117.5,
     "width": 75,
     "height": 75,
     "dropOffsetX": 2.5,
@@ -862,7 +862,7 @@
     "id": "holder-leopard",
     "type": "holder",
     "inheritFrom": "holder-elephant",
-    "y": 285.5,
+    "y": 265.5,
     "dropTarget": {
       "deck": "deck-tiles",
       "cardType": "tile-leopard"
@@ -927,7 +927,7 @@
     "id": "holder-lion",
     "type": "holder",
     "inheritFrom": "holder-elephant",
-    "y": 437.5,
+    "y": 417.5,
     "dropTarget": {
       "deck": "deck-tiles",
       "cardType": "tile-lion"
@@ -992,7 +992,7 @@
     "id": "holder-rhino",
     "type": "holder",
     "inheritFrom": "holder-elephant",
-    "y": 587.5,
+    "y": 567.5,
     "dropTarget": {
       "deck": "deck-tiles",
       "cardType": "tile-rhino"
@@ -1057,7 +1057,7 @@
     "id": "holder-zebra",
     "type": "holder",
     "inheritFrom": "holder-elephant",
-    "y": 737.5,
+    "y": 717.5,
     "dropTarget": {
       "deck": "deck-tiles",
       "cardType": "tile-zebra"
