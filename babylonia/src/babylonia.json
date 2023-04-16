@@ -1,0 +1,2284 @@
+{
+  "_meta": {
+    "version": 12,
+    "info": {
+      "name": "Babylonia",
+      "image": "",
+      "rules": "",
+      "bgg": "https://boardgamegeek.com/boardgame/266164/babylonia",
+      "year": "2019",
+      "mode": "vs",
+      "time": "60",
+      "attribution": "Game layout and scripting by Andy Pymont, provided under the MIT license. Tile graphics are from https://game-icons.net/ and https://thenounproject.com/ and are used under the CC BY 3.0 license:\n\nAaron A. Kim:\n- Hand: https://thenounproject.com/icon/hand-123919/\n\nAndy Pymont\n- Ziggurat: originates in this project.\n\nAyub Irawan\n- Scythe: https://thenounproject.com/icon/scythe-4338250/\n\nDelapouite:\n- Amphora: https://game-icons.net/1x1/delapouite/amphora.html/\n\nLorc:\n- Crown: https://game-icons.net/1x1/lorc/queen-crown.html\n\nNorbert Kucsera:\n- Corn: https://thenounproject.com/icon/corn-2144640/\n\nPaul Verhulst:\n- Circle arrow: https://thenounproject.com/icon/circle-arrow-1979672/\n\nSiri Masriatun:\n- Star: https://thenounproject.com/icon/star-5662351/",
+      "lastUpdate": 1681595644894,
+      "showName": true,
+      "description": "Compete for the land and cities between the rivers while commanding mighty ziggurats",
+      "helpText": "",
+      "skill": "",
+      "id": "babs",
+      "similarImage": "",
+      "similarName": "",
+      "similarAwards": "",
+      "ruleText": "",
+      "variantImage": "",
+      "variant": "",
+      "language": "en-GB",
+      "players": "2-4"
+    }
+  },
+  "board-4": {
+    "id": "board-4",
+    "layer": -4,
+    "x": 540,
+    "y": 140,
+    "width": 912.309,
+    "height": 729.461,
+    "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/assets/map-4p.svg",
+    "movable": false
+  },
+  "board-3": {
+    "id": "board-3",
+    "inheritFrom": "board-4",
+    "y": -1000,
+    "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/assets/map-3p.svg"
+  },
+  "board-2": {
+    "id": "board-2",
+    "inheritFrom": "board-4",
+    "y": -1000,
+    "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/assets/map-2p.svg"
+  },
+  "hand": {
+    "id": "hand",
+    "type": "holder",
+    "childrenPerOwner": true,
+    "layer": -3,
+    "x": 595,
+    "y": 910,
+    "width": 373,
+    "height": 80,
+    "dropOffsetX": 1,
+    "dropOffsetY": 8.7,
+    "dropLimit": 7,
+    "dropTarget": {
+      "deck": "deck-discs"
+    },
+    "stackOffsetX": 50,
+    "stackOffsetY": 0,
+    "onEnter": {
+      "activeFace": 1
+    },
+    "countRoutine": [
+      {
+        "func": "FOREACH",
+        "in": [
+          "seat-p1",
+          "seat-p2",
+          "seat-p3",
+          "seat-p4"
+        ],
+        "loopRoutine": [
+          {
+            "func": "GET",
+            "collection": ["${value}"],
+            "property": "player",
+            "variable": "pID"
+          },
+          {
+            "func": "SELECT",
+            "property": "parent",
+            "value": "${PROPERTY id}"
+          },
+          {
+            "func": "SELECT",
+            "source": "DEFAULT",
+            "property": "owner",
+            "value": "${pID}"
+          },
+          {
+            "func": "COUNT",
+            "collection": "DEFAULT"
+          },
+          "var playerNo = ${PROPERTY index OF $value}",
+          {
+            "func": "LABEL",
+            "label": "hand-counter-p${playerNo}",
+            "value": "${COUNT}"
+          }
+        ]
+      }
+    ],
+    "enterRoutine": [
+      {
+        "func": "CALL",
+        "routine": "countRoutine"
+      }
+    ],
+    "leaveRoutine": [
+      {
+        "func": "CALL",
+        "routine": "countRoutine"
+      }
+    ]
+  },
+  "area-p1": {
+    "id": "area-p1",
+    "layer": -1,
+    "x": 0,
+    "y": 0,
+    "width": 500,
+    "height": 250,
+    "image": "https://github.com/andypymont/vtt-games/raw/babylonia-v2/babylonia/assets/player-area.svg",
+    "movable": false,
+    "linkedToSeat": "seat-p1"
+  },
+  "area-p2": {
+    "id": "area-p2",
+    "inheritFrom": "area-p1",
+    "y": 250,
+    "linkedToSeat": "seat-p2"
+  },
+  "area-p3": {
+    "id": "area-p3",
+    "inheritFrom": "area-p1",
+    "y": 500,
+    "linkedToSeat": "seat-p3"
+  },
+  "area-p4": {
+    "id": "area-p4",
+    "inheritFrom": "area-p1",
+    "y": 750,
+    "linkedToSeat": "seat-p4"
+  },
+  "seat-p1": {
+    "id": "seat-p1",
+    "type": "seat",
+    "parent": "area-p1",
+    "fixedParent": true,
+    "x": 5,
+    "y": 10,
+    "height": 25,
+    "width": 290,
+    "index": 1,
+    "hideWhenUnused": true,
+    "clickRoutine": [
+      {
+        "func": "CLICK",
+        "collection": "thisButton",
+        "mode": "ignoreClickRoutine"
+      },
+      {
+        "func": "SELECT",
+        "property": "deck",
+        "value": "deck-discs"
+      },
+      {
+        "func": "SELECT",
+        "source": "DEFAULT",
+        "property": "playerIndex",
+        "value": "${PROPERTY index}"
+      },
+      {
+        "func": "SET",
+        "property": "color",
+        "value": "${PROPERTY color}"
+      }
+    ]
+  },
+  "seat-p2": {
+    "id": "seat-p2",
+    "type": "seat",
+    "parent": "area-p2",
+    "fixedParent": true,
+    "index": 2,
+    "inheritFrom": {
+      "seat-p1": [
+        "x",
+        "y",
+        "height",
+        "width",
+        "hideWhenUnused",
+        "clickRoutine"
+      ]
+    }
+  },
+  "seat-p3": {
+    "id": "seat-p3",
+    "type": "seat",
+    "parent": "area-p3",
+    "fixedParent": true,
+    "index": 3,
+    "inheritFrom": {
+      "seat-p1": [
+        "x",
+        "y",
+        "height",
+        "width",
+        "hideWhenUnused",
+        "clickRoutine"
+      ]
+    }
+  },
+  "seat-p4": {
+    "id": "seat-p4",
+    "type": "seat",
+    "parent": "area-p4",
+    "fixedParent": true,
+    "index": 4,
+    "inheritFrom": {
+      "seat-p1": [
+        "x",
+        "y",
+        "height",
+        "width",
+        "hideWhenUnused",
+        "clickRoutine"
+      ]
+    }
+  },
+  "score-p1": {
+    "id": "score-p1",
+    "type": "label",
+    "parent": "area-p1",
+    "fixedParent": true,
+    "x": 375,
+    "y": 30,
+    "width": 65,
+    "height": 40,
+    "css": {
+      "font-size": "30px"
+    },
+    "editable": false,
+    "text": 0
+ },
+  "label-score-p1": {
+    "id": "label-score-p1",
+    "type": "label",
+    "parent": "score-p1",
+    "fixedParent": true,
+    "x": 0,
+    "y": -20,
+    "width": 65,
+    "height": 40,
+    "movable": false,
+    "movableInEdit": false,
+    "editable": false,
+    "css": {
+      "font-size": "20px"
+    },
+    "text": "SCORE"
+  },
+  "button-score-dec-p1": {
+    "id": "button-score-dec-p1",
+    "type": "button",
+    "parent": "score-p1",
+    "fixedParent": true,
+    "x": -38,
+    "y": 1,
+    "width": 36,
+    "height": 36,
+    "movable": false,
+    "movableInEdit": false,
+    "classes": "symbols",
+    "css": {
+      "font-size": "28px"
+    },
+    "text": "remove",
+    "clickRoutine": [
+      "var counter = ${PROPERTY parent}",
+      "var currentScore = ${PROPERTY text OF $counter}",
+      {
+        "func": "IF",
+        "operand1": "${currentScore}",
+        "relation": ">",
+        "operand2": 0,
+        "thenRoutine": [
+          {
+            "func": "LABEL",
+            "label": "${counter}",
+            "mode": "dec",
+            "value": 1
+          }
+        ]
+      }
+    ]
+  },
+  "button-score-inc-p1": {
+    "id": "button-score-inc-p1",
+    "type": "button",
+    "parent": "score-p1",
+    "fixedParent": true,
+    "x": 68,
+    "y": 1,
+    "width": 36,
+    "height": 36,
+    "movable": false,
+    "movableInEdit": false,
+    "classes": "symbols",
+    "css": {
+      "font-size": "28px"
+    },
+    "text": "add",
+    "clickRoutine": [
+      {
+        "func": "LABEL",
+        "label": "${PROPERTY parent}",
+        "mode": "inc",
+        "value": 1
+      }
+    ]
+  },
+  "score-p2": {
+    "id": "score-p2",
+    "type": "label",
+    "parent": "area-p2",
+    "inheritFrom": "score-p1",
+    "text": 0
+  },
+  "button-score-dec-p2": {
+    "id": "button-score-dec-p2",
+    "type": "button",
+    "parent": "score-p2",
+    "inheritFrom": "button-score-dec-p1"
+  },
+  "button-score-inc-p2": {
+    "id": "button-score-inc-p2",
+    "type": "button",
+    "parent": "score-p2",
+    "inheritFrom": "button-score-inc-p1"
+  },
+  "label-score-p2": {
+    "id": "label-score-p2",
+    "type": "label",
+    "parent": "score-p2",
+    "inheritFrom": "label-score-p1"
+  },
+  "score-p3": {
+    "id": "score-p3",
+    "type": "label",
+    "parent": "area-p3",
+    "inheritFrom": "score-p1",
+    "text": 0
+  },
+  "button-score-dec-p3": {
+    "id": "button-score-dec-p3",
+    "type": "button",
+    "parent": "score-p3",
+    "inheritFrom": "button-score-dec-p1"
+  },
+  "button-score-inc-p3": {
+    "id": "button-score-inc-p3",
+    "type": "button",
+    "parent": "score-p3",
+    "inheritFrom": "button-score-inc-p1"
+  },
+  "label-score-p3": {
+    "id": "label-score-p3",
+    "type": "label",
+    "parent": "score-p3",
+    "inheritFrom": "label-score-p1"
+  },
+  "score-p4": {
+    "id": "score-p4",
+    "type": "label",
+    "parent": "area-p4",
+    "inheritFrom": "score-p1",
+    "text": 0
+  },
+  "button-score-dec-p4": {
+    "id": "button-score-dec-p4",
+    "type": "button",
+    "parent": "score-p4",
+    "inheritFrom": "button-score-dec-p1"
+  },
+  "button-score-inc-p4": {
+    "id": "button-score-inc-p4",
+    "type": "button",
+    "parent": "score-p4",
+    "inheritFrom": "button-score-inc-p1"
+  },
+  "label-score-p4": {
+    "id": "label-score-p4",
+    "type": "label",
+    "parent": "score-p4",
+    "inheritFrom": "label-score-p1"
+  },
+  "hand-counter-p1": {
+    "id": "hand-counter-p1",
+    "parent": "area-p1",
+    "fixedParent": true,
+    "x": 20,
+    "y": 60,
+    "width": 72.309,
+    "height": 62.622,
+    "movable": false,
+    "movableInEdit": false,
+    "image": "https://github.com/andypymont/vtt-games/raw/babylonia-v2/babylonia/assets/hand.svg",
+    "css": {
+      "color": "#000000",
+      "font-size": "30px",
+      "line-height": "85px",
+      "text-indent": "-5px",
+      "text-align": "center"
+    },
+    "text": 0
+  },
+  "hand-counter-p2": {
+    "id": "hand-counter-p2",
+    "parent": "area-p2",
+    "inheritFrom": "hand-counter-p1",
+    "text": 0
+  },
+  "hand-counter-p3": {
+    "id": "hand-counter-p3",
+    "parent": "area-p3",
+    "inheritFrom": "hand-counter-p1",
+    "text": 0
+  },
+  "hand-counter-p4": {
+    "id": "hand-counter-p4",
+    "parent": "area-p4",
+    "inheritFrom": "hand-counter-p1",
+    "text": 0
+  },
+  "holder-discs-p1": {
+    "id": "holder-discs-p1",
+    "type": "holder",
+    "parent": "area-p1",
+    "fixedParent": true,
+    "x": 20,
+    "y": 150,
+    "width": 72.309,
+    "height": 72.309,
+    "movable": false,
+    "movableInEdit": false,
+    "dropOffsetX": 0,
+    "dropOffsetY": 4.84,
+    "dropTarget": {
+      "deck": "deck-discs"
+    },
+    "onEnter": {
+      "activeFace": 0
+    }
+  },
+  "deck-discs": {
+    "id": "deck-discs",
+    "type": "deck",
+    "parent": "holder-discs-p1",
+    "cardTypes": {
+      "disc-crown": {
+        "image": "/assets/241391976_1306"
+      },
+      "disc-farmer": {
+        "image": "/assets/-627235169_1105"
+      },
+      "disc-pot": {
+        "image": "/assets/-1934393553_1696"
+      },
+      "disc-star": {
+        "image": "/assets/1462096251_712"
+      }
+    },
+    "faceTemplates": [
+      {
+        "border": false,
+        "radius": false,
+        "objects": [
+          {
+            "type": "image",
+            "x": 0,
+            "y": 0,
+            "width": 72.309,
+            "height": 62.622,
+            "value": "/assets/1433629594_263",
+            "color": "transparent",
+            "svgReplaces": {
+              "#color": "color"
+            }
+          }
+        ]
+      },
+      {
+        "border": false,
+        "radius": false,
+        "objects": [
+          {
+            "type": "image",
+            "x": 0,
+            "y": 0,
+            "width": 72.309,
+            "height": 62.622,
+            "color": "transparent",
+            "dynamicProperties": {
+              "value": "image"
+            },
+            "svgReplaces": {
+              "#color": "color"
+            }
+          }
+        ]
+      }
+    ],
+    "cardDefaults": {
+      "color": "gray",
+      "width": 72.309,
+      "height": 62.622,
+      "onPileCreation": {
+        "handleCSS": {
+          "background": "black",
+          "color": "white"
+        },
+        "handlePosition": "top right"
+      }
+    }
+  },
+  "pile-discs-p1": {
+    "id": "pile-discs-p1",
+    "type": "pile",
+    "parent": "holder-discs-p1",
+    "x": 0,
+    "y": 4.84,
+    "width": 72.309,
+    "height": 62.622,
+    "handleCSS": {
+      "background": "black",
+      "color": "white"
+    },
+    "handlePosition": "top right",
+    "movable": false
+  },
+  "disc-farmer-p1-01": {
+    "id": "disc-farmer-p1-01",
+    "parent": "pile-discs-p1",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-farmer",
+    "playerIndex": 1
+  },
+  "disc-farmer-p1-02": {
+    "id": "disc-farmer-p1-02",
+    "parent": "pile-discs-p1",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-farmer",
+    "playerIndex": 1
+  },
+  "disc-farmer-p1-03": {
+    "id": "disc-farmer-p1-03",
+    "parent": "pile-discs-p1",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-farmer",
+    "playerIndex": 1
+  },
+  "disc-farmer-p1-04": {
+    "id": "disc-farmer-p1-04",
+    "parent": "pile-discs-p1",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-farmer",
+    "playerIndex": 1
+  },
+  "disc-farmer-p1-04": {
+    "id": "disc-farmer-p1-04",
+    "parent": "pile-discs-p1",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-farmer",
+    "playerIndex": 1
+  },
+  "disc-farmer-p1-05": {
+    "id": "disc-farmer-p1-05",
+    "parent": "pile-discs-p1",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-farmer",
+    "playerIndex": 1
+  },
+  "disc-farmer-p1-06": {
+    "id": "disc-farmer-p1-06",
+    "parent": "pile-discs-p1",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-farmer",
+    "playerIndex": 1
+  },
+  "disc-farmer-p1-07": {
+    "id": "disc-farmer-p1-07",
+    "parent": "pile-discs-p1",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-farmer",
+    "playerIndex": 1
+  },
+   "disc-farmer-p1-08": {
+    "id": "disc-farmer-p1-08",
+    "parent": "pile-discs-p1",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-farmer",
+    "playerIndex": 1
+  },
+  "disc-farmer-p1-09": {
+    "id": "disc-farmer-p1-09",
+    "parent": "pile-discs-p1",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-farmer",
+    "playerIndex": 1
+  },
+  "disc-farmer-p1-10": {
+    "id": "disc-farmer-p1-10",
+    "parent": "pile-discs-p1",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-farmer",
+    "playerIndex": 1
+  },
+  "disc-farmer-p1-11": {
+    "id": "disc-farmer-p1-11",
+    "parent": "pile-discs-p1",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-farmer",
+    "playerIndex": 1
+  },
+  "disc-farmer-p1-12": {
+    "id": "disc-farmer-p1-12",
+    "parent": "pile-discs-p1",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-farmer",
+    "playerIndex": 1
+  },
+  "disc-crown-p1-1": {
+    "id": "disc-crown-p1-1",
+    "parent": "pile-discs-p1",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-crown",
+    "playerIndex": 1
+  },
+  "disc-crown-p1-2": {
+    "id": "disc-crown-p1-2",
+    "parent": "pile-discs-p1",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-crown",
+    "playerIndex": 1
+  },
+  "disc-crown-p1-3": {
+    "id": "disc-crown-p1-3",
+    "parent": "pile-discs-p1",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-crown",
+    "playerIndex": 1
+  },
+  "disc-crown-p1-4": {
+    "id": "disc-crown-p1-4",
+    "parent": "pile-discs-p1",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-crown",
+    "playerIndex": 1
+  },
+  "disc-crown-p1-5": {
+    "id": "disc-crown-p1-5",
+    "parent": "pile-discs-p1",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-crown",
+    "playerIndex": 1
+  },
+  "disc-crown-p1-6": {
+    "id": "disc-crown-p1-6",
+    "parent": "pile-discs-p1",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-crown",
+    "playerIndex": 1
+  },
+  "disc-pot-p1-1": {
+    "id": "disc-pot-p1-1",
+    "parent": "pile-discs-p1",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-pot",
+    "playerIndex": 1
+  },
+  "disc-pot-p1-2": {
+    "id": "disc-pot-p1-2",
+    "parent": "pile-discs-p1",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-pot",
+    "playerIndex": 1
+  },
+  "disc-pot-p1-3": {
+    "id": "disc-pot-p1-3",
+    "parent": "pile-discs-p1",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-pot",
+    "playerIndex": 1
+  },
+  "disc-pot-p1-4": {
+    "id": "disc-pot-p1-4",
+    "parent": "pile-discs-p1",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-pot",
+    "playerIndex": 1
+  },
+  "disc-pot-p1-5": {
+    "id": "disc-pot-p1-5",
+    "parent": "pile-discs-p1",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-pot",
+    "playerIndex": 1
+  },
+  "disc-pot-p1-6": {
+    "id": "disc-pot-p1-6",
+    "parent": "pile-discs-p1",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-pot",
+    "playerIndex": 1
+  },
+  "disc-star-p1-1": {
+    "id": "disc-star-p1-1",
+    "parent": "pile-discs-p1",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-star",
+    "playerIndex": 1
+  },
+  "disc-star-p1-2": {
+    "id": "disc-star-p1-2",
+    "parent": "pile-discs-p1",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-star",
+    "playerIndex": 1
+  },
+  "disc-star-p1-3": {
+    "id": "disc-star-p1-3",
+    "parent": "pile-discs-p1",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-star",
+    "playerIndex": 1
+  },
+  "disc-star-p1-4": {
+    "id": "disc-star-p1-4",
+    "parent": "pile-discs-p1",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-star",
+    "playerIndex": 1
+  },
+  "disc-star-p1-5": {
+    "id": "disc-star-p1-5",
+    "parent": "pile-discs-p1",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-star",
+    "playerIndex": 1
+  },
+  "disc-star-p1-6": {
+    "id": "disc-star-p1-6",
+    "parent": "pile-discs-p1",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-star",
+    "playerIndex": 1
+  },
+  "holder-discs-p2": {
+    "id": "holder-discs-p2",
+    "type": "holder",
+    "parent": "area-p2",
+    "inheritFrom": "holder-discs-p1"
+  },
+  "pile-discs-p2": {
+    "id": "pile-discs-p2",
+    "type": "pile",
+    "parent": "holder-discs-p2",
+    "x": 0,
+    "y": 4.84,
+    "width": 72.309,
+    "height": 62.622,
+    "handleCSS": {
+      "background": "black",
+      "color": "white"
+    },
+    "handlePosition": "top right",
+    "movable": false
+  },
+  "disc-farmer-p2-01": {
+    "id": "disc-farmer-p2-01",
+    "parent": "pile-discs-p2",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-farmer",
+    "playerIndex": 2
+  },
+  "disc-farmer-p2-02": {
+    "id": "disc-farmer-p2-02",
+    "parent": "pile-discs-p2",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-farmer",
+    "playerIndex": 2
+  },
+  "disc-farmer-p2-03": {
+    "id": "disc-farmer-p2-03",
+    "parent": "pile-discs-p2",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-farmer",
+    "playerIndex": 2
+  },
+  "disc-farmer-p2-04": {
+    "id": "disc-farmer-p2-04",
+    "parent": "pile-discs-p2",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-farmer",
+    "playerIndex": 2
+  },
+  "disc-farmer-p2-04": {
+    "id": "disc-farmer-p2-04",
+    "parent": "pile-discs-p2",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-farmer",
+    "playerIndex": 2
+  },
+  "disc-farmer-p2-05": {
+    "id": "disc-farmer-p2-05",
+    "parent": "pile-discs-p2",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-farmer",
+    "playerIndex": 2
+  },
+  "disc-farmer-p2-06": {
+    "id": "disc-farmer-p2-06",
+    "parent": "pile-discs-p2",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-farmer",
+    "playerIndex": 2
+  },
+  "disc-farmer-p2-07": {
+    "id": "disc-farmer-p2-07",
+    "parent": "pile-discs-p2",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-farmer",
+    "playerIndex": 2
+  },
+   "disc-farmer-p2-08": {
+    "id": "disc-farmer-p2-08",
+    "parent": "pile-discs-p2",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-farmer",
+    "playerIndex": 2
+  },
+  "disc-farmer-p2-09": {
+    "id": "disc-farmer-p2-09",
+    "parent": "pile-discs-p2",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-farmer",
+    "playerIndex": 2
+  },
+  "disc-farmer-p2-10": {
+    "id": "disc-farmer-p2-10",
+    "parent": "pile-discs-p2",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-farmer",
+    "playerIndex": 2
+  },
+  "disc-farmer-p2-11": {
+    "id": "disc-farmer-p2-11",
+    "parent": "pile-discs-p2",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-farmer",
+    "playerIndex": 2
+  },
+  "disc-farmer-p2-12": {
+    "id": "disc-farmer-p2-12",
+    "parent": "pile-discs-p2",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-farmer",
+    "playerIndex": 2
+  },
+  "disc-crown-p2-1": {
+    "id": "disc-crown-p2-1",
+    "parent": "pile-discs-p2",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-crown",
+    "playerIndex": 2
+  },
+  "disc-crown-p2-2": {
+    "id": "disc-crown-p2-2",
+    "parent": "pile-discs-p2",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-crown",
+    "playerIndex": 2
+  },
+  "disc-crown-p2-3": {
+    "id": "disc-crown-p2-3",
+    "parent": "pile-discs-p2",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-crown",
+    "playerIndex": 2
+  },
+  "disc-crown-p2-4": {
+    "id": "disc-crown-p2-4",
+    "parent": "pile-discs-p2",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-crown",
+    "playerIndex": 2
+  },
+  "disc-crown-p2-5": {
+    "id": "disc-crown-p2-5",
+    "parent": "pile-discs-p2",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-crown",
+    "playerIndex": 2
+  },
+  "disc-crown-p2-6": {
+    "id": "disc-crown-p2-6",
+    "parent": "pile-discs-p2",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-crown",
+    "playerIndex": 2
+  },
+  "disc-pot-p2-1": {
+    "id": "disc-pot-p2-1",
+    "parent": "pile-discs-p2",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-pot",
+    "playerIndex": 2
+  },
+  "disc-pot-p2-2": {
+    "id": "disc-pot-p2-2",
+    "parent": "pile-discs-p2",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-pot",
+    "playerIndex": 2
+  },
+  "disc-pot-p2-3": {
+    "id": "disc-pot-p2-3",
+    "parent": "pile-discs-p2",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-pot",
+    "playerIndex": 2
+  },
+  "disc-pot-p2-4": {
+    "id": "disc-pot-p2-4",
+    "parent": "pile-discs-p2",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-pot",
+    "playerIndex": 2
+  },
+  "disc-pot-p2-5": {
+    "id": "disc-pot-p2-5",
+    "parent": "pile-discs-p2",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-pot",
+    "playerIndex": 2
+  },
+  "disc-pot-p2-6": {
+    "id": "disc-pot-p2-6",
+    "parent": "pile-discs-p2",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-pot",
+    "playerIndex": 2
+  },
+  "disc-star-p2-1": {
+    "id": "disc-star-p2-1",
+    "parent": "pile-discs-p2",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-star",
+    "playerIndex": 2
+  },
+  "disc-star-p2-2": {
+    "id": "disc-star-p2-2",
+    "parent": "pile-discs-p2",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-star",
+    "playerIndex": 2
+  },
+  "disc-star-p2-3": {
+    "id": "disc-star-p2-3",
+    "parent": "pile-discs-p2",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-star",
+    "playerIndex": 2
+  },
+  "disc-star-p2-4": {
+    "id": "disc-star-p2-4",
+    "parent": "pile-discs-p2",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-star",
+    "playerIndex": 2
+  },
+  "disc-star-p2-5": {
+    "id": "disc-star-p2-5",
+    "parent": "pile-discs-p2",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-star",
+    "playerIndex": 2
+  },
+  "disc-star-p2-6": {
+    "id": "disc-star-p2-6",
+    "parent": "pile-discs-p2",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-star",
+    "playerIndex": 2
+  },
+  "holder-discs-p3": {
+    "id": "holder-discs-p3",
+    "type": "holder",
+    "parent": "area-p3",
+    "inheritFrom": "holder-discs-p1"
+  },
+  "pile-discs-p3": {
+    "id": "pile-discs-p3",
+    "type": "pile",
+    "parent": "holder-discs-p3",
+    "x": 0,
+    "y": 4.84,
+    "width": 72.309,
+    "height": 62.622,
+    "handleCSS": {
+      "background": "black",
+      "color": "white"
+    },
+    "handlePosition": "top right",
+    "movable": false
+  },
+  "disc-farmer-p3-01": {
+    "id": "disc-farmer-p3-01",
+    "parent": "pile-discs-p3",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-farmer",
+    "playerIndex": 3
+  },
+  "disc-farmer-p3-02": {
+    "id": "disc-farmer-p3-02",
+    "parent": "pile-discs-p3",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-farmer",
+    "playerIndex": 3
+  },
+  "disc-farmer-p3-03": {
+    "id": "disc-farmer-p3-03",
+    "parent": "pile-discs-p3",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-farmer",
+    "playerIndex": 3
+  },
+  "disc-farmer-p3-04": {
+    "id": "disc-farmer-p3-04",
+    "parent": "pile-discs-p3",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-farmer",
+    "playerIndex": 3
+  },
+  "disc-farmer-p3-04": {
+    "id": "disc-farmer-p3-04",
+    "parent": "pile-discs-p3",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-farmer",
+    "playerIndex": 3
+  },
+  "disc-farmer-p3-05": {
+    "id": "disc-farmer-p3-05",
+    "parent": "pile-discs-p3",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-farmer",
+    "playerIndex": 3
+  },
+  "disc-farmer-p3-06": {
+    "id": "disc-farmer-p3-06",
+    "parent": "pile-discs-p3",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-farmer",
+    "playerIndex": 3
+  },
+  "disc-farmer-p3-07": {
+    "id": "disc-farmer-p3-07",
+    "parent": "pile-discs-p3",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-farmer",
+    "playerIndex": 3
+  },
+   "disc-farmer-p3-08": {
+    "id": "disc-farmer-p3-08",
+    "parent": "pile-discs-p3",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-farmer",
+    "playerIndex": 3
+  },
+  "disc-farmer-p3-09": {
+    "id": "disc-farmer-p3-09",
+    "parent": "pile-discs-p3",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-farmer",
+    "playerIndex": 3
+  },
+  "disc-farmer-p3-10": {
+    "id": "disc-farmer-p3-10",
+    "parent": "pile-discs-p3",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-farmer",
+    "playerIndex": 3
+  },
+  "disc-farmer-p3-11": {
+    "id": "disc-farmer-p3-11",
+    "parent": "pile-discs-p3",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-farmer",
+    "playerIndex": 3
+  },
+  "disc-farmer-p3-12": {
+    "id": "disc-farmer-p3-12",
+    "parent": "pile-discs-p3",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-farmer",
+    "playerIndex": 3
+  },
+  "disc-crown-p3-1": {
+    "id": "disc-crown-p3-1",
+    "parent": "pile-discs-p3",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-crown",
+    "playerIndex": 3
+  },
+  "disc-crown-p3-2": {
+    "id": "disc-crown-p3-2",
+    "parent": "pile-discs-p3",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-crown",
+    "playerIndex": 3
+  },
+  "disc-crown-p3-3": {
+    "id": "disc-crown-p3-3",
+    "parent": "pile-discs-p3",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-crown",
+    "playerIndex": 3
+  },
+  "disc-crown-p3-4": {
+    "id": "disc-crown-p3-4",
+    "parent": "pile-discs-p3",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-crown",
+    "playerIndex": 3
+  },
+  "disc-crown-p3-5": {
+    "id": "disc-crown-p3-5",
+    "parent": "pile-discs-p3",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-crown",
+    "playerIndex": 3
+  },
+  "disc-crown-p3-6": {
+    "id": "disc-crown-p3-6",
+    "parent": "pile-discs-p3",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-crown",
+    "playerIndex": 3
+  },
+  "disc-pot-p3-1": {
+    "id": "disc-pot-p3-1",
+    "parent": "pile-discs-p3",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-pot",
+    "playerIndex": 3
+  },
+  "disc-pot-p3-2": {
+    "id": "disc-pot-p3-2",
+    "parent": "pile-discs-p3",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-pot",
+    "playerIndex": 3
+  },
+  "disc-pot-p3-3": {
+    "id": "disc-pot-p3-3",
+    "parent": "pile-discs-p3",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-pot",
+    "playerIndex": 3
+  },
+  "disc-pot-p3-4": {
+    "id": "disc-pot-p3-4",
+    "parent": "pile-discs-p3",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-pot",
+    "playerIndex": 3
+  },
+  "disc-pot-p3-5": {
+    "id": "disc-pot-p3-5",
+    "parent": "pile-discs-p3",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-pot",
+    "playerIndex": 3
+  },
+  "disc-pot-p3-6": {
+    "id": "disc-pot-p3-6",
+    "parent": "pile-discs-p3",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-pot",
+    "playerIndex": 3
+  },
+  "disc-star-p3-1": {
+    "id": "disc-star-p3-1",
+    "parent": "pile-discs-p3",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-star",
+    "playerIndex": 3
+  },
+  "disc-star-p3-2": {
+    "id": "disc-star-p3-2",
+    "parent": "pile-discs-p3",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-star",
+    "playerIndex": 3
+  },
+  "disc-star-p3-3": {
+    "id": "disc-star-p3-3",
+    "parent": "pile-discs-p3",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-star",
+    "playerIndex": 3
+  },
+  "disc-star-p3-4": {
+    "id": "disc-star-p3-4",
+    "parent": "pile-discs-p3",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-star",
+    "playerIndex": 3
+  },
+  "disc-star-p3-5": {
+    "id": "disc-star-p3-5",
+    "parent": "pile-discs-p3",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-star",
+    "playerIndex": 3
+  },
+  "disc-star-p3-6": {
+    "id": "disc-star-p3-6",
+    "parent": "pile-discs-p3",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-star",
+    "playerIndex": 3
+  },
+  "holder-discs-p4": {
+    "id": "holder-discs-p4",
+    "type": "holder",
+    "parent": "area-p4",
+    "inheritFrom": "holder-discs-p1"
+  },
+  "pile-discs-p4": {
+    "id": "pile-discs-p4",
+    "type": "pile",
+    "parent": "holder-discs-p4",
+    "x": 0,
+    "y": 4.84,
+    "width": 72.309,
+    "height": 62.622,
+    "handleCSS": {
+      "background": "black",
+      "color": "white"
+    },
+    "handlePosition": "top right",
+    "movable": false
+  },
+  "disc-farmer-p4-01": {
+    "id": "disc-farmer-p4-01",
+    "parent": "pile-discs-p4",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-farmer",
+    "playerIndex": 4
+  },
+  "disc-farmer-p4-02": {
+    "id": "disc-farmer-p4-02",
+    "parent": "pile-discs-p4",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-farmer",
+    "playerIndex": 4
+  },
+  "disc-farmer-p4-03": {
+    "id": "disc-farmer-p4-03",
+    "parent": "pile-discs-p4",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-farmer",
+    "playerIndex": 4
+  },
+  "disc-farmer-p4-04": {
+    "id": "disc-farmer-p4-04",
+    "parent": "pile-discs-p4",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-farmer",
+    "playerIndex": 4
+  },
+  "disc-farmer-p4-04": {
+    "id": "disc-farmer-p4-04",
+    "parent": "pile-discs-p4",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-farmer",
+    "playerIndex": 4
+  },
+  "disc-farmer-p4-05": {
+    "id": "disc-farmer-p4-05",
+    "parent": "pile-discs-p4",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-farmer",
+    "playerIndex": 4
+  },
+  "disc-farmer-p4-06": {
+    "id": "disc-farmer-p4-06",
+    "parent": "pile-discs-p4",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-farmer",
+    "playerIndex": 4
+  },
+  "disc-farmer-p4-07": {
+    "id": "disc-farmer-p4-07",
+    "parent": "pile-discs-p4",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-farmer",
+    "playerIndex": 4
+  },
+   "disc-farmer-p4-08": {
+    "id": "disc-farmer-p4-08",
+    "parent": "pile-discs-p4",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-farmer",
+    "playerIndex": 4
+  },
+  "disc-farmer-p4-09": {
+    "id": "disc-farmer-p4-09",
+    "parent": "pile-discs-p4",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-farmer",
+    "playerIndex": 4
+  },
+  "disc-farmer-p4-10": {
+    "id": "disc-farmer-p4-10",
+    "parent": "pile-discs-p4",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-farmer",
+    "playerIndex": 4
+  },
+  "disc-farmer-p4-11": {
+    "id": "disc-farmer-p4-11",
+    "parent": "pile-discs-p4",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-farmer",
+    "playerIndex": 4
+  },
+  "disc-farmer-p4-12": {
+    "id": "disc-farmer-p4-12",
+    "parent": "pile-discs-p4",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-farmer",
+    "playerIndex": 4
+  },
+  "disc-crown-p4-1": {
+    "id": "disc-crown-p4-1",
+    "parent": "pile-discs-p4",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-crown",
+    "playerIndex": 4
+  },
+  "disc-crown-p4-2": {
+    "id": "disc-crown-p4-2",
+    "parent": "pile-discs-p4",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-crown",
+    "playerIndex": 4
+  },
+  "disc-crown-p4-3": {
+    "id": "disc-crown-p4-3",
+    "parent": "pile-discs-p4",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-crown",
+    "playerIndex": 4
+  },
+  "disc-crown-p4-4": {
+    "id": "disc-crown-p4-4",
+    "parent": "pile-discs-p4",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-crown",
+    "playerIndex": 4
+  },
+  "disc-crown-p4-5": {
+    "id": "disc-crown-p4-5",
+    "parent": "pile-discs-p4",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-crown",
+    "playerIndex": 4
+  },
+  "disc-crown-p4-6": {
+    "id": "disc-crown-p4-6",
+    "parent": "pile-discs-p4",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-crown",
+    "playerIndex": 4
+  },
+  "disc-pot-p4-1": {
+    "id": "disc-pot-p4-1",
+    "parent": "pile-discs-p4",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-pot",
+    "playerIndex": 4
+  },
+  "disc-pot-p4-2": {
+    "id": "disc-pot-p4-2",
+    "parent": "pile-discs-p4",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-pot",
+    "playerIndex": 4
+  },
+  "disc-pot-p4-3": {
+    "id": "disc-pot-p4-3",
+    "parent": "pile-discs-p4",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-pot",
+    "playerIndex": 4
+  },
+  "disc-pot-p4-4": {
+    "id": "disc-pot-p4-4",
+    "parent": "pile-discs-p4",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-pot",
+    "playerIndex": 4
+  },
+  "disc-pot-p4-5": {
+    "id": "disc-pot-p4-5",
+    "parent": "pile-discs-p4",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-pot",
+    "playerIndex": 4
+  },
+  "disc-pot-p4-6": {
+    "id": "disc-pot-p4-6",
+    "parent": "pile-discs-p4",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-pot",
+    "playerIndex": 4
+  },
+  "disc-star-p4-1": {
+    "id": "disc-star-p4-1",
+    "parent": "pile-discs-p4",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-star",
+    "playerIndex": 4
+  },
+  "disc-star-p4-2": {
+    "id": "disc-star-p4-2",
+    "parent": "pile-discs-p4",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-star",
+    "playerIndex": 4
+  },
+  "disc-star-p4-3": {
+    "id": "disc-star-p4-3",
+    "parent": "pile-discs-p4",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-star",
+    "playerIndex": 4
+  },
+  "disc-star-p4-4": {
+    "id": "disc-star-p4-4",
+    "parent": "pile-discs-p4",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-star",
+    "playerIndex": 4
+  },
+  "disc-star-p4-5": {
+    "id": "disc-star-p4-5",
+    "parent": "pile-discs-p4",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-star",
+    "playerIndex": 4
+  },
+  "disc-star-p4-6": {
+    "id": "disc-star-p4-6",
+    "parent": "pile-discs-p4",
+    "type": "card",
+    "deck": "deck-discs",
+    "cardType": "disc-star",
+    "playerIndex": 4
+  },
+  "holder-cities-p1": {
+    "id": "holder-cities-p1",
+    "type": "holder",
+    "parent": "area-p1",
+    "x": 125,
+    "y": 105,
+    "width": 72.309,
+    "height": 72.309,
+    "dropOffsetX": 0,
+    "dropOffsetY": 4.84,
+    "dropTarget": {
+      "deck": "deck-tiles"
+    }
+  },
+  "holder-cities-label-p1": {
+    "id": "holder-cities-label-p1",
+    "type": "label",
+    "parent": "holder-cities-p1",
+    "fixedParent": true,
+    "x": 0,
+    "y": 72.309,
+    "width": 72.309,
+    "height": 20,
+    "movable": false,
+    "movableInEdit": false,
+    "editable": false,
+    "css": {
+      "font-size": "16px"
+    },
+    "text": "CITIES"
+  },
+  "holder-cities-p2": {
+    "id": "holder-cities-p2",
+    "type": "holder",
+    "parent": "area-p2",
+    "inheritFrom": "holder-cities-p1"
+  },
+  "holder-cities-label-p2": {
+    "id": "holder-cities-label-p2",
+    "type": "label",
+    "parent": "holder-cities-p2",
+    "inheritFrom": "holder-cities-label-p1"
+  },
+  "holder-cities-p3": {
+    "id": "holder-cities-p3",
+    "type": "holder",
+    "parent": "area-p3",
+    "inheritFrom": "holder-cities-p1"
+  },
+  "holder-cities-label-p3": {
+    "id": "holder-cities-label-p3",
+    "type": "label",
+    "parent": "holder-cities-p3",
+    "inheritFrom": "holder-cities-label-p1"
+  },
+  "holder-cities-p4": {
+    "id": "holder-cities-p4",
+    "type": "holder",
+    "parent": "area-p4",
+    "inheritFrom": "holder-cities-p1"
+  },
+  "holder-cities-label-p4": {
+    "id": "holder-cities-label-p4",
+    "type": "label",
+    "parent": "holder-cities-p4",
+    "inheritFrom": "holder-cities-label-p1"
+  },
+  "holder-ziggurats-p1": {
+    "id": "holder-ziggurats-p1",
+    "type": "holder",
+    "parent": "area-p1",
+    "x": 220,
+    "y": 90,
+    "width": 265,
+    "height": 100,
+    "dropOffsetX": 0,
+    "dropOffsetY": 0,
+    "dropTarget": {
+      "deck": "deck-ziggurats"
+    },
+    "onEnter": {
+      "activeFace": 1
+    },
+    "stackOffsetX": 35,
+    "stackOffsetY": 0
+  },
+  "holder-ziggurats-label-p1": {
+    "id": "holder-ziggurats-label-p1",
+    "type": "label",
+    "parent": "holder-ziggurats-p1",
+    "fixedParent": true,
+    "x": 0,
+    "y": 100,
+    "width": 265,
+    "height": 20,
+    "movable": false,
+    "movableInEdit": false,
+    "editable": false,
+    "css": {
+      "font-size": "16px"
+    },
+    "text": "ZIGGURAT TILES"
+  },
+  "holder-ziggurats-p2": {
+    "id": "holder-ziggurats-p2",
+    "type": "holder",
+    "parent": "area-p2",
+    "inheritFrom": "holder-ziggurats-p1"
+  },
+  "holder-ziggurats-label-p2": {
+    "id": "holder-ziggurats-label-p2",
+    "type": "label",
+    "parent": "holder-ziggurats-p2",
+    "inheritFrom": "holder-ziggurats-label-p1"
+  },
+  "holder-ziggurats-p3": {
+    "id": "holder-ziggurats-p3",
+    "type": "holder",
+    "parent": "area-p3",
+    "inheritFrom": "holder-ziggurats-p1"
+  },
+  "holder-ziggurats-label-p3": {
+    "id": "holder-ziggurats-label-p3",
+    "type": "label",
+    "parent": "holder-ziggurats-p3",
+    "inheritFrom": "holder-ziggurats-label-p1"
+  },
+  "holder-ziggurats-p4": {
+    "id": "holder-ziggurats-p4",
+    "type": "holder",
+    "parent": "area-p4",
+    "inheritFrom": "holder-ziggurats-p1"
+  },
+  "holder-ziggurats-label-p4": {
+    "id": "holder-ziggurats-label-p4",
+    "type": "label",
+    "parent": "holder-ziggurats-p4",
+    "inheritFrom": "holder-ziggurats-label-p1"
+  },
+  "holder-ziggurats": {
+    "id": "holder-ziggurats",
+    "type": "holder",
+    "x": 1490,
+    "y": 10,
+    "width": 100,
+    "height": 100,
+    "dropOffsetX": 0,
+    "dropOffsetY": 0,
+    "dropTarget": {
+      "deck": "deck-ziggurats"
+    },
+    "onEnter": {
+      "activeFace": 0
+    }
+  },
+  "deck-ziggurats": {
+    "id": "deck-ziggurats",
+    "type": "deck",
+    "parent": "holder-ziggurats",
+    "cardTypes": {
+      "ziggurat1": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/babylonia-v2/babylonia/assets/ziggurat-1.svg",
+        "value": 1
+      },
+      "ziggurat2": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/babylonia-v2/babylonia/assets/ziggurat-2.svg",
+        "value": 2
+      },
+      "ziggurat3": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/babylonia-v2/babylonia/assets/ziggurat-3.svg",
+        "value": 3
+      },
+      "ziggurat4": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/babylonia-v2/babylonia/assets/ziggurat-4.svg",
+        "value": 4
+      },
+      "ziggurat5": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/babylonia-v2/babylonia/assets/ziggurat-5.svg",
+        "value": 5
+      },
+      "ziggurat6": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/babylonia-v2/babylonia/assets/ziggurat-6.svg",
+        "value": 6
+      },
+      "ziggurat7": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/babylonia-v2/babylonia/assets/ziggurat-7.svg",
+        "value": 7
+      },
+      "ziggurat8": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/babylonia-v2/babylonia/assets/ziggurat-8.svg",
+        "value": 8
+      },
+      "ziggurat9": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/babylonia-v2/babylonia/assets/ziggurat-9.svg",
+        "value": 9
+      }
+    },
+    "faceTemplates": [
+      {
+        "border": false,
+        "radius": false,
+        "objects": [
+          {
+            "type": "image",
+            "x": 0,
+            "y": 0,
+            "width": 100,
+            "height": 100,
+            "value": "https://raw.githubusercontent.com/andypymont/vtt-games/main/babylonia/assets/ziggurat-back.svg",
+            "color": "transparent"
+          }
+        ]
+      },
+      {
+        "border": false,
+        "radius": false,
+        "objects": [
+          {
+            "type": "image",
+            "x": 0,
+            "y": 0,
+            "width": 100,
+            "height": 100,
+            "dynamicProperties": {
+              "value": "image"
+            },
+            "color": "transparent"
+          }
+        ]
+      }
+    ],
+    "cardDefaults": {
+      "height": 100,
+      "width": 100,
+      "onPileCreation": {
+        "handleCSS": {
+          "background": "black",
+          "color": "white"
+        },
+        "handlePosition": "center middle"
+      }
+    }
+  },
+  "pile-ziggurats": {
+    "id": "pile-ziggurats",
+    "type": "pile",
+    "parent": "holder-ziggurats",
+    "x": 0,
+    "y": 0,
+    "width": 100,
+    "height": 100,
+    "handleCSS": {
+      "background": "black",
+      "color": "white"
+    },
+    "handlePosition": "center middle",
+    "movable": false
+  },
+  "holder-ziggurats-active": {
+    "id": "holder-ziggurats-active",
+    "type": "holder",
+    "x": 650,
+    "y": 10,
+    "width": 700,
+    "height": 100,
+    "dropOffsetX": 0,
+    "dropOffsetY": 0,
+    "dropLimit": 7,
+    "dropTarget": {
+      "deck": "deck-ziggurats"
+    },
+    "stackOffsetX": 100,
+    "stackOffsetY": 0,
+    "onEnter": {
+      "activeFace": 1
+    }
+  },
+  "tile-ziggurat1": {
+    "id": "tile-ziggurat1",
+    "type": "card",
+    "parent": "pile-ziggurats",
+    "deck": "deck-ziggurats",
+    "cardType": "ziggurat1"
+  },
+  "tile-ziggurat2": {
+    "id": "tile-ziggurat2",
+    "type": "card",
+    "parent": "pile-ziggurats",
+    "deck": "deck-ziggurats",
+    "cardType": "ziggurat2"
+  },
+  "tile-ziggurat3": {
+    "id": "tile-ziggurat3",
+    "type": "card",
+    "parent": "pile-ziggurats",
+    "deck": "deck-ziggurats",
+    "cardType": "ziggurat3"
+  },
+  "tile-ziggurat4": {
+    "id": "tile-ziggurat4",
+    "type": "card",
+    "parent": "pile-ziggurats",
+    "deck": "deck-ziggurats",
+    "cardType": "ziggurat4"
+  },
+  "tile-ziggurat5": {
+    "id": "tile-ziggurat5",
+    "type": "card",
+    "parent": "pile-ziggurats",
+    "deck": "deck-ziggurats",
+    "cardType": "ziggurat5"
+  },
+  "tile-ziggurat6": {
+    "id": "tile-ziggurat6",
+    "type": "card",
+    "parent": "pile-ziggurats",
+    "deck": "deck-ziggurats",
+    "cardType": "ziggurat6"
+  },
+  "tile-ziggurat7": {
+    "id": "tile-ziggurat7",
+    "type": "card",
+    "parent": "pile-ziggurats",
+    "deck": "deck-ziggurats",
+    "cardType": "ziggurat7"
+  },
+  "tile-ziggurat8": {
+    "id": "tile-ziggurat8",
+    "type": "card",
+    "parent": "pile-ziggurats",
+    "deck": "deck-ziggurats",
+    "cardType": "ziggurat8"
+  },
+  "tile-ziggurat9": {
+    "id": "tile-ziggurat9",
+    "type": "card",
+    "parent": "pile-ziggurats",
+    "deck": "deck-ziggurats",
+    "cardType": "ziggurat9"
+  },
+  "holder-tiles": {
+    "id": "holder-tiles",
+    "type": "holder",
+    "x": 1505,
+    "y": 145,
+    "width": 72.309,
+    "height": 72.309,
+    "dropOffsetX": 0,
+    "dropOffsetY": 4.84,
+    "dropTarget": {
+      "deck": "deck-tiles"
+    },
+    "onEnter": {
+      "activeFace": 0
+    }
+  },
+  "deck-tiles": {
+    "id": "deck-tiles",
+    "parent": "holder-tiles",
+    "type": "deck",
+    "cardTypes": {
+      "tile-city-all": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/babylonia-v2/babylonia/assets/city-all.svg"
+      },
+      "tile-city-crown": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/babylonia-v2/babylonia/assets/city-crown.svg"
+      },
+      "tile-city-pot": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/babylonia-v2/babylonia/assets/city-pot.svg"
+      },
+      "tile-city-star": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/babylonia-v2/babylonia/assets/city-star.svg"
+      },
+      "tile-city-crown-pot": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/babylonia-v2/babylonia/assets/city-crown-pot.svg"
+      },
+      "tile-city-crown-star": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/babylonia-v2/babylonia/assets/city-crown-star.svg"
+      },
+      "tile-city-star-pot": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/babylonia-v2/babylonia/assets/city-star-pot.svg"
+      },
+      "tile-crop5": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/babylonia-v2/babylonia/assets/crop-5.svg"
+      },
+      "tile-crop6": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/babylonia-v2/babylonia/assets/crop-6.svg"
+      },
+      "tile-crop7": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/babylonia-v2/babylonia/assets/crop-7.svg"
+      },
+      "tile-cropx": {
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/babylonia-v2/babylonia/assets/crop-x.svg"
+      }
+    },
+    "faceTemplates": [
+      {
+        "border": false,
+        "radius": false,
+        "objects": [
+          {
+            "type": "image",
+            "x": 0,
+            "y": 0,
+            "width": 72.309,
+            "height": 62.622,
+            "value": "https://raw.githubusercontent.com/andypymont/vtt-games/babylonia-v2/babylonia/assets/citycrop-back.svg",
+            "color": "transparent"
+          }
+        ]
+      },
+      {
+        "border": false,
+        "radius": false,
+        "objects": [
+          {
+            "type": "image",
+            "x": 0,
+            "y": 0,
+            "width": 72.309,
+            "height": 62.622,
+            "color": "transparent",
+            "dynamicProperties": {
+              "value": "image"
+            }
+          }
+        ]
+      }
+    ],
+    "cardDefaults": {
+      "width": 72.309,
+      "height": 62.622,
+      "onPileCreation": {
+        "handleCSS": {
+          "background": "black",
+          "color": "white"
+        }
+      }
+    }
+  },
+  "pile-tiles": {
+    "id": "pile-tiles",
+    "type": "pile",
+    "parent": "holder-tiles",
+    "x": 0,
+    "y": 4.84,
+    "width": 72.309,
+    "height": 62.622,
+    "handleCSS": {
+      "background": "black",
+      "color": "white"
+    },
+    "handlePosition": "center middle",
+    "movable": false
+  },
+  "tile-city-all": {
+    "id": "tile-city-all",
+    "type": "card",
+    "parent": "pile-tiles",
+    "deck": "deck-tiles",
+    "cardType": "tile-city-all"
+  },
+  "tile-city-crown-1": {
+    "id": "tile-city-crown-1",
+    "type": "card",
+    "parent": "pile-tiles",
+    "deck": "deck-tiles",
+    "cardType": "tile-city-crown"
+  },
+  "tile-city-crown-2": {
+    "id": "tile-city-crown-2",
+    "type": "card",
+    "parent": "pile-tiles",
+    "deck": "deck-tiles",
+    "cardType": "tile-city-crown"
+  },
+  "tile-city-crown-3": {
+    "id": "tile-city-crown-3",
+    "type": "card",
+    "parent": "pile-tiles",
+    "deck": "deck-tiles",
+    "cardType": "tile-city-crown"
+  },
+  "tile-city-pot-1": {
+    "id": "tile-city-pot-1",
+    "type": "card",
+    "parent": "pile-tiles",
+    "deck": "deck-tiles",
+    "cardType": "tile-city-pot"
+  },
+  "tile-city-pot-2": {
+    "id": "tile-city-pot-2",
+    "type": "card",
+    "parent": "pile-tiles",
+    "deck": "deck-tiles",
+    "cardType": "tile-city-pot"
+  },
+  "tile-city-pot-3": {
+    "id": "tile-city-pot-3",
+    "type": "card",
+    "parent": "pile-tiles",
+    "deck": "deck-tiles",
+    "cardType": "tile-city-pot"
+  },
+  "tile-city-star-1": {
+    "id": "tile-city-star-1",
+    "type": "card",
+    "parent": "pile-tiles",
+    "deck": "deck-tiles",
+    "cardType": "tile-city-star"
+  },
+  "tile-city-star-2": {
+    "id": "tile-city-star-2",
+    "type": "card",
+    "parent": "pile-tiles",
+    "deck": "deck-tiles",
+    "cardType": "tile-city-star"
+  },
+  "tile-city-star-3": {
+    "id": "tile-city-star-3",
+    "type": "card",
+    "parent": "pile-tiles",
+    "deck": "deck-tiles",
+    "cardType": "tile-city-star"
+  },
+  "tile-city-crown-pot-1": {
+    "id": "tile-city-crown-pot-1",
+    "type": "card",
+    "parent": "pile-tiles",
+    "deck": "deck-tiles",
+    "cardType": "tile-city-crown-pot"
+  },
+  "tile-city-crown-pot-2": {
+    "id": "tile-city-crown-pot-2",
+    "type": "card",
+    "parent": "pile-tiles",
+    "deck": "deck-tiles",
+    "cardType": "tile-city-crown-pot"
+  },
+  "tile-city-crown-pot-3": {
+    "id": "tile-city-crown-pot-3",
+    "type": "card",
+    "parent": "pile-tiles",
+    "deck": "deck-tiles",
+    "cardType": "tile-city-crown-pot"
+  },
+  "tile-city-crown-star-1": {
+    "id": "tile-city-crown-star-1",
+    "type": "card",
+    "parent": "pile-tiles",
+    "deck": "deck-tiles",
+    "cardType": "tile-city-crown-star"
+  },
+  "tile-city-crown-star-2": {
+    "id": "tile-city-crown-star-2",
+    "type": "card",
+    "parent": "pile-tiles",
+    "deck": "deck-tiles",
+    "cardType": "tile-city-crown-star"
+  },
+  "tile-city-crown-star-3": {
+    "id": "tile-city-crown-star-3",
+    "type": "card",
+    "parent": "pile-tiles",
+    "deck": "deck-tiles",
+    "cardType": "tile-city-crown-star"
+  },
+  "tile-city-star-pot-1": {
+    "id": "tile-city-star-pot-1",
+    "type": "card",
+    "parent": "pile-tiles",
+    "deck": "deck-tiles",
+    "cardType": "tile-city-star-pot"
+  },
+  "tile-city-star-pot-2": {
+    "id": "tile-city-star-pot-2",
+    "type": "card",
+    "parent": "pile-tiles",
+    "deck": "deck-tiles",
+    "cardType": "tile-city-star-pot"
+  },
+  "tile-city-star-pot-3": {
+    "id": "tile-city-star-pot-3",
+    "type": "card",
+    "parent": "pile-tiles",
+    "deck": "deck-tiles",
+    "cardType": "tile-city-star-pot"
+  },
+  "tile-crop5-1": {
+    "id": "tile-crop5-1",
+    "type": "card",
+    "parent": "pile-tiles",
+    "deck": "deck-tiles",
+    "cardType": "tile-crop5"
+  },
+  "tile-crop5-2": {
+    "id": "tile-crop5-2",
+    "type": "card",
+    "parent": "pile-tiles",
+    "deck": "deck-tiles",
+    "cardType": "tile-crop5"
+  },
+  "tile-crop6-1": {
+    "id": "tile-crop6-1",
+    "type": "card",
+    "parent": "pile-tiles",
+    "deck": "deck-tiles",
+    "cardType": "tile-crop6"
+  },
+  "tile-crop6-2": {
+    "id": "tile-crop6-2",
+    "type": "card",
+    "parent": "pile-tiles",
+    "deck": "deck-tiles",
+    "cardType": "tile-crop6"
+  },
+  "tile-crop7-1": {
+    "id": "tile-crop7-1",
+    "type": "card",
+    "parent": "pile-tiles",
+    "deck": "deck-tiles",
+    "cardType": "tile-crop7"
+  },
+  "tile-crop7-2": {
+    "id": "tile-crop7-2",
+    "type": "card",
+    "parent": "pile-tiles",
+    "deck": "deck-tiles",
+    "cardType": "tile-crop7"
+  },
+  "tile-cropx-1": {
+    "id": "tile-cropx-1",
+    "type": "card",
+    "parent": "pile-tiles",
+    "deck": "deck-tiles",
+    "cardType": "tile-cropx"
+  },
+  "tile-cropx-2": {
+    "id": "tile-cropx-2",
+    "type": "card",
+    "parent": "pile-tiles",
+    "deck": "deck-tiles",
+    "cardType": "tile-cropx"
+  },
+  "tile-cropx-3": {
+    "id": "tile-cropx-3",
+    "type": "card",
+    "parent": "pile-tiles",
+    "deck": "deck-tiles",
+    "cardType": "tile-cropx"
+  },
+  "tile-cropx-4": {
+    "id": "tile-cropx-4",
+    "type": "card",
+    "parent": "pile-tiles",
+    "deck": "deck-tiles",
+    "cardType": "tile-cropx"
+  },
+  "tile-cropx-5": {
+    "id": "tile-cropx-5",
+    "type": "card",
+    "parent": "pile-tiles",
+    "deck": "deck-tiles",
+    "cardType": "tile-cropx"
+  },
+  "tile-cropx-6": {
+    "id": "tile-cropx-6",
+    "type": "card",
+    "parent": "pile-tiles",
+    "deck": "deck-tiles",
+    "cardType": "tile-cropx"
+  },
+  "tile-cropx-7": {
+    "id": "tile-cropx-7",
+    "type": "card",
+    "parent": "pile-tiles",
+    "deck": "deck-tiles",
+    "cardType": "tile-cropx"
+  }
+}
