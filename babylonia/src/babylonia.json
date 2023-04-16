@@ -36,17 +36,3394 @@
     "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/assets/map-4p.svg",
     "movable": false
   },
+  "board-4-space-a2": {
+    "id": "board-4-space-a2",
+    "type": "holder",
+    "parent": "board-4",
+    "fixedParent": true,
+    "x": 1,
+    "y": 60.622,
+    "width": 72.309,
+    "height": 62.622,
+    "dropOffsetX": 0,
+    "dropOffsetY": 0,
+    "dropLimit": 1,
+    "dropTarget": {
+      "width": 72.309
+    },
+    "movable": false,
+    "movableInEdit": false,
+    "css": {
+      "background-color": "transparent",
+      "border": "transparent"
+    }
+  },
+  "board-4-space-a4": {
+    "id": "board-4-space-a4",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "y": 121.244
+  },
+  "board-4-space-a6": {
+    "id": "board-4-space-a6",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "y": 181.866
+  },
+  "board-4-space-a8": {
+    "id": "board-4-space-a8",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "y": 242.488
+  },
+  "board-4-space-a10": {
+    "id": "board-4-space-a10",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "y": 303.11
+  },
+  "board-4-space-a12": {
+    "id": "board-4-space-a12",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "y": 363.732
+  },
+  "board-4-space-a14": {
+    "id": "board-4-space-a14",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "y": 424.354
+  },
+  "board-4-space-a16": {
+    "id": "board-4-space-a16",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "y": 484.976
+  },
+  "board-4-space-a18": {
+    "id": "board-4-space-a18",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "y": 545.598
+  },
+  "board-4-space-a20": {
+    "id": "board-4-space-a20",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "y": 606.22
+  },
+  "board-4-space-b1": {
+    "id": "board-4-space-b1",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 53.5,
+    "y": 30.311
+  },
+  "board-4-space-b5": {
+    "id": "board-4-space-b5",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 53.5,
+    "y": 151.555
+  },
+  "board-4-space-b7": {
+    "id": "board-4-space-b7",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 53.5,
+    "y": 212.177
+  },
+  "board-4-space-b9": {
+    "id": "board-4-space-b9",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 53.5,
+    "y": 272.799
+  },
+  "board-4-space-b11": {
+    "id": "board-4-space-b11",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 53.5,
+    "y": 333.421
+  },
+  "board-4-space-b13": {
+    "id": "board-4-space-b13",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 53.5,
+    "y": 394.043
+  },
+  "board-4-space-b15": {
+    "id": "board-4-space-b15",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 53.5,
+    "y": 454.665
+  },
+  "board-4-space-b17": {
+    "id": "board-4-space-b17",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 53.5,
+    "y": 515.287
+  },
+  "board-4-space-b19": {
+    "id": "board-4-space-b19",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 53.5,
+    "y": 575.909
+  },
+  "board-4-space-b21": {
+    "id": "board-4-space-b21",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 53.5,
+    "y": 636.531
+  },
+  "board-4-space-c2": {
+    "id": "board-4-space-c2",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 106
+  },
+  "board-4-space-c4": {
+    "id": "board-4-space-c4",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 106,
+    "y": 121.244
+  },
+  "board-4-space-c6": {
+    "id": "board-4-space-c6",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 106,
+    "y": 181.866
+  },
+  "board-4-space-c8": {
+    "id": "board-4-space-c8",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 106,
+    "y": 242.488
+  },
+  "board-4-space-c10": {
+    "id": "board-4-space-c10",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 106,
+    "y": 303.11
+  },
+  "board-4-space-c12": {
+    "id": "board-4-space-c12",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 106,
+    "y": 363.732
+  },
+  "board-4-space-c14": {
+    "id": "board-4-space-c14",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 106,
+    "y": 424.354
+  },
+  "board-4-space-c16": {
+    "id": "board-4-space-c16",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 106,
+    "y": 484.976
+  },
+  "board-4-space-c20": {
+    "id": "board-4-space-c20",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 106,
+    "y": 606.22
+  },
+  "board-4-space-c22": {
+    "id": "board-4-space-c22",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 106,
+    "y": 666.44
+  },
+  "board-4-space-d3": {
+    "id": "board-4-space-d3",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 158.5,
+    "y": 90.973
+  },
+  "board-4-space-d5": {
+    "id": "board-4-space-d5",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 158.5,
+    "y": 151.555
+  },
+  "board-4-space-d7": {
+    "id": "board-4-space-d7",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 158.5,
+    "y": 212.177
+  },
+  "board-4-space-d9": {
+    "id": "board-4-space-d9",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 158.5,
+    "y": 272.799
+  },
+  "board-4-space-d11": {
+    "id": "board-4-space-d11",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 158.5,
+    "y": 333.421
+  },
+  "board-4-space-d13": {
+    "id": "board-4-space-d13",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 158.5,
+    "y": 394.043
+  },
+  "board-4-space-d15": {
+    "id": "board-4-space-d15",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 158.5,
+    "y": 454.665
+  },
+  "board-4-space-d17": {
+    "id": "board-4-space-d17",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 158.5,
+    "y": 515.287
+  },
+  "board-4-space-d19": {
+    "id": "board-4-space-d19",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 158.5,
+    "y": 575.909
+  },
+  "board-4-space-d21": {
+    "id": "board-4-space-d21",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 158.5,
+    "y": 636.531
+  },
+  "board-4-space-e2": {
+    "id": "board-4-space-e2",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 211
+  },
+  "board-4-space-e4": {
+    "id": "board-4-space-e4",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 211,
+    "y": 121.244
+  },
+  "board-4-space-e6": {
+    "id": "board-4-space-e6",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 211,
+    "y": 181.866
+  },
+  "board-4-space-e8": {
+    "id": "board-4-space-e8",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 211,
+    "y": 242.488
+  },
+  "board-4-space-e10": {
+    "id": "board-4-space-e10",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 211,
+    "y": 303.11
+  },
+  "board-4-space-e12": {
+    "id": "board-4-space-e12",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 211,
+    "y": 363.732
+  },
+  "board-4-space-e14": {
+    "id": "board-4-space-e14",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 211,
+    "y": 424.354
+  },
+  "board-4-space-e16": {
+    "id": "board-4-space-e16",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 211,
+    "y": 484.976
+  },
+  "board-4-space-e18": {
+    "id": "board-4-space-e18",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 211,
+    "y": 545.598
+  },
+  "board-4-space-e20": {
+    "id": "board-4-space-e20",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 211,
+    "y": 606.22
+  },
+  "board-4-space-e22": {
+    "id": "board-4-space-e22",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 211,
+    "y": 666.44
+  },
+  "board-4-space-f3": {
+    "id": "board-4-space-f3",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 263.5,
+    "y": 90.973
+  },
+  "board-4-space-f5": {
+    "id": "board-4-space-f5",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 263.5,
+    "y": 151.555
+  },
+  "board-4-space-f7": {
+    "id": "board-4-space-f7",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 263.5,
+    "y": 212.177
+  },
+  "board-4-space-f9": {
+    "id": "board-4-space-f9",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 263.5,
+    "y": 272.799
+  },
+  "board-4-space-f11": {
+    "id": "board-4-space-f11",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 263.5,
+    "y": 333.421
+  },
+  "board-4-space-f13": {
+    "id": "board-4-space-f13",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 263.5,
+    "y": 394.043
+  },
+  "board-4-space-f15": {
+    "id": "board-4-space-f15",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 263.5,
+    "y": 454.665
+  },
+  "board-4-space-f17": {
+    "id": "board-4-space-f17",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 263.5,
+    "y": 515.287
+  },
+  "board-4-space-f19": {
+    "id": "board-4-space-f19",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 263.5,
+    "y": 575.909
+  },
+  "board-4-space-f21": {
+    "id": "board-4-space-f21",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 263.5,
+    "y": 636.531
+  },
+  "board-4-space-g2": {
+    "id": "board-4-space-g2",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 316
+  },
+  "board-4-space-g4": {
+    "id": "board-4-space-g4",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 316,
+    "y": 121.244
+  },
+  "board-4-space-g6": {
+    "id": "board-4-space-g6",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 316,
+    "y": 181.866
+  },
+  "board-4-space-g8": {
+    "id": "board-4-space-g8",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 316,
+    "y": 242.488
+  },
+  "board-4-space-g10": {
+    "id": "board-4-space-g10",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 316,
+    "y": 303.11
+  },
+  "board-4-space-g12": {
+    "id": "board-4-space-g12",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 316,
+    "y": 363.732
+  },
+  "board-4-space-g14": {
+    "id": "board-4-space-g14",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 316,
+    "y": 424.354
+  },
+  "board-4-space-g16": {
+    "id": "board-4-space-g16",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 316,
+    "y": 484.976
+  },
+  "board-4-space-g18": {
+    "id": "board-4-space-g18",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 316,
+    "y": 545.598
+  },
+  "board-4-space-g20": {
+    "id": "board-4-space-g20",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 316,
+    "y": 606.22
+  },
+  "board-4-space-g22": {
+    "id": "board-4-space-g22",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 316,
+    "y": 666.44
+  },
+  "board-4-space-h1": {
+    "id": "board-4-space-h1",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 368.5,
+    "y": 30.311
+  },
+  "board-4-space-h3": {
+    "id": "board-4-space-h3",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 368.5,
+    "y": 90.973
+  },
+  "board-4-space-h5": {
+    "id": "board-4-space-h5",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 368.5,
+    "y": 151.555
+  },
+  "board-4-space-h7": {
+    "id": "board-4-space-h7",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 368.5,
+    "y": 212.177
+  },
+  "board-4-space-h9": {
+    "id": "board-4-space-h9",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 368.5,
+    "y": 272.799
+  },
+  "board-4-space-h11": {
+    "id": "board-4-space-h11",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 368.5,
+    "y": 333.421
+  },
+  "board-4-space-h13": {
+    "id": "board-4-space-h13",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 368.5,
+    "y": 394.043
+  },
+  "board-4-space-h15": {
+    "id": "board-4-space-h15",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 368.5,
+    "y": 454.665
+  },
+  "board-4-space-h17": {
+    "id": "board-4-space-h17",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 368.5,
+    "y": 515.287
+  },
+  "board-4-space-h19": {
+    "id": "board-4-space-h19",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 368.5,
+    "y": 575.909
+  },
+  "board-4-space-h21": {
+    "id": "board-4-space-h21",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 368.5,
+    "y": 636.531
+  },
+  "board-4-space-i0": {
+    "id": "board-4-space-i0",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 421,
+    "y": 0
+  },
+  "board-4-space-i2": {
+    "id": "board-4-space-i2",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 421
+  },
+  "board-4-space-i4": {
+    "id": "board-4-space-i4",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 421,
+    "y": 121.244
+  },
+  "board-4-space-i6": {
+    "id": "board-4-space-i6",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 421,
+    "y": 181.866
+  },
+  "board-4-space-i8": {
+    "id": "board-4-space-i8",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 421,
+    "y": 242.488
+  },
+  "board-4-space-i10": {
+    "id": "board-4-space-i10",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 421,
+    "y": 303.11
+  },
+  "board-4-space-i14": {
+    "id": "board-4-space-i14",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 421,
+    "y": 424.354
+  },
+  "board-4-space-i16": {
+    "id": "board-4-space-i16",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 421,
+    "y": 484.976
+  },
+  "board-4-space-i18": {
+    "id": "board-4-space-i18",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 421,
+    "y": 545.598
+  },
+  "board-4-space-i20": {
+    "id": "board-4-space-i20",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 421,
+    "y": 606.22
+  },
+  "board-4-space-i22": {
+    "id": "board-4-space-i22",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 421,
+    "y": 666.44
+  },
+  "board-4-space-j1": {
+    "id": "board-4-space-j1",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 473.5,
+    "y": 30.311
+  },
+  "board-4-space-j3": {
+    "id": "board-4-space-j3",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 473.5,
+    "y": 90.973
+  },
+  "board-4-space-j5": {
+    "id": "board-4-space-j5",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 473.5,
+    "y": 151.555
+  },
+  "board-4-space-j7": {
+    "id": "board-4-space-j7",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 473.5,
+    "y": 212.177
+  },
+  "board-4-space-j9": {
+    "id": "board-4-space-j9",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 473.5,
+    "y": 272.799
+  },
+  "board-4-space-j11": {
+    "id": "board-4-space-j11",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 473.5,
+    "y": 333.421
+  },
+  "board-4-space-j13": {
+    "id": "board-4-space-j13",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 473.5,
+    "y": 394.043
+  },
+  "board-4-space-j15": {
+    "id": "board-4-space-j15",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 473.5,
+    "y": 454.665
+  },
+  "board-4-space-j17": {
+    "id": "board-4-space-j17",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 473.5,
+    "y": 515.287
+  },
+  "board-4-space-j19": {
+    "id": "board-4-space-j19",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 473.5,
+    "y": 575.909
+  },
+  "board-4-space-j21": {
+    "id": "board-4-space-j21",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 473.5,
+    "y": 636.531
+  },
+  "board-4-space-k0": {
+    "id": "board-4-space-k0",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 526,
+    "y": 0
+  },
+  "board-4-space-k2": {
+    "id": "board-4-space-k2",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 526
+  },
+  "board-4-space-k4": {
+    "id": "board-4-space-k4",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 526,
+    "y": 121.244
+  },
+  "board-4-space-k6": {
+    "id": "board-4-space-k6",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 526,
+    "y": 181.866
+  },
+  "board-4-space-k8": {
+    "id": "board-4-space-k8",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 526,
+    "y": 242.488
+  },
+  "board-4-space-k10": {
+    "id": "board-4-space-k10",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 526,
+    "y": 303.11
+  },
+  "board-4-space-k12": {
+    "id": "board-4-space-k12",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 526,
+    "y": 363.732
+  },
+  "board-4-space-k14": {
+    "id": "board-4-space-k14",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 526,
+    "y": 424.354
+  },
+  "board-4-space-k16": {
+    "id": "board-4-space-k16",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 526,
+    "y": 484.976
+  },
+  "board-4-space-k18": {
+    "id": "board-4-space-k18",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 526,
+    "y": 545.598
+  },
+  "board-4-space-k20": {
+    "id": "board-4-space-k20",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 526,
+    "y": 606.22
+  },
+  "board-4-space-k22": {
+    "id": "board-4-space-k22",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 526,
+    "y": 666.44
+  },
+  "board-4-space-l1": {
+    "id": "board-4-space-l1",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 578.5,
+    "y": 30.311
+  },
+  "board-4-space-l3": {
+    "id": "board-4-space-l3",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 578.5,
+    "y": 90.973
+  },
+  "board-4-space-l7": {
+    "id": "board-4-space-l7",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 578.5,
+    "y": 212.177
+  },
+  "board-4-space-l9": {
+    "id": "board-4-space-l9",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 578.5,
+    "y": 272.799
+  },
+  "board-4-space-l11": {
+    "id": "board-4-space-l11",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 578.5,
+    "y": 333.421
+  },
+  "board-4-space-l13": {
+    "id": "board-4-space-l13",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 578.5,
+    "y": 394.043
+  },
+  "board-4-space-l15": {
+    "id": "board-4-space-l15",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 578.5,
+    "y": 454.665
+  },
+  "board-4-space-l17": {
+    "id": "board-4-space-l17",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 578.5,
+    "y": 515.287
+  },
+  "board-4-space-l19": {
+    "id": "board-4-space-l19",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 578.5,
+    "y": 575.909
+  },
+  "board-4-space-l21": {
+    "id": "board-4-space-l21",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 578.5,
+    "y": 636.531
+  },
+  "board-4-space-m2": {
+    "id": "board-4-space-m2",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 631
+  },
+  "board-4-space-m4": {
+    "id": "board-4-space-m4",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 631,
+    "y": 121.244
+  },
+  "board-4-space-m6": {
+    "id": "board-4-space-m6",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 631,
+    "y": 181.866
+  },
+  "board-4-space-m8": {
+    "id": "board-4-space-m8",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 631,
+    "y": 242.488
+  },
+  "board-4-space-m10": {
+    "id": "board-4-space-m10",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 631,
+    "y": 303.11
+  },
+  "board-4-space-m12": {
+    "id": "board-4-space-m12",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 631,
+    "y": 363.732
+  },
+  "board-4-space-m14": {
+    "id": "board-4-space-m14",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 631,
+    "y": 424.354
+  },
+  "board-4-space-m16": {
+    "id": "board-4-space-m16",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 631,
+    "y": 484.976
+  },
+  "board-4-space-m18": {
+    "id": "board-4-space-m18",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 631,
+    "y": 545.598
+  },
+  "board-4-space-m20": {
+    "id": "board-4-space-m20",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 631,
+    "y": 606.22
+  },
+  "board-4-space-m22": {
+    "id": "board-4-space-m22",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 631,
+    "y": 666.44
+  },
+  "board-4-space-n3": {
+    "id": "board-4-space-n3",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 683.5,
+    "y": 90.973
+  },
+  "board-4-space-n5": {
+    "id": "board-4-space-n5",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 683.5,
+    "y": 151.555
+  },
+  "board-4-space-n7": {
+    "id": "board-4-space-n7",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 683.5,
+    "y": 212.177
+  },
+  "board-4-space-n9": {
+    "id": "board-4-space-n9",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 683.5,
+    "y": 272.799
+  },
+  "board-4-space-n11": {
+    "id": "board-4-space-n11",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 683.5,
+    "y": 333.421
+  },
+  "board-4-space-n13": {
+    "id": "board-4-space-n13",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 683.5,
+    "y": 394.043
+  },
+  "board-4-space-n15": {
+    "id": "board-4-space-n15",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 683.5,
+    "y": 454.665
+  },
+  "board-4-space-n17": {
+    "id": "board-4-space-n17",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 683.5,
+    "y": 515.287
+  },
+  "board-4-space-n19": {
+    "id": "board-4-space-n19",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 683.5,
+    "y": 575.909
+  },
+  "board-4-space-n21": {
+    "id": "board-4-space-n21",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 683.5,
+    "y": 636.531
+  },
+  "board-4-space-o4": {
+    "id": "board-4-space-o4",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 736,
+    "y": 121.244
+  },
+  "board-4-space-o6": {
+    "id": "board-4-space-o6",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 736,
+    "y": 181.866
+  },
+  "board-4-space-o8": {
+    "id": "board-4-space-o8",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 736,
+    "y": 242.488
+  },
+  "board-4-space-o10": {
+    "id": "board-4-space-o10",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 736,
+    "y": 303.11
+  },
+  "board-4-space-o12": {
+    "id": "board-4-space-o12",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 736,
+    "y": 363.732
+  },
+  "board-4-space-o14": {
+    "id": "board-4-space-o14",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 736,
+    "y": 424.354
+  },
+  "board-4-space-o16": {
+    "id": "board-4-space-o16",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 736,
+    "y": 484.976
+  },
+  "board-4-space-o20": {
+    "id": "board-4-space-o20",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 736,
+    "y": 606.22
+  },
+  "board-4-space-o22": {
+    "id": "board-4-space-o22",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 736,
+    "y": 666.44
+  },
+  "board-4-space-p7": {
+    "id": "board-4-space-p7",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 788.5,
+    "y": 212.177
+  },
+  "board-4-space-p9": {
+    "id": "board-4-space-p9",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 788.5,
+    "y": 272.799
+  },
+  "board-4-space-p11": {
+    "id": "board-4-space-p11",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 788.5,
+    "y": 333.421
+  },
+  "board-4-space-p13": {
+    "id": "board-4-space-p13",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 788.5,
+    "y": 394.043
+  },
+  "board-4-space-p15": {
+    "id": "board-4-space-p15",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 788.5,
+    "y": 454.665
+  },
+  "board-4-space-p17": {
+    "id": "board-4-space-p17",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 788.5,
+    "y": 515.287
+  },
+  "board-4-space-p19": {
+    "id": "board-4-space-p19",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 788.5,
+    "y": 575.909
+  },
+  "board-4-space-p21": {
+    "id": "board-4-space-p21",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 788.5,
+    "y": 636.531
+  },
+  "board-4-space-q12": {
+    "id": "board-4-space-q12",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 841,
+    "y": 363.732
+  },
+  "board-4-space-q14": {
+    "id": "board-4-space-q14",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 841,
+    "y": 424.354
+  },
+  "board-4-space-q16": {
+    "id": "board-4-space-q16",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 841,
+    "y": 484.976
+  },
+  "board-4-space-q18": {
+    "id": "board-4-space-q18",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 841,
+    "y": 545.598
+  },
+  "board-4-space-q20": {
+    "id": "board-4-space-q20",
+    "type": "holder",
+    "parent": "board-4",
+    "inheritFrom": "board-4-space-a2",
+    "x": 841,
+    "y": 606.22
+  },
   "board-3": {
     "id": "board-3",
     "inheritFrom": "board-4",
     "y": -1000,
     "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/assets/map-3p.svg"
   },
+  "board-3-space-a16": {
+    "id": "board-3-space-a16",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "y": 484.976
+  },
+  "board-3-space-a18": {
+    "id": "board-3-space-a18",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "y": 545.598
+  },
+  "board-3-space-a20": {
+    "id": "board-3-space-a20",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "y": 606.22
+  },
+  "board-3-space-b15": {
+    "id": "board-3-space-b15",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 53.5,
+    "y": 454.665
+  },
+  "board-3-space-b17": {
+    "id": "board-3-space-b17",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 53.5,
+    "y": 515.287
+  },
+  "board-3-space-b19": {
+    "id": "board-3-space-b19",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 53.5,
+    "y": 575.909
+  },
+  "board-3-space-b21": {
+    "id": "board-3-space-b21",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 53.5,
+    "y": 636.531
+  },
+  "board-3-space-c2": {
+    "id": "board-3-space-c2",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 106
+  },
+  "board-3-space-c4": {
+    "id": "board-3-space-c4",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 106,
+    "y": 121.244
+  },
+  "board-3-space-c6": {
+    "id": "board-3-space-c6",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 106,
+    "y": 181.866
+  },
+  "board-3-space-c16": {
+    "id": "board-3-space-c16",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 106,
+    "y": 484.976
+  },
+  "board-3-space-c20": {
+    "id": "board-3-space-c20",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 106,
+    "y": 606.22
+  },
+  "board-3-space-c22": {
+    "id": "board-3-space-c22",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 106,
+    "y": 666.44
+  },
+  "board-3-space-d3": {
+    "id": "board-3-space-d3",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 158.5,
+    "y": 90.973
+  },
+  "board-3-space-d5": {
+    "id": "board-3-space-d5",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 158.5,
+    "y": 151.555
+  },
+  "board-3-space-d7": {
+    "id": "board-3-space-d7",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 158.5,
+    "y": 212.177
+  },
+  "board-3-space-d17": {
+    "id": "board-3-space-d17",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 158.5,
+    "y": 515.287
+  },
+  "board-3-space-d19": {
+    "id": "board-3-space-d19",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 158.5,
+    "y": 575.909
+  },
+  "board-3-space-d21": {
+    "id": "board-3-space-d21",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 158.5,
+    "y": 636.531
+  },
+  "board-3-space-e2": {
+    "id": "board-3-space-e2",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 211
+  },
+  "board-3-space-e4": {
+    "id": "board-3-space-e4",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 211,
+    "y": 121.244
+  },
+  "board-3-space-e6": {
+    "id": "board-3-space-e6",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 211,
+    "y": 181.866
+  },
+  "board-3-space-e8": {
+    "id": "board-3-space-e8",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 211,
+    "y": 242.488
+  },
+  "board-3-space-e18": {
+    "id": "board-3-space-e18",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 211,
+    "y": 545.598
+  },
+  "board-3-space-e20": {
+    "id": "board-3-space-e20",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 211,
+    "y": 606.22
+  },
+  "board-3-space-e22": {
+    "id": "board-3-space-e22",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 211,
+    "y": 666.44
+  },
+  "board-3-space-f3": {
+    "id": "board-3-space-f3",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 263.5,
+    "y": 90.973
+  },
+  "board-3-space-f5": {
+    "id": "board-3-space-f5",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 263.5,
+    "y": 151.555
+  },
+  "board-3-space-f7": {
+    "id": "board-3-space-f7",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 263.5,
+    "y": 212.177
+  },
+  "board-3-space-f9": {
+    "id": "board-3-space-f9",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 263.5,
+    "y": 272.799
+  },
+  "board-3-space-f11": {
+    "id": "board-3-space-f11",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 263.5,
+    "y": 333.421
+  },
+  "board-3-space-f13": {
+    "id": "board-3-space-f13",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 263.5,
+    "y": 394.043
+  },
+  "board-3-space-f15": {
+    "id": "board-3-space-f15",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 263.5,
+    "y": 454.665
+  },
+  "board-3-space-f17": {
+    "id": "board-3-space-f17",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 263.5,
+    "y": 515.287
+  },
+  "board-3-space-f19": {
+    "id": "board-3-space-f19",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 263.5,
+    "y": 575.909
+  },
+  "board-3-space-f21": {
+    "id": "board-3-space-f21",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 263.5,
+    "y": 636.531
+  },
+  "board-3-space-g2": {
+    "id": "board-3-space-g2",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 316
+  },
+  "board-3-space-g4": {
+    "id": "board-3-space-g4",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 316,
+    "y": 121.244
+  },
+  "board-3-space-g6": {
+    "id": "board-3-space-g6",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 316,
+    "y": 181.866
+  },
+  "board-3-space-g8": {
+    "id": "board-3-space-g8",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 316,
+    "y": 242.488
+  },
+  "board-3-space-g10": {
+    "id": "board-3-space-g10",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 316,
+    "y": 303.11
+  },
+  "board-3-space-g12": {
+    "id": "board-3-space-g12",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 316,
+    "y": 363.732
+  },
+  "board-3-space-g14": {
+    "id": "board-3-space-g14",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 316,
+    "y": 424.354
+  },
+  "board-3-space-g16": {
+    "id": "board-3-space-g16",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 316,
+    "y": 484.976
+  },
+  "board-3-space-g18": {
+    "id": "board-3-space-g18",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 316,
+    "y": 545.598
+  },
+  "board-3-space-g20": {
+    "id": "board-3-space-g20",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 316,
+    "y": 606.22
+  },
+  "board-3-space-g22": {
+    "id": "board-3-space-g22",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 316,
+    "y": 666.44
+  },
+  "board-3-space-h1": {
+    "id": "board-3-space-h1",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 368.5,
+    "y": 30.311
+  },
+  "board-3-space-h3": {
+    "id": "board-3-space-h3",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 368.5,
+    "y": 90.973
+  },
+  "board-3-space-h5": {
+    "id": "board-3-space-h5",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 368.5,
+    "y": 151.555
+  },
+  "board-3-space-h7": {
+    "id": "board-3-space-h7",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 368.5,
+    "y": 212.177
+  },
+  "board-3-space-h9": {
+    "id": "board-3-space-h9",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 368.5,
+    "y": 272.799
+  },
+  "board-3-space-h11": {
+    "id": "board-3-space-h11",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 368.5,
+    "y": 333.421
+  },
+  "board-3-space-h13": {
+    "id": "board-3-space-h13",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 368.5,
+    "y": 394.043
+  },
+  "board-3-space-h15": {
+    "id": "board-3-space-h15",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 368.5,
+    "y": 454.665
+  },
+  "board-3-space-h17": {
+    "id": "board-3-space-h17",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 368.5,
+    "y": 515.287
+  },
+  "board-3-space-h19": {
+    "id": "board-3-space-h19",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 368.5,
+    "y": 575.909
+  },
+  "board-3-space-h21": {
+    "id": "board-3-space-h21",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 368.5,
+    "y": 636.531
+  },
+  "board-3-space-i0": {
+    "id": "board-3-space-i0",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 421,
+    "y": 0
+  },
+  "board-3-space-i2": {
+    "id": "board-3-space-i2",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 421
+  },
+  "board-3-space-i4": {
+    "id": "board-3-space-i4",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 421,
+    "y": 121.244
+  },
+  "board-3-space-i6": {
+    "id": "board-3-space-i6",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 421,
+    "y": 181.866
+  },
+  "board-3-space-i8": {
+    "id": "board-3-space-i8",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 421,
+    "y": 242.488
+  },
+  "board-3-space-i10": {
+    "id": "board-3-space-i10",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 421,
+    "y": 303.11
+  },
+  "board-3-space-i14": {
+    "id": "board-3-space-i14",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 421,
+    "y": 424.354
+  },
+  "board-3-space-i16": {
+    "id": "board-3-space-i16",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 421,
+    "y": 484.976
+  },
+  "board-3-space-i18": {
+    "id": "board-3-space-i18",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 421,
+    "y": 545.598
+  },
+  "board-3-space-i20": {
+    "id": "board-3-space-i20",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 421,
+    "y": 606.22
+  },
+  "board-3-space-i22": {
+    "id": "board-3-space-i22",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 421,
+    "y": 666.44
+  },
+  "board-3-space-j1": {
+    "id": "board-3-space-j1",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 473.5,
+    "y": 30.311
+  },
+  "board-3-space-j3": {
+    "id": "board-3-space-j3",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 473.5,
+    "y": 90.973
+  },
+  "board-3-space-j5": {
+    "id": "board-3-space-j5",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 473.5,
+    "y": 151.555
+  },
+  "board-3-space-j7": {
+    "id": "board-3-space-j7",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 473.5,
+    "y": 212.177
+  },
+  "board-3-space-j9": {
+    "id": "board-3-space-j9",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 473.5,
+    "y": 272.799
+  },
+  "board-3-space-j11": {
+    "id": "board-3-space-j11",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 473.5,
+    "y": 333.421
+  },
+  "board-3-space-j13": {
+    "id": "board-3-space-j13",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 473.5,
+    "y": 394.043
+  },
+  "board-3-space-j15": {
+    "id": "board-3-space-j15",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 473.5,
+    "y": 454.665
+  },
+  "board-3-space-j17": {
+    "id": "board-3-space-j17",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 473.5,
+    "y": 515.287
+  },
+  "board-3-space-j19": {
+    "id": "board-3-space-j19",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 473.5,
+    "y": 575.909
+  },
+  "board-3-space-j21": {
+    "id": "board-3-space-j21",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 473.5,
+    "y": 636.531
+  },
+  "board-3-space-k0": {
+    "id": "board-3-space-k0",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 526,
+    "y": 0
+  },
+  "board-3-space-k2": {
+    "id": "board-3-space-k2",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 526
+  },
+  "board-3-space-k4": {
+    "id": "board-3-space-k4",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 526,
+    "y": 121.244
+  },
+  "board-3-space-k6": {
+    "id": "board-3-space-k6",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 526,
+    "y": 181.866
+  },
+  "board-3-space-k8": {
+    "id": "board-3-space-k8",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 526,
+    "y": 242.488
+  },
+  "board-3-space-k10": {
+    "id": "board-3-space-k10",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 526,
+    "y": 303.11
+  },
+  "board-3-space-k12": {
+    "id": "board-3-space-k12",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 526,
+    "y": 363.732
+  },
+  "board-3-space-k14": {
+    "id": "board-3-space-k14",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 526,
+    "y": 424.354
+  },
+  "board-3-space-k16": {
+    "id": "board-3-space-k16",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 526,
+    "y": 484.976
+  },
+  "board-3-space-k18": {
+    "id": "board-3-space-k18",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 526,
+    "y": 545.598
+  },
+  "board-3-space-k20": {
+    "id": "board-3-space-k20",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 526,
+    "y": 606.22
+  },
+  "board-3-space-k22": {
+    "id": "board-3-space-k22",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 526,
+    "y": 666.44
+  },
+  "board-3-space-l1": {
+    "id": "board-3-space-l1",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 578.5,
+    "y": 30.311
+  },
+  "board-3-space-l3": {
+    "id": "board-3-space-l3",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 578.5,
+    "y": 90.973
+  },
+  "board-3-space-l7": {
+    "id": "board-3-space-l7",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 578.5,
+    "y": 212.177
+  },
+  "board-3-space-l9": {
+    "id": "board-3-space-l9",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 578.5,
+    "y": 272.799
+  },
+  "board-3-space-l11": {
+    "id": "board-3-space-l11",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 578.5,
+    "y": 333.421
+  },
+  "board-3-space-l13": {
+    "id": "board-3-space-l13",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 578.5,
+    "y": 394.043
+  },
+  "board-3-space-l15": {
+    "id": "board-3-space-l15",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 578.5,
+    "y": 454.665
+  },
+  "board-3-space-l17": {
+    "id": "board-3-space-l17",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 578.5,
+    "y": 515.287
+  },
+  "board-3-space-l19": {
+    "id": "board-3-space-l19",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 578.5,
+    "y": 575.909
+  },
+  "board-3-space-l21": {
+    "id": "board-3-space-l21",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 578.5,
+    "y": 636.531
+  },
+  "board-3-space-m2": {
+    "id": "board-3-space-m2",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 631
+  },
+  "board-3-space-m4": {
+    "id": "board-3-space-m4",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 631,
+    "y": 121.244
+  },
+  "board-3-space-m6": {
+    "id": "board-3-space-m6",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 631,
+    "y": 181.866
+  },
+  "board-3-space-m8": {
+    "id": "board-3-space-m8",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 631,
+    "y": 242.488
+  },
+  "board-3-space-m10": {
+    "id": "board-3-space-m10",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 631,
+    "y": 303.11
+  },
+  "board-3-space-m12": {
+    "id": "board-3-space-m12",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 631,
+    "y": 363.732
+  },
+  "board-3-space-m14": {
+    "id": "board-3-space-m14",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 631,
+    "y": 424.354
+  },
+  "board-3-space-m16": {
+    "id": "board-3-space-m16",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 631,
+    "y": 484.976
+  },
+  "board-3-space-m18": {
+    "id": "board-3-space-m18",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 631,
+    "y": 545.598
+  },
+  "board-3-space-m20": {
+    "id": "board-3-space-m20",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 631,
+    "y": 606.22
+  },
+  "board-3-space-m22": {
+    "id": "board-3-space-m22",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 631,
+    "y": 666.44
+  },
+  "board-3-space-n3": {
+    "id": "board-3-space-n3",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 683.5,
+    "y": 90.973
+  },
+  "board-3-space-n5": {
+    "id": "board-3-space-n5",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 683.5,
+    "y": 151.555
+  },
+  "board-3-space-n7": {
+    "id": "board-3-space-n7",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 683.5,
+    "y": 212.177
+  },
+  "board-3-space-n9": {
+    "id": "board-3-space-n9",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 683.5,
+    "y": 272.799
+  },
+  "board-3-space-n11": {
+    "id": "board-3-space-n11",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 683.5,
+    "y": 333.421
+  },
+  "board-3-space-n13": {
+    "id": "board-3-space-n13",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 683.5,
+    "y": 394.043
+  },
+  "board-3-space-n15": {
+    "id": "board-3-space-n15",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 683.5,
+    "y": 454.665
+  },
+  "board-3-space-n17": {
+    "id": "board-3-space-n17",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 683.5,
+    "y": 515.287
+  },
+  "board-3-space-n19": {
+    "id": "board-3-space-n19",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 683.5,
+    "y": 575.909
+  },
+  "board-3-space-n21": {
+    "id": "board-3-space-n21",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 683.5,
+    "y": 636.531
+  },
+  "board-3-space-o4": {
+    "id": "board-3-space-o4",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 736,
+    "y": 121.244
+  },
+  "board-3-space-o6": {
+    "id": "board-3-space-o6",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 736,
+    "y": 181.866
+  },
+  "board-3-space-o8": {
+    "id": "board-3-space-o8",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 736,
+    "y": 242.488
+  },
+  "board-3-space-o10": {
+    "id": "board-3-space-o10",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 736,
+    "y": 303.11
+  },
+  "board-3-space-o12": {
+    "id": "board-3-space-o12",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 736,
+    "y": 363.732
+  },
+  "board-3-space-o14": {
+    "id": "board-3-space-o14",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 736,
+    "y": 424.354
+  },
+  "board-3-space-o16": {
+    "id": "board-3-space-o16",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 736,
+    "y": 484.976
+  },
+  "board-3-space-o20": {
+    "id": "board-3-space-o20",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 736,
+    "y": 606.22
+  },
+  "board-3-space-o22": {
+    "id": "board-3-space-o22",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 736,
+    "y": 666.44
+  },
+  "board-3-space-p7": {
+    "id": "board-3-space-p7",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 788.5,
+    "y": 212.177
+  },
+  "board-3-space-p9": {
+    "id": "board-3-space-p9",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 788.5,
+    "y": 272.799
+  },
+  "board-3-space-p11": {
+    "id": "board-3-space-p11",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 788.5,
+    "y": 333.421
+  },
+  "board-3-space-p13": {
+    "id": "board-3-space-p13",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 788.5,
+    "y": 394.043
+  },
+  "board-3-space-p15": {
+    "id": "board-3-space-p15",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 788.5,
+    "y": 454.665
+  },
+  "board-3-space-p17": {
+    "id": "board-3-space-p17",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 788.5,
+    "y": 515.287
+  },
+  "board-3-space-p19": {
+    "id": "board-3-space-p19",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 788.5,
+    "y": 575.909
+  },
+  "board-3-space-p21": {
+    "id": "board-3-space-p21",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 788.5,
+    "y": 636.531
+  },
+  "board-3-space-q12": {
+    "id": "board-3-space-q12",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 841,
+    "y": 363.732
+  },
+  "board-3-space-q14": {
+    "id": "board-3-space-q14",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 841,
+    "y": 424.354
+  },
+  "board-3-space-q16": {
+    "id": "board-3-space-q16",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 841,
+    "y": 484.976
+  },
+  "board-3-space-q18": {
+    "id": "board-3-space-q18",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 841,
+    "y": 545.598
+  },
+  "board-3-space-q20": {
+    "id": "board-3-space-q20",
+    "type": "holder",
+    "parent": "board-3",
+    "inheritFrom": "board-4-space-a2",
+    "x": 841,
+    "y": 606.22
+  },
   "board-2": {
     "id": "board-2",
     "inheritFrom": "board-4",
     "y": -1000,
     "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/assets/map-2p.svg"
+  },
+  "board-2-space-a2": {
+    "id": "board-2-space-a2",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 1,
+    "y": 60.622
+  },
+  "board-2-space-a4": {
+    "id": "board-2-space-a4",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "y": 121.244
+  },
+  "board-2-space-a6": {
+    "id": "board-2-space-a6",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "y": 181.866
+  },
+  "board-2-space-a8": {
+    "id": "board-2-space-a8",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "y": 242.488
+  },
+  "board-2-space-a10": {
+    "id": "board-2-space-a10",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "y": 303.11
+  },
+  "board-2-space-a12": {
+    "id": "board-2-space-a12",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "y": 363.732
+  },
+  "board-2-space-a14": {
+    "id": "board-2-space-a14",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "y": 424.354
+  },
+  "board-2-space-a16": {
+    "id": "board-2-space-a16",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "y": 484.976
+  },
+  "board-2-space-a18": {
+    "id": "board-2-space-a18",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "y": 545.598
+  },
+  "board-2-space-a20": {
+    "id": "board-2-space-a20",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "y": 606.22
+  },
+  "board-2-space-b1": {
+    "id": "board-2-space-b1",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 53.5,
+    "y": 30.311
+  },
+  "board-2-space-b5": {
+    "id": "board-2-space-b5",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 53.5,
+    "y": 151.555
+  },
+  "board-2-space-b7": {
+    "id": "board-2-space-b7",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 53.5,
+    "y": 212.177
+  },
+  "board-2-space-b9": {
+    "id": "board-2-space-b9",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 53.5,
+    "y": 272.799
+  },
+  "board-2-space-b11": {
+    "id": "board-2-space-b11",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 53.5,
+    "y": 333.421
+  },
+  "board-2-space-b13": {
+    "id": "board-2-space-b13",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 53.5,
+    "y": 394.043
+  },
+  "board-2-space-b15": {
+    "id": "board-2-space-b15",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 53.5,
+    "y": 454.665
+  },
+  "board-2-space-b17": {
+    "id": "board-2-space-b17",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 53.5,
+    "y": 515.287
+  },
+  "board-2-space-b19": {
+    "id": "board-2-space-b19",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 53.5,
+    "y": 575.909
+  },
+  "board-2-space-b21": {
+    "id": "board-2-space-b21",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 53.5,
+    "y": 636.531
+  },
+  "board-2-space-c2": {
+    "id": "board-2-space-c2",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 106
+  },
+  "board-2-space-c4": {
+    "id": "board-2-space-c4",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 106,
+    "y": 121.244
+  },
+  "board-2-space-c6": {
+    "id": "board-2-space-c6",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 106,
+    "y": 181.866
+  },
+  "board-2-space-c8": {
+    "id": "board-2-space-c8",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 106,
+    "y": 242.488
+  },
+  "board-2-space-c10": {
+    "id": "board-2-space-c10",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 106,
+    "y": 303.11
+  },
+  "board-2-space-c12": {
+    "id": "board-2-space-c12",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 106,
+    "y": 363.732
+  },
+  "board-2-space-c14": {
+    "id": "board-2-space-c14",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 106,
+    "y": 424.354
+  },
+  "board-2-space-c16": {
+    "id": "board-2-space-c16",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 106,
+    "y": 484.976
+  },
+  "board-2-space-c20": {
+    "id": "board-2-space-c20",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 106,
+    "y": 606.22
+  },
+  "board-2-space-c22": {
+    "id": "board-2-space-c22",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 106,
+    "y": 666.44
+  },
+  "board-2-space-d3": {
+    "id": "board-2-space-d3",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 158.5,
+    "y": 90.973
+  },
+  "board-2-space-d5": {
+    "id": "board-2-space-d5",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 158.5,
+    "y": 151.555
+  },
+  "board-2-space-d7": {
+    "id": "board-2-space-d7",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 158.5,
+    "y": 212.177
+  },
+  "board-2-space-d9": {
+    "id": "board-2-space-d9",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 158.5,
+    "y": 272.799
+  },
+  "board-2-space-d11": {
+    "id": "board-2-space-d11",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 158.5,
+    "y": 333.421
+  },
+  "board-2-space-d13": {
+    "id": "board-2-space-d13",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 158.5,
+    "y": 394.043
+  },
+  "board-2-space-d15": {
+    "id": "board-2-space-d15",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 158.5,
+    "y": 454.665
+  },
+  "board-2-space-d17": {
+    "id": "board-2-space-d17",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 158.5,
+    "y": 515.287
+  },
+  "board-2-space-d19": {
+    "id": "board-2-space-d19",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 158.5,
+    "y": 575.909
+  },
+  "board-2-space-d21": {
+    "id": "board-2-space-d21",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 158.5,
+    "y": 636.531
+  },
+  "board-2-space-e2": {
+    "id": "board-2-space-e2",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 211
+  },
+  "board-2-space-e4": {
+    "id": "board-2-space-e4",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 211,
+    "y": 121.244
+  },
+  "board-2-space-e6": {
+    "id": "board-2-space-e6",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 211,
+    "y": 181.866
+  },
+  "board-2-space-e8": {
+    "id": "board-2-space-e8",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 211,
+    "y": 242.488
+  },
+  "board-2-space-e10": {
+    "id": "board-2-space-e10",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 211,
+    "y": 303.11
+  },
+  "board-2-space-e12": {
+    "id": "board-2-space-e12",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 211,
+    "y": 363.732
+  },
+  "board-2-space-e14": {
+    "id": "board-2-space-e14",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 211,
+    "y": 424.354
+  },
+  "board-2-space-e16": {
+    "id": "board-2-space-e16",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 211,
+    "y": 484.976
+  },
+  "board-2-space-e18": {
+    "id": "board-2-space-e18",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 211,
+    "y": 545.598
+  },
+  "board-2-space-e20": {
+    "id": "board-2-space-e20",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 211,
+    "y": 606.22
+  },
+  "board-2-space-e22": {
+    "id": "board-2-space-e22",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 211,
+    "y": 666.44
+  },
+  "board-2-space-f3": {
+    "id": "board-2-space-f3",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 263.5,
+    "y": 90.973
+  },
+  "board-2-space-f5": {
+    "id": "board-2-space-f5",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 263.5,
+    "y": 151.555
+  },
+  "board-2-space-f7": {
+    "id": "board-2-space-f7",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 263.5,
+    "y": 212.177
+  },
+  "board-2-space-f9": {
+    "id": "board-2-space-f9",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 263.5,
+    "y": 272.799
+  },
+  "board-2-space-f11": {
+    "id": "board-2-space-f11",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 263.5,
+    "y": 333.421
+  },
+  "board-2-space-f13": {
+    "id": "board-2-space-f13",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 263.5,
+    "y": 394.043
+  },
+  "board-2-space-f15": {
+    "id": "board-2-space-f15",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 263.5,
+    "y": 454.665
+  },
+  "board-2-space-f17": {
+    "id": "board-2-space-f17",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 263.5,
+    "y": 515.287
+  },
+  "board-2-space-f19": {
+    "id": "board-2-space-f19",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 263.5,
+    "y": 575.909
+  },
+  "board-2-space-f21": {
+    "id": "board-2-space-f21",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 263.5,
+    "y": 636.531
+  },
+  "board-2-space-g2": {
+    "id": "board-2-space-g2",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 316
+  },
+  "board-2-space-g4": {
+    "id": "board-2-space-g4",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 316,
+    "y": 121.244
+  },
+  "board-2-space-g6": {
+    "id": "board-2-space-g6",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 316,
+    "y": 181.866
+  },
+  "board-2-space-g8": {
+    "id": "board-2-space-g8",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 316,
+    "y": 242.488
+  },
+  "board-2-space-g10": {
+    "id": "board-2-space-g10",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 316,
+    "y": 303.11
+  },
+  "board-2-space-g12": {
+    "id": "board-2-space-g12",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 316,
+    "y": 363.732
+  },
+  "board-2-space-g14": {
+    "id": "board-2-space-g14",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 316,
+    "y": 424.354
+  },
+  "board-2-space-g16": {
+    "id": "board-2-space-g16",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 316,
+    "y": 484.976
+  },
+  "board-2-space-g18": {
+    "id": "board-2-space-g18",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 316,
+    "y": 545.598
+  },
+  "board-2-space-g20": {
+    "id": "board-2-space-g20",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 316,
+    "y": 606.22
+  },
+  "board-2-space-g22": {
+    "id": "board-2-space-g22",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 316,
+    "y": 666.44
+  },
+  "board-2-space-h1": {
+    "id": "board-2-space-h1",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 368.5,
+    "y": 30.311
+  },
+  "board-2-space-h3": {
+    "id": "board-2-space-h3",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 368.5,
+    "y": 90.973
+  },
+  "board-2-space-h5": {
+    "id": "board-2-space-h5",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 368.5,
+    "y": 151.555
+  },
+  "board-2-space-h7": {
+    "id": "board-2-space-h7",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 368.5,
+    "y": 212.177
+  },
+  "board-2-space-h9": {
+    "id": "board-2-space-h9",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 368.5,
+    "y": 272.799
+  },
+  "board-2-space-h11": {
+    "id": "board-2-space-h11",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 368.5,
+    "y": 333.421
+  },
+  "board-2-space-h13": {
+    "id": "board-2-space-h13",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 368.5,
+    "y": 394.043
+  },
+  "board-2-space-h15": {
+    "id": "board-2-space-h15",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 368.5,
+    "y": 454.665
+  },
+  "board-2-space-h17": {
+    "id": "board-2-space-h17",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 368.5,
+    "y": 515.287
+  },
+  "board-2-space-h19": {
+    "id": "board-2-space-h19",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 368.5,
+    "y": 575.909
+  },
+  "board-2-space-h21": {
+    "id": "board-2-space-h21",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 368.5,
+    "y": 636.531
+  },
+  "board-2-space-i0": {
+    "id": "board-2-space-i0",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 421,
+    "y": 0
+  },
+  "board-2-space-i2": {
+    "id": "board-2-space-i2",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 421
+  },
+  "board-2-space-i4": {
+    "id": "board-2-space-i4",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 421,
+    "y": 121.244
+  },
+  "board-2-space-i6": {
+    "id": "board-2-space-i6",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 421,
+    "y": 181.866
+  },
+  "board-2-space-i8": {
+    "id": "board-2-space-i8",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 421,
+    "y": 242.488
+  },
+  "board-2-space-i10": {
+    "id": "board-2-space-i10",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 421,
+    "y": 303.11
+  },
+  "board-2-space-i14": {
+    "id": "board-2-space-i14",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 421,
+    "y": 424.354
+  },
+  "board-2-space-i16": {
+    "id": "board-2-space-i16",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 421,
+    "y": 484.976
+  },
+  "board-2-space-i18": {
+    "id": "board-2-space-i18",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 421,
+    "y": 545.598
+  },
+  "board-2-space-i20": {
+    "id": "board-2-space-i20",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 421,
+    "y": 606.22
+  },
+  "board-2-space-i22": {
+    "id": "board-2-space-i22",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 421,
+    "y": 666.44
+  },
+  "board-2-space-j5": {
+    "id": "board-2-space-j5",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 473.5,
+    "y": 151.555
+  },
+  "board-2-space-j7": {
+    "id": "board-2-space-j7",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 473.5,
+    "y": 212.177
+  },
+  "board-2-space-j9": {
+    "id": "board-2-space-j9",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 473.5,
+    "y": 272.799
+  },
+  "board-2-space-j11": {
+    "id": "board-2-space-j11",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 473.5,
+    "y": 333.421
+  },
+  "board-2-space-j13": {
+    "id": "board-2-space-j13",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 473.5,
+    "y": 394.043
+  },
+  "board-2-space-j15": {
+    "id": "board-2-space-j15",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 473.5,
+    "y": 454.665
+  },
+  "board-2-space-j17": {
+    "id": "board-2-space-j17",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 473.5,
+    "y": 515.287
+  },
+  "board-2-space-j19": {
+    "id": "board-2-space-j19",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 473.5,
+    "y": 575.909
+  },
+  "board-2-space-j21": {
+    "id": "board-2-space-j21",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 473.5,
+    "y": 636.531
+  },
+  "board-2-space-k6": {
+    "id": "board-2-space-k6",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 526,
+    "y": 181.866
+  },
+  "board-2-space-k8": {
+    "id": "board-2-space-k8",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 526,
+    "y": 242.488
+  },
+  "board-2-space-k10": {
+    "id": "board-2-space-k10",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 526,
+    "y": 303.11
+  },
+  "board-2-space-k12": {
+    "id": "board-2-space-k12",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 526,
+    "y": 363.732
+  },
+  "board-2-space-k14": {
+    "id": "board-2-space-k14",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 526,
+    "y": 424.354
+  },
+  "board-2-space-k20": {
+    "id": "board-2-space-k20",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 526,
+    "y": 606.22
+  },
+  "board-2-space-k22": {
+    "id": "board-2-space-k22",
+    "type": "holder",
+    "parent": "board-2",
+    "inheritFrom": "board-4-space-a2",
+    "x": 526,
+    "y": 666.44
   },
   "hand": {
     "id": "hand",
@@ -1956,6 +5333,9 @@
     },
     "onEnter": {
       "activeFace": 0
+    },
+    "onLeave": {
+      "activeFace": 1
     }
   },
   "deck-tiles": {
@@ -2039,7 +5419,8 @@
           "background": "black",
           "color": "white"
         }
-      }
+      },
+      "clickRoutine": []
     }
   },
   "pile-tiles": {
