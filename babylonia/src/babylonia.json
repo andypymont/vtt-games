@@ -3,7 +3,7 @@
     "version": 12,
     "info": {
       "name": "Babylonia",
-      "image": "https://github.com/andypymont/vtt-games/raw/babylonia-v2/babylonia/assets/representative-image.png",
+      "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/assets/representative-image.png",
       "rules": "",
       "bgg": "https://boardgamegeek.com/boardgame/266164/babylonia",
       "year": "2019",
@@ -3607,7 +3607,7 @@
     "y": 0,
     "width": 500,
     "height": 250,
-    "image": "https://github.com/andypymont/vtt-games/raw/babylonia-v2/babylonia/assets/player-area.svg",
+    "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/assets/player-area.svg",
     "movable": false,
     "linkedToSeat": "seat-p1"
   },
@@ -3983,7 +3983,7 @@
     "height": 62.622,
     "movable": false,
     "movableInEdit": false,
-    "image": "https://github.com/andypymont/vtt-games/raw/babylonia-v2/babylonia/assets/hand.svg",
+    "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/assets/hand.svg",
     "css": {
       "color": "#000000",
       "font-size": "30px",
@@ -5446,39 +5446,39 @@
     "parent": "holder-ziggurats",
     "cardTypes": {
       "ziggurat1": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/babylonia-v2/babylonia/assets/ziggurat-1.svg",
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/babylonia/assets/ziggurat-1.svg",
         "value": 1
       },
       "ziggurat2": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/babylonia-v2/babylonia/assets/ziggurat-2.svg",
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/babylonia/assets/ziggurat-2.svg",
         "value": 2
       },
       "ziggurat3": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/babylonia-v2/babylonia/assets/ziggurat-3.svg",
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/babylonia/assets/ziggurat-3.svg",
         "value": 3
       },
       "ziggurat4": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/babylonia-v2/babylonia/assets/ziggurat-4.svg",
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/babylonia/assets/ziggurat-4.svg",
         "value": 4
       },
       "ziggurat5": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/babylonia-v2/babylonia/assets/ziggurat-5.svg",
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/babylonia/assets/ziggurat-5.svg",
         "value": 5
       },
       "ziggurat6": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/babylonia-v2/babylonia/assets/ziggurat-6.svg",
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/babylonia/assets/ziggurat-6.svg",
         "value": 6
       },
       "ziggurat7": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/babylonia-v2/babylonia/assets/ziggurat-7.svg",
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/babylonia/assets/ziggurat-7.svg",
         "value": 7
       },
       "ziggurat8": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/babylonia-v2/babylonia/assets/ziggurat-8.svg",
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/babylonia/assets/ziggurat-8.svg",
         "value": 8
       },
       "ziggurat9": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/babylonia-v2/babylonia/assets/ziggurat-9.svg",
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/babylonia/assets/ziggurat-9.svg",
         "value": 9
       }
     },
@@ -5929,37 +5929,37 @@
     "type": "deck",
     "cardTypes": {
       "tile-city-all": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/babylonia-v2/babylonia/assets/city-all.svg"
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/babylonia/assets/city-all.svg"
       },
       "tile-city-crown": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/babylonia-v2/babylonia/assets/city-crown.svg"
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/babylonia/assets/city-crown.svg"
       },
       "tile-city-pot": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/babylonia-v2/babylonia/assets/city-pot.svg"
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/babylonia/assets/city-pot.svg"
       },
       "tile-city-star": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/babylonia-v2/babylonia/assets/city-star.svg"
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/babylonia/assets/city-star.svg"
       },
       "tile-city-crown-pot": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/babylonia-v2/babylonia/assets/city-crown-pot.svg"
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/babylonia/assets/city-crown-pot.svg"
       },
       "tile-city-crown-star": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/babylonia-v2/babylonia/assets/city-crown-star.svg"
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/babylonia/assets/city-crown-star.svg"
       },
       "tile-city-star-pot": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/babylonia-v2/babylonia/assets/city-star-pot.svg"
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/babylonia/assets/city-star-pot.svg"
       },
       "tile-crop5": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/babylonia-v2/babylonia/assets/crop-5.svg"
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/babylonia/assets/crop-5.svg"
       },
       "tile-crop6": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/babylonia-v2/babylonia/assets/crop-6.svg"
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/babylonia/assets/crop-6.svg"
       },
       "tile-crop7": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/babylonia-v2/babylonia/assets/crop-7.svg"
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/babylonia/assets/crop-7.svg"
       },
       "tile-cropx": {
-        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/babylonia-v2/babylonia/assets/crop-x.svg"
+        "image": "https://raw.githubusercontent.com/andypymont/vtt-games/main/babylonia/assets/crop-x.svg"
       }
     },
     "faceTemplates": [
@@ -5973,7 +5973,7 @@
             "y": 0,
             "width": 72.309,
             "height": 62.622,
-            "value": "https://raw.githubusercontent.com/andypymont/vtt-games/babylonia-v2/babylonia/assets/citycrop-back.svg",
+            "value": "https://raw.githubusercontent.com/andypymont/vtt-games/main/babylonia/assets/citycrop-back.svg",
             "color": "transparent"
           }
         ]
