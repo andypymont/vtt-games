@@ -97,6 +97,7 @@
     "height": 400,
     "movable": false,
     "movableInEdit": false,
+    "verticalHeader": true,
     "calculateScoresRoutine": [
       {
         "note": "Reset scores for this round to zero",
