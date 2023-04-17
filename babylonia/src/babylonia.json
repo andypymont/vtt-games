@@ -5395,7 +5395,7 @@
           {
             "note": "Count the number of cities collected by this player",
             "func": "COUNT",
-            "collection": "holder-cities-p${value}",
+            "holder": "holder-cities-p${value}",
             "variable": "cities"
           },
           {
