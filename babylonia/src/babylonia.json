@@ -34,7 +34,42 @@
     "width": 912.309,
     "height": 729.461,
     "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/assets/map-4p.svg",
-    "movable": false
+    "movable": false,
+    "tilesRemoved": {},
+    "tileSpaces": [
+      "board-4-space-a6",
+      "board-4-space-a12",
+      "board-4-space-b9",
+      "board-4-space-b21",
+      "board-4-space-c14",
+      "board-4-space-d3",
+      "board-4-space-e10",
+      "board-4-space-e14",
+      "board-4-space-e22",
+      "board-4-space-f7",
+      "board-4-space-f19",
+      "board-4-space-g4",
+      "board-4-space-g12",
+      "board-4-space-h19",
+      "board-4-space-i6",
+      "board-4-space-i16",
+      "board-4-space-i22",
+      "board-4-space-j1",
+      "board-4-space-j9",
+      "board-4-space-k18",
+      "board-4-space-l13",
+      "board-4-space-m2",
+      "board-4-space-m8",
+      "board-4-space-m16",
+      "board-4-space-m22",
+      "board-4-space-n11",
+      "board-4-space-o4",
+      "board-4-space-o14",
+      "board-4-space-o22",
+      "board-4-space-p7",
+      "board-4-space-q12",
+      "board-4-space-q18"
+    ]
   },
   "board-4-space-a2": {
     "id": "board-4-space-a2",
@@ -1399,7 +1434,41 @@
     "id": "board-3",
     "inheritFrom": "board-4",
     "y": -1000,
-    "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/assets/map-3p.svg"
+    "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/assets/map-3p.svg",
+    "tilesRemoved": {
+      "tile-city-crown": 1,
+      "tile-city-pot": 1,
+      "tile-city-star": 1,
+      "tile-cropx": 3
+    },
+    "tileSpaces": [
+      "board-3-space-b21",
+      "board-3-space-d3",
+      "board-3-space-e22",
+      "board-3-space-f7",
+      "board-3-space-f19",
+      "board-3-space-g4",
+      "board-3-space-g12",
+      "board-3-space-h19",
+      "board-3-space-i6",
+      "board-3-space-i16",
+      "board-3-space-i22",
+      "board-3-space-j1",
+      "board-3-space-j9",
+      "board-3-space-k18",
+      "board-3-space-l13",
+      "board-3-space-m2",
+      "board-3-space-m8",
+      "board-3-space-m16",
+      "board-3-space-m22",
+      "board-3-space-n11",
+      "board-3-space-o4",
+      "board-3-space-o14",
+      "board-3-space-o22",
+      "board-3-space-p7",
+      "board-3-space-q12",
+      "board-3-space-q18"
+    ]
   },
   "board-3-space-a16": {
     "id": "board-3-space-a16",
@@ -2556,7 +2625,40 @@
     "id": "board-2",
     "inheritFrom": "board-4",
     "y": -1000,
-    "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/assets/map-2p.svg"
+    "image": "https://github.com/andypymont/vtt-games/raw/main/babylonia/assets/map-2p.svg",
+    "tilesRemoved": {
+      "tile-city-all": 1,
+      "tile-city-crown": 1,
+      "tile-city-pot": 1,
+      "tile-city-star": 1,
+      "tile-city-crown-pot": 1,
+      "tile-city-crown-star": 1,
+      "tile-city-star-pot": 1,
+      "tile-crop5": 1,
+      "tile-crop6": 1,
+      "tile-crop7": 1,
+      "tile-cropx": 4
+    },
+    "tileSpaces": [
+      "board-2-space-a6",
+      "board-2-space-a12",
+      "board-2-space-b9",
+      "board-2-space-b21",
+      "board-2-space-c14",
+      "board-2-space-d3",
+      "board-2-space-e10",
+      "board-2-space-e14",
+      "board-2-space-e22",
+      "board-2-space-f7",
+      "board-2-space-f19",
+      "board-2-space-g4",
+      "board-2-space-g12",
+      "board-2-space-h19",
+      "board-2-space-i6",
+      "board-2-space-i16",
+      "board-2-space-i22",
+      "board-2-space-j9"
+    ]
   },
   "board-2-space-a2": {
     "id": "board-2-space-a2",
@@ -5118,6 +5220,116 @@
     "parent": "holder-ziggurats-p4",
     "inheritFrom": "holder-ziggurats-label-p1"
   },
+  "button-end-turn": {
+    "id": "button-end-turn",
+    "type": "button",
+    "x": 525,
+    "y": 20,
+    "width": 100,
+    "height": 30,
+    "text": "End Turn",
+    "clickRoutine": [
+      {
+        "note": "Get the active player seat 1/2",
+        "func": "SELECT",
+        "property": "turn",
+        "value": true
+      },
+      {
+        "note": "Get the active player seat 2/2",
+        "func": "GET",
+        "property": "id",
+        "variable": "seat"
+      },
+      {
+        "note": "Determine that player's hand size (based on whether they own ziggurat tile 3)",
+        "func": "IF",
+        "operand1": "${PROPERTY parent OF tile-ziggurat3}",
+        "operand2": "holder-ziggurats-p${PROPERTY index OF $seat}",
+        "thenRoutine": [
+          "var handSize = 7"
+        ],
+        "elseRoutine": [
+          "var handSize = 5"
+        ]
+      },
+      {
+        "note": "Count the number of tiles in hand 1/2",
+        "func": "SELECT",
+        "property": "owner",
+        "value": "${PROPERTY player OF $seat}"
+      },
+      {
+        "note": "Count the number of tiles in hand 2/2",
+        "func": "COUNT"
+      },
+      "var quantity = ${handSize} - ${COUNT}",
+      {
+        "note": "Draw extra tiles if not already at hand limit",
+        "func": "IF",
+        "operand1": "${quantity}",
+        "relation": ">",
+        "operand2": 0,
+        "thenRoutine": [
+          {
+            "func": "MOVE",
+            "from": "holder-discs-p${PROPERTY index OF $seat}",
+            "to": "${seat}",
+            "count": "${quantity}"
+          }
+        ]
+      },
+      {
+        "note": "Move the turn to the next player",
+        "func": "TURN",
+        "turnCycle": "forward"
+      }
+    ]
+  },
+  "button-score-cities": {
+    "id": "button-score-cities",
+    "type": "button",
+    "inheritFrom": "button-end-turn",
+    "y": 60,
+    "text": "Score Cities",
+    "clickRoutine": [
+      {
+        "note": "Loop through the players",
+        "func": "FOREACH",
+        "range": 4,
+        "loopRoutine": [
+          {
+            "note": "Count the number of cities collected by this player",
+            "func": "COUNT",
+            "collection": "holder-cities-p${value}",
+            "variable": "cities"
+          },
+          {
+            "note": "Check if this player owns ziggurat tile 7 and apply the scoring bonus if they do",
+            "func": "IF",
+            "operand1": "${PROPERTY parent OF tile-ziggurat7}",
+            "operand2": "holder-ziggurats-p${value}",
+            "thenRoutine": [
+              "var remainderByTwo = ${cities} % 2",
+              "var bonusCities = ${cities} - ${remainderByTwo}",
+              "var bonus = ${bonusCities} / 2"
+            ],
+            "elseRoutine": [
+              "var bonus = 0"
+            ]
+          },
+          "var cityScore = ${cities} + ${bonus}",
+          {
+            "note": "Add the appropriate amount to this player's score",
+            "func": "LABEL",
+            "label": "score-p${value}",
+            "mode": "inc",
+            "value": "${cityScore}"
+          }
+        ]
+      }
+    ]
+  },
   "holder-ziggurats": {
     "id": "holder-ziggurats",
     "type": "holder",
@@ -5319,11 +5531,278 @@
     "deck": "deck-ziggurats",
     "cardType": "ziggurat9"
   },
+  "button-setup": {
+    "id": "button-setup",
+    "type": "button",
+    "x": 1490,
+    "y": 120,
+    "width": 100,
+    "height": 30,
+    "text": "Setup",
+    "clickRoutine": [
+      {
+        "note": "Ask the user whether to use the standard set of ziggurats or a random set - also gives them the opportunity to cancel the rest of this setup routine if clicked by accident",
+        "func": "INPUT",
+        "header": "Set up a new game",
+        "confirmButtonText": "OK",
+        "cancelButtonText": "Cancel",
+        "fields": [
+          {
+            "label": "Variant setup (7 random ziggurats)",
+            "type": "switch",
+            "variable": "variantSetup"
+          }
+        ]
+      },
+      {
+        "note": "Recall all the ziggurats",
+        "func": "RECALL",
+        "holder": "holder-ziggurats"
+      },
+      {
+        "func": "IF",
+        "operand1": "${variantSetup}",
+        "operand2": "on",
+        "thenRoutine": [
+          {
+            "note": "Variant setup - shuffle the ziggurats",
+            "func": "SHUFFLE",
+            "holder": "holder-ziggurats"
+          }
+        ],
+        "elseRoutine": [
+          {
+            "note": "Standard setup - sort the ziggurats",
+            "func": "SORT",
+            "holder": "holder-ziggurats",
+            "reverse": true
+          }
+        ]
+      },
+      {
+        "note": "Move 7 ziggurats for this game into the ziggurat display",
+        "func": "MOVE",
+        "from": "holder-ziggurats",
+        "to": "holder-ziggurats-active",
+        "count": 7
+      },
+      {
+        "note": "Sort the ziggurat display",
+        "func": "SORT",
+        "holder": "holder-ziggurats-active"
+      },
+      {
+        "note": "Recall the player discs",
+        "func": "RECALL",
+        "holder": "holder-discs-p1"
+      },
+      {
+        "note": "Move each player's discs to their own holder and shuffle",
+        "func": "FOREACH",
+        "range": 4,
+        "loopRoutine": [
+          {
+            "func": "SELECT",
+            "property": "playerIndex",
+            "value": "${value}"
+          },
+          {
+            "func": "SET",
+            "property": "parent",
+            "value": "holder-discs-p${value}"
+          },
+          {
+            "func": "SHUFFLE",
+            "holder": "holder-discs-p${value}"
+          }
+        ]
+      },
+      {
+        "note": "Get player count 1/3 - select player seats",
+        "func": "SELECT",
+        "property": "type",
+        "value": "seat",
+        "collection": "seatedPlayers"
+      },
+      {
+        "note": "Get player count 2/3 - filter out empty seats",
+        "func": "SELECT",
+        "mode": "remove",
+        "source": "seatedPlayers",
+        "property": "player",
+        "value": "",
+        "collection": "seatedPlayers"
+      },
+      {
+        "note": "Get player count 3/3 - count remaining seats",
+        "func": "COUNT",
+        "collection": "seatedPlayers"
+      },
+      {
+        "note": "Move all boards off-screen",
+        "func": "SET",
+        "collection": [
+          "board-2",
+          "board-3",
+          "board-4"
+        ],
+        "property": "y",
+        "value": -1000
+      },
+      {
+        "note": "Select the board to use based on the player count",
+        "func": "IF",
+        "operand1": "${COUNT}",
+        "operand2": 4,
+        "thenRoutine": [
+          {
+            "func": "SELECT",
+            "property": "id",
+            "value": "board-4",
+            "collection": "board"
+          }
+        ],
+        "elseRoutine": [
+          {
+            "func": "IF",
+            "operand1": "${COUNT}",
+            "operand2": 3,
+            "thenRoutine": [
+              {
+                "func": "SELECT",
+                "property": "id",
+                "value": "board-3",
+                "collection": "board"
+              }
+            ],
+            "elseRoutine": [
+              {
+                "func": "SELECT",
+                "property": "id",
+                "value": "board-2",
+                "collection": "board"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "note": "Move the board onto the screen",
+        "func": "SET",
+        "collection": "board",
+        "property": "y",
+        "value": 140
+      },
+      {
+        "note": "Recall the crop and city tiles",
+        "func": "RECALL",
+        "holder": "holder-tiles"
+      },
+      {
+        "note": "Get the list of tiles to remove from the game for the board being used",
+        "func": "GET",
+        "collection": "board",
+        "property": "tilesRemoved"
+      },
+      {
+        "note": "Iterate through the set of tiles to be removed",
+        "func": "FOREACH",
+        "in": "${tilesRemoved}",
+        "loopRoutine": [
+          {
+            "note": "Select all tiles of the type being considered",
+            "func": "SELECT",
+            "property": "cardType",
+            "value": "${key}"
+          },
+          {
+            "note": "Move those tiles to the setup holder",
+            "func": "SET",
+            "property": "parent",
+            "value": "holder-tiles-setup"
+          },
+          {
+            "note": "Move an appropriate number to the removed holder",
+            "func": "MOVE",
+            "from": "holder-tiles-setup",
+            "to": "holder-tiles-removed",
+            "count": "${value}"
+          },
+          {
+            "note": "Move the remainder of the tiles back into the main deck",
+            "func": "MOVE",
+            "from": "holder-tiles-setup",
+            "to": "holder-tiles",
+            "count": 0
+          }
+        ]
+      },
+      {
+        "note": "Shuffle the tiles",
+        "func": "SHUFFLE",
+        "holder": "holder-tiles"
+      },
+      {
+        "note": "Get the list of tile start locations for the board being used",
+        "func": "GET",
+        "collection": "board",
+        "property": "tileSpaces"
+      },
+      {
+        "note": "Deal 1 tile to each of these spaces",
+        "func": "FOREACH",
+        "in": "${tileSpaces}",
+        "loopRoutine": [
+          {
+            "func": "MOVE",
+            "from": "holder-tiles",
+            "to": "${value}"
+          }
+        ]
+      },
+      {
+        "note": "Move the removed tiles back to the draw-pile holder",
+        "func": "MOVE",
+        "from": "holder-tiles-removed",
+        "to": "holder-tiles",
+        "count": 0
+      },
+      {
+        "note": "Reset all scores to zero",
+        "func": "LABEL",
+        "label": [
+          "score-p1",
+          "score-p2",
+          "score-p3",
+          "score-p4"
+        ],
+        "value": 0
+      },
+      {
+        "note": "Draw each seated player a starting hand of 5 tiles",
+        "func": "FOREACH",
+        "collection": "seatedPlayers",
+        "loopRoutine": [
+          {
+            "func": "MOVE",
+            "from": "holder-discs-p${PROPERTY index OF $widgetID}",
+            "to": "${widgetID}",
+            "count": 5
+          }
+        ]
+      },
+      {
+        "note": "Select a random start player",
+        "func": "TURN",
+        "turnCycle": "random"
+      }
+    ]
+  },
   "holder-tiles": {
     "id": "holder-tiles",
     "type": "holder",
     "x": 1505,
-    "y": 145,
+    "y": 160,
     "width": 72.309,
     "height": 72.309,
     "dropOffsetX": 0,
@@ -5337,6 +5816,18 @@
     "onLeave": {
       "activeFace": 1
     }
+  },
+  "holder-tiles-setup": {
+    "id": "holder-tiles-setup",
+    "type": "holder",
+    "inheritFrom": "holder-tiles",
+    "x": 1700
+  },
+  "holder-tiles-removed": {
+    "id": "holder-tiles-removed",
+    "type": "holder",
+    "inheritFrom": "holder-tiles",
+    "x": 1800
   },
   "deck-tiles": {
     "id": "deck-tiles",
