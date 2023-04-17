@@ -3720,10 +3720,10 @@
     "type": "label",
     "parent": "area-p1",
     "fixedParent": true,
-    "x": 375,
+    "x": 350,
     "y": 30,
     "width": 65,
-    "height": 40,
+    "height": 30,
     "css": {
       "font-size": "30px"
     },
@@ -3738,7 +3738,7 @@
     "x": 0,
     "y": -20,
     "width": 65,
-    "height": 40,
+    "height": 20,
     "movable": false,
     "movableInEdit": false,
     "editable": false,
@@ -3793,17 +3793,58 @@
     "height": 36,
     "movable": false,
     "movableInEdit": false,
-    "classes": "symbols",
     "css": {
-      "font-size": "28px"
+      "font-size": "18px"
     },
-    "text": "add",
+    "text": "+1",
     "clickRoutine": [
       {
         "func": "LABEL",
         "label": "${PROPERTY parent}",
         "mode": "inc",
         "value": 1
+      }
+    ]
+  },
+  "button-score-inc-x-p1": {
+    "id": "button-score-inc-x-p1",
+    "type": "button",
+    "parent": "score-p1",
+    "inheritFrom": "button-score-inc-p1",
+    "x": 110,
+    "text": "+X",
+    "clickRoutine": [
+      "var score = ${PROPERTY parent}",
+      "var area = ${PROPERTY parent OF $score}",
+      "var seat = ${PROPERTY linkedToSeat OF $area}",
+      {
+        "func": "IF",
+        "operand1": "${PROPERTY player OF $seat}",
+        "operand2": "",
+        "thenRoutine": [
+          "var playerDesc = 'Player ' + ${PROPERTY index OF $seat}"
+        ],
+        "elseRoutine": [
+          "var playerDesc = ${PROPERTY player OF $seat}"
+        ]
+      },
+      {
+        "func": "INPUT",
+        "header": "Enter amount to add to ${playerDesc}'s score",
+        "confirmButtonText": "Add",
+        "cancelButtonText": "Cancel",
+        "fields": [
+          {
+            "type": "number",
+            "variable": "addToScore"
+          }
+        ]
+      },
+      {
+        "func": "LABEL",
+        "label": "${score}",
+        "mode": "inc",
+        "value": "${addToScore}"
       }
     ]
   },
@@ -3825,6 +3866,12 @@
     "type": "button",
     "parent": "score-p2",
     "inheritFrom": "button-score-inc-p1"
+  },
+  "button-score-inc-x-p2": {
+    "id": "button-score-inc-x-p2",
+    "type": "button",
+    "parent": "score-p2",
+    "inheritFrom": "button-score-inc-x-p1"
   },
   "label-score-p2": {
     "id": "label-score-p2",
@@ -3851,6 +3898,12 @@
     "parent": "score-p3",
     "inheritFrom": "button-score-inc-p1"
   },
+  "button-score-inc-x-p3": {
+    "id": "button-score-inc-x-p3",
+    "type": "button",
+    "parent": "score-p3",
+    "inheritFrom": "button-score-inc-x-p1"
+  },
   "label-score-p3": {
     "id": "label-score-p3",
     "type": "label",
@@ -3875,6 +3928,12 @@
     "type": "button",
     "parent": "score-p4",
     "inheritFrom": "button-score-inc-p1"
+  },
+  "button-score-inc-x-p4": {
+    "id": "button-score-inc-x-p4",
+    "type": "button",
+    "parent": "score-p4",
+    "inheritFrom": "button-score-inc-x-p1"
   },
   "label-score-p4": {
     "id": "label-score-p4",
