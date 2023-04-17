@@ -3842,15 +3842,33 @@
       },
       "var checkInt = ${addToScore} % 1",
       {
+        "note": "Sanity check / typo avoidance 1 of 2: only add value if it is an integer",
         "func": "IF",
         "operand1": "${checkInt}",
         "operand2": 0,
         "thenRoutine": [
           {
-            "func": "LABEL",
-            "label": "${score}",
-            "mode": "inc",
-            "value": "${addToScore}"
+            "note": "Sanity check / typo avoidance 2 of 2: only add value if it is a three-digit number",
+            "func": "IF",
+            "operand1": "${addToScore}",
+            "relation": "<",
+            "operand2": 1000,
+            "thenRoutine": [
+              {
+                "func": "IF",
+                "operand1": "${addToScore}",
+                "relation": ">",
+                "operand2": -1000,
+                "thenRoutine": [
+                  {
+                    "func": "LABEL",
+                    "label": "${score}",
+                    "mode": "inc",
+                    "value": "${addToScore}"
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
