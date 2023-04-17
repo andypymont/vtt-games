@@ -3538,7 +3538,6 @@
     "height": 80,
     "dropOffsetX": 1,
     "dropOffsetY": 8.7,
-    "dropLimit": 7,
     "dropTarget": {
       "deck": "deck-discs"
     },
