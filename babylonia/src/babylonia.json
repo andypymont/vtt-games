@@ -3659,8 +3659,14 @@
       },
       {
         "func": "SET",
-        "property": "color",
+        "property": "background",
         "value": "${PROPERTY color}"
+      },
+      "var foreground = colorContrast ${PROPERTY color}",
+      {
+        "func": "SET",
+        "property": "color",
+        "value": "${foreground}"
       }
     ]
   },
@@ -4031,16 +4037,16 @@
     "parent": "holder-discs-p1",
     "cardTypes": {
       "disc-crown": {
-        "image": "/assets/241391976_1306"
+        "image": "/assets/647184309_1309"
       },
       "disc-farmer": {
-        "image": "/assets/-627235169_1105"
+        "image": "/assets/1613144768_1110"
       },
       "disc-pot": {
-        "image": "/assets/-1934393553_1696"
+        "image": "/assets/2012672162_1699"
       },
       "disc-star": {
-        "image": "/assets/1462096251_712"
+        "image": "/assets/-166243862_715"
       }
     },
     "faceTemplates": [
@@ -4054,10 +4060,11 @@
             "y": 0,
             "width": 72.309,
             "height": 62.622,
-            "value": "/assets/1433629594_263",
+            "value": "/assets/-1112820028_265",
             "color": "transparent",
             "svgReplaces": {
-              "#color": "color"
+              "#bgcolor": "background",
+              "#fgcolor": "color"
             }
           }
         ]
@@ -4077,14 +4084,16 @@
               "value": "image"
             },
             "svgReplaces": {
-              "#color": "color"
+              "#bgcolor": "background",
+              "#fgcolor": "color"
             }
           }
         ]
       }
     ],
     "cardDefaults": {
-      "color": "gray",
+      "background": "gray",
+      "color": "black",
       "width": 72.309,
       "height": 62.622,
       "onPileCreation": {
