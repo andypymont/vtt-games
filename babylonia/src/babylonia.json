@@ -3840,11 +3840,19 @@
           }
         ]
       },
+      "var checkInt = ${addToScore} % 1",
       {
-        "func": "LABEL",
-        "label": "${score}",
-        "mode": "inc",
-        "value": "${addToScore}"
+        "func": "IF",
+        "operand1": "${checkInt}",
+        "operand2": 0,
+        "thenRoutine": [
+          {
+            "func": "LABEL",
+            "label": "${score}",
+            "mode": "inc",
+            "value": "${addToScore}"
+          }
+        ]
       }
     ]
   },
