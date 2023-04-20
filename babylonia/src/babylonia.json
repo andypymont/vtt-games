@@ -3841,7 +3841,8 @@
         "fields": [
           {
             "type": "number",
-            "variable": "addToScore"
+            "variable": "addToScore",
+            "value": ""
           }
         ]
       },
