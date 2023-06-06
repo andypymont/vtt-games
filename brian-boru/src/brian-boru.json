@@ -1979,22 +1979,21 @@
         "loopRoutine": [
           "var thisIndex = ${activeIndex.$key}",
           "var thisOwner = ${activeOwner.$key}",
-          "var playerDesc = 'p' + ${thisIndex}",
-          "var tempPlace = playerDesc + '-score'",
-          {
-            "func": "SELECT",
-            "property": "owner",
-            "value": "${thisOwner}"
-          },
           {
             "func": "SELECT",
             "property": "parent",
             "value": "hand-right"
           },
           {
+            "func": "SELECT",
+            "source": "DEFAULT",
+            "property": "owner",
+            "value": "${thisOwner}"
+          },
+          {
             "func": "SET",
             "property": "parent",
-            "value": "${tempPlace}"
+            "value": "p${thisIndex}-score"
           }
         ]
       },
@@ -2010,8 +2009,6 @@
         "loopRoutine": [
           "var thisIndex = ${activeIndex.$key}",
           "var thisOwner = ${activeOwner.$key}",
-          "var playerDesc = 'p' + ${thisIndex}",
-          "var tempPlace = ${playerDesc} + '-score'",
           "var newKey = ${key} + 1",
           {
             "func": "IF",
@@ -2027,13 +2024,7 @@
             "func": "SELECT",
             "type": "card",
             "property": "parent",
-            "value": "${tempPlace}"
-          },
-          {
-            "func": "SELECT",
-            "source": "DEFAULT",
-            "property": "owner",
-            "value": "${thisOwner}"
+            "value": "p${thisIndex}-score"
           },
           {
             "func": "SET",
